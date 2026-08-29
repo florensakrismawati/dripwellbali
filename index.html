@@ -65,6 +65,7 @@
   --accent-gold: #e3b66f;
   --border-teal: rgba(19, 62, 61, 0.15);
   --border-coral: rgba(210, 107, 82, 0.25);
+  --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
 }
 
 * {
@@ -192,9 +193,12 @@ nav {
   font: 10px "DM Mono";
   letter-spacing: .16em;
   text-transform: uppercase;
-  transition: .2s;
+  transition: background .2s, transform .2s;
 }
-.nav-book:hover { background: var(--text-dark); }
+.nav-book:hover { 
+  background: var(--text-dark); 
+  transform: translateY(-1px);
+}
 
 .mobile-menu {
   display: none;
@@ -271,6 +275,7 @@ section { padding: 60px 0; }
   align-items: center;
   gap: 16px;
   margin-top: 28px;
+  flex-wrap: wrap;
 }
 
 .btn-cta {
@@ -293,6 +298,7 @@ section { padding: 60px 0; }
 .btn-cta:hover {
   background: var(--text-dark);
   border-color: var(--text-dark);
+  transform: translateY(-2px);
 }
 
 .btn-cta-outline {
@@ -315,6 +321,7 @@ section { padding: 60px 0; }
 .btn-cta-outline:hover {
   background: var(--text-dark);
   color: var(--bg-white);
+  transform: translateY(-2px);
 }
 
 .photo-frame {
@@ -324,6 +331,7 @@ section { padding: 60px 0; }
   border: 1px solid var(--border-teal);
   height: 420px;
   background: #789c91;
+  box-shadow: var(--shadow-soft);
 }
 
 .photo-frame img {
@@ -362,6 +370,7 @@ section { padding: 60px 0; }
   align-items: flex-end;
   gap: 20px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .packages-head h2 {
@@ -396,8 +405,8 @@ section { padding: 60px 0; }
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
 }
 
 .treatment-card {
@@ -408,12 +417,13 @@ section { padding: 60px 0; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform .2s, border-color .2s;
+  transition: transform .25s ease, border-color .25s ease, background-color .25s ease;
 }
 
 .treatment-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: var(--primary-coral);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .treatment-card h3 {
@@ -436,11 +446,12 @@ section { padding: 60px 0; }
   list-style: none;
   font-size: 13px;
   opacity: .85;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .treatment-card ul li {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
 
 .treatment-card ul li::before {
@@ -459,7 +470,8 @@ section { padding: 60px 0; }
   letter-spacing: .15em;
   text-transform: uppercase;
   text-align: center;
-  transition: background .2s;
+  transition: background .2s, transform .2s;
+  width: 100%;
 }
 
 .btn-card-book:hover {
@@ -467,12 +479,19 @@ section { padding: 60px 0; }
   color: var(--text-dark);
 }
 
-/* How It Works & Services Grid */
+/* Info Section (How It Works & Service Areas) */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
 .info-card {
   border: 1px solid var(--border-teal);
   border-radius: 28px;
   padding: 40px;
   background: var(--bg-soft);
+  box-shadow: var(--shadow-soft);
 }
 
 .step-item {
@@ -504,6 +523,7 @@ section { padding: 60px 0; }
   padding: 8px 16px;
   font-size: 12px;
   font-weight: 500;
+  transition: all .2s;
 }
 
 .area-pill.active, .area-pill:hover {
@@ -518,6 +538,7 @@ section { padding: 60px 0; }
   border-radius: 28px;
   padding: 40px;
   background: var(--bg-white);
+  box-shadow: var(--shadow-soft);
 }
 
 .form-grid {
@@ -547,6 +568,7 @@ section { padding: 60px 0; }
   padding: 12px 16px;
   color: var(--text-dark);
   font-size: 14px;
+  transition: border-color .2s, background-color .2s;
 }
 
 .field input:focus, .field select:focus, .field textarea:focus {
@@ -560,6 +582,7 @@ footer {
   border-top: 1px solid var(--border-teal);
   padding: 40px 0 30px;
   margin-top: 60px;
+  background: var(--bg-soft);
 }
 
 .footer-top {
@@ -599,6 +622,7 @@ footer {
 
 .sticky-bar { display: none; }
 
+/* Responsive Media Queries */
 @media (max-width: 900px) {
   nav { display: none; }
   .mobile-menu { display: block; }
@@ -624,8 +648,13 @@ footer {
     letter-spacing: .14em;
   }
   .mobile-panel a:last-child { border-bottom: 0; }
-  .hero-grid, .cards-grid, .form-grid { grid-template-columns: 1fr; gap: 30px; }
+  
+  .hero-grid, .info-grid, .form-grid { 
+    grid-template-columns: 1fr; 
+    gap: 30px; 
+  }
   .photo-frame { height: 320px; }
+  
   .sticky-bar {
     display: block;
     position: fixed;
@@ -645,11 +674,12 @@ footer {
     font: 10px "DM Mono";
     letter-spacing: .16em;
     text-transform: uppercase;
-    box-shadow: 0 10px 25px rgba(210, 107, 82, 0.3);
+    box-shadow: 0 10px 25px rgba(210, 107, 82, 0.35);
   }
   .footer-top { flex-direction: column; }
   .footer-actions { align-items: flex-start; }
   .copyright { flex-direction: column; gap: 8px; }
+  .info-card, .booking-card { padding: 24px; }
 }
 </style>
 </head>
@@ -749,7 +779,7 @@ footer {
 
   <!-- HOW IT WORKS & SERVICE AREA -->
   <section class="wrap">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+    <div class="info-grid">
       
       <!-- HOW IT WORKS -->
       <div class="info-card">
@@ -797,7 +827,7 @@ footer {
           <span class="area-pill active">Sanur</span>
           <span class="area-pill active">Ubud</span>
           <span class="area-pill active">Uluwatu</span>
-          <span class="area-pill active">Nusantara / Tabanan</span>
+          <span class="area-pill active">Tabanan / Nuanu</span>
         </div>
 
         <p style="font-size: 13px; opacity: .7; margin-top: 20px;">
@@ -835,6 +865,10 @@ footer {
               <option value="Fever Package">Fever Package — Rp 3.125.000</option>
               <option value="Flu Relief Package">Flu Relief Package — Rp 1.850.000</option>
               <option value="Physiotherapy Package">Physiotherapy Package — Rp 500.000</option>
+              <option value="Jetlag Package">Jetlag Package — Rp 975.000</option>
+              <option value="Energy Booster">Energy Booster — Rp 2.325.000</option>
+              <option value="Immune Booster Basic">Immune Booster Basic — Rp 1.350.000</option>
+              <option value="Ultimate Immune Booster">Ultimate Immune Booster — Rp 2.925.000</option>
               <option value="General Doctor Visit">Doctor Consultation Visit</option>
             </select>
           </div>
@@ -938,17 +972,30 @@ function renderCards(list) {
 
 function selectPackage(name) {
   const select = document.getElementById('packageSelect');
-  if(select) select.value = name;
+  if(select) {
+    // Matching select option value
+    for (let option of select.options) {
+      if (option.value.includes(name) || name.includes(option.value)) {
+        select.value = option.value;
+        break;
+      }
+    }
+  }
   document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
 }
 
 function toggleMenu() {
   const panel = document.getElementById("mobilePanel");
-  panel.classList.toggle("show");
+  const btn = document.querySelector(".mobile-menu");
+  const isShow = panel.classList.toggle("show");
+  btn.setAttribute("aria-expanded", isShow ? "true" : "false");
 }
 
 function closeMenu() {
-  document.getElementById("mobilePanel").classList.remove("show");
+  const panel = document.getElementById("mobilePanel");
+  panel.classList.remove("show");
+  const btn = document.querySelector(".mobile-menu");
+  if (btn) btn.setAttribute("aria-expanded", "false");
 }
 
 function submitBooking(e) {
