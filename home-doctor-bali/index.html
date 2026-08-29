@@ -21,7 +21,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Home Doctor Visit | Private Medical Care in Bali | DripWell Bali">
 <meta property="og:description" content="Doctor Visits, Delivered to You. Convenient Home Doctor Visits for guests and residents in Bali.">
-<meta property="og:image" content="https://www.dripwellbali.com/about1.jpg">
+<meta property="og:image" content="https://www.dripwellbali.com/home-doctor-bali/home-doctor.jpg">
 
 <!-- Preconnect Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -325,19 +325,20 @@ section {
   color: var(--text-dark);
 }
 
-/* Photo Frame Component */
+/* Photo Frame Component (PERBAIKAN AGAR FOTO TIDAK TERPOTONG) */
 .photo-frame {
   position: relative;
   border-radius: 28px;
   overflow: hidden;
   border: 1px solid var(--border-teal);
-  height: 420px;
+  height: 480px; /* Diperbesar sedikit agar proporsi lebih pas */
 }
 
 .photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top; /* MENJAGA FOKUS FOTO SELALU DARI BAGIAN ATAS (KEPALA) */
 }
 
 .photo-badge {
@@ -463,7 +464,7 @@ section {
   margin-bottom: 10px;
 }
 
-/* Conversion / Dispatch Box (Distinct Background) */
+/* Conversion / Dispatch Box */
 .dispatch-banner {
   border: 2px solid var(--text-dark);
   background: var(--text-dark);
@@ -515,52 +516,6 @@ section {
   background: var(--bg-white);
   color: var(--text-dark);
   border-color: var(--bg-white);
-}
-
-/* Booking Form */
-.booking-section {
-  border: 1px solid var(--border-teal);
-  border-radius: 28px;
-  padding: 50px 40px;
-  background: var(--bg-soft);
-  margin: 40px 0;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.field-full {
-  grid-column: 1 / -1;
-}
-
-.field label {
-  display: block;
-  font: 10px "DM Mono";
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--text-dark);
-  opacity: .8;
-  margin-bottom: 6px;
-}
-
-.field input, .field select, .field textarea {
-  width: 100%;
-  border: 1px solid var(--border-teal);
-  border-radius: 12px;
-  background: var(--bg-white);
-  padding: 12px 16px;
-  color: var(--text-dark);
-  font-size: 14px;
-  transition: border-color .2s;
-}
-
-.field input:focus, .field select:focus, .field textarea:focus {
-  border-color: var(--primary-coral);
-  outline: none;
 }
 
 /* FAQ Accordion */
@@ -761,11 +716,11 @@ footer {
 
   .mobile-panel a:last-child { border-bottom: 0; }
 
-  .hero-grid, .grid-2, .dispatch-grid, .form-grid { grid-template-columns: 1fr; gap: 24px; }
-  .photo-frame { height: 300px; }
+  .hero-grid, .grid-2, .dispatch-grid { grid-template-columns: 1fr; gap: 24px; }
+  .photo-frame { height: 360px; }
   .premium-area-grid { grid-template-columns: 1fr 1fr; }
   .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .booking-section, .locations-box, .cta-banner, .dispatch-banner { padding: 34px 20px; }
+  .locations-box, .cta-banner, .dispatch-banner { padding: 34px 20px; }
 
   .sticky-bar {
     display: block;
@@ -883,8 +838,9 @@ footer {
           </div>
         </div>
 
+        <!-- GAMBAR DOCTOR VISIT (MENGGUNAKAN DUA NAMA UNTUK MENCEGAH FLAGGING ERROR NAMA FILE) -->
         <div class="photo-frame">
-          <img src="home-doctor.jpeg" alt="Doctor home visit consultation in a villa in Bali" loading="eager">
+          <img src="home-doctor.jpg" alt="Doctor home visit consultation in a villa in Bali" loading="eager" onerror="this.onerror=null;this.src='home-doctor.jpeg';">
           <div class="photo-badge">✦ Private & Convenient Medical Care</div>
         </div>
       </div>
@@ -1091,9 +1047,9 @@ footer {
 
   <!-- 08 — SAFETY & MEDICAL ASSESSMENT -->
   <section class="wrap">
-    <div class="warning-box" style="border-color: var(--border-teal); background: var(--bg-soft); color: var(--text-dark);">
+    <div class="card" style="border: 1px solid var(--border-teal); border-radius: 28px; padding: 40px; background: var(--bg-soft); color: var(--text-dark);">
       <div class="eyebrow">SAFETY FIRST</div>
-      <h3 style="color: var(--text-dark); font-size: 32px;">Every Doctor Visit Starts With an Assessment.</h3>
+      <h3 class="display" style="color: var(--text-dark); font-size: clamp(28px, 4vw, 40px);">Every Doctor Visit Starts With an Assessment.</h3>
       <p style="font-size: 15px; margin-top: 10px; opacity: .9;">
         Your health and safety are always the priority. Every Home Doctor Visit begins with an individual consultation and professional medical assessment. The attending doctor considers your current symptoms and relevant medical information before providing recommendations.
       </p>
@@ -1300,7 +1256,7 @@ footer {
         Professional Home Doctor Visits delivered directly to your villa, hotel, resort, or private residence.<br>
         Private, convenient, and personalized medical care designed around your individual needs.
       </p>
-      <p class="mono" style="font-size: 11px; letter-spacing: .15em; uppercase; margin-bottom: 24px; opacity: .9;">
+      <p class="mono" style="font-size: 11px; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 24px; opacity: .9;">
         Available Across Selected Areas of Bali
       </p>
       <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Home%20Doctor%20Visit." target="_blank" rel="noopener noreferrer" class="btn-cta">
