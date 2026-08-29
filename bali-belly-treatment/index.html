@@ -451,7 +451,7 @@ section {
   opacity: .85;
 }
 
-/* Featured Package Card */
+/* Featured Package Card Layout (FIXED FOR MOBILE) */
 .package-box {
   border: 2px solid var(--primary-coral);
   border-radius: 28px;
@@ -462,19 +462,25 @@ section {
 
 .package-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 8px;
   border-bottom: 1px solid var(--border-coral);
-  padding-bottom: 24px;
+  padding-bottom: 20px;
   margin-bottom: 28px;
 }
 
-/* PERBAIKAN UKURAN HARGA AGAR RAPI */
+.package-header h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.1;
+  color: var(--text-dark);
+}
+
 .package-price {
-  font: 24px "Playfair Display";
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 26px;
   color: var(--primary-coral);
-  font-weight: 600;
-  letter-spacing: .02em;
+  font-weight: 700;
+  margin-top: 4px;
 }
 
 .package-details-grid {
@@ -772,7 +778,7 @@ footer {
   display: none;
 }
 
-/* Responsive */
+/* Responsive Styles for Mobile */
 @media (max-width: 900px) {
   nav { display: none; }
   .mobile-menu { display: block; }
@@ -805,9 +811,14 @@ footer {
 
   .hero-grid, .locations-grid, .grid-2, .package-details-grid, .form-grid { grid-template-columns: 1fr; gap: 24px; }
   .photo-frame { height: 300px; }
-  .package-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  
+  /* PERBAIKAN KHUSUS CARD PAKET DI HP */
+  .package-box { padding: 28px 20px 36px; }
+  .package-price { font-size: 24px; }
+  .btn-cta-package { width: 100%; justify-content: center; }
+
   .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .booking-section, .package-box, .warning-box, .locations-box, .cta-banner { padding: 34px 20px; }
+  .booking-section, .warning-box, .locations-box, .cta-banner { padding: 34px 20px; }
   .warning-list { grid-template-columns: 1fr; }
 
   .sticky-bar {
@@ -891,7 +902,7 @@ footer {
 
 <main id="main">
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION WITH GAMBAR HERO (bali-belly.jpg) -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-grid">
@@ -970,15 +981,12 @@ footer {
     </div>
   </section>
 
-  <!-- BALI BELLY PACKAGE -->
+  <!-- BALI BELLY PACKAGE (RAPI DI HP & LAPTOP) -->
   <section class="wrap">
     <div class="package-box">
       <div class="package-header">
-        <div>
-          <div class="eyebrow">All-Inclusive Home Service</div>
-          <h2 class="display" style="font-size: clamp(32px, 4vw, 48px);">Bali Belly Package</h2>
-        </div>
-        <!-- HARGA DENGAN UKURAN RAPI -->
+        <div class="eyebrow">All-Inclusive Home Service</div>
+        <h2 class="display">Bali Belly Package</h2>
         <div class="package-price">Rp 2.025.000</div>
       </div>
 
@@ -1003,8 +1011,8 @@ footer {
         </div>
       </div>
 
-      <div style="margin-top: 36px; text-align: center;">
-        <a href="#booking-form" class="btn-cta">
+      <div style="margin-top: 32px; text-align: center;">
+        <a href="#booking-form" class="btn-cta btn-cta-package">
           Book This Package →
         </a>
       </div>
@@ -1282,7 +1290,7 @@ footer {
     </div>
   </section>
 
-  <!-- FAQ SECTION (DENGAN MARGIN SPACING DITAMBAHKAN) -->
+  <!-- FAQ SECTION (EXTRA SPACING INCLUDED) -->
   <section class="wrap">
     <div style="text-align: center; max-width: 650px; margin: 0 auto 48px;">
       <div class="eyebrow">Frequently Asked Questions</div>
@@ -1352,7 +1360,7 @@ footer {
     </div>
   </section>
 
-  <!-- CTA BANNER (HANYA MENGGUNAKAN TOMBOL CHAT ON WHATSAPP) -->
+  <!-- CTA BANNER -->
   <section class="wrap">
     <div class="cta-banner">
       <div class="eyebrow" style="color: var(--bg-white); opacity: .9;">Feeling Unwell in Bali?</div>
