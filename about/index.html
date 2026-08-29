@@ -9,7 +9,7 @@
 <meta name="description" content="Learn about DripWell Bali. We offer a refined approach to mobile IV therapy and home doctor services delivered directly to your villa, hotel, or residence in Bali.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="author" content="Dripwell Bali">
-<meta name="theme-color" content="#d26b52">
+<meta name="theme-color" content="#133e3d">
 
 <link rel="canonical" href="https://www.dripwellbali.com/about/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -21,7 +21,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="About Dripwell Bali | Wellness, Delivered with Comfort and Care">
 <meta property="og:description" content="Dripwell Bali offers professional mobile IV therapy and home doctor visits in the comfort of your villa, hotel, or private residence.">
-<meta property="og:image" content="https://www.dripwellbali.com/dripwell-hero.jpg">
+<meta property="og:image" content="https://www.dripwellbali.com/about1.jpg">
 
 <!-- Preconnect Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +39,7 @@
       "name": "Dripwell Bali",
       "url": "https://www.dripwellbali.com/",
       "logo": "https://www.dripwellbali.com/dripwell-logo.jpeg",
-      "image": "https://www.dripwellbali.com/dripwell-hero.jpg",
+      "image": "https://www.dripwellbali.com/about1.jpg",
       "description": "Dripwell Bali offers a refined approach to mobile IV therapy and wellness services delivered directly to your villa, hotel, resort, or private residence.",
       "telephone": "+6282221614966",
       "email": "dripwellbali@gmail.com",
@@ -70,12 +70,14 @@
 </script>
 
 <style>
-/* Strict 2-Tone Color Palette (Clean White Background) */
+/* Refined Color Palette: Pure White Background, Deep Teal Text & Terracotta Accent */
 :root {
   --bg-white: #ffffff;
-  --bg-soft: #fcfaf8;
+  --bg-soft: #f8faf9;
+  --text-dark: #133e3d;
   --primary-coral: #d26b52;
-  --border-coral: rgba(210, 107, 82, 0.2);
+  --border-teal: rgba(19, 62, 61, 0.15);
+  --border-coral: rgba(210, 107, 82, 0.25);
 }
 
 * {
@@ -90,7 +92,7 @@ html {
 
 body {
   background: var(--bg-white);
-  color: var(--primary-coral);
+  color: var(--text-dark);
   font-family: "DM Sans", Arial, sans-serif;
   line-height: 1.6;
 }
@@ -101,6 +103,10 @@ body {
 
 .display {
   font-family: "Playfair Display", Georgia, serif;
+}
+
+.coral-text {
+  color: var(--primary-coral);
 }
 
 button, input, select, textarea {
@@ -127,7 +133,7 @@ img {
   left: 12px;
   top: -60px;
   z-index: 100;
-  background: var(--primary-coral);
+  background: var(--text-dark);
   color: var(--bg-white);
   padding: 12px 16px;
   border-radius: 8px;
@@ -148,10 +154,10 @@ button:focus-visible, a:focus-visible {
 header {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid var(--border-coral);
+  border-bottom: 1px solid var(--border-teal);
 }
 
 .nav {
@@ -175,7 +181,7 @@ header {
   flex: 0 0 44px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid var(--primary-coral);
+  border: 1px solid var(--border-teal);
 }
 
 .logo img {
@@ -189,12 +195,13 @@ header {
   font: 10px "DM Mono";
   letter-spacing: .16em;
   text-transform: uppercase;
-  opacity: .8;
+  color: var(--primary-coral);
 }
 
 .brand strong {
   font: 24px "Playfair Display";
   line-height: 1;
+  color: var(--text-dark);
 }
 
 nav {
@@ -207,12 +214,14 @@ nav {
   font: 10px "DM Mono";
   letter-spacing: .16em;
   text-transform: uppercase;
-  opacity: .75;
-  transition: opacity .2s;
+  color: var(--text-dark);
+  opacity: .8;
+  transition: opacity .2s, color .2s;
 }
 
 .navlink:hover, .navlink.active {
   opacity: 1;
+  color: var(--primary-coral);
   font-weight: 700;
 }
 
@@ -228,17 +237,17 @@ nav {
 }
 
 .nav-book:hover {
-  opacity: .9;
+  background: var(--text-dark);
 }
 
 .mobile-menu {
   display: none;
   width: 40px;
   height: 40px;
-  border: 1px solid var(--primary-coral);
+  border: 1px solid var(--border-teal);
   border-radius: 50%;
   background: none;
-  color: var(--primary-coral);
+  color: var(--text-dark);
   font-size: 18px;
 }
 
@@ -262,7 +271,7 @@ section {
   font: 11px "DM Mono";
   letter-spacing: .2em;
   text-transform: uppercase;
-  opacity: .8;
+  color: var(--primary-coral);
   margin-bottom: 12px;
 }
 
@@ -278,7 +287,7 @@ section {
 /* Hero Section */
 .hero {
   padding: 60px 0 50px;
-  border-bottom: 1px solid var(--border-coral);
+  border-bottom: 1px solid var(--border-teal);
 }
 
 .hero-grid {
@@ -293,16 +302,19 @@ section {
   line-height: 1.05;
   letter-spacing: -.03em;
   margin-top: 10px;
+  color: var(--text-dark);
 }
 
 .hero h1 em {
   font-style: italic;
   font-weight: 400;
+  color: var(--primary-coral);
 }
 
 .hero p {
   font-size: 17px;
   margin-top: 20px;
+  color: var(--text-dark);
   opacity: .9;
   max-width: 620px;
 }
@@ -310,9 +322,9 @@ section {
 /* Photo Wrapper Styling */
 .photo-frame {
   position: relative;
-  border-radius: 32px;
+  border-radius: 28px;
   overflow: hidden;
-  border: 1px solid var(--primary-coral);
+  border: 1px solid var(--border-teal);
   height: 440px;
 }
 
@@ -326,14 +338,14 @@ section {
   position: absolute;
   bottom: 16px;
   left: 16px;
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--primary-coral);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-dark);
   padding: 8px 16px;
   border-radius: 999px;
   font: 10px "DM Mono";
   text-transform: uppercase;
   letter-spacing: .14em;
-  border: 1px solid var(--primary-coral);
+  border: 1px solid var(--border-teal);
 }
 
 /* Button Component */
@@ -354,8 +366,8 @@ section {
 }
 
 .btn-cta:hover {
-  background: var(--bg-white);
-  color: var(--primary-coral);
+  background: var(--text-dark);
+  border-color: var(--text-dark);
 }
 
 .btn-cta-outline {
@@ -363,7 +375,7 @@ section {
   align-items: center;
   gap: 10px;
   background: transparent;
-  color: var(--primary-coral);
+  color: var(--text-dark);
   padding: 14px 28px;
   border-radius: 999px;
   font: 11px "DM Mono";
@@ -371,11 +383,11 @@ section {
   text-transform: uppercase;
   font-weight: 600;
   transition: all .2s;
-  border: 1px solid var(--primary-coral);
+  border: 1px solid var(--text-dark);
 }
 
 .btn-cta-outline:hover {
-  background: var(--primary-coral);
+  background: var(--text-dark);
   color: var(--bg-white);
 }
 
@@ -394,7 +406,7 @@ section {
 }
 
 .card {
-  border: 1px solid var(--border-coral);
+  border: 1px solid var(--border-teal);
   border-radius: 20px;
   padding: 28px;
   background: var(--bg-white);
@@ -408,22 +420,25 @@ section {
 
 .card .icon {
   font-size: 20px;
+  color: var(--primary-coral);
   margin-bottom: 14px;
 }
 
 .card h3 {
   font: 24px "Playfair Display";
+  color: var(--text-dark);
   margin-bottom: 10px;
 }
 
 .card p {
   font-size: 14px;
+  color: var(--text-dark);
   opacity: .85;
 }
 
 /* Vision & Mission Box */
 .vision-mission-box {
-  border: 1px solid var(--primary-coral);
+  border: 1px solid var(--border-teal);
   border-radius: 28px;
   padding: 50px 40px;
   background: var(--bg-soft);
@@ -431,7 +446,7 @@ section {
 }
 
 .vm-card {
-  border: 1px solid var(--border-coral);
+  border: 1px solid var(--border-teal);
   border-radius: 20px;
   padding: 32px;
   background: var(--bg-white);
@@ -439,11 +454,13 @@ section {
 
 .vm-card h3 {
   font: 28px "Playfair Display";
+  color: var(--text-dark);
   margin-bottom: 14px;
 }
 
 .vm-card p, .vm-card ul {
   font-size: 15px;
+  color: var(--text-dark);
   opacity: .9;
 }
 
@@ -462,36 +479,39 @@ section {
 .vm-card ul li:before {
   content: "✦";
   font-size: 10px;
+  color: var(--primary-coral);
 }
 
-/* Philosophy Banner Grid */
+/* Philosophy Grid */
 .philosophy-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 32px;
   align-items: center;
-  border: 1px solid var(--border-coral);
+  border: 1px solid var(--border-teal);
   border-radius: 28px;
   padding: 40px;
-  background: var(--bg-white);
+  background: var(--bg-soft);
   margin: 30px 0;
 }
 
 .philosophy-banner h2 {
   font-size: clamp(32px, 5vw, 50px);
   line-height: 1.1;
+  color: var(--text-dark);
   margin: 10px 0 20px;
 }
 
 .philosophy-banner p {
   font-size: 15px;
+  color: var(--text-dark);
   margin-bottom: 14px;
   opacity: .9;
 }
 
 /* Locations & Map Box */
 .locations-box {
-  border: 1px solid var(--border-coral);
+  border: 1px solid var(--border-teal);
   border-radius: 28px;
   padding: 40px;
   background: var(--bg-soft);
@@ -515,6 +535,7 @@ section {
 .location-list li {
   font-size: 14px;
   font-weight: 500;
+  color: var(--text-dark);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -523,6 +544,7 @@ section {
 .location-list li:before {
   content: "✦";
   font-size: 10px;
+  color: var(--primary-coral);
 }
 
 .areas {
@@ -533,12 +555,12 @@ section {
 }
 
 .area {
-  border: 1px solid var(--border-coral);
+  border: 1px solid var(--border-teal);
   border-radius: 999px;
   background: var(--bg-white);
   padding: 6px 14px;
   font-size: 12px;
-  color: var(--primary-coral);
+  color: var(--text-dark);
   transition: .2s;
 }
 
@@ -558,11 +580,13 @@ section {
 
 .map-card h4 {
   font: 22px "Playfair Display";
+  color: var(--text-dark);
   margin: 8px 0 12px;
 }
 
 .map-card p {
   font-size: 13px;
+  color: var(--text-dark);
   opacity: .8;
   margin-bottom: 20px;
 }
@@ -598,13 +622,14 @@ section {
 }
 
 .cta-banner .btn-cta:hover {
-  background: transparent;
+  background: var(--text-dark);
   color: var(--bg-white);
+  border-color: var(--text-dark);
 }
 
 /* Footer */
 footer {
-  border-top: 1px solid var(--border-coral);
+  border-top: 1px solid var(--border-teal);
   padding: 40px 0 30px;
   margin-top: 40px;
 }
@@ -614,12 +639,13 @@ footer {
   justify-content: space-between;
   gap: 30px;
   padding-bottom: 30px;
-  border-bottom: 1px solid var(--border-coral);
+  border-bottom: 1px solid var(--border-teal);
 }
 
 .footer-brand p {
   max-width: 320px;
   font-size: 13px;
+  color: var(--text-dark);
   opacity: .8;
   margin-top: 10px;
 }
@@ -639,6 +665,7 @@ footer {
   font: 10px "DM Mono";
   text-transform: uppercase;
   letter-spacing: .15em;
+  color: var(--text-dark);
   opacity: .7;
 }
 
@@ -657,10 +684,10 @@ footer {
     left: 16px;
     right: 16px;
     background: var(--bg-white);
-    border: 1px solid var(--primary-coral);
+    border: 1px solid var(--border-teal);
     border-radius: 16px;
     padding: 8px;
-    box-shadow: 0 10px 30px rgba(210, 107, 82, 0.15);
+    box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12);
   }
 
   .mobile-panel.show { display: block; }
@@ -669,7 +696,7 @@ footer {
     display: block;
     width: 100%;
     padding: 14px;
-    border-bottom: 1px solid var(--border-coral);
+    border-bottom: 1px solid var(--border-teal);
     font: 10px "DM Mono";
     text-transform: uppercase;
     letter-spacing: .14em;
@@ -763,7 +790,7 @@ footer {
 
 <main id="main">
 
-  <!-- HERO SECTION WITH HERO PHOTO -->
+  <!-- HERO SECTION WITH FOTO HERO (about1.jpg) -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-grid">
@@ -783,10 +810,10 @@ footer {
           </div>
         </div>
 
-        <!-- FOTO HERO DISINI -->
+        <!-- FOTO HERO DISINI (about1.jpg) -->
         <div class="photo-frame">
-          <img src="/dripwell-hero.jpg" alt="Dripwell Bali medical team providing IV drip treatment at a villa" loading="eager">
-          <div class="photo-badge">✦ Professional Mobile Wellness</div>
+          <img src="/about1.jpg" alt="DripWell Bali mobile IV therapy session in a villa" loading="eager">
+          <div class="photo-badge">✦ Professional Care at Your Door</div>
         </div>
       </div>
     </div>
@@ -805,7 +832,7 @@ footer {
           <div class="eyebrow">Our Vision</div>
           <h3>Visi DripWell Bali</h3>
           <p>
-            Menjadi penyedia layanan *mobile IV therapy* dan kesehatan terdepan di Bali yang dikenal atas profesionalisme medis, standar pelayanan kelas atas, serta kemudahan akses perawatan langsung ke lokasi klien.
+            Menjadi penyedia layanan <i>mobile IV therapy</i> dan kesehatan terdepan di Bali yang dikenal atas profesionalisme medis, standar pelayanan kelas atas, serta kemudahan akses perawatan langsung ke lokasi klien.
           </p>
         </div>
 
@@ -816,7 +843,7 @@ footer {
             <li>Memberikan pelayanan kesehatan dan perawatan IV therapy berkualitas tinggi oleh tenaga medis profesional dan berpengalaman.</li>
             <li>Mengutamakan kenyamanan, privasi, dan keamanan pasien tanpa perlu keluar dari tempat menginap.</li>
             <li>Menyajikan konsultasi personal untuk memastikan setiap perawatan disesuaikan dengan kondisi dan kebutuhan individu.</li>
-            <li>Menghadirkan pengalaman *wellness* yang transparan, aman, responsif, dan tanpa hambatan di seluruh wilayah Bali.</li>
+            <li>Menghadirkan pengalaman <i>wellness</i> yang transparan, aman, responsif, dan tanpa hambatan di seluruh wilayah Bali.</li>
           </ul>
         </div>
       </div>
@@ -857,7 +884,7 @@ footer {
   </section>
 
   <!-- PERSONALIZED CARE & WHY CHOOSE US -->
-  <section style="border-top: 1px solid var(--border-coral); border-bottom: 1px solid var(--border-coral);">
+  <section style="border-top: 1px solid var(--border-teal); border-bottom: 1px solid var(--border-teal);">
     <div class="wrap">
       <div style="text-align: center; max-width: 750px; margin: 0 auto 40px;">
         <div class="eyebrow">Professional Standards</div>
@@ -901,7 +928,7 @@ footer {
     </div>
   </section>
 
-  <!-- PHILOSOPHY GRID WITH LOGO PHOTO -->
+  <!-- PHILOSOPHY GRID WITH FOTO PHILOSOPHY (about2.jpg) -->
   <section class="wrap">
     <div class="philosophy-grid">
       <div class="philosophy-banner" style="border: none; padding: 0; margin: 0;">
@@ -913,15 +940,15 @@ footer {
         <p>
           By bringing our services directly to you, we create an experience that feels personal, convenient, and thoughtfully considered from beginning to end.
         </p>
-        <p style="font-family: 'Playfair Display', serif; font-style: italic; margin-top: 16px; font-size: 17px;">
+        <p style="font-family: 'Playfair Display', serif; font-style: italic; margin-top: 16px; font-size: 17px;" class="coral-text">
           "Because wellness is not only about what you receive—it is also about how you experience it."
         </p>
       </div>
 
-      <!-- SECONDARY PHOTO / LOGO BADGE -->
-      <div class="photo-frame" style="height: 350px;">
-        <img src="/dripwell-logo.jpeg" alt="Dripwell Bali emblem and brand image" loading="lazy">
-        <div class="photo-badge">✦ Care Wherever You Are</div>
+      <!-- SECONDARY FOTO DISINI (about2.jpg) -->
+      <div class="photo-frame" style="height: 360px;">
+        <img src="/about2.jpg" alt="Dripwell Bali wellness service setup" loading="lazy">
+        <div class="photo-badge">✦ Effortless Personal Wellness</div>
       </div>
     </div>
   </section>
@@ -994,7 +1021,7 @@ footer {
   <!-- CTA BANNER -->
   <section class="wrap">
     <div class="cta-banner">
-      <div class="eyebrow" style="opacity: .9;">Our Commitment</div>
+      <div class="eyebrow" style="color: var(--bg-white); opacity: .9;">Our Commitment</div>
       <h2 class="display">Experience Wellness, On Your Terms</h2>
       <p>
         Professional Care. Personal Comfort. Wherever You Are.<br>
@@ -1027,7 +1054,7 @@ footer {
       </div>
 
       <div class="footer-actions">
-        <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">
+        <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali" target="_blank" rel="noopener noreferrer" style="font-weight: 600;" class="coral-text">
           ✦ Chat WhatsApp: 082221614966
         </a>
         <a href="mailto:dripwellbali@gmail.com">
