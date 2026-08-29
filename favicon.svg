@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Ocean Blue Gradient exact to original logo -->
+    <linearGradient id="dripGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b2447"/>
+      <stop offset="50%" stop-color="#004e89"/>
+      <stop offset="100%" stop-color="#0077b6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Transparent/Clean White -->
+  <rect width="512" height="512" fill="none"/>
+
+  <g transform="translate(0, 10)">
+    <!-- Main Drop Contour Line -->
+    <path d="M 256 55 C 256 55, 130 220, 130 320 A 126 126 0 0 0 382 320 C 382 220, 256 55, 256 55 Z" 
+          fill="none" 
+          stroke="url(#dripGradient)" 
+          stroke-width="26" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Filled Plus Cross Inside Drop -->
+    <path d="M 234 200 H 278 C 283 200 286 203 286 208 V 242 H 320 C 325 242 328 245 328 250 V 294 C 328 299 325 302 320 302 H 286 V 336 C 286 341 283 344 278 344 H 234 C 229 344 226 341 226 336 V 302 H 192 C 187 302 184 299 184 294 V 250 C 184 245 187 242 192 242 H 226 V 208 C 226 203 229 200 234 200 Z" 
+          fill="url(#dripGradient)"/>
+
+    <!-- Inner Water Ripple -->
+    <path d="M 136 385 A 160 40 0 0 0 376 385" 
+          fill="none" 
+          stroke="url(#dripGradient)" 
+          stroke-width="16" 
+          stroke-linecap="round"/>
+
+    <!-- Outer Water Ripple -->
+    <path d="M 94 420 A 205 50 0 0 0 418 420" 
+          fill="none" 
+          stroke="url(#dripGradient)" 
+          stroke-width="20" 
+          stroke-linecap="round"/>
+  </g>
+</svg>
