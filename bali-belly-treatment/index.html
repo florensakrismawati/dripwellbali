@@ -463,16 +463,18 @@ section {
 .package-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   border-bottom: 1px solid var(--border-coral);
   padding-bottom: 24px;
   margin-bottom: 28px;
 }
 
+/* PERBAIKAN UKURAN HARGA AGAR RAPI */
 .package-price {
-  font: 36px "Playfair Display";
+  font: 24px "Playfair Display";
   color: var(--primary-coral);
   font-weight: 600;
+  letter-spacing: .02em;
 }
 
 .package-details-grid {
@@ -803,6 +805,7 @@ footer {
 
   .hero-grid, .locations-grid, .grid-2, .package-details-grid, .form-grid { grid-template-columns: 1fr; gap: 24px; }
   .photo-frame { height: 300px; }
+  .package-header { flex-direction: column; align-items: flex-start; gap: 10px; }
   .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .booking-section, .package-box, .warning-box, .locations-box, .cta-banner { padding: 34px 20px; }
   .warning-list { grid-template-columns: 1fr; }
@@ -888,7 +891,7 @@ footer {
 
 <main id="main">
 
-  <!-- HERO SECTION WITH GAMBAR HERO (bali-belly.jpg) -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-grid">
@@ -975,6 +978,7 @@ footer {
           <div class="eyebrow">All-Inclusive Home Service</div>
           <h2 class="display" style="font-size: clamp(32px, 4vw, 48px);">Bali Belly Package</h2>
         </div>
+        <!-- HARGA DENGAN UKURAN RAPI -->
         <div class="package-price">Rp 2.025.000</div>
       </div>
 
@@ -1278,9 +1282,9 @@ footer {
     </div>
   </section>
 
-  <!-- FAQ SECTION -->
+  <!-- FAQ SECTION (DENGAN MARGIN SPACING DITAMBAHKAN) -->
   <section class="wrap">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 48px;">
       <div class="eyebrow">Frequently Asked Questions</div>
       <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">FAQ</h2>
     </div>
@@ -1348,7 +1352,7 @@ footer {
     </div>
   </section>
 
-  <!-- CTA BANNER -->
+  <!-- CTA BANNER (HANYA MENGGUNAKAN TOMBOL CHAT ON WHATSAPP) -->
   <section class="wrap">
     <div class="cta-banner">
       <div class="eyebrow" style="color: var(--bg-white); opacity: .9;">Feeling Unwell in Bali?</div>
@@ -1357,11 +1361,9 @@ footer {
         Doctor & Nurse Home Service — Professional medical care at your hotel or villa.<br>
         Available 24/7 across Bali.
       </p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Bali%20Belly%20treatment." target="_blank" rel="noopener noreferrer" class="btn-cta">
-          Book Bali Belly Treatment →
-        </a>
-      </div>
+      <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Bali%20Belly%20treatment." target="_blank" rel="noopener noreferrer" class="btn-cta">
+        Chat on WhatsApp →
+      </a>
     </div>
   </section>
 
