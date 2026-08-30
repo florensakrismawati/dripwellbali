@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
 <title>Frequently Asked Questions (FAQ) | DripWell Bali Mobile Medical Service</title>
 
@@ -101,6 +101,7 @@
   --primary-coral: #d26b52;
   --border-teal: rgba(19, 62, 61, 0.15);
   --border-coral: rgba(210, 107, 82, 0.25);
+  --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
 }
 
 * {
@@ -127,7 +128,7 @@ body {
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; display: block; height: auto; }
 
 /* Accessibility */
 .skip-link {
@@ -202,12 +203,12 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .navlink {
   font: 10px "DM Mono";
-  letter-spacing: .16em;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--text-dark);
   opacity: .8;
@@ -220,6 +221,46 @@ nav {
   font-weight: 700;
 }
 
+/* Dropdown Menu CSS */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-white);
+  min-width: 220px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-teal);
+  border-radius: 12px;
+  padding: 8px 0;
+  z-index: 1001;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  font: 10px "DM Mono";
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover, .dropdown-menu a.active-link {
+  background: var(--bg-white);
+  color: var(--primary-coral);
+  font-weight: bold;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .nav-book {
   background: var(--primary-coral);
   color: var(--bg-white);
@@ -228,9 +269,12 @@ nav {
   font: 10px "DM Mono";
   letter-spacing: .16em;
   text-transform: uppercase;
-  transition: .2s;
+  transition: background .2s, transform .2s;
 }
-.nav-book:hover { background: var(--text-dark); }
+.nav-book:hover {
+  background: var(--text-dark);
+  transform: translateY(-1px);
+}
 
 .mobile-menu {
   display: none;
@@ -243,7 +287,27 @@ nav {
   font-size: 18px;
 }
 
-.mobile-panel { display: none; }
+.mobile-panel { 
+  display: none; 
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.mobile-submenu {
+  padding-left: 16px;
+  background: rgba(19, 62, 61, 0.03);
+}
+
+.mobile-submenu a {
+  font-size: 9px !important;
+  opacity: 0.85;
+}
+
+.mobile-submenu a.active-link {
+  color: var(--primary-coral);
+  font-weight: bold;
+  opacity: 1;
+}
 
 .wrap { max-width: 1280px; margin: auto; padding: 0 20px; }
 section { padding: 60px 0; }
@@ -267,12 +331,12 @@ section { padding: 60px 0; }
 
 /* Hero Section */
 .hero {
-  padding: 60px 0 40px;
+  padding: 50px 0 30px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: clamp(38px, 5vw, 64px);
+  font-size: clamp(32px, 5vw, 64px);
   line-height: 1.1;
   letter-spacing: -.03em;
   margin-top: 10px;
@@ -286,7 +350,7 @@ section { padding: 60px 0; }
 }
 
 .hero p {
-  font-size: 17px;
+  font-size: 16px;
   margin: 16px auto 0;
   color: var(--text-dark);
   opacity: .9;
@@ -296,10 +360,10 @@ section { padding: 60px 0; }
 /* FAQ Accordion Styling */
 .faq-container {
   max-width: 850px;
-  margin: 20px auto 60px;
+  margin: 20px auto 40px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .faq-item {
@@ -310,54 +374,50 @@ section { padding: 60px 0; }
   transition: border-color .2s;
 }
 
-.faq-item:hover {
-  border-color: var(--primary-coral);
-}
-
-.faq-question {
+.faq-q {
   width: 100%;
+  padding: 18px 20px;
   background: none;
   border: none;
   text-align: left;
-  padding: 22px 24px;
-  font-size: 18px;
+  font: 16px "DM Sans", sans-serif;
   font-weight: 600;
   color: var(--text-dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
-.faq-question span.icon {
-  font-size: 20px;
+.faq-q .icon {
+  font-size: 18px;
   color: var(--primary-coral);
-  transition: transform .3s;
+  transition: transform .2s;
+  flex-shrink: 0;
 }
 
-.faq-item.active .faq-question span.icon {
-  transform: rotate(45deg);
+.faq-q.open .icon {
+  transform: rotate(180deg);
 }
 
-.faq-answer {
+.faq-a {
   max-height: 0;
   overflow: hidden;
-  transition: max-height .3s ease-out;
-  padding: 0 24px;
-  font-size: 15px;
-  opacity: .85;
+  transition: max-height .3s ease;
+  padding: 0 20px;
 }
 
-.faq-item.active .faq-answer {
-  max-height: 300px;
-  padding-bottom: 24px;
+.faq-a p {
+  padding-bottom: 18px;
+  font-size: 14px;
+  opacity: .85;
 }
 
 /* Help Box */
 .help-box {
   border: 1px solid var(--border-teal);
-  border-radius: 28px;
-  padding: 50px 40px;
+  border-radius: 20px;
+  padding: 36px 20px;
   background: var(--bg-soft);
   text-align: center;
   max-width: 850px;
@@ -367,6 +427,7 @@ section { padding: 60px 0; }
 .btn-cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   background: var(--primary-coral);
   color: var(--bg-white);
@@ -379,6 +440,7 @@ section { padding: 60px 0; }
   transition: all .2s;
   border: 1px solid var(--primary-coral);
   margin-top: 20px;
+  text-align: center;
 }
 
 .btn-cta:hover {
@@ -390,7 +452,7 @@ section { padding: 60px 0; }
 footer {
   border-top: 1px solid var(--border-teal);
   padding: 40px 0 30px;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .footer-top {
@@ -430,12 +492,26 @@ footer {
 
 .sticky-bar { display: none; }
 
-@media (max-width: 900px) {
+/* Responsive Mobile Layout */
+@media (max-width: 1024px) {
+  body {
+    padding-bottom: 75px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .wrap {
+    padding: 0 16px;
+  }
+
   nav { display: none; }
   .mobile-menu { display: block; }
+
   .mobile-panel {
     position: absolute;
-    top: 70px;
+    top: 65px;
     left: 16px;
     right: 16px;
     background: var(--bg-white);
@@ -444,25 +520,34 @@ footer {
     padding: 8px;
     box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12);
   }
+
   .mobile-panel.show { display: block; }
+
   .mobile-panel a {
     display: block;
     width: 100%;
-    padding: 14px;
+    padding: 12px 14px;
     border-bottom: 1px solid var(--border-teal);
     font: 10px "DM Mono";
     text-transform: uppercase;
     letter-spacing: .14em;
   }
+
   .mobile-panel a:last-child { border-bottom: 0; }
+
+  .btn-cta {
+    width: 100%;
+  }
+
   .sticky-bar {
     display: block;
     position: fixed;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    z-index: 100;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    z-index: 1000;
   }
+
   .sticky-bar a {
     display: block;
     width: 100%;
@@ -471,15 +556,16 @@ footer {
     color: var(--bg-white);
     border-radius: 999px;
     padding: 14px;
-    font: 10px "DM Mono";
-    letter-spacing: .16em;
+    font: 11px "DM Mono";
+    letter-spacing: .14em;
     text-transform: uppercase;
-    box-shadow: 0 10px 25px rgba(210, 107, 82, 0.3);
+    box-shadow: 0 8px 20px rgba(210, 107, 82, 0.35);
   }
+
   .footer-top { flex-direction: column; }
   .footer-actions { align-items: flex-start; }
   .copyright { flex-direction: column; gap: 8px; }
-  .faq-container, .help-box { padding: 0 10px; }
+  .faq-container, .help-box { padding-left: 0; padding-right: 0; }
 }
 </style>
 </head>
@@ -503,13 +589,35 @@ footer {
 
     <nav aria-label="Main navigation">
       <a class="navlink" href="/">Home</a>
-      <a class="navlink" href="/home-doctor-bali/">Home Doctor</a>
-      <a class="navlink" href="/iv-drip-bali/">IV Drip</a>
-      <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
-      <a class="navlink" href="/bali-belly-treatment/">Bali Belly</a>
-      <a class="navlink" href="/hangover-treatment-bali/">Hangover</a>
-      <a class="navlink active" href="/faq/">FAQ</a>
       <a class="navlink" href="/about/">About Us</a>
+      
+      <!-- HEALTH PACKAGES DROPDOWN -->
+      <div class="dropdown">
+        <a class="navlink" href="javascript:void(0);">Health Packages ▾</a>
+        <div class="dropdown-menu">
+          <a href="/bali-belly-package/">Bali Belly Package</a>
+          <a href="/hangover-package/">Hangover Package</a>
+          <a href="/fever-package/">Fever Package</a>
+          <a href="/flu-relief-package/">Flu Relief Package</a>
+        </div>
+      </div>
+
+      <!-- IV DRIPS VITAMIN DROPDOWN -->
+      <div class="dropdown">
+        <a class="navlink" href="/iv-drip-bali/">IV Drips Vitamin ▾</a>
+        <div class="dropdown-menu">
+          <a href="/jetlag-package/">Jetlag Package</a>
+          <a href="/energy-booster-package/">Energy Booster Package</a>
+          <a href="/immune-booster-basic/">Immune Booster Basic</a>
+          <a href="/immune-booster-standard-package/">Immune Booster Standard Package</a>
+          <a href="/ultimate-immune-booster/">Ultimate Immune Booster</a>
+        </div>
+      </div>
+
+      <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
+      <a class="navlink" href="/home-doctor-bali/">Home Doctor</a>
+      <a class="navlink" href="/blog/">Blog</a>
+      <a class="navlink active" href="/faq/">FAQ</a>
       <a class="navlink" href="/contact/">Contact</a>
       <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
     </nav>
@@ -521,13 +629,31 @@ footer {
 
   <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
     <a href="/" onclick="closeMenu()">Home</a>
-    <a href="/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
-    <a href="/iv-drip-bali/" onclick="closeMenu()">IV Drip</a>
-    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
-    <a href="/bali-belly-treatment/" onclick="closeMenu()">Bali Belly</a>
-    <a href="/hangover-treatment-bali/" onclick="closeMenu()">Hangover</a>
-    <a href="/faq/" onclick="closeMenu()">FAQ</a>
     <a href="/about/" onclick="closeMenu()">About Us</a>
+    
+    <!-- MOBILE HEALTH PACKAGES -->
+    <a href="javascript:void(0);" onclick="closeMenu()"><strong>Health Packages</strong></a>
+    <div class="mobile-submenu">
+      <a href="/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
+      <a href="/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
+      <a href="/fever-package/" onclick="closeMenu()">— Fever Package</a>
+      <a href="/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
+    </div>
+
+    <!-- MOBILE IV DRIPS VITAMIN -->
+    <a href="/iv-drip-bali/" onclick="closeMenu()"><strong>IV Drips Vitamin</strong></a>
+    <div class="mobile-submenu">
+      <a href="/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
+      <a href="/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
+      <a href="/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
+      <a href="/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
+      <a href="/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
+    </div>
+
+    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
+    <a href="/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
+    <a href="/blog/" onclick="closeMenu()">Blog</a>
+    <a href="/faq/" class="active-link" onclick="closeMenu()">FAQ</a>
     <a href="/contact/" onclick="closeMenu()">Contact</a>
     <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Chat on WhatsApp</a>
   </div>
@@ -555,67 +681,67 @@ footer {
       
       <!-- FAQ 1 -->
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          How does DripWell Bali mobile medical service work?
-          <span class="icon">+</span>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>How does DripWell Bali mobile medical service work?</span>
+          <span class="icon">⌄</span>
         </button>
-        <div class="faq-answer">
-          Simply contact us via WhatsApp or submit a booking request. Our licensed medical doctor and registered nurse will visit your villa, hotel, or resort directly to provide professional assessment, consultation, and treatment in the comfort of your room.
+        <div class="faq-a">
+          <p>Simply contact us via WhatsApp or submit a booking request. Our licensed medical doctor and registered nurse will visit your villa, hotel, or resort directly to provide professional assessment, consultation, and treatment in the comfort of your room.</p>
         </div>
       </div>
 
       <!-- FAQ 2 -->
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          Are medical doctors involved in every treatment?
-          <span class="icon">+</span>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Are medical doctors involved in every treatment?</span>
+          <span class="icon">⌄</span>
         </button>
-        <div class="faq-answer">
-          Yes. Patient safety is our highest priority. Every IV drip or health package includes an in-person doctor consultation and physical evaluation alongside our licensed nurses to ensure safe and accurate care.
+        <div class="faq-a">
+          <p>Yes. Patient safety is our highest priority. Every IV drip or health package includes an in-person doctor consultation and physical evaluation alongside our licensed nurses to ensure safe and accurate care.</p>
         </div>
       </div>
 
       <!-- FAQ 3 -->
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          What areas in Bali do you cover?
-          <span class="icon">+</span>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What areas in Bali do you cover?</span>
+          <span class="icon">⌄</span>
         </button>
-        <div class="faq-answer">
-          We provide mobile medical services across Canggu, Pererenan, Seseh, Munggu, Kedungu, Tabanan, Yeh Gangga, Tanah Lot, Cemagi, Beraban, Nuanu Area, Berawa, Batu Bolong, Echo Beach, and Mengwi.
+        <div class="faq-a">
+          <p>We provide mobile medical services across Canggu, Pererenan, Seseh, Munggu, Kedungu, Tabanan, Yeh Gangga, Tanah Lot, Cemagi, Beraban, Nuanu Area, Berawa, Batu Bolong, Echo Beach, and Mengwi.</p>
         </div>
       </div>
 
       <!-- FAQ 4 -->
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          How long does an IV drip session take?
-          <span class="icon">+</span>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>How long does an IV drip session take?</span>
+          <span class="icon">⌄</span>
         </button>
-        <div class="faq-answer">
-          Most IV drip therapy and vitamin booster sessions take between 45 to 60 minutes while you rest comfortably in your villa or hotel.
+        <div class="faq-a">
+          <p>Most IV drip therapy and vitamin booster sessions take between 45 to 60 minutes while you rest comfortably in your villa or hotel.</p>
         </div>
       </div>
 
       <!-- FAQ 5 -->
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          What payment methods do you accept?
-          <span class="icon">+</span>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What payment methods do you accept?</span>
+          <span class="icon">⌄</span>
         </button>
-        <div class="faq-answer">
-          We accept cash in Indonesian Rupiah (IDR) or major foreign currencies equivalent, credit/debit card payments, and secure bank transfers as coordinated through our WhatsApp support team.
+        <div class="faq-a">
+          <p>We accept cash in Indonesian Rupiah (IDR) or major foreign currencies equivalent, credit/debit card payments, and secure bank transfers as coordinated through our WhatsApp support team.</p>
         </div>
       </div>
 
       <!-- FAQ 6 -->
       <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          What should I prepare before the medical team arrives?
-          <span class="icon">+</span>
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What should I prepare before the medical team arrives?</span>
+          <span class="icon">⌄</span>
         </button>
-        <div class="faq-answer">
-          You don't need to prepare much! Just ensure you have a comfortable spot to sit or lie down (such as a bed or sofa), your ID or passport details, and information regarding any known drug allergies or current medications you are taking.
+        <div class="faq-a">
+          <p>You don't need to prepare much! Just ensure you have a comfortable spot to sit or lie down (such as a bed or sofa), your ID or passport details, and information regarding any known drug allergies or current medications you are taking.</p>
         </div>
       </div>
 
@@ -624,8 +750,8 @@ footer {
     <!-- STILL HAVE QUESTIONS BOX -->
     <div class="help-box">
       <div class="eyebrow">24/7 Support</div>
-      <h3 class="display" style="font-size: clamp(26px, 4vw, 36px); margin-bottom: 12px;">Still Have Questions?</h3>
-      <p style="font-size: 15px; opacity: .85; max-width: 600px; margin: 0 auto;">
+      <h3 class="display" style="font-size: clamp(24px, 4vw, 36px); margin-bottom: 12px;">Still Have Questions?</h3>
+      <p style="font-size: 14px; opacity: .85; max-width: 600px; margin: 0 auto;">
         If you couldn't find the answer you were looking for, our medical coordinators are available 24/7 on WhatsApp to assist you immediately.
       </p>
       <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20have%20a%20question%20not%20listed%20in%20your%20FAQ." target="_blank" rel="noopener noreferrer" class="btn-cta">
@@ -706,20 +832,15 @@ function closeMenu(){
   btn.setAttribute("aria-label", "Open navigation menu");
 }
 
-function toggleFaq(button) {
-  const item = button.parentElement;
-  const isActive = item.classList.contains('active');
+function toggleFaq(btn){
+  const item = btn.parentElement;
+  const answer = item.querySelector('.faq-a');
+  const open = btn.classList.toggle('open');
   
-  // Close all open items
-  document.querySelectorAll('.faq-item').forEach(el => {
-    el.classList.remove('active');
-    el.querySelector('.faq-question span.icon').textContent = '+';
-  });
-
-  // If clicked item was not active, open it
-  if (!isActive) {
-    item.classList.add('active');
-    button.querySelector('.faq-question span.icon').textContent = '-';
+  if(open) {
+    answer.style.maxHeight = answer.scrollHeight + "px";
+  } else {
+    answer.style.maxHeight = "0";
   }
 }
 </script>
