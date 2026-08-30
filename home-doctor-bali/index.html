@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
 <title>Home Doctor Visit Bali | Private Medical Care | DripWell Bali</title>
 
@@ -89,7 +89,7 @@ body {
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; display: block; height: auto; }
 
 /* Accessibility */
 .skip-link {
@@ -253,7 +253,11 @@ nav {
   font-size: 18px;
 }
 
-.mobile-panel { display: none; }
+.mobile-panel { 
+  display: none; 
+  max-height: 80vh;
+  overflow-y: auto;
+}
 
 .mobile-submenu {
   padding-left: 16px;
@@ -314,8 +318,8 @@ section {
 }
 
 .hero h1 {
-  font-size: clamp(40px, 5.5vw, 72px);
-  line-height: 1.05;
+  font-size: clamp(32px, 5.5vw, 72px);
+  line-height: 1.1;
   letter-spacing: -.03em;
   margin-top: 10px;
   color: var(--text-dark);
@@ -328,7 +332,7 @@ section {
 }
 
 .hero p {
-  font-size: 17px;
+  font-size: 16px;
   margin-top: 20px;
   color: var(--text-dark);
   opacity: .9;
@@ -386,6 +390,7 @@ section {
 .btn-cta {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   background: var(--primary-coral);
   color: var(--bg-white);
@@ -397,6 +402,7 @@ section {
   font-weight: 600;
   transition: all .2s;
   border: 1px solid var(--primary-coral);
+  text-align: center;
 }
 
 .btn-cta:hover {
@@ -407,6 +413,7 @@ section {
 .btn-cta-outline {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   background: transparent;
   color: var(--text-dark);
@@ -418,6 +425,7 @@ section {
   font-weight: 600;
   transition: all .2s;
   border: 1px solid var(--text-dark);
+  text-align: center;
 }
 
 .btn-cta-outline:hover {
@@ -466,7 +474,7 @@ section {
 }
 
 .card h3 {
-  font: 24px "Playfair Display";
+  font: 22px "Playfair Display";
   color: var(--text-dark);
   margin-bottom: 10px;
 }
@@ -523,20 +531,6 @@ section {
   outline: none;
 }
 
-/* Step / Process Section */
-.step-card {
-  border: 1px solid var(--border-teal);
-  border-radius: 20px;
-  padding: 24px;
-  background: var(--bg-white);
-}
-
-.step-num {
-  font: 12px "DM Mono";
-  color: var(--primary-coral);
-  margin-bottom: 10px;
-}
-
 /* Conversion / Dispatch Box */
 .dispatch-banner {
   border: 2px solid var(--text-dark);
@@ -549,7 +543,7 @@ section {
 
 .dispatch-banner h2 {
   color: var(--bg-white);
-  font-size: clamp(32px, 5vw, 48px);
+  font-size: clamp(28px, 5vw, 48px);
   margin-bottom: 10px;
 }
 
@@ -602,22 +596,24 @@ section {
 
 .faq-q {
   width: 100%;
-  padding: 20px 24px;
+  padding: 18px 20px;
   background: none;
   border: none;
   text-align: left;
-  font: 17px "DM Sans", sans-serif;
+  font: 16px "DM Sans", sans-serif;
   font-weight: 600;
   color: var(--text-dark);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .faq-q .icon {
   font-size: 18px;
   color: var(--primary-coral);
   transition: transform .2s;
+  flex-shrink: 0;
 }
 
 .faq-q.open .icon {
@@ -628,12 +624,12 @@ section {
   max-height: 0;
   overflow: hidden;
   transition: max-height .3s ease;
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 .faq-a p {
-  padding-bottom: 20px;
-  font-size: 15px;
+  padding-bottom: 18px;
+  font-size: 14px;
   opacity: .85;
 }
 
@@ -674,7 +670,7 @@ section {
   border-radius: 999px;
   background: var(--bg-white);
   color: var(--text-dark);
-  padding: 8px 16px;
+  padding: 6px 14px;
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
@@ -733,14 +729,26 @@ footer {
 
 .sticky-bar { display: none; }
 
-/* Responsive Styles for Mobile */
+/* Mobile Optimizations */
 @media (max-width: 1024px) {
+  body {
+    padding-bottom: 75px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .wrap {
+    padding: 0 16px;
+  }
+
   nav { display: none; }
   .mobile-menu { display: block; }
 
   .mobile-panel {
     position: absolute;
-    top: 70px;
+    top: 65px;
     left: 16px;
     right: 16px;
     background: var(--bg-white);
@@ -764,18 +772,39 @@ footer {
 
   .mobile-panel a:last-child { border-bottom: 0; }
 
-  .hero-grid, .grid-2, .dispatch-grid, .form-grid { grid-template-columns: 1fr; gap: 24px; }
-  .photo-frame { height: 360px; }
-  .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .booking-section, .locations-box, .dispatch-banner { padding: 34px 20px; }
+  .hero {
+    padding: 30px 0;
+  }
+
+  .hero-grid, .grid-2, .grid-3, .grid-4, .dispatch-grid, .form-grid { 
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+  }
+
+  .photo-frame { 
+    height: 280px; 
+  }
+
+  .booking-section, .locations-box, .dispatch-banner { 
+    padding: 24px 16px; 
+    border-radius: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .btn-cta, .btn-cta-outline {
+    width: 100%;
+  }
 
   .sticky-bar {
     display: block;
     position: fixed;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    z-index: 100;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    z-index: 1000;
   }
 
   .sticky-bar a {
@@ -786,10 +815,10 @@ footer {
     color: var(--bg-white);
     border-radius: 999px;
     padding: 14px;
-    font: 10px "DM Mono";
-    letter-spacing: .16em;
+    font: 11px "DM Mono";
+    letter-spacing: .14em;
     text-transform: uppercase;
-    box-shadow: 0 10px 25px rgba(210, 107, 82, 0.3);
+    box-shadow: 0 8px 20px rgba(210, 107, 82, 0.35);
   }
 
   .footer-top { flex-direction: column; }
@@ -915,7 +944,7 @@ footer {
             <a href="#booking-form" class="btn-cta">
               Request a Doctor Visit →
             </a>
-            <p class="mono" style="font-size: 11px; margin-top: 10px; opacity: .7;">
+            <p class="mono" style="font-size: 11px; margin-top: 10px; opacity: .7; text-align: center;">
               Check availability for your location
             </p>
           </div>
@@ -933,13 +962,13 @@ footer {
   <section class="wrap">
     <div style="text-align: center; max-width: 800px; margin: 0 auto;">
       <div class="eyebrow">MOBILE MEDICAL SERVICE</div>
-      <h2 class="display" style="font-size: clamp(32px, 5vw, 52px);">
+      <h2 class="display" style="font-size: clamp(28px, 5vw, 52px);">
         A More Comfortable Way to See a Doctor.
       </h2>
-      <p style="font-size: 17px; margin-top: 18px; opacity: .9;">
+      <p style="font-size: 16px; margin-top: 18px; opacity: .9;">
         When you're feeling unwell, travelling to a clinic or hospital may not always be convenient.
       </p>
-      <p style="font-size: 15px; margin-top: 14px; opacity: .85;">
+      <p style="font-size: 14px; margin-top: 14px; opacity: .85;">
         DripWell Bali brings professional medical care directly to your preferred location, allowing you to receive a private doctor consultation without unnecessary travel. Whether you are staying at a villa, hotel, resort, or private residence, our Home Doctor Visit service is designed around comfort, privacy, and individual needs.
       </p>
     </div>
@@ -948,9 +977,9 @@ footer {
   <!-- 03 — QUICK BENEFITS -->
   <section style="border-top: 1px solid var(--border-teal); border-bottom: 1px solid var(--border-teal);">
     <div class="wrap">
-      <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
         <div class="eyebrow">WHY HOME VISITS</div>
-        <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">
+        <h2 class="display" style="font-size: clamp(28px, 5vw, 48px);">
           Medical Care, Wherever You Stay.
         </h2>
       </div>
@@ -982,12 +1011,12 @@ footer {
 
   <!-- 04 — COMMON REASONS FOR A DOCTOR VISIT -->
   <section class="wrap">
-    <div style="text-align: center; max-width: 750px; margin: 0 auto 40px;">
+    <div style="text-align: center; max-width: 750px; margin: 0 auto 30px;">
       <div class="eyebrow">MEDICAL SUPPORT</div>
-      <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">
+      <h2 class="display" style="font-size: clamp(28px, 5vw, 48px);">
         When You Need Medical Attention.
       </h2>
-      <p style="font-size: 15px; opacity: .85; margin-top: 12px;">
+      <p style="font-size: 14px; opacity: .85; margin-top: 12px;">
         Our Home Doctor Visit service provides professional consultation and medical assessment for a range of non-emergency health concerns.
       </p>
     </div>
@@ -1019,7 +1048,7 @@ footer {
       </div>
     </div>
 
-    <p style="text-align: center; margin-top: 32px; font-style: italic; font-size: 14px; opacity: .8;">
+    <p style="text-align: center; margin-top: 24px; font-style: italic; font-size: 13px; opacity: .8;">
       Medical recommendations and treatment options are determined following an individual consultation and professional medical assessment.
     </p>
   </section>
@@ -1029,8 +1058,8 @@ footer {
     <div class="booking-section">
       <div style="text-align: center; max-width: 650px; margin: 0 auto 20px;">
         <div class="eyebrow">Fast & Direct Service</div>
-        <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">Book Your Doctor Visit</h2>
-        <p style="margin-top: 10px; opacity: .85;">
+        <h2 class="display" style="font-size: clamp(28px, 5vw, 48px);">Book Your Doctor Visit</h2>
+        <p style="margin-top: 10px; opacity: .85; font-size: 14px;">
           We Come To You. Please complete the form below and our medical team will contact you on WhatsApp to confirm your appointment.
         </p>
       </div>
@@ -1078,7 +1107,7 @@ footer {
           </div>
 
           <div class="field field-full" style="text-align: center; margin-top: 10px;">
-            <button type="submit" class="btn-cta" style="width: 100%; justify-content: center;">
+            <button type="submit" class="btn-cta" style="width: 100%;">
               Send Booking Request via WhatsApp →
             </button>
             <p class="mono" style="font-size: 11px; margin-top: 12px; opacity: .7;">
@@ -1090,137 +1119,33 @@ footer {
     </div>
   </section>
 
-  <!-- 06 — HOW IT WORKS -->
-  <section class="wrap">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 40px;">
-      <div class="eyebrow">SIMPLE. PRIVATE. CONVENIENT.</div>
-      <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">From Request to Consultation.</h2>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;" class="grid-4">
-      <div class="step-card">
-        <div class="step-num">01 — SEND YOUR REQUEST</div>
-        <p style="font-size: 13px;">Contact DripWell Bali via WhatsApp and share your current location along with a brief description of your medical concern.</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">02 — AVAILABILITY CHECK</div>
-        <p style="font-size: 13px;">Our team checks service availability and confirms whether your location is within our Home Doctor coverage area.</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">03 — DOCTOR VISIT</div>
-        <p style="font-size: 13px;">Once confirmed, a doctor visit is coordinated at your villa, hotel, resort, or private residence.</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">04 — MEDICAL ASSESSMENT</div>
-        <p style="font-size: 13px;">Your consultation begins with an individual assessment based on your symptoms and relevant medical information.</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">05 — NEXT STEPS</div>
-        <p style="font-size: 13px;">Following the assessment, the attending doctor provides appropriate recommendations based on your individual needs.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- 07 — WHAT TO EXPECT DURING YOUR VISIT -->
   <section class="wrap">
-    <div class="card" style="border: 1px solid var(--border-teal); border-radius: 28px; padding: 40px; background: var(--bg-soft);">
+    <div class="card" style="border: 1px solid var(--border-teal); border-radius: 20px; padding: 28px; background: var(--bg-soft);">
       <div class="eyebrow">YOUR CONSULTATION</div>
-      <h2 class="display" style="font-size: clamp(30px, 4vw, 44px); margin-bottom: 14px;">
+      <h2 class="display" style="font-size: clamp(26px, 4vw, 44px); margin-bottom: 14px;">
         Professional Care, Personally Delivered.
       </h2>
-      <p style="font-size: 15px; opacity: .9; margin-bottom: 24px;">
+      <p style="font-size: 14px; opacity: .9; margin-bottom: 20px;">
         Every Home Doctor Visit is approached according to the individual's current condition and medical needs. Your consultation may include:
       </p>
 
       <div class="grid-2">
         <ul style="list-style: none;">
-          <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">✓ Discussion of current symptoms</li>
-          <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">✓ Review of relevant medical history</li>
-          <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">✓ Review of known allergies</li>
-          <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">✓ Review of current medications</li>
+          <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Discussion of current symptoms</li>
+          <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Review of relevant medical history</li>
+          <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Review of known allergies</li>
+          <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Review of current medications</li>
         </ul>
         <ul style="list-style: none;">
-          <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">✓ Vital signs assessment</li>
-          <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">✓ Professional medical consultation</li>
-          <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">✓ Recommendations for appropriate next steps</li>
+          <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Vital signs assessment</li>
+          <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Professional medical consultation</li>
+          <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Recommendations for appropriate next steps</li>
         </ul>
       </div>
 
-      <p style="margin-top: 24px; font-style: italic; font-size: 13px; opacity: .8;">
+      <p style="margin-top: 20px; font-style: italic; font-size: 13px; opacity: .8;">
         All medical recommendations are based on the attending doctor's professional assessment.
-      </p>
-    </div>
-  </section>
-
-  <!-- 08 — WHY CHOOSE DRIPWELL BALI -->
-  <section class="wrap">
-    <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
-      <div class="eyebrow">THE DRIPWELL EXPERIENCE</div>
-      <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">
-        Medical Care With Comfort & Convenience.
-      </h2>
-    </div>
-
-    <div class="grid-3">
-      <div class="card">
-        <h3>Professional Medical Support</h3>
-        <p>Professional care coordinated around individual needs and medical assessment.</p>
-      </div>
-      <div class="card">
-        <h3>We Come to You</h3>
-        <p>Avoid unnecessary travel by receiving medical care at your preferred location.</p>
-      </div>
-      <div class="card">
-        <h3>Privacy & Discretion</h3>
-        <p>A comfortable option for guests who value privacy and personal space.</p>
-      </div>
-      <div class="card">
-        <h3>Personalized Approach</h3>
-        <p>Every consultation is approached individually based on your current symptoms and relevant medical information.</p>
-      </div>
-      <div class="card">
-        <h3>Designed for Bali Living & Travel</h3>
-        <p>Convenient medical access for visitors, families, villa guests, and Bali residents.</p>
-      </div>
-      <div class="card">
-        <h3>Simple Booking Process</h3>
-        <p>Request a Doctor Visit directly through WhatsApp and receive availability confirmation from our team.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 09 — SAFETY & MEDICAL ASSESSMENT -->
-  <section class="wrap">
-    <div class="card" style="border: 1px solid var(--border-teal); border-radius: 28px; padding: 40px; background: var(--bg-soft); color: var(--text-dark);">
-      <div class="eyebrow">SAFETY FIRST</div>
-      <h3 class="display" style="color: var(--text-dark); font-size: clamp(28px, 4vw, 40px);">Every Doctor Visit Starts With an Assessment.</h3>
-      <p style="font-size: 15px; margin-top: 10px; opacity: .9;">
-        Your health and safety are always the priority. Every Home Doctor Visit begins with an individual consultation and professional medical assessment. The attending doctor considers your current symptoms and relevant medical information before providing recommendations.
-      </p>
-
-      <div style="margin-top: 20px;">
-        <p class="mono" style="font-size: 11px; text-transform: uppercase; font-weight: 600;">Your assessment may include:</p>
-        <div class="grid-2" style="margin-top: 10px;">
-          <ul style="list-style: none;">
-            <li style="margin-bottom: 6px;">✦ Current symptoms</li>
-            <li style="margin-bottom: 6px;">✦ Relevant medical history</li>
-            <li style="margin-bottom: 6px;">✦ Known allergies</li>
-            <li style="margin-bottom: 6px;">✦ Current medications</li>
-          </ul>
-          <ul style="list-style: none;">
-            <li style="margin-bottom: 6px;">✦ Vital signs</li>
-            <li style="margin-bottom: 6px;">✦ Severity of your condition</li>
-            <li style="margin-bottom: 6px;">✦ Appropriate next steps</li>
-          </ul>
-        </div>
-      </div>
-
-      <p style="font-weight: 600; margin-top: 20px; font-size: 14px;">
-        If your condition requires a higher level of medical care, the attending doctor may recommend further evaluation at an appropriate medical facility.
       </p>
     </div>
   </section>
@@ -1230,7 +1155,7 @@ footer {
     <div class="locations-box">
       <div>
         <div class="eyebrow">Service Coverage</div>
-        <h3 class="display" style="font-size: 28px; margin-bottom: 8px;">Professional Care, Delivered to Your Door</h3>
+        <h3 class="display" style="font-size: 26px; margin-bottom: 8px;">Professional Care, Delivered to Your Door</h3>
         <p style="font-size: 14px; opacity: .85;">Experience personalized medical care without leaving the comfort of your location. dripwellbali brings professional medical and doctor visit services</p>
         
         <div style="margin-top: 18px;">
@@ -1285,7 +1210,7 @@ footer {
     <div class="dispatch-banner">
       <div class="eyebrow" style="color: var(--primary-coral);">DOCTOR DISPATCH</div>
       <h2>Need a Doctor?</h2>
-      <p style="font-size: 16px; opacity: .9;">
+      <p style="font-size: 15px; opacity: .9;">
         Feeling unwell while staying in Bali? Contact our medical team to check current Home Doctor Visit availability for your location.
       </p>
 
@@ -1303,7 +1228,7 @@ footer {
         </div>
 
         <div style="text-align: center;">
-          <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20need%20a%20Doctor%20Visit.%0A%0A*Name:*%20%0A*Location:*%20%0A*Villa/Hotel:*%20%0A*Medical%20Concern:*%20" target="_blank" rel="noopener noreferrer" class="btn-cta" style="padding: 18px 36px; font-size: 12px;">
+          <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20need%20a%20Doctor%20Visit.%0A%0A*Name:*%20%0A*Location:*%20%0A*Villa/Hotel:*%20%0A*Medical%20Concern:*%20" target="_blank" rel="noopener noreferrer" class="btn-cta">
             Check Doctor Availability ↗
           </a>
         </div>
@@ -1317,9 +1242,9 @@ footer {
 
   <!-- 12 — FAQ SECTION -->
   <section class="wrap">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 48px;">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 30px;">
       <div class="eyebrow">FREQUENTLY ASKED QUESTIONS</div>
-      <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">
+      <h2 class="display" style="font-size: clamp(28px, 5vw, 48px);">
         Home Doctor Visit in Bali.
       </h2>
     </div>
