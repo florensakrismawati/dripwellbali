@@ -69,6 +69,7 @@
   --primary-coral: #d26b52;
   --border-teal: rgba(19, 62, 61, 0.15);
   --border-coral: rgba(210, 107, 82, 0.25);
+  --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
 }
 
 * {
@@ -170,12 +171,12 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .navlink {
   font: 10px "DM Mono";
-  letter-spacing: .16em;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--text-dark);
   opacity: .8;
@@ -186,6 +187,46 @@ nav {
   opacity: 1;
   color: var(--primary-coral);
   font-weight: 700;
+}
+
+/* Dropdown Menu CSS */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-white);
+  min-width: 220px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-teal);
+  border-radius: 12px;
+  padding: 8px 0;
+  z-index: 1001;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  font: 10px "DM Mono";
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover, .dropdown-menu a.active-link {
+  background: var(--bg-white);
+  color: var(--primary-coral);
+  font-weight: bold;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .nav-book {
@@ -212,6 +253,22 @@ nav {
 }
 
 .mobile-panel { display: none; }
+
+.mobile-submenu {
+  padding-left: 16px;
+  background: rgba(19, 62, 61, 0.03);
+}
+
+.mobile-submenu a {
+  font-size: 9px !important;
+  opacity: 0.85;
+}
+
+.mobile-submenu a.active-link {
+  color: var(--primary-coral);
+  font-weight: bold;
+  opacity: 1;
+}
 
 .wrap { max-width: 1280px; margin: auto; padding: 0 20px; }
 section { padding: 60px 0; }
@@ -525,11 +582,34 @@ footer {
 
     <nav aria-label="Main navigation">
       <a class="navlink" href="/">Home</a>
-      <a class="navlink" href="/home-doctor-bali/">Home Doctor</a>
-      <a class="navlink" href="/iv-drip-bali/">IV Drip</a>
+      <a class="navlink" href="/about/">About Us</a>
+      
+      <!-- HEALTH PACKAGES DROPDOWN -->
+      <div class="dropdown">
+        <a class="navlink" href="javascript:void(0);">Health Packages ▾</a>
+        <div class="dropdown-menu">
+          <a href="/bali-belly-package/">Bali Belly Package</a>
+          <a href="/hangover-package/">Hangover Package</a>
+          <a href="/fever-package/">Fever Package</a>
+          <a href="/flu-relief-package/">Flu Relief Package</a>
+        </div>
+      </div>
+
+      <!-- IV DRIPS VITAMIN DROPDOWN -->
+      <div class="dropdown">
+        <a class="navlink" href="/iv-drip-bali/">IV Drips Vitamin ▾</a>
+        <div class="dropdown-menu">
+          <a href="/jetlag-package/">Jetlag Package</a>
+          <a href="/energy-booster-package/">Energy Booster Package</a>
+          <a href="/immune-booster-basic/">Immune Booster Basic</a>
+          <a href="/immune-booster-standard-package/">Immune Booster Standard Package</a>
+          <a href="/ultimate-immune-booster/">Ultimate Immune Booster</a>
+        </div>
+      </div>
+
       <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
-      <a class="navlink" href="/bali-belly-treatment/">Bali Belly</a>
-      <a class="navlink" href="/hangover-treatment-bali/">Hangover</a>
+      <a class="navlink" href="/home-doctor-bali/">Home Doctor</a>
+      <a class="navlink" href="/blog/">Blog</a>
       <a class="navlink" href="/faq/">FAQ</a>
       <a class="navlink active" href="/contact/">Contact</a>
       <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20need%20assistance." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
@@ -542,14 +622,32 @@ footer {
 
   <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
     <a href="/" onclick="closeMenu()">Home</a>
-    <a href="/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
-    <a href="/iv-drip-bali/" onclick="closeMenu()">IV Drip</a>
-    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
-    <a href="/bali-belly-treatment/" onclick="closeMenu()">Bali Belly</a>
-    <a href="/hangover-treatment-bali/" onclick="closeMenu()">Hangover</a>
-    <a href="/faq/" onclick="closeMenu()">FAQ</a>
     <a href="/about/" onclick="closeMenu()">About Us</a>
-    <a href="/contact/" onclick="closeMenu()">Contact</a>
+    
+    <!-- MOBILE HEALTH PACKAGES -->
+    <a href="javascript:void(0);" onclick="closeMenu()"><strong>Health Packages</strong></a>
+    <div class="mobile-submenu">
+      <a href="/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
+      <a href="/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
+      <a href="/fever-package/" onclick="closeMenu()">— Fever Package</a>
+      <a href="/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
+    </div>
+
+    <!-- MOBILE IV DRIPS VITAMIN -->
+    <a href="/iv-drip-bali/" onclick="closeMenu()"><strong>IV Drips Vitamin</strong></a>
+    <div class="mobile-submenu">
+      <a href="/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
+      <a href="/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
+      <a href="/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
+      <a href="/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
+      <a href="/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
+    </div>
+
+    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
+    <a href="/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
+    <a href="/blog/" onclick="closeMenu()">Blog</a>
+    <a href="/faq/" onclick="closeMenu()">FAQ</a>
+    <a href="/contact/" class="active-link" onclick="closeMenu()">Contact</a>
     <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20need%20assistance." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Chat on WhatsApp</a>
   </div>
 </header>
@@ -692,7 +790,7 @@ footer {
             Instagram
           </a>
           &nbsp;·&nbsp;
-          <a href="https://tel:+6282221614966">
+          <a href="tel:+6282221614966">
             Call +62 822 2161 4966
           </a>
         </div>
