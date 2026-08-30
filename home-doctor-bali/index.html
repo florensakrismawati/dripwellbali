@@ -55,7 +55,6 @@
 </script>
 
 <style>
-/* Refined Color Palette: Pure White Background, Deep Teal Text & Terracotta Accent */
 :root {
   --bg-white: #ffffff;
   --bg-soft: #f8faf9;
@@ -63,8 +62,7 @@
   --primary-coral: #d26b52;
   --border-teal: rgba(19, 62, 61, 0.15);
   --border-coral: rgba(210, 107, 82, 0.25);
-  --alert-red: #c0392b;
-  --alert-bg: #fdf2f2;
+  --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
 }
 
 * {
@@ -84,35 +82,14 @@ body {
   line-height: 1.6;
 }
 
-.mono {
-  font-family: "DM Mono", monospace;
-}
+.mono { font-family: "DM Mono", monospace; }
+.display { font-family: "Playfair Display", Georgia, serif; }
+.coral-text { color: var(--primary-coral); }
 
-.display {
-  font-family: "Playfair Display", Georgia, serif;
-}
-
-.coral-text {
-  color: var(--primary-coral);
-}
-
-button, input, select, textarea {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
 
 /* Accessibility */
 .skip-link {
@@ -127,10 +104,7 @@ img {
   font: 12px "DM Mono";
   transition: top .2s;
 }
-
-.skip-link:focus {
-  top: 12px;
-}
+.skip-link:focus { top: 12px; }
 
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline: 3px solid var(--primary-coral);
@@ -194,12 +168,12 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .navlink {
   font: 10px "DM Mono";
-  letter-spacing: .16em;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--text-dark);
   opacity: .8;
@@ -212,6 +186,46 @@ nav {
   font-weight: 700;
 }
 
+/* Dropdown Menu CSS */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-white);
+  min-width: 220px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-teal);
+  border-radius: 12px;
+  padding: 8px 0;
+  z-index: 1001;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  font: 10px "DM Mono";
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover, .dropdown-menu a.active-link {
+  background: var(--bg-white);
+  color: var(--primary-coral);
+  font-weight: bold;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .nav-book {
   background: var(--primary-coral);
   color: var(--bg-white);
@@ -220,11 +234,12 @@ nav {
   font: 10px "DM Mono";
   letter-spacing: .16em;
   text-transform: uppercase;
-  transition: .2s;
+  transition: background .2s, transform .2s;
 }
 
 .nav-book:hover {
   background: var(--text-dark);
+  transform: translateY(-1px);
 }
 
 .mobile-menu {
@@ -238,8 +253,22 @@ nav {
   font-size: 18px;
 }
 
-.mobile-panel {
-  display: none;
+.mobile-panel { display: none; }
+
+.mobile-submenu {
+  padding-left: 16px;
+  background: rgba(19, 62, 61, 0.03);
+}
+
+.mobile-submenu a {
+  font-size: 9px !important;
+  opacity: 0.85;
+}
+
+.mobile-submenu a.active-link {
+  color: var(--primary-coral);
+  font-weight: bold;
+  opacity: 1;
 }
 
 /* Container Wrapper */
@@ -325,20 +354,19 @@ section {
   color: var(--text-dark);
 }
 
-/* Photo Frame Component (PERBAIKAN AGAR FOTO TIDAK TERPOTONG) */
 .photo-frame {
   position: relative;
   border-radius: 28px;
   overflow: hidden;
   border: 1px solid var(--border-teal);
-  height: 480px; /* Diperbesar sedikit agar proporsi lebih pas */
+  height: 480px;
 }
 
 .photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top; /* MENJAGA FOKUS FOTO SELALU DARI BAGIAN ATAS (KEPALA) */
+  object-position: center top;
 }
 
 .photo-badge {
@@ -355,7 +383,6 @@ section {
   border: 1px solid var(--border-teal);
 }
 
-/* Button Component */
 .btn-cta {
   display: inline-flex;
   align-items: center;
@@ -448,6 +475,52 @@ section {
   font-size: 14px;
   color: var(--text-dark);
   opacity: .85;
+}
+
+/* Booking Form Section */
+.booking-section {
+  border: 1px solid var(--border-teal);
+  border-radius: 28px;
+  padding: 50px 40px;
+  background: var(--bg-soft);
+  margin: 40px 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  display: block;
+  font: 10px "DM Mono";
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  opacity: .8;
+  margin-bottom: 6px;
+}
+
+.field input, .field select, .field textarea {
+  width: 100%;
+  border: 1px solid var(--border-teal);
+  border-radius: 12px;
+  background: var(--bg-white);
+  padding: 12px 16px;
+  color: var(--text-dark);
+  font-size: 14px;
+  transition: border-color .2s;
+}
+
+.field input:focus, .field select:focus, .field textarea:focus {
+  border-color: var(--primary-coral);
+  outline: none;
 }
 
 /* Step / Process Section */
@@ -572,35 +645,48 @@ section {
   background: var(--bg-soft);
 }
 
-.premium-area-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 24px 0;
+.accommodations-list {
+  list-style: none;
+  margin-top: 12px;
+  margin-bottom: 24px;
 }
 
-.premium-area-chip {
-  border: 1px solid var(--border-teal);
-  border-radius: 12px;
-  background: var(--bg-white);
-  padding: 14px 16px;
+.accommodations-list li {
   font-size: 14px;
-  font-weight: 600;
-  color: var(--text-dark);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.accommodations-list li::before {
+  content: "✦ ";
+  color: var(--primary-coral);
+}
+
+.areas-flex {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
-  transition: .2s;
+  margin-top: 12px;
 }
 
-.premium-area-chip:hover {
+.area-pill {
+  border: 1px solid var(--border-teal);
+  border-radius: 999px;
+  background: var(--bg-white);
+  color: var(--text-dark);
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.area-pill:hover {
+  background: var(--primary-coral);
+  color: var(--bg-white);
   border-color: var(--primary-coral);
-  color: var(--primary-coral);
-}
-
-.premium-area-chip:before {
-  content: "⌖";
-  color: var(--primary-coral);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(210, 107, 82, 0.25);
 }
 
 /* Call to Action Section */
@@ -681,12 +767,10 @@ footer {
   opacity: .7;
 }
 
-.sticky-bar {
-  display: none;
-}
+.sticky-bar { display: none; }
 
 /* Responsive Styles for Mobile */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   nav { display: none; }
   .mobile-menu { display: block; }
 
@@ -707,7 +791,7 @@ footer {
   .mobile-panel a {
     display: block;
     width: 100%;
-    padding: 14px;
+    padding: 12px 14px;
     border-bottom: 1px solid var(--border-teal);
     font: 10px "DM Mono";
     text-transform: uppercase;
@@ -716,11 +800,10 @@ footer {
 
   .mobile-panel a:last-child { border-bottom: 0; }
 
-  .hero-grid, .grid-2, .dispatch-grid { grid-template-columns: 1fr; gap: 24px; }
+  .hero-grid, .grid-2, .dispatch-grid, .form-grid { grid-template-columns: 1fr; gap: 24px; }
   .photo-frame { height: 360px; }
-  .premium-area-grid { grid-template-columns: 1fr 1fr; }
   .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .locations-box, .cta-banner, .dispatch-banner { padding: 34px 20px; }
+  .booking-section, .locations-box, .cta-banner, .dispatch-banner { padding: 34px 20px; }
 
   .sticky-bar {
     display: block;
@@ -749,10 +832,6 @@ footer {
   .footer-actions { align-items: flex-start; }
   .copyright { flex-direction: column; gap: 8px; }
 }
-
-@media (max-width: 500px) {
-  .premium-area-grid { grid-template-columns: 1fr; }
-}
 </style>
 </head>
 
@@ -775,13 +854,35 @@ footer {
 
     <nav aria-label="Main navigation">
       <a class="navlink" href="/">Home</a>
-      <a class="navlink active" href="/home-doctor-bali/">Home Doctor</a>
-      <a class="navlink" href="/iv-drip-bali/">IV Drip</a>
-      <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
-      <a class="navlink" href="/bali-belly-treatment/">Bali Belly</a>
-      <a class="navlink" href="/hangover-treatment-bali/">Hangover</a>
-      <a class="navlink" href="/faq/">FAQ</a>
       <a class="navlink" href="/about/">About Us</a>
+      
+      <!-- HEALTH PACKAGES DROPDOWN -->
+      <div class="dropdown">
+        <a class="navlink" href="javascript:void(0);">Health Packages ▾</a>
+        <div class="dropdown-menu">
+          <a href="/bali-belly-package/">Bali Belly Package</a>
+          <a href="/hangover-package/">Hangover Package</a>
+          <a href="/fever-package/">Fever Package</a>
+          <a href="/flu-relief-package/">Flu Relief Package</a>
+        </div>
+      </div>
+
+      <!-- IV DRIPS VITAMIN DROPDOWN -->
+      <div class="dropdown">
+        <a class="navlink" href="/iv-drip-bali/">IV Drips Vitamin ▾</a>
+        <div class="dropdown-menu">
+          <a href="/jetlag-package/">Jetlag Package</a>
+          <a href="/energy-booster-package/">Energy Booster Package</a>
+          <a href="/immune-booster-basic/">Immune Booster Basic</a>
+          <a href="/immune-booster-standard-package/">Immune Booster Standard Package</a>
+          <a href="/ultimate-immune-booster/">Ultimate Immune Booster</a>
+        </div>
+      </div>
+
+      <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
+      <a class="navlink active" href="/home-doctor-bali/">Home Doctor</a>
+      <a class="navlink" href="/blog/">Blog</a>
+      <a class="navlink" href="/faq/">FAQ</a>
       <a class="navlink" href="/contact/">Contact</a>
       <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20request%20a%20Home%20Doctor%20Visit." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
     </nav>
@@ -793,13 +894,31 @@ footer {
 
   <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
     <a href="/" onclick="closeMenu()">Home</a>
-    <a href="/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
-    <a href="/iv-drip-bali/" onclick="closeMenu()">IV Drip</a>
-    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
-    <a href="/bali-belly-treatment/" onclick="closeMenu()">Bali Belly</a>
-    <a href="/hangover-treatment-bali/" onclick="closeMenu()">Hangover</a>
-    <a href="/faq/" onclick="closeMenu()">FAQ</a>
     <a href="/about/" onclick="closeMenu()">About Us</a>
+    
+    <!-- MOBILE HEALTH PACKAGES -->
+    <a href="javascript:void(0);" onclick="closeMenu()"><strong>Health Packages</strong></a>
+    <div class="mobile-submenu">
+      <a href="/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
+      <a href="/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
+      <a href="/fever-package/" onclick="closeMenu()">— Fever Package</a>
+      <a href="/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
+    </div>
+
+    <!-- MOBILE IV DRIPS VITAMIN -->
+    <a href="/iv-drip-bali/" onclick="closeMenu()"><strong>IV Drips Vitamin</strong></a>
+    <div class="mobile-submenu">
+      <a href="/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
+      <a href="/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
+      <a href="/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
+      <a href="/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
+      <a href="/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
+    </div>
+
+    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
+    <a href="/home-doctor-bali/" class="active-link" onclick="closeMenu()">Home Doctor</a>
+    <a href="/blog/" onclick="closeMenu()">Blog</a>
+    <a href="/faq/" onclick="closeMenu()">FAQ</a>
     <a href="/contact/" onclick="closeMenu()">Contact</a>
     <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20request%20a%20Home%20Doctor%20Visit." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Chat on WhatsApp</a>
   </div>
@@ -829,7 +948,7 @@ footer {
           </div>
 
           <div style="margin-top: 28px;">
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20request%20a%20Home%20Doctor%20Visit." target="_blank" rel="noopener noreferrer" class="btn-cta">
+            <a href="#booking-form" class="btn-cta">
               Request a Doctor Visit →
             </a>
             <p class="mono" style="font-size: 11px; margin-top: 10px; opacity: .7;">
@@ -838,7 +957,6 @@ footer {
           </div>
         </div>
 
-        <!-- GAMBAR DOCTOR VISIT (MENGGUNAKAN DUA NAMA UNTUK MENCEGAH FLAGGING ERROR NAMA FILE) -->
         <div class="photo-frame">
           <img src="home-doctor.jpg" alt="Doctor home visit consultation in a villa in Bali" loading="eager" onerror="this.onerror=null;this.src='home-doctor.jpeg';">
           <div class="photo-badge">✦ Private & Convenient Medical Care</div>
@@ -942,7 +1060,73 @@ footer {
     </p>
   </section>
 
-  <!-- 05 — HOW IT WORKS -->
+  <!-- 05 — BOOKING FORM SECTION -->
+  <section id="booking-form" class="wrap">
+    <div class="booking-section">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 20px;">
+        <div class="eyebrow">Fast & Direct Service</div>
+        <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">Book Your Doctor Visit</h2>
+        <p style="margin-top: 10px; opacity: .85;">
+          We Come To You. Please complete the form below and our medical team will contact you on WhatsApp to confirm your appointment.
+        </p>
+      </div>
+
+      <form onsubmit="submitForm(event)">
+        <div class="form-grid">
+          <div class="field">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="field">
+            <label for="waNumber">WhatsApp Number</label>
+            <input type="tel" id="waNumber" placeholder="Enter WhatsApp number (e.g. +62...)" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter email address" required>
+          </div>
+
+          <div class="field">
+            <label for="hotelName">Hotel / Villa Name</label>
+            <input type="text" id="hotelName" placeholder="Enter hotel or villa name" required>
+          </div>
+
+          <div class="field">
+            <label for="locationArea">Location / Area</label>
+            <input type="text" id="locationArea" placeholder="e.g. Canggu, Seminyak, Ubud" required>
+          </div>
+
+          <div class="field">
+            <label for="prefDate">Preferred Date</label>
+            <input type="date" id="prefDate" required>
+          </div>
+
+          <div class="field">
+            <label for="prefTime">Preferred Time</label>
+            <input type="text" id="prefTime" placeholder="e.g. As soon as possible / 2:00 PM" required>
+          </div>
+
+          <div class="field field-full">
+            <label for="symptoms">Your Current Symptoms / Medical Concern</label>
+            <textarea id="symptoms" rows="3" placeholder="Tell us briefly about your medical concern (e.g. fever, nausea, headaches, severe fatigue)" required></textarea>
+          </div>
+
+          <div class="field field-full" style="text-align: center; margin-top: 10px;">
+            <button type="submit" class="btn-cta" style="width: 100%; justify-content: center;">
+              Send Booking Request via WhatsApp →
+            </button>
+            <p class="mono" style="font-size: 11px; margin-top: 12px; opacity: .7;">
+              Our team will contact you shortly to confirm your booking and availability.
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 06 — HOW IT WORKS -->
   <section class="wrap">
     <div style="text-align: center; max-width: 650px; margin: 0 auto 40px;">
       <div class="eyebrow">SIMPLE. PRIVATE. CONVENIENT.</div>
@@ -977,7 +1161,7 @@ footer {
     </div>
   </section>
 
-  <!-- 06 — WHAT TO EXPECT DURING YOUR VISIT -->
+  <!-- 07 — WHAT TO EXPECT DURING YOUR VISIT -->
   <section class="wrap">
     <div class="card" style="border: 1px solid var(--border-teal); border-radius: 28px; padding: 40px; background: var(--bg-soft);">
       <div class="eyebrow">YOUR CONSULTATION</div>
@@ -1008,7 +1192,7 @@ footer {
     </div>
   </section>
 
-  <!-- 07 — WHY CHOOSE DRIPWELL BALI -->
+  <!-- 08 — WHY CHOOSE DRIPWELL BALI -->
   <section class="wrap">
     <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
       <div class="eyebrow">THE DRIPWELL EXPERIENCE</div>
@@ -1045,7 +1229,7 @@ footer {
     </div>
   </section>
 
-  <!-- 08 — SAFETY & MEDICAL ASSESSMENT -->
+  <!-- 09 — SAFETY & MEDICAL ASSESSMENT -->
   <section class="wrap">
     <div class="card" style="border: 1px solid var(--border-teal); border-radius: 28px; padding: 40px; background: var(--bg-soft); color: var(--text-dark);">
       <div class="eyebrow">SAFETY FIRST</div>
@@ -1077,50 +1261,62 @@ footer {
     </div>
   </section>
 
-  <!-- 09 — COVERAGE AREAS -->
+  <!-- 10 — COVERAGE AREAS -->
   <section class="wrap">
     <div class="locations-box">
-      <div style="text-align: center; max-width: 750px; margin: 0 auto 30px;">
-        <div class="eyebrow">COVERAGE AREAS</div>
-        <h2 class="display" style="font-size: clamp(30px, 4vw, 44px);">
-          Home Doctor & Medical Services Across Selected Areas of Bali
-        </h2>
-        <p style="font-size: 14px; opacity: .85; margin-top: 10px;">
-          Our home doctor and medical services are available across selected areas of Bali, bringing professional care directly to your villa, hotel, resort, or private residence.
-        </p>
-      </div>
+      <div>
+        <div class="eyebrow">Service Coverage</div>
+        <h3 class="display" style="font-size: 28px; margin-bottom: 8px;">Professional Care, Delivered to Your Door</h3>
+        <p style="font-size: 14px; opacity: .85;">Experience personalized medical care without leaving the comfort of your location. dripwellbali brings professional medical and doctor visit services</p>
+        
+        <div style="margin-top: 18px;">
+          <strong style="font-size: 11px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .12em; color: var(--primary-coral);">We Provide Services At:</strong>
+          <ul class="accommodations-list">
+            <li>Private Villas</li>
+            <li>Hotels & Resorts</li>
+            <li>Private Residences</li>
+            <li>Selected Accommodations</li>
+          </ul>
+        </div>
 
-      <div class="premium-area-grid">
-        <div class="premium-area-chip">Canggu</div>
-        <div class="premium-area-chip">Pererenan</div>
-        <div class="premium-area-chip">Seseh</div>
-        <div class="premium-area-chip">Munggu</div>
-        <div class="premium-area-chip">Kedungu</div>
-        <div class="premium-area-chip">Tabanan</div>
-        <div class="premium-area-chip">Yeh Gangga</div>
-        <div class="premium-area-chip">Tanah Lot</div>
-        <div class="premium-area-chip">Cemagi</div>
-        <div class="premium-area-chip">Beraban</div>
-        <div class="premium-area-chip">Nuanu Area</div>
-        <div class="premium-area-chip">Berawa</div>
-        <div class="premium-area-chip">Batu Bolong</div>
-        <div class="premium-area-chip">Echo Beach</div>
-        <div class="premium-area-chip">Mengwi</div>
-      </div>
+        <div>
+          <strong style="font-size: 11px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .12em; color: var(--primary-coral);">◆ Covered Areas In Bali:</strong>
+          <div class="areas-flex">
+            <span class="area-pill">Canggu</span>
+            <span class="area-pill">Berawa</span>
+            <span class="area-pill">Batu Bolong</span>
+            <span class="area-pill">Echo Beach</span>
+            <span class="area-pill">Batu Belig</span>
+            <span class="area-pill">Pererenan</span>
+            <span class="area-pill">Seseh</span>
+            <span class="area-pill">Tumbak Bayuh</span>
+            <span class="area-pill">Padonan</span>
+            <span class="area-pill">Babakan</span>
+            <span class="area-pill">Tibubeneng</span>
+            <span class="area-pill">Dalung</span>
+            <span class="area-pill">Seminyak</span>
+            <span class="area-pill">Petitenget</span>
+            <span class="area-pill">Kerobokan</span>
+            <span class="area-pill">Umalas</span>
+            <span class="area-pill">Munggu</span>
+            <span class="area-pill">Kedungu</span>
+            <span class="area-pill">Tabanan</span>
+            <span class="area-pill">Yeh Gangga</span>
+            <span class="area-pill">Tanah Lot</span>
+            <span class="area-pill">Cemagi</span>
+            <span class="area-pill">Beraban</span>
+            <span class="area-pill">Nuanu Area</span>
+            <span class="area-pill">Mengwi</span>
+            <span class="area-pill">Others</span>
+          </div>
+        </div>
 
-      <div style="text-align: center; margin-top: 30px; border-top: 1px solid var(--border-teal); padding-top: 24px;">
-        <h4 class="display" style="font-size: 22px;">Not Sure If Your Location Is Covered?</h4>
-        <p style="font-size: 14px; opacity: .85; margin: 8px 0 20px;">
-          Send us your villa name, hotel name, or location pin via WhatsApp. Our team will check service availability and confirm whether a Home Doctor Visit can be arranged for your location.
-        </p>
-        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20can%20you%20check%20if%20my%20location%20is%20covered%20for%20a%20Home%20Doctor%20Visit?" target="_blank" rel="noopener noreferrer" class="btn-cta-outline">
-          Check Your Location →
-        </a>
+        <p style="font-size: 12px; opacity: .75; margin-top: 16px;">Service availability may vary depending on location and scheduling. Contact our team to check availability.</p>
       </div>
     </div>
   </section>
 
-  <!-- 10 — DOCTOR DISPATCH CTA (CONVERSION POINT WITH DISTINCT BACKGROUND) -->
+  <!-- 11 — DOCTOR DISPATCH CTA -->
   <section class="wrap">
     <div class="dispatch-banner">
       <div class="eyebrow" style="color: var(--primary-coral);">DOCTOR DISPATCH</div>
@@ -1155,7 +1351,7 @@ footer {
     </div>
   </section>
 
-  <!-- 11 — FAQ SECTION -->
+  <!-- 12 — FAQ SECTION -->
   <section class="wrap">
     <div style="text-align: center; max-width: 650px; margin: 0 auto 48px;">
       <div class="eyebrow">FREQUENTLY ASKED QUESTIONS</div>
@@ -1247,7 +1443,7 @@ footer {
     </div>
   </section>
 
-  <!-- 12 — FINAL CTA -->
+  <!-- 13 — FINAL CTA -->
   <section class="wrap">
     <div class="cta-banner">
       <div class="eyebrow" style="color: var(--bg-white); opacity: .9;">MEDICAL CARE, MADE MORE CONVENIENT</div>
@@ -1346,6 +1542,31 @@ function toggleFaq(btn){
   } else {
     answer.style.maxHeight = "0";
   }
+}
+
+function submitForm(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('fullName').value;
+  const phone = document.getElementById('waNumber').value;
+  const email = document.getElementById('email').value;
+  const hotel = document.getElementById('hotelName').value;
+  const area = document.getElementById('locationArea').value;
+  const date = document.getElementById('prefDate').value;
+  const time = document.getElementById('prefTime').value;
+  const symptoms = document.getElementById('symptoms').value;
+
+  const message = `Hello DripWell Bali, I would like to book a Home Doctor Visit.%0A%0A` +
+    `*Name:* ${encodeURIComponent(name)}%0A` +
+    `*WhatsApp:* ${encodeURIComponent(phone)}%0A` +
+    `*Email:* ${encodeURIComponent(email)}%0A` +
+    `*Hotel/Villa:* ${encodeURIComponent(hotel)}%0A` +
+    `*Area:* ${encodeURIComponent(area)}%0A` +
+    `*Date:* ${encodeURIComponent(date)}%0A` +
+    `*Time:* ${encodeURIComponent(time)}%0A` +
+    `*Medical Concern:* ${encodeURIComponent(symptoms)}`;
+
+  window.open(`https://wa.me/6282221614966?text=${message}`, '_blank');
 }
 </script>
 
