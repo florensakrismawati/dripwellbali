@@ -14,19 +14,22 @@
 <link rel="canonical" href="https://www.dripwellbali.com/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.dripwellbali.com/">
 <meta property="og:site_name" content="Dripwell Bali">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Dripwell Bali | 24/7 Home Doctor, IV Drip & Medical Service">
 <meta property="og:description" content="Professional home doctor visits, IV drip therapy, physiotherapy and medical care delivered to your hotel or villa across Bali.">
-<meta property="og:image" content="https://www.dripwellbali.com/dripwell-hero.jpg">
+<meta property="og:image" content="https://www.dripwellbali.com/dokter.jpeg">
 <meta property="og:image:alt" content="Dripwell Bali medical team providing treatment at a villa">
 
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
 
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,7 +40,7 @@
       "name": "Dripwell Bali",
       "url": "https://www.dripwellbali.com/",
       "logo": "https://www.dripwellbali.com/dripwell-logo.jpeg",
-      "image": "https://www.dripwellbali.com/dripwell-hero.jpg",
+      "image": "https://www.dripwellbali.com/dokter.jpeg",
       "telephone": "+6282221614966",
       "email": "dripwellbali@gmail.com",
       "openingHoursSpecification": {
@@ -54,8 +57,6 @@
 <style>
 :root {
   --bg-white: #ffffff;
-  --bg-soft: #f8faf9;
-  --bg-cream: #f4efe5;
   --text-dark: #133e3d;
   --primary-coral: #d26b52;
   --accent-gold: #e3b66f;
@@ -163,12 +164,12 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .navlink {
   font: 10px "DM Mono";
-  letter-spacing: .16em;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--text-dark);
   opacity: .8;
@@ -179,6 +180,45 @@ nav {
   opacity: 1;
   color: var(--primary-coral);
   font-weight: 700;
+}
+
+/* Dropdown Menu CSS */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-white);
+  min-width: 220px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-teal);
+  border-radius: 12px;
+  padding: 8px 0;
+  z-index: 1001;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  font: 10px "DM Mono";
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background: var(--bg-white);
+  color: var(--primary-coral);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .nav-book {
@@ -209,6 +249,16 @@ nav {
 
 .mobile-panel { display: none; }
 
+.mobile-submenu {
+  padding-left: 16px;
+  background: rgba(19, 62, 61, 0.03);
+}
+
+.mobile-submenu a {
+  font-size: 9px !important;
+  opacity: 0.85;
+}
+
 /* Sections Scaffolding */
 .wrap { max-width: 1280px; margin: auto; padding: 0 20px; }
 section { padding: 60px 0; }
@@ -232,7 +282,7 @@ section { padding: 60px 0; }
 
 /* Hero Section */
 .hero {
-  background: var(--bg-soft);
+  background: var(--bg-white);
   border-bottom: 1px solid var(--border-teal);
   padding: 60px 0 50px;
 }
@@ -484,7 +534,7 @@ section { padding: 60px 0; }
   border: 1px solid var(--border-teal);
   border-radius: 28px;
   padding: 40px;
-  background: var(--bg-soft);
+  background: var(--bg-white);
   box-shadow: var(--shadow-soft);
 }
 
@@ -527,20 +577,25 @@ section { padding: 60px 0; }
   margin-top: 12px;
 }
 
+/* AREA PILLS HOVER EFFECT */
 .area-pill {
   border: 1px solid var(--border-teal);
   border-radius: 999px;
   background: var(--bg-white);
+  color: var(--text-dark);
   padding: 8px 16px;
   font-size: 12px;
   font-weight: 500;
-  transition: all .2s;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.area-pill.active, .area-pill:hover {
+.area-pill:hover {
   background: var(--primary-coral);
   color: var(--bg-white);
   border-color: var(--primary-coral);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(210, 107, 82, 0.25);
 }
 
 /* FAQ Section */
@@ -608,7 +663,7 @@ footer {
   border-top: 1px solid var(--border-teal);
   padding: 40px 0 30px;
   margin-top: 60px;
-  background: var(--bg-soft);
+  background: var(--bg-white);
 }
 
 .footer-top {
@@ -649,7 +704,7 @@ footer {
 .sticky-bar { display: none; }
 
 /* Responsive Media Queries */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   nav { display: none; }
   .mobile-menu { display: block; }
   .mobile-panel {
@@ -667,7 +722,7 @@ footer {
   .mobile-panel a {
     display: block;
     width: 100%;
-    padding: 14px;
+    padding: 12px 14px;
     border-bottom: 1px solid var(--border-teal);
     font: 10px "DM Mono";
     text-transform: uppercase;
@@ -714,6 +769,7 @@ footer {
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<!-- HEADER NAVIGATION -->
 <header>
   <div class="nav">
     <a class="brand" href="/" aria-label="Dripwell Bali home">
@@ -728,12 +784,35 @@ footer {
 
     <nav aria-label="Main navigation">
       <a class="navlink active" href="/">Home</a>
-      <a class="navlink" href="/home-doctor-bali/">Home Doctor</a>
-      <a class="navlink" href="/iv-drip-bali/">IV Drip</a>
-      <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
       <a class="navlink" href="/about/">About Us</a>
-      <a class="navlink" href="/faq/">FAQ</a>
+      
+      <!-- HEALTH PACKAGES DROPDOWN -->
+      <div class="dropdown">
+        <a class="navlink" href="#">Health Packages ▾</a>
+        <div class="dropdown-menu">
+          <a href="/bali-belly-package/">Bali Belly Package</a>
+          <a href="/hangover-package/">Hangover Package</a>
+          <a href="/fever-package/">Fever Package</a>
+          <a href="/flu-relief-package/">Flu Relief Package</a>
+        </div>
+      </div>
+
+      <!-- IV DRIPS VITAMIN DROPDOWN -->
+      <div class="dropdown">
+        <a class="navlink" href="/iv-drip-bali/">IV Drips Vitamin ▾</a>
+        <div class="dropdown-menu">
+          <a href="/jetlag-package/">Jetlag Package</a>
+          <a href="/energy-booster-package/">Energy Booster Package</a>
+          <a href="/immune-booster-basic/">Immune Booster Basic</a>
+          <a href="/immune-booster-standard-package/">Immune Booster Standard Package</a>
+          <a href="/ultimate-immune-booster/">Ultimate Immune Booster</a>
+        </div>
+      </div>
+
+      <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
+      <a class="navlink" href="/home-doctor-bali/">Home Doctor</a>
       <a class="navlink" href="/blog/">Blog</a>
+      <a class="navlink" href="/faq/">FAQ</a>
       <a class="navlink" href="/contact/">Contact</a>
       <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20visit." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
     </nav>
@@ -745,12 +824,31 @@ footer {
 
   <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
     <a href="/" onclick="closeMenu()">Home</a>
-    <a href="/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
-    <a href="/iv-drip-bali/" onclick="closeMenu()">IV Drip</a>
-    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
     <a href="/about/" onclick="closeMenu()">About Us</a>
-    <a href="/faq/" onclick="closeMenu()">FAQ</a>
+    
+    <!-- MOBILE HEALTH PACKAGES -->
+    <a href="#" onclick="closeMenu()"><strong>Health Packages</strong></a>
+    <div class="mobile-submenu">
+      <a href="/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
+      <a href="/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
+      <a href="/fever-package/" onclick="closeMenu()">— Fever Package</a>
+      <a href="/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
+    </div>
+
+    <!-- MOBILE IV DRIPS VITAMIN -->
+    <a href="/iv-drip-bali/" onclick="closeMenu()"><strong>IV Drips Vitamin</strong></a>
+    <div class="mobile-submenu">
+      <a href="/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
+      <a href="/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
+      <a href="/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
+      <a href="/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
+      <a href="/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
+    </div>
+
+    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
+    <a href="/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
     <a href="/blog/" onclick="closeMenu()">Blog</a>
+    <a href="/faq/" onclick="closeMenu()">FAQ</a>
     <a href="/contact/" onclick="closeMenu()">Contact</a>
     <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20visit." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Chat on WhatsApp</a>
   </div>
@@ -758,6 +856,7 @@ footer {
 
 <main id="main">
 
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
@@ -775,12 +874,13 @@ footer {
       </div>
 
       <div class="photo-frame">
-        <img src="/dripwell-hero.jpg" alt="Dripwell Bali medical team providing treatment at a villa" loading="eager" decoding="async">
+        <img src="/dokter.jpeg" alt="Dripwell Bali medical team providing treatment at a villa" loading="eager" decoding="async">
         <div class="photo-badge">✦ Professional Medical Team at Your Villa</div>
       </div>
     </div>
   </section>
 
+  <!-- TREATMENTS PACKAGES -->
   <section id="treatments" class="packages-section">
     <div class="wrap">
       <div class="packages-head">
@@ -790,19 +890,22 @@ footer {
         </div>
 
         <div class="tabs" role="tablist">
-          <button id="vitTab" class="active" onclick="setCategory('vitamin')">IV Vitamin Drips</button>
+          <button id="vitTab" class="active" onclick="setCategory('vitamin')">IV Drips Vitamin</button>
           <button id="healthTab" onclick="setCategory('health')">Health Packages</button>
         </div>
       </div>
 
       <div class="cards-grid" id="cardsContainer">
-        </div>
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
     </div>
   </section>
 
+  <!-- HOW IT WORKS & SERVICE COVERAGE -->
   <section class="wrap">
     <div class="info-grid">
       
+      <!-- HOW IT WORKS -->
       <div class="info-card">
         <div class="eyebrow">Simple Process</div>
         <h3 class="display" style="font-size: 28px; margin-bottom: 16px;">How It Works</h3>
@@ -832,6 +935,7 @@ footer {
         </div>
       </div>
 
+      <!-- SERVICE COVERAGE -->
       <div class="info-card">
         <div class="eyebrow">Service Coverage</div>
         <h3 class="display" style="font-size: 28px; margin-bottom: 8px;">Serving Bali, Wherever You Are</h3>
@@ -850,21 +954,32 @@ footer {
         <div>
           <strong style="font-size: 11px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .12em; color: var(--primary-coral);">◆ Covered Areas In Bali:</strong>
           <div class="areas-flex">
-            <span class="area-pill active">Canggu</span>
-            <span class="area-pill active">Pererenan</span>
-            <span class="area-pill active">Seseh</span>
-            <span class="area-pill active">Munggu</span>
-            <span class="area-pill active">Kedungu</span>
-            <span class="area-pill active">Tabanan</span>
-            <span class="area-pill active">Yeh Gangga</span>
-            <span class="area-pill active">Tanah Lot</span>
-            <span class="area-pill active">Cemagi</span>
-            <span class="area-pill active">Beraban</span>
-            <span class="area-pill active">Nuanu Area</span>
-            <span class="area-pill active">Berawa</span>
-            <span class="area-pill active">Batu Bolong</span>
-            <span class="area-pill active">Echo Beach</span>
-            <span class="area-pill active">Mengwi</span>
+            <span class="area-pill">Canggu</span>
+            <span class="area-pill">Berawa</span>
+            <span class="area-pill">Batu Bolong</span>
+            <span class="area-pill">Echo Beach</span>
+            <span class="area-pill">Batu Belig</span>
+            <span class="area-pill">Pererenan</span>
+            <span class="area-pill">Seseh</span>
+            <span class="area-pill">Tumbak Bayuh</span>
+            <span class="area-pill">Padonan</span>
+            <span class="area-pill">Babakan</span>
+            <span class="area-pill">Tibubeneng</span>
+            <span class="area-pill">Dalung</span>
+            <span class="area-pill">Seminyak</span>
+            <span class="area-pill">Petitenget</span>
+            <span class="area-pill">Kerobokan</span>
+            <span class="area-pill">Umalas</span>
+            <span class="area-pill">Munggu</span>
+            <span class="area-pill">Kedungu</span>
+            <span class="area-pill">Tabanan</span>
+            <span class="area-pill">Yeh Gangga</span>
+            <span class="area-pill">Tanah Lot</span>
+            <span class="area-pill">Cemagi</span>
+            <span class="area-pill">Beraban</span>
+            <span class="area-pill">Nuanu Area</span>
+            <span class="area-pill">Mengwi</span>
+            <span class="area-pill">Others</span>
           </div>
         </div>
 
@@ -874,6 +989,7 @@ footer {
     </div>
   </section>
 
+  <!-- FAQ SECTION -->
   <section class="wrap faq-section">
     <div class="faq-card">
       <div class="eyebrow">Common Questions</div>
@@ -923,6 +1039,7 @@ footer {
 
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-top">
@@ -943,7 +1060,7 @@ footer {
         <a href="https://wa.me/6282221614966" target="_blank" rel="noopener noreferrer" class="coral-text">✦ Chat on WhatsApp</a>
         <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
         <div>
-          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a>  · 
+          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
           <a href="tel:+6282221614966">Call +62 822 2161 4966</a>
         </div>
       </div>
@@ -956,6 +1073,7 @@ footer {
   </div>
 </footer>
 
+<!-- STICKY MOBILE BAR -->
 <div class="sticky-bar">
   <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20visit." target="_blank" rel="noopener noreferrer">✦ Chat on WhatsApp →</a>
 </div>
@@ -968,7 +1086,7 @@ const vitaminPackages = [
     desc: "Reset your body clock and support recovery from travel fatigue.",
     includes: ["Saline Solution", "Vitamin B Complex", "Stomach Protector"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
-    link: "https://www.dripwellbali.com/iv-drip-bali/"
+    link: "https://www.dripwellbali.com/jetlag-package/"
   },
   { 
     name: "Energy Booster Package", 
@@ -976,7 +1094,7 @@ const vitaminPackages = [
     desc: "Replenish essential nutrients and support your energy levels.",
     includes: ["Saline Solution", "Multivitamin", "Stomach Protector"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
-    link: "https://www.dripwellbali.com/iv-drip-bali/"
+    link: "https://www.dripwellbali.com/energy-booster-package/"
   },
   { 
     name: "Immune Booster Basic", 
@@ -984,7 +1102,7 @@ const vitaminPackages = [
     desc: "Essential hydration and nutritional support for everyday wellness.",
     includes: ["Saline Solution", "Vitamin C", "Stomach Protector"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
-    link: "https://www.dripwellbali.com/iv-drip-bali/"
+    link: "https://www.dripwellbali.com/immune-booster-basic/"
   },
   { 
     name: "Immune Booster Standard Package", 
@@ -992,7 +1110,7 @@ const vitaminPackages = [
     desc: "Enhanced nutritional support designed to complement your wellness routine.",
     includes: ["Saline Solution", "Vitamin B Complex", "Multivitamin", "Stomach Protector"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
-    link: "https://www.dripwellbali.com/iv-drip-bali/"
+    link: "https://www.dripwellbali.com/immune-booster-standard-package/"
   },
   { 
     name: "Ultimate Immune Booster", 
@@ -1000,7 +1118,7 @@ const vitaminPackages = [
     desc: "Comprehensive hydration and nutritional support for optimal wellness.",
     includes: ["Saline Solution", "Vitamin B Complex", "Multivitamin", "Vitamin C", "Stomach Protector"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
-    link: "https://www.dripwellbali.com/iv-drip-bali/"
+    link: "https://www.dripwellbali.com/ultimate-immune-booster/"
   }
 ];
 
@@ -1011,7 +1129,7 @@ const healthPackages = [
     desc: "Support your digestive recovery and restore your body's balance.",
     includes: ["Electrolyte Solution", "Anti Nausea", "Anti Vomiting", "Stomach Protector", "Stomach Ache Relief", "Vitamin B Complex"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
-    link: "https://www.dripwellbali.com/bali-belly-treatment/"
+    link: "https://www.dripwellbali.com/bali-belly-package/"
   },
   { 
     name: "Hangover Package", 
@@ -1019,7 +1137,7 @@ const healthPackages = [
     desc: "Rehydrate, replenish, and help your body recover after a long night.",
     includes: ["Electrolyte Solution", "Anti Nausea", "Anti Vomiting", "Stomach Protector", "Multivitamin"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
-    link: "https://www.dripwellbali.com/hangover-treatment-bali/"
+    link: "https://www.dripwellbali.com/hangover-package/"
   },
   { 
     name: "Fever Package", 
@@ -1027,7 +1145,7 @@ const healthPackages = [
     desc: "Support recovery and hydration when you're feeling unwell.",
     includes: ["Electrolyte Solution", "Stomach Protector", "Multivitamin", "Fever Reducer"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
-    link: "https://www.dripwellbali.com/iv-drip-bali/"
+    link: "https://www.dripwellbali.com/fever-package/"
   },
   { 
     name: "Flu Relief Package", 
@@ -1035,7 +1153,7 @@ const healthPackages = [
     desc: "Support hydration and recovery while helping relieve common flu symptoms.",
     includes: ["Saline Solution", "Vitamin B Complex", "Vitamin C", "Stomach Protector", "Anti-Inflammatory"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
-    link: "https://www.dripwellbali.com/iv-drip-bali/"
+    link: "https://www.dripwellbali.com/flu-relief-package/"
   },
   { 
     name: "Physiotherapy Package", 
