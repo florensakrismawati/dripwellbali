@@ -11,12 +11,12 @@
 <meta name="author" content="Dripwell Bali">
 <meta name="theme-color" content="#133e3d">
 
-<link rel="canonical" href="https://www.dripwellbali.com/bali-belly-treatment/">
+<link rel="canonical" href="https://www.dripwellbali.com/bali-belly-package/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.dripwellbali.com/bali-belly-treatment/">
+<meta property="og:url" content="https://www.dripwellbali.com/bali-belly-package/">
 <meta property="og:site_name" content="Dripwell Bali">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Bali Belly Treatment | DripWell Bali Doctor & Nurse Home Service">
@@ -35,8 +35,8 @@
   "@graph": [
     {
       "@type": "MedicalProcedure",
-      "@id": "https://www.dripwellbali.com/bali-belly-treatment/#procedure",
-      "name": "Bali Belly Treatment",
+      "@id": "https://www.dripwellbali.com/bali-belly-package/#procedure",
+      "name": "Bali Belly Package",
       "procedureType": "Emergency / Mobile Medical Care",
       "description": "Mobile doctor and nurse IV therapy service for gastrointestinal illness, diarrhea, nausea, and dehydration recovery in Bali.",
       "bodyLocation": "Gastrointestinal tract",
@@ -225,9 +225,10 @@ nav {
   transition: background 0.2s, color 0.2s;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover, .dropdown-menu a.active-link {
   background: var(--bg-white);
   color: var(--primary-coral);
+  font-weight: bold;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -271,6 +272,12 @@ nav {
 .mobile-submenu a {
   font-size: 9px !important;
   opacity: 0.85;
+}
+
+.mobile-submenu a.active-link {
+  color: var(--primary-coral);
+  font-weight: bold;
+  opacity: 1;
 }
 
 .wrap {
@@ -506,6 +513,12 @@ section {
   margin-top: 4px;
 }
 
+.package-desc {
+  font-size: 15px;
+  opacity: .9;
+  margin-bottom: 20px;
+}
+
 .package-details-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -583,17 +596,26 @@ section {
   outline: none;
 }
 
-.step-card {
+.info-card {
   border: 1px solid var(--border-teal);
-  border-radius: 20px;
-  padding: 24px;
+  border-radius: 28px;
+  padding: 40px;
   background: var(--bg-white);
+  box-shadow: var(--shadow-soft);
 }
 
-.step-num {
+.step-item {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  border-top: 1px solid var(--border-teal);
+  padding-top: 16px;
+}
+
+.step-num-simple {
   font: 12px "DM Mono";
   color: var(--primary-coral);
-  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .warning-box {
@@ -677,7 +699,6 @@ section {
   opacity: .85;
 }
 
-/* Locations Box */
 .locations-box {
   border: 1px solid var(--border-teal);
   border-radius: 28px;
@@ -846,7 +867,7 @@ footer {
   .btn-cta-package { width: 100%; justify-content: center; }
 
   .grid-3, .grid-4 { grid-template-columns: 1fr; }
-  .booking-section, .warning-box, .locations-box, .cta-banner { padding: 34px 20px; }
+  .booking-section, .warning-box, .locations-box, .cta-banner, .info-card { padding: 34px 20px; }
   .warning-list { grid-template-columns: 1fr; }
 
   .sticky-bar {
@@ -902,9 +923,9 @@ footer {
       
       <!-- HEALTH PACKAGES DROPDOWN -->
       <div class="dropdown">
-        <a class="navlink active" href="#">Health Packages ▾</a>
+        <a class="navlink active" href="javascript:void(0);">Health Packages ▾</a>
         <div class="dropdown-menu">
-          <a href="/bali-belly-package/">Bali Belly Package</a>
+          <a href="/bali-belly-package/" class="active-link">Bali Belly Package</a>
           <a href="/hangover-package/">Hangover Package</a>
           <a href="/fever-package/">Fever Package</a>
           <a href="/flu-relief-package/">Flu Relief Package</a>
@@ -941,9 +962,9 @@ footer {
     <a href="/about/" onclick="closeMenu()">About Us</a>
     
     <!-- MOBILE HEALTH PACKAGES -->
-    <a href="#" onclick="closeMenu()"><strong>Health Packages</strong></a>
+    <a href="javascript:void(0);" onclick="closeMenu()"><strong>Health Packages</strong></a>
     <div class="mobile-submenu">
-      <a href="/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
+      <a href="/bali-belly-package/" class="active-link" onclick="closeMenu()">— Bali Belly Package</a>
       <a href="/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
       <a href="/fever-package/" onclick="closeMenu()">— Fever Package</a>
       <a href="/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
@@ -988,7 +1009,7 @@ footer {
             <span class="tag">✦ Doctor & Nurse Visit</span>
             <span class="tag">✦ Hotel / Villa Service</span>
             <span class="tag">✦ Medical Assessment</span>
-            <span class="tag">✦ Medical Report</span>
+            <span class="tag">✦ Travel Insurance Report</span>
           </div>
 
           <div style="margin-top: 28px;">
@@ -1057,23 +1078,26 @@ footer {
         <div class="package-price">Rp 2.025.000</div>
       </div>
 
+      <p class="package-desc">Support your digestive recovery and restore your body's balance.</p>
+
       <div class="package-details-grid">
         <div class="package-col">
-          <h4>Treatment Includes:</h4>
+          <h4>Includes:</h4>
           <ul>
             <li>Electrolyte Solution</li>
-            <li>Anti-Nausea Medication</li>
-            <li>Anti-Vomiting Therapy</li>
+            <li>Anti Nausea</li>
+            <li>Anti Vomiting</li>
             <li>Stomach Protector</li>
+            <li>Stomach Ache Relief</li>
             <li>Vitamin B Complex</li>
           </ul>
         </div>
         <div class="package-col">
-          <h4>Medical Service Includes:</h4>
+          <h4>Service Includes:</h4>
           <ul>
-            <li>Nurse Visit</li>
+            <li>Nurse + Doctor Visit</li>
             <li>Doctor Consultation</li>
-            <li>Medical Report</li>
+            <li>Travel Insurance Report</li>
           </ul>
         </div>
       </div>
@@ -1154,105 +1178,32 @@ footer {
 
   <!-- HOW IT WORKS -->
   <section class="wrap">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 40px;">
-      <div class="eyebrow">Step-by-Step Process</div>
-      <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">How It Works</h2>
-    </div>
-
-    <div class="grid-4">
-      <div class="step-card">
-        <div class="step-num">01 — BOOK YOUR TREATMENT</div>
-        <p style="font-size: 14px;">Contact DRIPWELL BALI via WhatsApp or complete the booking form.</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">02 — DOCTOR ASSESSMENT</div>
-        <p style="font-size: 14px;">Our medical team assesses your symptoms, medical history and vital signs.</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">03 — TREATMENT AT LOCATION</div>
-        <p style="font-size: 14px;">A nurse provides the prescribed treatment at your hotel or villa according to doctor's assessment.</p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-num">04 — RECOVERY & FOLLOW-UP</div>
-        <p style="font-size: 14px;">Receive treatment information and medical documentation after your visit.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT YOU MAY EXPERIENCE -->
-  <section style="border-top: 1px solid var(--border-teal); border-bottom: 1px solid var(--border-teal);">
-    <div class="wrap">
-      <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
-        <div class="eyebrow">Symptom Relief</div>
-        <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">What You May Experience</h2>
-      </div>
-
-      <div class="grid-3">
-        <div class="card">
-          <h3>Nausea & Vomiting</h3>
-          <p>Help manage continuous nausea and stop vomiting cycle to allow rest.</p>
-        </div>
-        <div class="card">
-          <h3>Diarrhea Recovery</h3>
-          <p>Support recovery from fluid loss and promote intestinal comfort.</p>
-        </div>
-        <div class="card">
-          <h3>Stomach Cramps</h3>
-          <p>Symptomatic relief of painful spasms when medically appropriate.</p>
-        </div>
-        <div class="card">
-          <h3>Dehydration Relief</h3>
-          <p>Direct IV support for rapid fluid and electrolyte replacement.</p>
-        </div>
-        <div class="card">
-          <h3>Weakness & Fatigue</h3>
-          <p>Essential vitamin B & hydration support following nutrient loss.</p>
-        </div>
-        <div class="card" style="border-style: dashed; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
-          <h3>Need Immediate Help?</h3>
-          <p style="margin-bottom: 16px;">Our medical team is available 24/7 for home visits.</p>
-          <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20am%20feeling%20unwell%20with%20Bali%20Belly." target="_blank" rel="noopener noreferrer" class="btn-cta-outline" style="padding: 10px 20px; font-size: 10px;">
-            Chat on WhatsApp →
-          </a>
+    <div class="info-card">
+      <div class="eyebrow">Simple Process</div>
+      <h3 class="display" style="font-size: 32px; margin-bottom: 16px;">How It Works</h3>
+      
+      <div class="step-item">
+        <span class="step-num-simple">01</span>
+        <div>
+          <strong>Contact Us via WhatsApp</strong>
+          <p style="font-size: 14px; opacity: .8;">Share your symptoms, location, and preferred treatment time with our 24/7 team.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- WHY CHOOSE DRIPWELL BALI -->
-  <section class="wrap">
-    <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
-      <div class="eyebrow">Why Choose Us</div>
-      <h2 class="display" style="font-size: clamp(32px, 5vw, 48px);">Why Choose DripWell Bali?</h2>
-    </div>
+      <div class="step-item">
+        <span class="step-num-simple">02</span>
+        <div>
+          <strong>Medical Consultation & Dispatch</strong>
+          <p style="font-size: 14px; opacity: .8;">Our licensed doctor and nurse arrive at your villa or hotel with full medical gear.</p>
+        </div>
+      </div>
 
-    <div class="grid-3">
-      <div class="card">
-        <h3>Professional Medical Team</h3>
-        <p>Doctor and nurse-led service ensuring safe and clinical procedures.</p>
-      </div>
-      <div class="card">
-        <h3>At Your Hotel or Villa</h3>
-        <p>No need to travel while feeling unwell. Relax in your own bed.</p>
-      </div>
-      <div class="card">
-        <h3>Personalized Treatment</h3>
-        <p>Treatment is based specifically on your symptoms and clinical vital signs.</p>
-      </div>
-      <div class="card">
-        <h3>Medical Documentation</h3>
-        <p>Official medical report provided after treatment for your insurance needs.</p>
-      </div>
-      <div class="card">
-        <h3>Private & Convenient</h3>
-        <p>Professional healthcare delivered with complete privacy and comfort.</p>
-      </div>
-      <div class="card">
-        <h3>24/7 Availability</h3>
-        <p>On-call medical support available day and night across Bali.</p>
+      <div class="step-item">
+        <span class="step-num-simple">03</span>
+        <div>
+          <strong>Recover in Comfort</strong>
+          <p style="font-size: 14px; opacity: .8;">Receive safe, monitored IV treatment or medical consultation without leaving your bed.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1310,7 +1261,7 @@ footer {
     </div>
   </section>
 
-  <!-- COVERED AREAS (SERVICE COVERAGE MATRIC MATCHED TO HOME MENU) -->
+  <!-- COVERED AREAS -->
   <section class="wrap">
     <div class="locations-box">
       <div>
@@ -1419,7 +1370,7 @@ footer {
           <span class="icon">⌄</span>
         </button>
         <div class="faq-a">
-          <p>Yes. The Bali Belly Package includes an official Medical Report for your records or insurance claim.</p>
+          <p>Yes. The Bali Belly Package includes an official Travel Insurance Report for your records or insurance claim.</p>
         </div>
       </div>
 
