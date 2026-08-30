@@ -50,14 +50,18 @@
       "logo": "https://www.dripwellbali.com/dripwell-logo.jpeg",
       "telephone": "+6282221614966",
       "email": "dripwellbali@gmail.com",
-      "hasMap": "https://share.google/eC4kjAxjvGdGjutWF"
+      "areaServed": [
+        "Canggu", "Berawa", "Batu Bolong", "Echo Beach", "Batu Belig", "Pererenan", "Seseh", 
+        "Tumbak Bayuh", "Padonan", "Babakan", "Tibubeneng", "Dalung", "Seminyak", "Petitenget", 
+        "Kerobokan", "Umalas", "Munggu", "Kedungu", "Tabanan", "Yeh Gangga", "Tanah Lot", 
+        "Cemagi", "Beraban", "Nuanu Area", "Mengwi", "Others"
+      ]
     }
   ]
 }
 </script>
 
 <style>
-/* Refined Color Palette: Pure White Background, Deep Teal Text & Terracotta Accent */
 :root {
   --bg-white: #ffffff;
   --bg-soft: #f8faf9;
@@ -65,6 +69,7 @@
   --primary-coral: #d26b52;
   --border-teal: rgba(19, 62, 61, 0.15);
   --border-coral: rgba(210, 107, 82, 0.25);
+  --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
   --alert-red: #c0392b;
   --alert-bg: #fdf2f2;
 }
@@ -86,35 +91,14 @@ body {
   line-height: 1.6;
 }
 
-.mono {
-  font-family: "DM Mono", monospace;
-}
+.mono { font-family: "DM Mono", monospace; }
+.display { font-family: "Playfair Display", Georgia, serif; }
+.coral-text { color: var(--primary-coral); }
 
-.display {
-  font-family: "Playfair Display", Georgia, serif;
-}
-
-.coral-text {
-  color: var(--primary-coral);
-}
-
-button, input, select, textarea {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
 
 /* Accessibility */
 .skip-link {
@@ -129,10 +113,7 @@ img {
   font: 12px "DM Mono";
   transition: top .2s;
 }
-
-.skip-link:focus {
-  top: 12px;
-}
+.skip-link:focus { top: 12px; }
 
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline: 3px solid var(--primary-coral);
@@ -196,12 +177,12 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .navlink {
   font: 10px "DM Mono";
-  letter-spacing: .16em;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--text-dark);
   opacity: .8;
@@ -214,6 +195,45 @@ nav {
   font-weight: 700;
 }
 
+/* Dropdown Menu CSS */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-white);
+  min-width: 220px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-teal);
+  border-radius: 12px;
+  padding: 8px 0;
+  z-index: 1001;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  font: 10px "DM Mono";
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background: var(--bg-white);
+  color: var(--primary-coral);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .nav-book {
   background: var(--primary-coral);
   color: var(--bg-white);
@@ -222,11 +242,12 @@ nav {
   font: 10px "DM Mono";
   letter-spacing: .16em;
   text-transform: uppercase;
-  transition: .2s;
+  transition: background .2s, transform .2s;
 }
 
 .nav-book:hover {
   background: var(--text-dark);
+  transform: translateY(-1px);
 }
 
 .mobile-menu {
@@ -240,18 +261,24 @@ nav {
   font-size: 18px;
 }
 
-.mobile-panel {
-  display: none;
+.mobile-panel { display: none; }
+
+.mobile-submenu {
+  padding-left: 16px;
+  background: rgba(19, 62, 61, 0.03);
 }
 
-/* Container Wrapper */
+.mobile-submenu a {
+  font-size: 9px !important;
+  opacity: 0.85;
+}
+
 .wrap {
   max-width: 1280px;
   margin: auto;
   padding: 0 20px;
 }
 
-/* Standard Section Layout */
 section {
   padding: 60px 0;
 }
@@ -327,7 +354,6 @@ section {
   color: var(--text-dark);
 }
 
-/* Photo Frame Component */
 .photo-frame {
   position: relative;
   border-radius: 28px;
@@ -356,7 +382,6 @@ section {
   border: 1px solid var(--border-teal);
 }
 
-/* Button Component */
 .btn-cta {
   display: inline-flex;
   align-items: center;
@@ -399,7 +424,6 @@ section {
   color: var(--bg-white);
 }
 
-/* Grid & Card Component */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -451,7 +475,6 @@ section {
   opacity: .85;
 }
 
-/* Featured Package Card Layout (FIXED FOR MOBILE) */
 .package-box {
   border: 2px solid var(--primary-coral);
   border-radius: 28px;
@@ -515,7 +538,6 @@ section {
   font-weight: bold;
 }
 
-/* Booking Form */
 .booking-section {
   border: 1px solid var(--border-teal);
   border-radius: 28px;
@@ -561,7 +583,6 @@ section {
   outline: none;
 }
 
-/* Step / Process Section */
 .step-card {
   border: 1px solid var(--border-teal);
   border-radius: 20px;
@@ -575,7 +596,6 @@ section {
   margin-bottom: 10px;
 }
 
-/* Hospital Warning Box */
 .warning-box {
   border: 1px solid var(--alert-red);
   background: var(--alert-bg);
@@ -612,7 +632,6 @@ section {
   font-size: 12px;
 }
 
-/* FAQ Accordion */
 .faq-item {
   border: 1px solid var(--border-teal);
   border-radius: 16px;
@@ -627,7 +646,7 @@ section {
   background: none;
   border: none;
   text-align: left;
-  font: 17px "DM Sans", sans-serif;
+  font: 16px "DM Sans", sans-serif;
   font-weight: 600;
   color: var(--text-dark);
   display: flex;
@@ -658,45 +677,59 @@ section {
   opacity: .85;
 }
 
-/* Locations & Map Box */
+/* Locations Box */
 .locations-box {
   border: 1px solid var(--border-teal);
   border-radius: 28px;
   padding: 40px;
-  background: var(--bg-soft);
+  background: var(--bg-white);
+  box-shadow: var(--shadow-soft);
 }
 
-.locations-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
-  align-items: center;
+.accommodations-list {
+  list-style: none;
+  margin-top: 12px;
+  margin-bottom: 24px;
 }
 
-.areas {
+.accommodations-list li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.accommodations-list li::before {
+  content: "✦ ";
+  color: var(--primary-coral);
+}
+
+.areas-flex {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 14px;
+  margin-top: 12px;
 }
 
-.area {
+.area-pill {
   border: 1px solid var(--border-teal);
   border-radius: 999px;
   background: var(--bg-white);
-  padding: 6px 14px;
-  font-size: 12px;
   color: var(--text-dark);
-  transition: .2s;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.area.active, .area:hover {
+.area-pill:hover {
   background: var(--primary-coral);
   color: var(--bg-white);
   border-color: var(--primary-coral);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(210, 107, 82, 0.25);
 }
 
-/* Call to Action Section */
 .cta-banner {
   border: 1px solid var(--primary-coral);
   background: var(--primary-coral);
@@ -732,7 +765,6 @@ section {
   border-color: var(--text-dark);
 }
 
-/* Footer */
 footer {
   border-top: 1px solid var(--border-teal);
   padding: 40px 0 30px;
@@ -774,12 +806,9 @@ footer {
   opacity: .7;
 }
 
-.sticky-bar {
-  display: none;
-}
+.sticky-bar { display: none; }
 
-/* Responsive Styles for Mobile */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   nav { display: none; }
   .mobile-menu { display: block; }
 
@@ -800,7 +829,7 @@ footer {
   .mobile-panel a {
     display: block;
     width: 100%;
-    padding: 14px;
+    padding: 12px 14px;
     border-bottom: 1px solid var(--border-teal);
     font: 10px "DM Mono";
     text-transform: uppercase;
@@ -809,10 +838,9 @@ footer {
 
   .mobile-panel a:last-child { border-bottom: 0; }
 
-  .hero-grid, .locations-grid, .grid-2, .package-details-grid, .form-grid { grid-template-columns: 1fr; gap: 24px; }
+  .hero-grid, .grid-2, .package-details-grid, .form-grid { grid-template-columns: 1fr; gap: 24px; }
   .photo-frame { height: 300px; }
   
-  /* PERBAIKAN KHUSUS CARD PAKET DI HP */
   .package-box { padding: 28px 20px 36px; }
   .package-price { font-size: 24px; }
   .btn-cta-package { width: 100%; justify-content: center; }
@@ -870,13 +898,35 @@ footer {
 
     <nav aria-label="Main navigation">
       <a class="navlink" href="/">Home</a>
-      <a class="navlink" href="/home-doctor-bali/">Home Doctor</a>
-      <a class="navlink" href="/iv-drip-bali/">IV Drip</a>
-      <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
-      <a class="navlink active" href="/bali-belly-treatment/">Bali Belly</a>
-      <a class="navlink" href="/hangover-treatment-bali/">Hangover</a>
-      <a class="navlink" href="/faq/">FAQ</a>
       <a class="navlink" href="/about/">About Us</a>
+      
+      <!-- HEALTH PACKAGES DROPDOWN -->
+      <div class="dropdown">
+        <a class="navlink active" href="#">Health Packages ▾</a>
+        <div class="dropdown-menu">
+          <a href="/bali-belly-package/">Bali Belly Package</a>
+          <a href="/hangover-package/">Hangover Package</a>
+          <a href="/fever-package/">Fever Package</a>
+          <a href="/flu-relief-package/">Flu Relief Package</a>
+        </div>
+      </div>
+
+      <!-- IV DRIPS VITAMIN DROPDOWN -->
+      <div class="dropdown">
+        <a class="navlink" href="/iv-drip-bali/">IV Drips Vitamin ▾</a>
+        <div class="dropdown-menu">
+          <a href="/jetlag-package/">Jetlag Package</a>
+          <a href="/energy-booster-package/">Energy Booster Package</a>
+          <a href="/immune-booster-basic/">Immune Booster Basic</a>
+          <a href="/immune-booster-standard-package/">Immune Booster Standard Package</a>
+          <a href="/ultimate-immune-booster/">Ultimate Immune Booster</a>
+        </div>
+      </div>
+
+      <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
+      <a class="navlink" href="/home-doctor-bali/">Home Doctor</a>
+      <a class="navlink" href="/blog/">Blog</a>
+      <a class="navlink" href="/faq/">FAQ</a>
       <a class="navlink" href="/contact/">Contact</a>
       <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20need%20Bali%20Belly%20treatment." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
     </nav>
@@ -888,13 +938,31 @@ footer {
 
   <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
     <a href="/" onclick="closeMenu()">Home</a>
-    <a href="/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
-    <a href="/iv-drip-bali/" onclick="closeMenu()">IV Drip</a>
-    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
-    <a href="/bali-belly-treatment/" onclick="closeMenu()">Bali Belly</a>
-    <a href="/hangover-treatment-bali/" onclick="closeMenu()">Hangover</a>
-    <a href="/faq/" onclick="closeMenu()">FAQ</a>
     <a href="/about/" onclick="closeMenu()">About Us</a>
+    
+    <!-- MOBILE HEALTH PACKAGES -->
+    <a href="#" onclick="closeMenu()"><strong>Health Packages</strong></a>
+    <div class="mobile-submenu">
+      <a href="/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
+      <a href="/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
+      <a href="/fever-package/" onclick="closeMenu()">— Fever Package</a>
+      <a href="/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
+    </div>
+
+    <!-- MOBILE IV DRIPS VITAMIN -->
+    <a href="/iv-drip-bali/" onclick="closeMenu()"><strong>IV Drips Vitamin</strong></a>
+    <div class="mobile-submenu">
+      <a href="/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
+      <a href="/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
+      <a href="/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
+      <a href="/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
+      <a href="/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
+    </div>
+
+    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
+    <a href="/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
+    <a href="/blog/" onclick="closeMenu()">Blog</a>
+    <a href="/faq/" onclick="closeMenu()">FAQ</a>
     <a href="/contact/" onclick="closeMenu()">Contact</a>
     <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20need%20Bali%20Belly%20treatment." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Chat on WhatsApp</a>
   </div>
@@ -930,7 +998,6 @@ footer {
           </div>
         </div>
 
-        <!-- GAMBAR HERO BALI BELLY (bali-belly.jpg) -->
         <div class="photo-frame">
           <img src="bali-belly.jpg" alt="Bali Belly medical IV treatment at villa" loading="eager">
           <div class="photo-badge">✦ Fast Recovery at Your Villa</div>
@@ -981,7 +1048,7 @@ footer {
     </div>
   </section>
 
-  <!-- BALI BELLY PACKAGE (RAPI DI HP & LAPTOP) -->
+  <!-- BALI BELLY PACKAGE -->
   <section class="wrap">
     <div class="package-box">
       <div class="package-header">
@@ -1243,54 +1310,62 @@ footer {
     </div>
   </section>
 
-  <!-- COVERED AREAS -->
+  <!-- COVERED AREAS (SERVICE COVERAGE MATRIC MATCHED TO HOME MENU) -->
   <section class="wrap">
     <div class="locations-box">
-      <div class="locations-grid">
+      <div>
+        <div class="eyebrow">Service Coverage</div>
+        <h3 class="display" style="font-size: 28px; margin-bottom: 8px;">Professional Care, Delivered to Your Door</h3>
+        <p style="font-size: 14px; opacity: .85;">Experience personalized wellness care without leaving the comfort of your location. dripwellbali brings professional medical and IV therapy</p>
+        
+        <div style="margin-top: 18px;">
+          <strong style="font-size: 11px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .12em; color: var(--primary-coral);">We Provide Services At:</strong>
+          <ul class="accommodations-list">
+            <li>Private Villas</li>
+            <li>Hotels & Resorts</li>
+            <li>Private Residences</li>
+            <li>Selected Accommodations</li>
+          </ul>
+        </div>
+
         <div>
-          <div class="eyebrow">Service Coverage</div>
-          <h2 class="display" style="font-size: clamp(30px, 4vw, 46px);">
-            Hotel & Villa Medical Service Across Bali
-          </h2>
-          <p style="font-size: 14px; opacity: .85; margin-top: 10px;">
-            DRIPWELL BALI provides Doctor & Nurse Home Service in selected areas of Bali:
-          </p>
-
-          <div class="areas">
-            <span class="area active">Canggu</span>
-            <span class="area active">Seminyak</span>
-            <span class="area active">Legian</span>
-            <span class="area active">Kuta</span>
-            <span class="area active">Sanur</span>
-            <span class="area active">Jimbaran</span>
-            <span class="area active">Nusa Dua</span>
-            <span class="area active">Uluwatu</span>
-            <span class="area active">Ubud</span>
-            <span class="area active">Ungasan</span>
-            <span class="area active">Denpasar</span>
-          </div>
-
-          <div style="margin-top: 24px;">
-            <p style="font-size: 14px; font-weight: 600;">Not sure if your location is covered?</p>
-            <p style="font-size: 13px; opacity: .8;">Contact us and send your hotel or villa location. Our team will confirm availability immediately.</p>
+          <strong style="font-size: 11px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .12em; color: var(--primary-coral);">◆ Covered Areas In Bali:</strong>
+          <div class="areas-flex">
+            <span class="area-pill">Canggu</span>
+            <span class="area-pill">Berawa</span>
+            <span class="area-pill">Batu Bolong</span>
+            <span class="area-pill">Echo Beach</span>
+            <span class="area-pill">Batu Belig</span>
+            <span class="area-pill">Pererenan</span>
+            <span class="area-pill">Seseh</span>
+            <span class="area-pill">Tumbak Bayuh</span>
+            <span class="area-pill">Padonan</span>
+            <span class="area-pill">Babakan</span>
+            <span class="area-pill">Tibubeneng</span>
+            <span class="area-pill">Dalung</span>
+            <span class="area-pill">Seminyak</span>
+            <span class="area-pill">Petitenget</span>
+            <span class="area-pill">Kerobokan</span>
+            <span class="area-pill">Umalas</span>
+            <span class="area-pill">Munggu</span>
+            <span class="area-pill">Kedungu</span>
+            <span class="area-pill">Tabanan</span>
+            <span class="area-pill">Yeh Gangga</span>
+            <span class="area-pill">Tanah Lot</span>
+            <span class="area-pill">Cemagi</span>
+            <span class="area-pill">Beraban</span>
+            <span class="area-pill">Nuanu Area</span>
+            <span class="area-pill">Mengwi</span>
+            <span class="area-pill">Others</span>
           </div>
         </div>
 
-        <div class="map-card">
-          <div class="mono" style="font-size: 10px; text-transform: uppercase; letter-spacing: .15em; opacity: .8;">
-            Coverage Check
-          </div>
-          <h4>Check Your Location</h4>
-          <p>Send your villa location on WhatsApp to confirm immediate availability.</p>
-          <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20is%20my%20location%20covered%20for%20Bali%20Belly%20treatment?" target="_blank" rel="noopener noreferrer" class="btn-cta-outline">
-            Check My Area ↗
-          </a>
-        </div>
+        <p style="font-size: 12px; opacity: .75; margin-top: 16px;">Service availability may vary depending on location and scheduling. Contact our team to check availability.</p>
       </div>
     </div>
   </section>
 
-  <!-- FAQ SECTION (EXTRA SPACING INCLUDED) -->
+  <!-- FAQ SECTION -->
   <section class="wrap">
     <div style="text-align: center; max-width: 650px; margin: 0 auto 48px;">
       <div class="eyebrow">Frequently Asked Questions</div>
