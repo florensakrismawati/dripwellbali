@@ -417,6 +417,27 @@ section { padding: 60px 0; }
   color: var(--bg-white);
 }
 
+/* Package Card Buttons */
+.btn-pkg-book {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: var(--text-dark);
+  color: var(--bg-white);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font: 10px "DM Mono";
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 14px;
+  transition: all .2s;
+}
+
+.btn-pkg-book:hover {
+  background: var(--primary-coral);
+}
+
 /* Package Grid Cards */
 .packages-grid-5 {
   display: grid;
@@ -875,91 +896,121 @@ footer {
     </div>
 
     <div class="packages-grid-5">
+      <!-- PACKAGE 1 -->
       <div class="pkg-card">
-        <div class="pkg-header">
-          <div class="eyebrow" style="margin-bottom: 4px;">Travel Recovery</div>
-          <h3>Jetlag Package</h3>
-          <div class="pkg-price">Rp 975.000</div>
+        <div>
+          <div class="pkg-header">
+            <div class="eyebrow" style="margin-bottom: 4px;">Travel Recovery</div>
+            <h3>Jetlag Package</h3>
+            <div class="pkg-price">Rp 975.000</div>
+          </div>
+          <ul class="pkg-items">
+            <li>Saline Solution</li>
+            <li>Vitamin B Complex</li>
+            <li>Stomach Protector</li>
+          </ul>
         </div>
-        <ul class="pkg-items">
-          <li>Saline Solution</li>
-          <li>Vitamin B Complex</li>
-          <li>Stomach Protector</li>
-        </ul>
-        <div class="pkg-footer">
-          <span>Nurse + Doctor Visite</span>
-          <span>Doctor Consultation</span>
+        <div>
+          <div class="pkg-footer">
+            <span>Nurse + Doctor Visite</span>
+            <span>Doctor Consultation</span>
+          </div>
+          <a href="#booking-form" onclick="selectPackage('Jetlag Package (Rp 975.000)')" class="btn-pkg-book">Book This Package →</a>
         </div>
       </div>
 
+      <!-- PACKAGE 2 -->
       <div class="pkg-card">
-        <div class="pkg-header">
-          <div class="eyebrow" style="margin-bottom: 4px;">Performance</div>
-          <h3>Energy Booster</h3>
-          <div class="pkg-price">Rp 2.325.000</div>
+        <div>
+          <div class="pkg-header">
+            <div class="eyebrow" style="margin-bottom: 4px;">Performance</div>
+            <h3>Energy Booster</h3>
+            <div class="pkg-price">Rp 2.325.000</div>
+          </div>
+          <ul class="pkg-items">
+            <li>Saline Solution</li>
+            <li>Multivitamin</li>
+            <li>Stomach Protector</li>
+          </ul>
         </div>
-        <ul class="pkg-items">
-          <li>Saline Solution</li>
-          <li>Multivitamin</li>
-          <li>Stomach Protector</li>
-        </ul>
-        <div class="pkg-footer">
-          <span>Nurse + Doctor Visite</span>
-          <span>Doctor Consultation</span>
+        <div>
+          <div class="pkg-footer">
+            <span>Nurse + Doctor Visite</span>
+            <span>Doctor Consultation</span>
+          </div>
+          <a href="#booking-form" onclick="selectPackage('Energy Booster Package (Rp 2.325.000)')" class="btn-pkg-book">Book This Package →</a>
         </div>
       </div>
 
+      <!-- PACKAGE 3 -->
       <div class="pkg-card">
-        <div class="pkg-header">
-          <div class="eyebrow" style="margin-bottom: 4px;">Protection</div>
-          <h3>Immune Basic</h3>
-          <div class="pkg-price">Rp 1.350.000</div>
+        <div>
+          <div class="pkg-header">
+            <div class="eyebrow" style="margin-bottom: 4px;">Protection</div>
+            <h3>Immune Basic</h3>
+            <div class="pkg-price">Rp 1.350.000</div>
+          </div>
+          <ul class="pkg-items">
+            <li>Saline Solution</li>
+            <li>Vitamin C</li>
+            <li>Stomach Protector</li>
+          </ul>
         </div>
-        <ul class="pkg-items">
-          <li>Saline Solution</li>
-          <li>Vitamin C</li>
-          <li>Stomach Protector</li>
-        </ul>
-        <div class="pkg-footer">
-          <span>Nurse + Doctor Visite</span>
-          <span>Doctor Consultation</span>
+        <div>
+          <div class="pkg-footer">
+            <span>Nurse + Doctor Visite</span>
+            <span>Doctor Consultation</span>
+          </div>
+          <a href="#booking-form" onclick="selectPackage('Immune Booster Basic (Rp 1.350.000)')" class="btn-pkg-book">Book This Package →</a>
         </div>
       </div>
 
+      <!-- PACKAGE 4 -->
       <div class="pkg-card">
-        <div class="pkg-header">
-          <div class="eyebrow" style="margin-bottom: 4px;">Advanced Protection</div>
-          <h3>Immune Standard</h3>
-          <div class="pkg-price">Rp 2.625.000</div>
+        <div>
+          <div class="pkg-header">
+            <div class="eyebrow" style="margin-bottom: 4px;">Advanced Protection</div>
+            <h3>Immune Standard</h3>
+            <div class="pkg-price">Rp 2.625.000</div>
+          </div>
+          <ul class="pkg-items">
+            <li>Saline Solution</li>
+            <li>Vitamin B Complex</li>
+            <li>Multivitamin</li>
+            <li>Stomach Protector</li>
+          </ul>
         </div>
-        <ul class="pkg-items">
-          <li>Saline Solution</li>
-          <li>Vitamin B Complex</li>
-          <li>Multivitamin</li>
-          <li>Stomach Protector</li>
-        </ul>
-        <div class="pkg-footer">
-          <span>Nurse + Doctor Visite</span>
-          <span>Doctor Consultation</span>
+        <div>
+          <div class="pkg-footer">
+            <span>Nurse + Doctor Visite</span>
+            <span>Doctor Consultation</span>
+          </div>
+          <a href="#booking-form" onclick="selectPackage('Immune Booster Standard Package (Rp 2.625.000)')" class="btn-pkg-book">Book This Package →</a>
         </div>
       </div>
 
+      <!-- PACKAGE 5 -->
       <div class="pkg-card">
-        <div class="pkg-header">
-          <div class="eyebrow" style="margin-bottom: 4px;">Maximum Defense</div>
-          <h3>Ultimate Immune</h3>
-          <div class="pkg-price">Rp 2.925.000</div>
+        <div>
+          <div class="pkg-header">
+            <div class="eyebrow" style="margin-bottom: 4px;">Maximum Defense</div>
+            <h3>Ultimate Immune</h3>
+            <div class="pkg-price">Rp 2.925.000</div>
+          </div>
+          <ul class="pkg-items">
+            <li>Saline Solution</li>
+            <li>Vitamin B Complex</li>
+            <li>Multivitamin</li>
+            <li>Vitamin C</li>
+            <li>Stomach Protector</li>
+          </ul>
         </div>
-        <ul class="pkg-items">
-          <li>Saline Solution</li>
-          <li>Vitamin B Complex</li>
-          <li>Multivitamin</li>
-          <li>Vitamin C</li>
-          <li>Stomach Protector</li>
-        </ul>
-        <div class="pkg-footer">
-          <span>Nurse + Doctor Visite</span>
-          <span>Doctor Consultation</span>
+        <div>
+          <div class="pkg-footer">
+            <span>Nurse + Doctor Visite</span>
+            <span>Doctor Consultation</span>
+          </div>
+          <a href="#booking-form" onclick="selectPackage('Ultimate Immune Booster (Rp 2.925.000)')" class="btn-pkg-book">Book This Package →</a>
         </div>
       </div>
     </div>
@@ -1237,6 +1288,13 @@ function closeMenu(){
   panel.classList.remove("show");
   btn.setAttribute("aria-expanded", "false");
   btn.setAttribute("aria-label", "Open navigation menu");
+}
+
+function selectPackage(val) {
+  const pkgSelect = document.getElementById('packageSelect');
+  if(pkgSelect) {
+    pkgSelect.value = val;
+  }
 }
 
 function submitForm(e) {
