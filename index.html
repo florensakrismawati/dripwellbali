@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
 <title>Dripwell Bali | 24/7 Home Doctor, IV Drip & Medical Service</title>
 
@@ -54,9 +54,10 @@
 <style>
 :root {
   --bg-white: #ffffff;
+  --bg-soft: #f8faf9;
   --text-dark: #133e3d;
   --primary-coral: #d26b52;
-  --accent-gold: #e3b66f;
+  --accent-gold: #c28e38;
   --border-teal: rgba(19, 62, 61, 0.15);
   --border-coral: rgba(210, 107, 82, 0.25);
   --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
@@ -86,7 +87,7 @@ body {
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; }
 a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; display: block; height: auto; }
 
 /* Accessibility */
 .skip-link {
@@ -210,8 +211,9 @@ nav {
 }
 
 .dropdown-menu a:hover {
-  background: var(--bg-white);
+  background: var(--bg-soft);
   color: var(--primary-coral);
+  font-weight: bold;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -244,7 +246,11 @@ nav {
   font-size: 18px;
 }
 
-.mobile-panel { display: none; }
+.mobile-panel { 
+  display: none; 
+  max-height: 80vh;
+  overflow-y: auto;
+}
 
 .mobile-submenu {
   padding-left: 16px;
@@ -350,7 +356,7 @@ section { padding: 60px 0; }
   overflow: hidden;
   border: 1px solid var(--border-teal);
   height: 420px;
-  background: #789c91;
+  background: var(--bg-soft);
   box-shadow: var(--shadow-soft);
 }
 
@@ -375,13 +381,12 @@ section { padding: 60px 0; }
   border: 1px solid var(--border-teal);
 }
 
-/* Treatments Section */
+/* Treatments Section (Light Theme Tone) */
 .packages-section {
-  background: var(--text-dark);
-  color: var(--bg-white);
+  background: var(--bg-soft);
+  color: var(--text-dark);
   padding: 80px 0;
-  border-radius: 40px 40px 0 0;
-  margin-top: -20px;
+  border-bottom: 1px solid var(--border-teal);
 }
 
 .packages-head {
@@ -395,20 +400,22 @@ section { padding: 60px 0; }
 
 .packages-head h2 {
   font-size: clamp(32px, 4vw, 48px);
-  color: var(--bg-white);
+  color: var(--text-dark);
 }
 
 .tabs {
   display: flex;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border-teal);
   border-radius: 999px;
   padding: 4px;
+  background: var(--bg-white);
 }
 
 .tabs button {
   border: 0;
   background: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-dark);
+  opacity: 0.7;
   border-radius: 999px;
   padding: 10px 20px;
   font: 10px "DM Mono";
@@ -420,45 +427,47 @@ section { padding: 60px 0; }
 .tabs button.active {
   background: var(--primary-coral);
   color: var(--bg-white);
+  opacity: 1;
   font-weight: 600;
 }
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .treatment-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 24px;
-  padding: 28px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-teal);
+  border-radius: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform .25s ease, border-color .25s ease, background-color .25s ease;
+  transition: transform .25s ease, border-color .25s ease;
 }
 
 .treatment-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   border-color: var(--primary-coral);
-  background: rgba(255, 255, 255, 0.08);
 }
 
 .treatment-card h3 {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 24px;
-  margin-top: 6px;
-  color: var(--bg-white);
+  font-size: 22px;
+  margin-top: 4px;
+  color: var(--text-dark);
 }
 
 .treatment-card .price {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 22px;
-  color: var(--accent-gold);
+  color: var(--primary-coral);
+  font-weight: 700;
   margin: 6px 0 12px;
   padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-teal);
 }
 
 .treatment-card .desc {
@@ -472,9 +481,10 @@ section { padding: 60px 0; }
   font: 10px "DM Mono";
   text-transform: uppercase;
   letter-spacing: .12em;
-  color: var(--accent-gold);
+  color: var(--primary-coral);
   margin-top: 12px;
   margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .treatment-card ul {
@@ -492,15 +502,22 @@ section { padding: 60px 0; }
 .treatment-card ul.includes-list li::before {
   content: "• ";
   color: var(--primary-coral);
+  font-weight: bold;
 }
 
 .treatment-card ul.service-list li {
-  color: var(--bg-white);
+  color: var(--text-dark);
+}
+
+.treatment-card ul.service-list li::before {
+  content: "✓ ";
+  color: var(--primary-coral);
+  font-weight: bold;
 }
 
 .btn-card-book {
   display: block;
-  background: var(--primary-coral);
+  background: var(--text-dark);
   color: var(--bg-white);
   border: none;
   padding: 12px;
@@ -513,14 +530,15 @@ section { padding: 60px 0; }
   width: 100%;
   margin-top: auto;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .btn-card-book:hover {
-  background: var(--accent-gold);
-  color: var(--text-dark);
+  background: var(--primary-coral);
+  color: var(--bg-white);
 }
 
-/* Info Section (How It Works & Service Coverage) */
+/* Info Section */
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -574,13 +592,12 @@ section { padding: 60px 0; }
   margin-top: 12px;
 }
 
-/* AREA PILLS HOVER EFFECT */
 .area-pill {
   border: 1px solid var(--border-teal);
   border-radius: 999px;
   background: var(--bg-white);
   color: var(--text-dark);
-  padding: 8px 16px;
+  padding: 6px 14px;
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
@@ -702,11 +719,24 @@ footer {
 
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
+  body {
+    padding-bottom: 75px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .wrap {
+    padding: 0 16px;
+  }
+
   nav { display: none; }
   .mobile-menu { display: block; }
+
   .mobile-panel {
     position: absolute;
-    top: 70px;
+    top: 65px;
     left: 16px;
     right: 16px;
     background: var(--bg-white);
@@ -715,7 +745,9 @@ footer {
     padding: 8px;
     box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12);
   }
+
   .mobile-panel.show { display: block; }
+
   .mobile-panel a {
     display: block;
     width: 100%;
@@ -725,22 +757,25 @@ footer {
     text-transform: uppercase;
     letter-spacing: .14em;
   }
+
   .mobile-panel a:last-child { border-bottom: 0; }
   
   .hero-grid, .info-grid { 
     grid-template-columns: 1fr; 
     gap: 30px; 
   }
-  .photo-frame { height: 320px; }
+
+  .photo-frame { height: 280px; }
   
   .sticky-bar {
     display: block;
     position: fixed;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    z-index: 100;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    z-index: 1000;
   }
+
   .sticky-bar a {
     display: block;
     width: 100%;
@@ -749,11 +784,12 @@ footer {
     color: var(--bg-white);
     border-radius: 999px;
     padding: 14px;
-    font: 10px "DM Mono";
-    letter-spacing: .16em;
+    font: 11px "DM Mono";
+    letter-spacing: .14em;
     text-transform: uppercase;
-    box-shadow: 0 10px 25px rgba(210, 107, 82, 0.35);
+    box-shadow: 0 8px 20px rgba(210, 107, 82, 0.35);
   }
+
   .footer-top { flex-direction: column; }
   .footer-actions { align-items: flex-start; }
   .copyright { flex-direction: column; gap: 8px; }
@@ -766,6 +802,7 @@ footer {
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<!-- HEADER -->
 <header>
   <div class="nav">
     <a class="brand" href="/" aria-label="Dripwell Bali home">
@@ -782,8 +819,9 @@ footer {
       <a class="navlink active" href="/">Home</a>
       <a class="navlink" href="/about/">About Us</a>
       
+      <!-- HEALTH PACKAGES DROPDOWN -->
       <div class="dropdown">
-        <a class="navlink" href="#">Health Packages ▾</a>
+        <a class="navlink" href="/health-packages/">Health Packages ▾</a>
         <div class="dropdown-menu">
           <a href="/bali-belly-package/">Bali Belly Package</a>
           <a href="/hangover-package/">Hangover Package</a>
@@ -792,6 +830,7 @@ footer {
         </div>
       </div>
 
+      <!-- IV DRIPS VITAMIN DROPDOWN -->
       <div class="dropdown">
         <a class="navlink" href="/iv-drip-bali/">IV Drips Vitamin ▾</a>
         <div class="dropdown-menu">
@@ -820,7 +859,8 @@ footer {
     <a href="/" onclick="closeMenu()">Home</a>
     <a href="/about/" onclick="closeMenu()">About Us</a>
     
-    <a href="#" onclick="closeMenu()"><strong>Health Packages</strong></a>
+    <!-- MOBILE HEALTH PACKAGES -->
+    <a href="/health-packages/" onclick="closeMenu()"><strong>Health Packages</strong></a>
     <div class="mobile-submenu">
       <a href="/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
       <a href="/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
@@ -828,6 +868,7 @@ footer {
       <a href="/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
     </div>
 
+    <!-- MOBILE IV DRIPS VITAMIN -->
     <a href="/iv-drip-bali/" onclick="closeMenu()"><strong>IV Drips Vitamin</strong></a>
     <div class="mobile-submenu">
       <a href="/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
@@ -848,6 +889,7 @@ footer {
 
 <main id="main">
 
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
@@ -871,11 +913,12 @@ footer {
     </div>
   </section>
 
+  <!-- TREATMENTS SECTION -->
   <section id="treatments" class="packages-section">
     <div class="wrap">
       <div class="packages-head">
         <div>
-          <div class="eyebrow" style="color: var(--accent-gold);">01 — Choose Your Care</div>
+          <div class="eyebrow">01 — Choose Your Care</div>
           <h2 class="display">Targeted Treatments.<br><i>Delivered Fast.</i></h2>
         </div>
 
@@ -890,6 +933,7 @@ footer {
     </div>
   </section>
 
+  <!-- INFO SECTION -->
   <section class="wrap">
     <div class="info-grid">
       
@@ -975,6 +1019,7 @@ footer {
     </div>
   </section>
 
+  <!-- FAQ SECTION -->
   <section class="wrap faq-section">
     <div class="faq-card">
       <div class="eyebrow">Common Questions</div>
@@ -1024,6 +1069,7 @@ footer {
 
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-top">
@@ -1057,6 +1103,7 @@ footer {
   </div>
 </footer>
 
+<!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
   <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20visit." target="_blank" rel="noopener noreferrer">✦ Chat on WhatsApp →</a>
 </div>
@@ -1173,7 +1220,7 @@ function renderCards(list) {
           ${item.serviceIncludes.map(s => `<li>${s}</li>`).join('')}
         </ul>
       </div>
-      <a href="${item.link}" class="btn-card-book">book treatment</a>
+      <a href="${item.link}" class="btn-card-book">book treatment →</a>
     </div>
   `).join('');
 }
