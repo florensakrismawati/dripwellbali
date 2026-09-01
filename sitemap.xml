@@ -1,13 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HALAMAN UTAMA -->
   <url>
     <loc>https://www.dripwellbali.com/</loc>
     <priority>1.0</priority>
   </url>
+
+  <!-- HALAMAN BLOG INDEX -->
   <url>
     <loc>https://www.dripwellbali.com/blog/</loc>
     <priority>0.9</priority>
   </url>
+
+  <!-- HALAMAN LAYANAN UTAMA -->
+  <url>
+    <loc>https://www.dripwellbali.com/home-doctor-bali/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/iv-drip-bali/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/bali-belly-treatment/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/hangover-package/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/fever-package/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/flu-relief-package/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/physiotherapy-bali/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/about/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/faq/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/contact/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ARTIKEL BLOG -->
   <url>
     <loc>https://www.dripwellbali.com/blog/why-tourists-prefer-home-doctors-bali/</loc>
     <priority>0.8</priority>
@@ -28,4 +76,5 @@
     <loc>https://www.dripwellbali.com/blog/surfing-injuries-physiotherapy-bali/</loc>
     <priority>0.8</priority>
   </url>
+
 </urlset>
