@@ -83,15 +83,8 @@
   --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg-white);
@@ -111,422 +104,206 @@ img { max-width: 100%; display: block; }
 
 /* Accessibility */
 .skip-link {
-  position: fixed;
-  left: 12px;
-  top: -60px;
-  z-index: 100;
-  background: var(--text-dark);
-  color: var(--bg-white);
-  padding: 12px 16px;
-  border-radius: 8px;
-  font: 12px "DM Mono";
-  transition: top .2s;
+  position: fixed; left: 12px; top: -60px; z-index: 100;
+  background: var(--text-dark); color: var(--bg-white);
+  padding: 12px 16px; border-radius: 8px; font: 12px "DM Mono"; transition: top .2s;
 }
 .skip-link:focus { top: 12px; }
 
 /* Header Navigation */
 header {
-  position: sticky;
-  top: 0;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid var(--border-teal);
+  position: sticky; top: 0;
+  background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px);
+  z-index: 1000; border-bottom: 1px solid var(--border-teal);
 }
 
 .nav {
-  max-width: 1280px;
-  margin: auto;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  max-width: 1280px; margin: auto; padding: 16px 20px;
+  display: flex; align-items: center; justify-content: space-between;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+.brand { display: flex; align-items: center; gap: 12px; }
 
 .logo {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--border-teal);
+  width: 44px; height: 44px; flex: 0 0 44px;
+  border-radius: 50%; overflow: hidden; border: 1px solid var(--border-teal);
 }
 
-.logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.logo img { width: 100%; height: 100%; object-fit: cover; }
 
 .brand small {
-  display: block;
-  font: 10px "DM Mono";
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--primary-coral);
+  display: block; font: 10px "DM Mono"; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--primary-coral);
 }
 
-.brand strong {
-  font: 24px "Playfair Display";
-  line-height: 1;
-  color: var(--text-dark);
-}
+.brand strong { font: 24px "Playfair Display"; line-height: 1; color: var(--text-dark); }
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+nav { display: flex; align-items: center; gap: 16px; }
 
 .navlink {
-  font: 10px "DM Mono";
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--text-dark);
-  opacity: .8;
-  transition: opacity .2s, color .2s;
+  font: 10px "DM Mono"; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--text-dark); opacity: .8; transition: opacity .2s, color .2s;
 }
 
-.navlink:hover, .navlink.active {
-  opacity: 1;
-  color: var(--primary-coral);
-  font-weight: 700;
-}
+.navlink:hover, .navlink.active { opacity: 1; color: var(--primary-coral); font-weight: 700; }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+.dropdown { position: relative; display: inline-block; }
 
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--bg-white);
-  min-width: 220px;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--border-teal);
-  border-radius: 12px;
-  padding: 8px 0;
-  z-index: 1001;
+  display: none; position: absolute; top: 100%; left: 0;
+  background-color: var(--bg-white); min-width: 220px;
+  box-shadow: var(--shadow-soft); border: 1px solid var(--border-teal);
+  border-radius: 12px; padding: 8px 0; z-index: 1001;
 }
 
 .dropdown-menu a {
-  display: block;
-  padding: 10px 16px;
-  font: 10px "DM Mono";
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--text-dark);
+  display: block; padding: 10px 16px; font: 10px "DM Mono";
+  letter-spacing: .1em; text-transform: uppercase; color: var(--text-dark);
   transition: background 0.2s, color 0.2s;
 }
 
-.dropdown-menu a:hover {
-  background: var(--bg-soft);
-  color: var(--primary-coral);
-  font-weight: bold;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+.dropdown-menu a:hover { background: var(--bg-soft); color: var(--primary-coral); font-weight: bold; }
+.dropdown:hover .dropdown-menu { display: block; }
 
 .nav-book {
-  background: var(--primary-coral);
-  color: var(--bg-white);
-  padding: 10px 20px;
-  border-radius: 999px;
-  font: 10px "DM Mono";
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  transition: background .2s;
+  background: var(--primary-coral); color: var(--bg-white);
+  padding: 10px 20px; border-radius: 999px;
+  font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; transition: background .2s;
 }
 
-.nav-book:hover {
-  background: var(--text-dark);
-}
+.nav-book:hover { background: var(--text-dark); }
 
 .mobile-menu {
-  display: none;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--border-teal);
-  border-radius: 50%;
-  background: none;
-  color: var(--text-dark);
-  font-size: 18px;
+  display: none; width: 40px; height: 40px;
+  border: 1px solid var(--border-teal); border-radius: 50%;
+  background: none; color: var(--text-dark); font-size: 18px;
 }
 
 .mobile-panel { display: none; }
 
-.mobile-submenu {
-  padding-left: 16px;
-  background: rgba(19, 62, 61, 0.03);
-}
+.mobile-submenu { padding-left: 16px; background: rgba(19, 62, 61, 0.03); }
+.mobile-submenu a { font-size: 9px !important; opacity: 0.85; }
 
-.mobile-submenu a {
-  font-size: 9px !important;
-  opacity: 0.85;
-}
-
-.wrap {
-  max-width: 1280px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-section {
-  padding: 60px 0;
-}
+.wrap { max-width: 1280px; margin: auto; padding: 0 20px; }
+section { padding: 60px 0; }
 
 .eyebrow {
-  font: 11px "DM Mono";
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--primary-coral);
-  margin-bottom: 12px;
+  font: 11px "DM Mono"; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--primary-coral); margin-bottom: 12px;
 }
 
 .eyebrow span {
-  display: inline-block;
-  width: 24px;
-  height: 1px;
-  background: var(--primary-coral);
-  vertical-align: middle;
-  margin-right: 8px;
+  display: inline-block; width: 24px; height: 1px;
+  background: var(--primary-coral); vertical-align: middle; margin-right: 8px;
 }
 
 /* Blog Layout & Cards */
-.blog-header {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto 50px;
-}
+.blog-header { text-align: center; max-width: 750px; margin: 0 auto 50px; }
 
 .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
 }
 
 .blog-card {
-  border: 1px solid var(--border-teal);
-  border-radius: 20px;
-  overflow: hidden;
-  background: var(--bg-white);
-  display: flex;
-  flex-direction: column;
+  border: 1px solid var(--border-teal); border-radius: 20px;
+  overflow: hidden; background: var(--bg-white);
+  display: flex; flex-direction: column;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .blog-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--primary-coral);
-  box-shadow: var(--shadow-soft);
+  transform: translateY(-6px); border-color: var(--primary-coral); box-shadow: var(--shadow-soft);
 }
 
-.blog-img {
-  height: 220px;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
+.blog-img { height: 220px; width: 100%; overflow: hidden; position: relative; }
 
 .blog-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
+  width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;
 }
 
-.blog-card:hover .blog-img img {
-  transform: scale(1.05);
-}
+.blog-card:hover .blog-img img { transform: scale(1.05); }
 
 .blog-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: var(--bg-white);
-  color: var(--primary-coral);
-  padding: 4px 12px;
-  border-radius: 999px;
-  font: 10px "DM Mono";
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  font-weight: 600;
+  position: absolute; top: 14px; left: 14px;
+  background: var(--bg-white); color: var(--primary-coral);
+  padding: 4px 12px; border-radius: 999px;
+  font: 10px "DM Mono"; text-transform: uppercase; letter-spacing: .1em; font-weight: 600;
   border: 1px solid var(--border-coral);
 }
 
 .blog-content {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  padding: 24px; display: flex; flex-direction: column; flex-grow: 1;
 }
 
 .blog-meta {
-  font: 11px "DM Mono";
-  color: var(--text-dark);
-  opacity: 0.6;
-  margin-bottom: 10px;
-  display: flex;
-  gap: 12px;
+  font: 11px "DM Mono"; color: var(--text-dark); opacity: 0.6; margin-bottom: 10px; display: flex; gap: 12px;
 }
 
 .blog-content h2 {
-  font: 22px "Playfair Display", serif;
-  line-height: 1.3;
-  margin-bottom: 12px;
-  color: var(--text-dark);
+  font: 22px "Playfair Display", serif; line-height: 1.3; margin-bottom: 12px; color: var(--text-dark);
 }
 
-.blog-content p {
-  font-size: 14px;
-  opacity: 0.85;
-  margin-bottom: 20px;
-  flex-grow: 1;
-}
+.blog-content p { font-size: 14px; opacity: 0.85; margin-bottom: 20px; flex-grow: 1; }
 
 .read-more {
-  font: 11px "DM Mono";
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--primary-coral);
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  font: 11px "DM Mono"; text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--primary-coral); font-weight: 700; display: inline-flex; align-items: center; gap: 6px;
 }
 
-.read-more:hover {
-  color: var(--text-dark);
-}
+.read-more:hover { color: var(--text-dark); }
 
 /* CTA Section */
 .cta-banner {
-  border: 1px solid var(--primary-coral);
-  background: var(--primary-coral);
-  color: var(--bg-white);
-  border-radius: 28px;
-  padding: 60px 30px;
-  text-align: center;
-  margin: 40px 0;
+  border: 1px solid var(--primary-coral); background: var(--primary-coral);
+  color: var(--bg-white); border-radius: 28px; padding: 60px 30px; text-align: center; margin: 40px 0;
 }
 
-.cta-banner h2 {
-  font-size: clamp(34px, 5vw, 60px);
-  line-height: 1.1;
-  margin-bottom: 16px;
-}
-
-.cta-banner p {
-  font-size: 16px;
-  max-width: 650px;
-  margin: 0 auto 28px;
-  opacity: .95;
-}
+.cta-banner h2 { font-size: clamp(34px, 5vw, 60px); line-height: 1.1; margin-bottom: 16px; }
+.cta-banner p { font-size: 16px; max-width: 650px; margin: 0 auto 28px; opacity: .95; }
 
 .btn-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--bg-white);
-  color: var(--primary-coral);
-  padding: 14px 28px;
-  border-radius: 999px;
-  font: 11px "DM Mono";
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: all .2s;
-  border: 1px solid var(--bg-white);
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--bg-white); color: var(--primary-coral);
+  padding: 14px 28px; border-radius: 999px; font: 11px "DM Mono";
+  letter-spacing: .16em; text-transform: uppercase; font-weight: 600;
+  transition: all .2s; border: 1px solid var(--bg-white);
 }
 
-.btn-cta:hover {
-  background: var(--text-dark);
-  color: var(--bg-white);
-  border-color: var(--text-dark);
-}
+.btn-cta:hover { background: var(--text-dark); color: var(--bg-white); border-color: var(--text-dark); }
 
 /* Footer */
-footer {
-  border-top: 1px solid var(--border-teal);
-  padding: 40px 0 30px;
-  margin-top: 40px;
-}
+footer { border-top: 1px solid var(--border-teal); padding: 40px 0 30px; margin-top: 40px; }
 
 .footer-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid var(--border-teal);
+  display: flex; justify-content: space-between; gap: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--border-teal);
 }
 
-.footer-brand p {
-  max-width: 320px;
-  font-size: 13px;
-  color: var(--text-dark);
-  opacity: .8;
-  margin-top: 10px;
-}
+.footer-brand p { max-width: 320px; font-size: 13px; color: var(--text-dark); opacity: .8; margin-top: 10px; }
 
-.footer-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-  font-size: 13px;
-}
+.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: 13px; }
 
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-  font: 10px "DM Mono";
-  text-transform: uppercase;
-  letter-spacing: .15em;
-  color: var(--text-dark);
-  opacity: .7;
+  display: flex; justify-content: space-between; padding-top: 20px;
+  font: 10px "DM Mono"; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7;
 }
 
 .sticky-bar { display: none; }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
   nav { display: none; }
   .mobile-menu { display: block; }
 
   .mobile-panel {
-    position: absolute;
-    top: 70px;
-    left: 16px;
-    right: 16px;
-    background: var(--bg-white);
-    border: 1px solid var(--border-teal);
-    border-radius: 16px;
-    padding: 8px;
-    box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12);
+    position: absolute; top: 70px; left: 16px; right: 16px;
+    background: var(--bg-white); border: 1px solid var(--border-teal);
+    border-radius: 16px; padding: 8px; box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12);
   }
 
   .mobile-panel.show { display: block; }
 
   .mobile-panel a {
-    display: block;
-    width: 100%;
-    padding: 12px 14px;
-    border-bottom: 1px solid var(--border-teal);
-    font: 10px "DM Mono";
-    text-transform: uppercase;
-    letter-spacing: .14em;
+    display: block; width: 100%; padding: 12px 14px;
+    border-bottom: 1px solid var(--border-teal); font: 10px "DM Mono"; text-transform: uppercase; letter-spacing: .14em;
   }
 
   .mobile-panel a:last-child { border-bottom: 0; }
@@ -535,26 +312,14 @@ footer {
   .cta-banner { padding: 34px 20px; }
 
   .sticky-bar {
-    display: block;
-    position: fixed;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    z-index: 100;
+    display: block; position: fixed; bottom: 16px; left: 16px; right: 16px; z-index: 100;
   }
 
   .sticky-bar a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: var(--primary-coral);
-    color: var(--bg-white);
-    border-radius: 999px;
-    padding: 14px;
-    font: 10px "DM Mono";
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    box-shadow: 0 10px 25px rgba(210, 107, 82, 0.3);
+    display: block; width: 100%; text-align: center;
+    background: var(--primary-coral); color: var(--bg-white);
+    border-radius: 999px; padding: 14px; font: 10px "DM Mono";
+    letter-spacing: .16em; text-transform: uppercase; box-shadow: 0 10px 25px rgba(210, 107, 82, 0.3);
   }
 
   .footer-top { flex-direction: column; }
@@ -664,214 +429,240 @@ footer {
       </p>
     </div>
 
-    <!-- BLOG GRID (13 TOTAL ARTICLES) -->
+    <!-- BLOG GRID (DENGAN LINK INTERNAL LOKAL/FOLDER GITHUB DAN LAYANAN) -->
     <div class="blog-grid">
 
-      <!-- ORIGINAL ARTICLE 1 (FROM IMAGE) -->
+      <!-- ARTICLE 1: BALI BELLY -->
       <article class="blog-card">
         <div class="blog-img">
-          <img src="https://www.dripwellbali.com/bali-belly-package/bali-belly.jpg" alt="How to Recover Fast From Bali Belly: Doctor's Guide" loading="lazy">
+          <a href="https://www.dripwellbali.com/blog/how-to-recover-fast-from-bali-belly/">
+            <img src="https://www.dripwellbali.com/bali-belly-package/bali-belly.jpg" alt="How to Recover Fast From Bali Belly: Doctor's Guide" loading="lazy">
+          </a>
           <span class="blog-badge">Travel Health</span>
         </div>
         <div class="blog-content">
           <div class="blog-meta">
             <span>August 2026</span> • <span>5 min read</span>
           </div>
-          <h2>How to Recover Fast From Bali Belly: Doctor’s Guide</h2>
+          <h2><a href="https://www.dripwellbali.com/blog/how-to-recover-fast-from-bali-belly/">How to Recover Fast From Bali Belly: Doctor’s Guide</a></h2>
           <p>Experiencing nausea, stomach cramps, and severe dehydration? Learn what steps to take immediately and how IV hydration speeds up recovery.</p>
-          <a href="https://www.dripwellbali.com/bali-belly-package/" class="read-more">Read Article →</a>
+          <a href="https://www.dripwellbali.com/blog/how-to-recover-fast-from-bali-belly/" class="read-more">Read Article →</a>
         </div>
       </article>
 
-      <!-- ORIGINAL ARTICLE 2 (FROM IMAGE) -->
+      <!-- ARTICLE 2: IV DRIP VS PILLS -->
       <article class="blog-card">
         <div class="blog-img">
-          <img src="https://www.dripwellbali.com/ultimate-immune-booster/ultimate-immune.jpg" alt="Why IV Drips Work Faster Than Oral Vitamin Pills" loading="lazy">
+          <a href="https://www.dripwellbali.com/blog/why-iv-drips-work-faster-than-pills/">
+            <img src="https://www.dripwellbali.com/ultimate-immune-booster/ultimate-immune.jpg" alt="Why IV Drips Work Faster Than Oral Vitamin Pills" loading="lazy">
+          </a>
           <span class="blog-badge">IV Therapy</span>
         </div>
         <div class="blog-content">
           <div class="blog-meta">
             <span>July 2026</span> • <span>4 min read</span>
           </div>
-          <h2>Why IV Drips Work Faster Than Oral Vitamin Pills</h2>
+          <h2><a href="https://www.dripwellbali.com/blog/why-iv-drips-work-faster-than-pills/">Why IV Drips Work Faster Than Oral Vitamin Pills</a></h2>
           <p>Discover the science behind 100% absorption rates with IV therapy, high-dose Vitamin C, Glutathione, and essential electrolytes delivered to your vein.</p>
-          <a href="https://www.dripwellbali.com/iv-drip-bali/" class="read-more">Read Article →</a>
+          <a href="https://www.dripwellbali.com/blog/why-iv-drips-work-faster-than-pills/" class="read-more">Read Article →</a>
         </div>
       </article>
 
-      <!-- ORIGINAL ARTICLE 3 (FROM IMAGE) -->
+      <!-- ARTICLE 3: SURFING INJURIES -->
       <article class="blog-card">
         <div class="blog-img">
-          <img src="https://www.dripwellbali.com/physiotherapy-bali/physiotherapy.jpg" alt="Common Surfing Injuries in Bali & How Physiotherapy Helps" loading="lazy">
+          <a href="https://www.dripwellbali.com/blog/surfing-injuries-physiotherapy-bali/">
+            <img src="https://www.dripwellbali.com/physiotherapy-bali/physiotherapy.jpg" alt="Common Surfing Injuries in Bali & How Physiotherapy Helps" loading="lazy">
+          </a>
           <span class="blog-badge">Rehabilitation</span>
         </div>
         <div class="blog-content">
           <div class="blog-meta">
             <span>June 2026</span> • <span>6 min read</span>
           </div>
-          <h2>Common Surfing Injuries in Bali & How Physiotherapy Helps</h2>
+          <h2><a href="https://www.dripwellbali.com/blog/surfing-injuries-physiotherapy-bali/">Common Surfing Injuries in Bali & How Physiotherapy Helps</a></h2>
           <p>From shoulder impingement to lower back stiffness from long paddle sessions—here is how home physical therapy gets you back on the wave.</p>
-          <a href="https://www.dripwellbali.com/physiotherapy-bali/" class="read-more">Read Article →</a>
+          <a href="https://www.dripwellbali.com/blog/surfing-injuries-physiotherapy-bali/" class="read-more">Read Article →</a>
         </div>
       </article>
 
-      <!-- NEW LOCAL SEO ARTICLE 4 -->
+      <!-- ARTICLE 4: TRAVEL INSURANCE CLAIM -->
       <article class="blog-card">
         <div class="blog-img">
-          <img src="https://www.dripwellbali.com/bali-belly-package/bali-belly.jpg" alt="Bali Belly Treatment in Canggu and Pererenan" loading="lazy">
-          <span class="blog-badge">Canggu & Pererenan</span>
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span>August 2026</span> • <span>5 min read</span>
-          </div>
-          <h2>Got Bali Belly in Canggu or Pererenan? Villa Doctor's Care Guide</h2>
-          <p>Severe cramps, vomiting, and diarrhea ruining your trip? Learn why direct IV hydration at your Canggu or Pererenan villa is the most effective cure.</p>
-          <a href="https://www.dripwellbali.com/bali-belly-package/" class="read-more">Book Belly Relief →</a>
-        </div>
-      </article>
-
-      <!-- NEW LOCAL SEO ARTICLE 5 -->
-      <article class="blog-card">
-        <div class="blog-img">
-          <img src="https://www.dripwellbali.com/home.jpg" alt="Home Doctor Visit in Tabanan and Kedungu" loading="lazy">
-          <span class="blog-badge">Tabanan & Kedungu</span>
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span>August 2026</span> • <span>4 min read</span>
-          </div>
-          <h2>24/7 Mobile Doctor Service in Tabanan & Kedungu Beach</h2>
-          <p>Staying in quiet Tabanan or Kedungu and feeling unwell? Discover how our call-out doctors bring full medical diagnostics directly to your resort.</p>
-          <a href="https://www.dripwellbali.com/home-doctor-bali/" class="read-more">Call Doctor Now →</a>
-        </div>
-      </article>
-
-      <!-- NEW LOCAL SEO ARTICLE 6 -->
-      <article class="blog-card">
-        <div class="blog-img">
-          <img src="https://www.dripwellbali.com/hangover-package/hangover.jpg" alt="Canggu Party Hangover Cure IV Therapy" loading="lazy">
-          <span class="blog-badge">Party Recovery</span>
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span>August 2026</span> • <span>4 min read</span>
-          </div>
-          <h2>Ultimate Hangover Cure in Canggu: IV Drips vs. Coconut Water</h2>
-          <p>Partied too hard in Batu Bolong or Echo Beach? Discover how targeted electrolytes, anti-nausea meds, and multivitamin IVs bounce you back in 45 mins.</p>
-          <a href="https://www.dripwellbali.com/hangover-package/" class="read-more">Book Hangover Drip →</a>
-        </div>
-      </article>
-
-      <!-- NEW LOCAL SEO ARTICLE 7 -->
-      <article class="blog-card">
-        <div class="blog-img">
-          <img src="https://www.dripwellbali.com/fever-package/fever-hero.jpg" alt="Fever and Dengue Testing in Pererenan" loading="lazy">
-          <span class="blog-badge">Emergency Care</span>
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span>July 2026</span> • <span>6 min read</span>
-          </div>
-          <h2>Sudden Fever in Pererenan? When to Check for Dengue Fever</h2>
-          <p>High fever, chills, and muscle pain? Learn the warning signs of tropical fever and how on-site blood testing and IV fever control protect your health.</p>
-          <a href="https://www.dripwellbali.com/fever-package/" class="read-more">Book Fever Care →</a>
-        </div>
-      </article>
-
-      <!-- NEW LOCAL SEO ARTICLE 8 -->
-      <article class="blog-card">
-        <div class="blog-img">
-          <img src="https://www.dripwellbali.com/physiotherapy-bali/physiotherapy.jpg" alt="Surfing Injury Physiotherapy Echo Beach Canggu" loading="lazy">
-          <span class="blog-badge">Surfer Health</span>
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span>July 2026</span> • <span>5 min read</span>
-          </div>
-          <h2>Surfing Injuries at Echo Beach & Kedungu: Villa Physiotherapy Guide</h2>
-          <p>Lower back stiffness, shoulder strain, or reef cuts? See how home ultrasound therapy, TENS, and rehab physio speed up your surf recovery.</p>
-          <a href="https://www.dripwellbali.com/physiotherapy-bali/" class="read-more">Book Physiotherapy →</a>
-        </div>
-      </article>
-
-      <!-- NEW LOCAL SEO ARTICLE 9 -->
-      <article class="blog-card">
-        <div class="blog-img">
-          <img src="https://www.dripwellbali.com/flu-relief-package/flu-relief.jpg" alt="Flu and AC Sick Treatment in Villa Bali" loading="lazy">
-          <span class="blog-badge">Respiratory Health</span>
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span>July 2026</span> • <span>4 min read</span>
-          </div>
-          <h2>Bali AC Flu & Air Travel Cold: How Anti-Inflammatory IV Drips Help</h2>
-          <p>Throat pain, dry cough, and sinus congestion after long flights or heavy villa AC? Clear symptoms fast with targeted anti-inflammatory therapy.</p>
-          <a href="https://www.dripwellbali.com/flu-relief-package/" class="read-more">Book Flu Relief →</a>
-        </div>
-      </article>
-
-      <!-- NEW LOCAL SEO ARTICLE 10 -->
-      <article class="blog-card">
-        <div class="blog-img">
-          <img src="https://www.dripwellbali.com/ultimate-immune-booster/ultimate-immune.jpg" alt="Immune Booster IV Drip for Digital Nomads in Canggu" loading="lazy">
-          <span class="blog-badge">Wellness & Nomad</span>
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span>June 2026</span> • <span>5 min read</span>
-          </div>
-          <h2>Immune Booster IV Drips for Digital Nomads in Canggu & Seseh</h2>
-          <p>Long working hours in co-working spaces taking a toll on your energy? Boost mental clarity and immunity with high-dose Vitamin C and B Complex.</p>
-          <a href="https://www.dripwellbali.com/ultimate-immune-booster/" class="read-more">Book Immune Drip →</a>
-        </div>
-      </article>
-
-      <!-- NEW LOCAL SEO ARTICLE 11 -->
-      <article class="blog-card">
-        <div class="blog-img">
-          <img src="https://www.dripwellbali.com/jetlag-package/jetlag.jpg" alt="Jetlag Recovery IV Therapy Bali Airport Arrival" loading="lazy">
-          <span class="blog-badge">Travel Health</span>
-        </div>
-        <div class="blog-content">
-          <div class="blog-meta">
-            <span>June 2026</span> • <span>4 min read</span>
-          </div>
-          <h2>Beating Jetlag in Tabanan & Canggu: Why IV Fluid Beats Sleep Pills</h2>
-          <p>Landed after an 18-hour flight from Australia or Europe? Reset your circadian rhythm and fight severe dehydration with targeted saline drips.</p>
-          <a href="https://www.dripwellbali.com/jetlag-package/" class="read-more">Book Jetlag Drip →</a>
-        </div>
-      </article>
-
-      <!-- NEW LOCAL SEO ARTICLE 12 -->
-      <article class="blog-card">
-        <div class="blog-img">
-          <img src="https://www.dripwellbali.com/energy-booster-package/energy.jpg" alt="Travel Insurance Medical Reports for Tourists in Bali" loading="lazy">
+          <a href="https://www.dripwellbali.com/blog/travel-insurance-claim-bali/">
+            <img src="https://www.dripwellbali.com/energy-booster-package/energy.jpg" alt="How to Claim Travel Insurance for Villa Doctor Visits in Bali" loading="lazy">
+          </a>
           <span class="blog-badge">Insurance Guide</span>
         </div>
         <div class="blog-content">
           <div class="blog-meta">
             <span>June 2026</span> • <span>5 min read</span>
           </div>
-          <h2>How to Claim Travel Insurance for Villa Doctor Visits in Bali</h2>
+          <h2><a href="https://www.dripwellbali.com/blog/travel-insurance-claim-bali/">How to Claim Travel Insurance for Villa Doctor Visits in Bali</a></h2>
           <p>Need a medical report and official receipt for Cover-More, World Nomads, or Allianz? Learn how Dripwell provides 100% claimable documentation.</p>
-          <a href="https://www.dripwellbali.com/about/" class="read-more">Learn Insurance Process →</a>
+          <a href="https://www.dripwellbali.com/blog/travel-insurance-claim-bali/" class="read-more">Read Article →</a>
         </div>
       </article>
 
-      <!-- NEW LOCAL SEO ARTICLE 13 -->
+      <!-- ARTICLE 5: WHY TOURISTS PREFER HOME DOCTORS -->
       <article class="blog-card">
         <div class="blog-img">
-          <img src="https://www.dripwellbali.com/dripwell-hero.jpg" alt="Villa Doctor Call-Out Service in Canggu and Tabanan" loading="lazy">
+          <a href="https://www.dripwellbali.com/blog/why-tourists-prefer-home-doctors-bali/">
+            <img src="https://www.dripwellbali.com/home.jpg" alt="Why Tourists in Canggu, Pererenan & Tabanan Prefer Home Doctors" loading="lazy">
+          </a>
           <span class="blog-badge">Local Healthcare</span>
         </div>
         <div class="blog-content">
           <div class="blog-meta">
             <span>May 2026</span> • <span>5 min read</span>
           </div>
-          <h2>Why Tourists in Canggu, Pererenan & Tabanan Prefer Home Doctors</h2>
+          <h2><a href="https://www.dripwellbali.com/blog/why-tourists-prefer-home-doctors-bali/">Why Tourists in Canggu, Pererenan & Tabanan Prefer Home Doctors</a></h2>
           <p>Skip hospital queues and congested traffic. Discover the safety, luxury, and convenience of private doctor visits in your villa environment.</p>
-          <a href="https://www.dripwellbali.com/contact/" class="read-more">Contact Medical Team →</a>
+          <a href="https://www.dripwellbali.com/blog/why-tourists-prefer-home-doctors-bali/" class="read-more">Read Article →</a>
+        </div>
+      </article>
+
+      <!-- ARTICLE 6: CANGGU HANGOVER CURE -->
+      <article class="blog-card">
+        <div class="blog-img">
+          <a href="https://www.dripwellbali.com/hangover-package/">
+            <img src="https://www.dripwellbali.com/hangover-package/hangover.jpg" alt="Canggu Party Hangover Cure IV Therapy" loading="lazy">
+          </a>
+          <span class="blog-badge">Party Recovery</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span>August 2026</span> • <span>4 min read</span>
+          </div>
+          <h2><a href="https://www.dripwellbali.com/hangover-package/">Ultimate Hangover Cure in Canggu: IV Drips vs. Coconut Water</a></h2>
+          <p>Partied too hard in Batu Bolong or Echo Beach? Discover how targeted electrolytes, anti-nausea meds, and multivitamin IVs bounce you back in 45 mins.</p>
+          <a href="https://www.dripwellbali.com/hangover-package/" class="read-more">Book Hangover Drip →</a>
+        </div>
+      </article>
+
+      <!-- ARTICLE 7: FEVER & DENGUE -->
+      <article class="blog-card">
+        <div class="blog-img">
+          <a href="https://www.dripwellbali.com/fever-package/">
+            <img src="https://www.dripwellbali.com/fever-package/fever-hero.jpg" alt="Fever and Dengue Testing in Pererenan" loading="lazy">
+          </a>
+          <span class="blog-badge">Emergency Care</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span>July 2026</span> • <span>6 min read</span>
+          </div>
+          <h2><a href="https://www.dripwellbali.com/fever-package/">Sudden Fever in Pererenan? When to Check for Dengue Fever</a></h2>
+          <p>High fever, chills, and muscle pain? Learn the warning signs of tropical fever and how on-site blood testing and IV fever control protect your health.</p>
+          <a href="https://www.dripwellbali.com/fever-package/" class="read-more">Book Fever Care →</a>
+        </div>
+      </article>
+
+      <!-- ARTICLE 8: FLU RELIEF -->
+      <article class="blog-card">
+        <div class="blog-img">
+          <a href="https://www.dripwellbali.com/flu-relief-package/">
+            <img src="https://www.dripwellbali.com/flu-relief-package/flu-relief.jpg" alt="Flu and AC Sick Treatment in Villa Bali" loading="lazy">
+          </a>
+          <span class="blog-badge">Respiratory Health</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span>July 2026</span> • <span>4 min read</span>
+          </div>
+          <h2><a href="https://www.dripwellbali.com/flu-relief-package/">Bali AC Flu & Air Travel Cold: How Anti-Inflammatory IV Drips Help</a></h2>
+          <p>Throat pain, dry cough, and sinus congestion after long flights or heavy villa AC? Clear symptoms fast with targeted anti-inflammatory therapy.</p>
+          <a href="https://www.dripwellbali.com/flu-relief-package/" class="read-more">Book Flu Relief →</a>
+        </div>
+      </article>
+
+      <!-- ARTICLE 9: JETLAG RECOVERY -->
+      <article class="blog-card">
+        <div class="blog-img">
+          <a href="https://www.dripwellbali.com/jetlag-package/">
+            <img src="https://www.dripwellbali.com/jetlag-package/jetlag.jpg" alt="Jetlag Recovery IV Therapy Bali Airport Arrival" loading="lazy">
+          </a>
+          <span class="blog-badge">Travel Health</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span>June 2026</span> • <span>4 min read</span>
+          </div>
+          <h2><a href="https://www.dripwellbali.com/jetlag-package/">Beating Jetlag in Tabanan & Canggu: Why IV Fluid Beats Sleep Pills</a></h2>
+          <p>Landed after an 18-hour flight from Australia or Europe? Reset your circadian rhythm and fight severe dehydration with targeted saline drips.</p>
+          <a href="https://www.dripwellbali.com/jetlag-package/" class="read-more">Book Jetlag Drip →</a>
+        </div>
+      </article>
+
+      <!-- ARTICLE 10: IMMUNE BOOSTER -->
+      <article class="blog-card">
+        <div class="blog-img">
+          <a href="https://www.dripwellbali.com/ultimate-immune-booster/">
+            <img src="https://www.dripwellbali.com/ultimate-immune-booster/ultimate-immune.jpg" alt="Immune Booster IV Drip for Digital Nomads in Canggu" loading="lazy">
+          </a>
+          <span class="blog-badge">Wellness & Nomad</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span>June 2026</span> • <span>5 min read</span>
+          </div>
+          <h2><a href="https://www.dripwellbali.com/ultimate-immune-booster/">Immune Booster IV Drips for Digital Nomads in Canggu & Seseh</a></h2>
+          <p>Long working hours in co-working spaces taking a toll on your energy? Boost mental clarity and immunity with high-dose Vitamin C and B Complex.</p>
+          <a href="https://www.dripwellbali.com/ultimate-immune-booster/" class="read-more">Book Immune Drip →</a>
+        </div>
+      </article>
+
+      <!-- ARTICLE 11: ENERGY BOOSTER -->
+      <article class="blog-card">
+        <div class="blog-img">
+          <a href="https://www.dripwellbali.com/energy-booster-package/">
+            <img src="https://www.dripwellbali.com/energy-booster-package/energy.jpg" alt="Energy Booster IV Drip Package Bali" loading="lazy">
+          </a>
+          <span class="blog-badge">Energy & Vitality</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span>June 2026</span> • <span>4 min read</span>
+          </div>
+          <h2><a href="https://www.dripwellbali.com/energy-booster-package/">Boost Your Energy Levels Fast with Private IV Therapy</a></h2>
+          <p>Recover from intense outdoor activities, surfing, or long flight fatigue with customized multivitamin infusions delivered to your villa.</p>
+          <a href="https://www.dripwellbali.com/energy-booster-package/" class="read-more">Book Energy Drip →</a>
+        </div>
+      </article>
+
+      <!-- ARTICLE 12: HOME DOCTOR SERVICE -->
+      <article class="blog-card">
+        <div class="blog-img">
+          <a href="https://www.dripwellbali.com/home-doctor-bali/">
+            <img src="https://www.dripwellbali.com/home.jpg" alt="24/7 Mobile Doctor Visit Service in Bali" loading="lazy">
+          </a>
+          <span class="blog-badge">Doctor Call-Out</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span>May 2026</span> • <span>5 min read</span>
+          </div>
+          <h2><a href="https://www.dripwellbali.com/home-doctor-bali/">24/7 Mobile Villa Doctor Services Across Canggu & Tabanan</a></h2>
+          <p>Get full bedside medical consultations, vital exams, prescriptions, and official medical reports without stepping out of your room.</p>
+          <a href="https://www.dripwellbali.com/home-doctor-bali/" class="read-more">Book Villa Doctor →</a>
+        </div>
+      </article>
+
+      <!-- ARTICLE 13: PHYSIOTHERAPY REHAB -->
+      <article class="blog-card">
+        <div class="blog-img">
+          <a href="https://www.dripwellbali.com/physiotherapy-bali/">
+            <img src="https://www.dripwellbali.com/physiotherapy-bali/physiotherapy.jpg" alt="In-Villa Physical Therapy and Rehabilitation Bali" loading="lazy">
+          </a>
+          <span class="blog-badge">Physiotherapy</span>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span>May 2026</span> • <span>6 min read</span>
+          </div>
+          <h2><a href="https://www.dripwellbali.com/physiotherapy-bali/">Mobile Physiotherapy & Rehabilitation Care in Bali Villas</a></h2>
+          <p>Professional physical therapy sessions utilizing TENS, ultrasound, manual therapy, and rehab exercises for muscular injury recovery.</p>
+          <a href="https://www.dripwellbali.com/physiotherapy-bali/" class="read-more">Book Physiotherapy →</a>
         </div>
       </article>
 
