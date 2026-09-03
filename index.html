@@ -742,7 +742,7 @@
     transform: rotate(45deg);
   }
 
-  /* Footer */
+  /* Footer Layout Styles */
   footer {
     border-top: 1px solid var(--border-teal);
     padding: 40px 0 30px;
@@ -750,10 +750,11 @@
     background: var(--bg-white);
   }
 
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
     padding-bottom: 30px;
     border-bottom: 1px solid var(--border-teal);
   }
@@ -769,9 +770,16 @@
   .footer-actions {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
+    gap: 8px;
     font-size: 13px;
+    margin-top: 16px;
+  }
+
+  .footer-map-compact {
+    border: 1px solid var(--border-teal);
+    border-radius: 16px;
+    padding: 16px;
+    background: var(--bg-soft);
   }
 
   .copyright {
@@ -830,7 +838,7 @@
 
     .mobile-panel a:last-child { border-bottom: 0; }
     
-    .hero-grid, .info-grid { 
+    .hero-grid, .info-grid, .footer-grid { 
       grid-template-columns: 1fr; 
       gap: 30px; 
     }
@@ -860,10 +868,8 @@
       box-shadow: 0 8px 20px rgba(210, 107, 82, 0.35);
     }
 
-    .footer-top { flex-direction: column; }
-    .footer-actions { align-items: flex-start; }
     .copyright { flex-direction: column; gap: 8px; }
-    .info-card, .faq-card { padding: 24px; }
+    .info-card, .faq-card { padding: 20px; }
   }
   </style>
 </head>
@@ -1139,10 +1145,12 @@
 
 </main>
 
-<!-- FOOTER -->
+<!-- FOOTER (SEJAJAR & PROPORSI RINGKAS) -->
 <footer>
   <div class="wrap">
-    <div class="footer-top">
+    
+    <div class="footer-grid">
+      <!-- KIRI: BRANDING & KONTAK -->
       <div class="footer-brand">
         <a class="brand" href="https://www.dripwellbali.com/" aria-label="Back to home">
           <span class="logo">
@@ -1152,23 +1160,50 @@
             <strong>Dripwell <i>Bali</i></strong>
           </span>
         </a>
-        <p>Recover • Rehydrate • Revive</p>
-        <p style="margin-top: 6px;">Available 24/7 across Bali for villa visits and medical consultations.</p>
+        <p>Recover • Rehydrate • Revive[cite: 1]</p>
+        <p style="margin-top: 6px;">Available 24/7 across Bali for villa visits and medical consultations.[cite: 1]</p>
+
+        <div class="footer-actions">
+          <a href="https://wa.me/6282221614966" target="_blank" rel="noopener noreferrer" class="coral-text">✦ Chat on WhatsApp</a>
+          <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
+          <div>
+            <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a>[cite: 1] &nbsp;·&nbsp;
+            <a href="tel:+6282221614966">Call +62 822 2161 4966</a>[cite: 1]
+          </div>
+        </div>
       </div>
 
-      <div class="footer-actions">
-        <a href="https://wa.me/6282221614966" target="_blank" rel="noopener noreferrer" class="coral-text">✦ Chat on WhatsApp</a>
-        <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
-        <div>
-          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
-          <a href="tel:+6282221614966">Call +62 822 2161 4966</a>
+      <!-- KANAN: MAPS KOMPAK & PROPORSIAL -->
+      <div class="footer-map-compact">
+        <div class="eyebrow" style="font-size: 10px; margin-bottom: 4px;">Headquarters</div>
+        <p style="font-size: 12px; opacity: .85; margin-bottom: 10px; line-height: 1.4;">
+          <strong>Address:</strong> Perumahan Gria Batu Indah, Jalan Batu Sangian No. 5, Gubug, Tabanan, Bali 82115[cite: 1]
+        </p>
+        
+        <!-- Maps Ringkas (Height 160px) -->
+        <div style="width: 100%; height: 160px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-teal); margin-bottom: 10px;">
+          <iframe 
+            title="Dripwell Bali Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.3970423180493!2d115.1118!3d-8.5583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzMnMjkuOSJTIDExNcKwMDYnNDI0NSJF!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
+
+        <a href="https://maps.google.com/?q=Perumahan+Gria+Batu+Indah,+Jalan+Batu+Sangian+No.+5,+Gubug,+Tabanan,+Bali+82115" target="_blank" rel="noopener noreferrer" style="font: 10px 'DM Mono'; text-transform: uppercase; color: var(--primary-coral); font-weight: 600; text-decoration: underline;">
+          Open in Google Maps ↗
+        </a>
       </div>
     </div>
 
+    <!-- COPYRIGHT -->
     <div class="copyright">
       <span>© 2026 Dripwell Bali</span>
-      <span>Care, wherever you are.</span>
+      <span>Care, wherever you are.[cite: 1]</span>
     </div>
   </div>
 </footer>
