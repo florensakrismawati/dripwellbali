@@ -12,7 +12,7 @@
   <meta name="author" content="Dripwell Bali">
   <meta name="theme-color" content="#133e3d">
 
-  <!-- Canonical Tag -->
+  <!-- Canonical Tag & Favicon -->
   <link rel="canonical" href="https://www.dripwellbali.com/">
   <link rel="icon" href="https://www.dripwellbali.com/favicon.svg" type="image/svg+xml">
 
@@ -33,11 +33,12 @@
   <meta name="twitter:description" content="Professional home doctor visits, IV drip therapy, physiotherapy and medical care delivered to your hotel or villa across Bali.">
   <meta name="twitter:image" content="https://www.dripwellbali.com/home.jpg">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
 
-  <!-- Interconnected Graph Schema (Structured Data JSON-LD) -->
+  <!-- Structured Data JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -127,8 +128,8 @@
     --bg-white: #ffffff;
     --bg-soft: #f8faf9;
     --text-dark: #133e3d;
-    --primary-green: #133e3d; /* Forest Green */
-    --accent-gold: #c28e38;    /* Muted Gold */
+    --primary-green: #133e3d;
+    --accent-gold: #c28e38;
     --border-teal: rgba(19, 62, 61, 0.15);
     --border-gold: rgba(194, 142, 56, 0.3);
     --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
@@ -161,7 +162,7 @@
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; height: auto; }
 
-  /* Top Promo Banner (Seamless Running Text) */
+  /* Promo Banner */
   .promo-bar {
     background: var(--primary-green);
     color: var(--bg-white);
@@ -193,7 +194,6 @@
     font-weight: 700;
   }
 
-  /* Stop running text on hover */
   .promo-bar:hover .promo-track {
     animation-play-state: paused;
   }
@@ -294,7 +294,7 @@
     font-weight: 700;
   }
 
-  /* Dropdown Menu CSS */
+  /* Dropdown Menu */
   .dropdown {
     position: relative;
     display: inline-block;
@@ -378,7 +378,7 @@
     opacity: 0.85;
   }
 
-  /* Sections Scaffolding */
+  /* Scaffolding */
   .wrap { max-width: 1280px; margin: auto; padding: 0 20px; }
   section { padding: 60px 0; }
 
@@ -616,21 +616,73 @@
     line-height: 1.5;
   }
 
-  .treatment-card .section-title {
-    font: 10px "DM Mono";
+  /* Accordion / Collapsible Style untuk Kartu */
+  .accordion-group {
+    margin-top: 10px;
+  }
+
+  .accordion-btn {
+    width: 100%;
+    background: var(--bg-soft);
+    border: 1px solid var(--border-teal);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font: 11px "DM Mono", monospace;
     text-transform: uppercase;
-    letter-spacing: .12em;
+    letter-spacing: .1em;
     color: var(--accent-gold);
-    margin-top: 12px;
-    margin-bottom: 6px;
-    font-weight: 600;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .accordion-btn:hover {
+    background: #f0f4f3;
+    border-color: var(--accent-gold);
+  }
+
+  .accordion-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    color: var(--primary-green);
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out, padding 0.35s ease;
+    padding: 0 4px;
+  }
+
+  .accordion-group.open .accordion-content {
+    max-height: 500px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+  }
+
+  .accordion-group.open .accordion-icon {
+    transform: rotate(180deg);
+  }
+
+  .composition-group {
+    margin-bottom: 10px;
+  }
+
+  .composition-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 4px;
+    display: block;
   }
 
   .treatment-card ul {
     list-style: none;
     font-size: 13px;
     opacity: .9;
-    margin-bottom: 16px;
   }
 
   .treatment-card ul li {
@@ -638,14 +690,22 @@
     line-height: 1.4;
   }
 
-  .treatment-card ul.includes-list li::before {
-    content: "• ";
-    color: var(--accent-gold);
-    font-weight: bold;
+  .treatment-card ul.sub-list {
+    margin-top: 2px;
+    margin-bottom: 8px;
+    padding-left: 8px;
   }
 
-  .treatment-card ul.service-list li {
-    color: var(--text-dark);
+  .treatment-card ul.sub-list li {
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 3px;
+  }
+
+  .treatment-card ul.sub-list li::before {
+    content: "◦ ";
+    color: var(--accent-gold);
+    font-weight: bold;
   }
 
   .treatment-card ul.service-list li::before {
@@ -667,7 +727,7 @@
     text-align: center;
     transition: background .2s, transform .2s;
     width: 100%;
-    margin-top: auto;
+    margin-top: 16px;
     text-decoration: none;
     font-weight: 600;
   }
@@ -677,7 +737,7 @@
     color: var(--bg-white);
   }
 
-  /* WHY CHOOSE US SECTION STYLES */
+  /* Why Choose Us */
   .why-choose-section {
     padding-top: 20px;
   }
@@ -743,7 +803,7 @@
     line-height: 1.4;
   }
 
-  /* Service Coverage Full-Width Card */
+  /* Service Coverage */
   .coverage-card {
     border: 1px solid var(--border-teal);
     border-radius: 28px;
@@ -994,7 +1054,7 @@
 
 <body id="top">
 
-<!-- TOP PROMO BANNER (SEAMLESS RUNNING TEXT IN FOREST GREEN) -->
+<!-- TOP PROMO BANNER -->
 <div class="promo-bar" aria-label="Promotion Banner">
   <div class="promo-track">
     <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
@@ -1149,7 +1209,7 @@
         <!-- Item 1 -->
         <div class="why-item">
           <div class="why-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 16 14"/></svg>
           </div>
           <div>
             <h4>24/7 Non-Stop Medical Service</h4>
@@ -1360,7 +1420,11 @@
 </div>
 
 <script>
-// 1. Health Packages (Prioritas Utama untuk Lead Konversi)
+// Data elemen medis
+const bComplexBoosters = ["Vitamin B1", "Vitamin B6", "Vitamin B12", "D-Panthenol"];
+const multivitaminBoosters = ["Multivitamin A", "Vitamin D3", "B-Complex", "Vitamin C", "Nicotinamide"];
+
+// 1. Health Packages
 const healthPackages = [
   { 
     name: "Bali Belly Package", 
@@ -1368,7 +1432,8 @@ const healthPackages = [
     oldPrice: "Rp 2.025.000",
     price: "Rp 1.721.250", 
     desc: "Fast relief for acute stomach issues, nausea, and dehydration directly at your villa.",
-    includes: ["Electrolyte Solution", "Anti Nausea", "Anti Vomiting", "Stomach Protector", "Stomach Ache Relief", "Vitamin B Complex"],
+    therapeutics: ["Electrolyte Solution", "Anti Nausea", "Anti Vomiting", "Stomach Protector", "Stomach Ache Relief"],
+    vitamins: bComplexBoosters,
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
     link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Bali%20Belly%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
@@ -1378,7 +1443,8 @@ const healthPackages = [
     oldPrice: "Rp 2.475.000",
     price: "Rp 2.103.750", 
     desc: "Rehydrate, replenish, and eliminate headaches or nausea after a long night out.",
-    includes: ["Electrolyte Solution", "Anti Nausea", "Anti Vomiting", "Stomach Protector", "Multivitamin"],
+    therapeutics: ["Electrolyte Solution", "Anti Nausea", "Anti Vomiting", "Stomach Protector"],
+    vitamins: multivitaminBoosters,
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
     link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Hangover%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
@@ -1388,7 +1454,8 @@ const healthPackages = [
     oldPrice: "Rp 1.850.000",
     price: "Rp 1.572.500", 
     desc: "Support hydration and recovery while helping relieve common flu and cold symptoms.",
-    includes: ["Saline Solution", "Vitamin B Complex", "Vitamin C", "Stomach Protector", "Anti-Inflammatory"],
+    therapeutics: ["Saline Solution", "Stomach Protector", "Anti-Inflammatory"],
+    vitamins: ["Vitamin C", ...bComplexBoosters],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
     link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Flu%20Relief%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
@@ -1398,7 +1465,8 @@ const healthPackages = [
     oldPrice: "Rp 3.125.000",
     price: "Rp 2.656.250", 
     desc: "Comprehensive medical hydration and symptom relief when feeling unwell with fever.",
-    includes: ["Electrolyte Solution", "Stomach Protector", "Multivitamin", "Fever Reducer"],
+    therapeutics: ["Electrolyte Solution", "Stomach Protector", "Fever Reducer"],
+    vitamins: multivitaminBoosters,
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
     link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Fever%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
@@ -1408,7 +1476,8 @@ const healthPackages = [
     oldPrice: "Rp 500.000",
     price: "Rp 425.000", 
     desc: "Professional physiotherapy support to improve mobility and relieve physical aches.",
-    includes: ["Ultrasound Therapy", "Transcutaneous Electrical Nerve Stimulation", "Infrared Lamp"],
+    therapeutics: ["Ultrasound Therapy", "Transcutaneous Electrical Nerve Stimulation", "Infrared Lamp"],
+    vitamins: [],
     serviceIncludes: ["Physiotherapist", "Consultation"],
     link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Physiotherapy%20with%2015%%20Discount%20(Code:%20SAVE15)"
   }
@@ -1422,7 +1491,8 @@ const vitaminPackages = [
     oldPrice: "Rp 975.000",
     price: "Rp 828.750", 
     desc: "Reset your body clock and support fast recovery from long travel fatigue.",
-    includes: ["Saline Solution", "Vitamin B Complex", "Stomach Protector"],
+    therapeutics: ["Saline Solution", "Stomach Protector"],
+    vitamins: bComplexBoosters,
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
     link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Jetlag%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
@@ -1432,7 +1502,8 @@ const vitaminPackages = [
     oldPrice: "Rp 1.350.000",
     price: "Rp 1.147.500", 
     desc: "Essential hydration and daily vitamin C support for everyday wellness.",
-    includes: ["Saline Solution", "Vitamin C", "Stomach Protector"],
+    therapeutics: ["Saline Solution", "Stomach Protector"],
+    vitamins: ["Vitamin C"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
     link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Immune%20Booster%20Basic%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
@@ -1442,7 +1513,8 @@ const vitaminPackages = [
     oldPrice: "Rp 2.325.000",
     price: "Rp 1.976.250", 
     desc: "Replenish essential nutrients and restore optimal stamina for active days.",
-    includes: ["Saline Solution", "Multivitamin", "Stomach Protector"],
+    therapeutics: ["Saline Solution", "Stomach Protector"],
+    vitamins: multivitaminBoosters,
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
     link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Energy%20Booster%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
@@ -1452,7 +1524,8 @@ const vitaminPackages = [
     oldPrice: "Rp 2.625.000",
     price: "Rp 2.231.250", 
     desc: "Enhanced nutritional support designed to complement your wellness routine.",
-    includes: ["Saline Solution", "Vitamin B Complex", "Multivitamin", "Stomach Protector"],
+    therapeutics: ["Saline Solution", "Stomach Protector"],
+    vitamins: [...multivitaminBoosters, ...bComplexBoosters],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
     link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Immune%20Booster%20Standard%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
@@ -1462,7 +1535,8 @@ const vitaminPackages = [
     oldPrice: "Rp 2.925.000",
     price: "Rp 2.486.250", 
     desc: "Comprehensive hydration and maximum nutritional support for total immunity.",
-    includes: ["Saline Solution", "Vitamin B Complex", "Multivitamin", "Vitamin C", "Stomach Protector"],
+    therapeutics: ["Saline Solution", "Stomach Protector"],
+    vitamins: ["High-Dose Vitamin C", ...multivitaminBoosters, ...bComplexBoosters],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
     link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Ultimate%20Immune%20Booster%20with%2015%%20Discount%20(Code:%20SAVE15)"
   }
@@ -1476,29 +1550,85 @@ function setCategory(cat) {
 
 function renderCards(list) {
   const container = document.getElementById('cardsContainer');
-  container.innerHTML = list.map(item => `
-    <div class="treatment-card">
-      <span class="card-badge">${item.badge}</span>
-      <div>
-        <h3>${item.name}</h3>
-        <div class="price">
-          <span class="old-price">${item.oldPrice}</span>${item.price}
-        </div>
-        <p class="desc">${item.desc}</p>
-        
-        <div class="section-title">Includes:</div>
-        <ul class="includes-list">
-          ${item.includes.map(i => `<li>${i}</li>`).join('')}
-        </ul>
+  container.innerHTML = list.map((item) => {
+    let compositionHTML = '';
+    
+    if ((item.therapeutics && item.therapeutics.length > 0) || (item.vitamins && item.vitamins.length > 0)) {
+      let therapeuticsList = '';
+      if (item.therapeutics && item.therapeutics.length > 0) {
+        therapeuticsList = `
+          <div class="composition-group">
+            <span class="composition-title">Therapeutic Components:</span>
+            <ul class="sub-list">
+              ${item.therapeutics.map(t => `<li>${t}</li>`).join('')}
+            </ul>
+          </div>`;
+      }
 
-        <div class="section-title">Service Includes:</div>
-        <ul class="service-list">
-          ${item.serviceIncludes.map(s => `<li>${s}</li>`).join('')}
-        </ul>
+      let vitaminsList = '';
+      if (item.vitamins && item.vitamins.length > 0) {
+        vitaminsList = `
+          <div class="composition-group">
+            <span class="composition-title">Vitamin Boosters:</span>
+            <ul class="sub-list">
+              ${item.vitamins.map(v => `<li>${v}</li>`).join('')}
+            </ul>
+          </div>`;
+      }
+
+      compositionHTML = `
+        <div class="accordion-group">
+          <button type="button" class="accordion-btn" onclick="toggleCardAccordion(this)">
+            <span>Composition</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            ${therapeuticsList}
+            ${vitaminsList}
+          </div>
+        </div>
+      `;
+    }
+
+    let serviceIncludesHTML = '';
+    if (item.serviceIncludes && item.serviceIncludes.length > 0) {
+      serviceIncludesHTML = `
+        <div class="accordion-group">
+          <button type="button" class="accordion-btn" onclick="toggleCardAccordion(this)">
+            <span>Service Includes</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-content">
+            <ul class="service-list">
+              ${item.serviceIncludes.map(s => `<li>${s}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="treatment-card">
+        <span class="card-badge">${item.badge}</span>
+        <div>
+          <h3>${item.name}</h3>
+          <div class="price">
+            <span class="old-price">${item.oldPrice}</span>${item.price}
+          </div>
+          <p class="desc">${item.desc}</p>
+          
+          ${compositionHTML}
+          ${serviceIncludesHTML}
+        </div>
+        <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn-card-book">book with 15% off →</a>
       </div>
-      <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn-card-book">book with 15% off →</a>
-    </div>
-  `).join('');
+    `;
+  }).join('');
+}
+
+function toggleCardAccordion(btn) {
+  const group = btn.parentElement;
+  group.classList.toggle('open');
 }
 
 function toggleMenu() {
@@ -1520,7 +1650,7 @@ function toggleFaq(btn) {
   item.classList.toggle("open");
 }
 
-// Initial Render Default Set to Health Packages
+// Initial Render
 renderCards(healthPackages);
 </script>
 
