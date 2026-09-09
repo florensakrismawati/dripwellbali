@@ -23,9 +23,10 @@
 <meta property="og:description" content="Doctor Visits, Delivered to You. Convenient Home Doctor Visits for guests and residents in Bali.">
 <meta property="og:image" content="https://www.dripwellbali.com/home-doctor-bali/home-doctor.jpg">
 
-<!-- Preconnect Fonts -->
+<!-- Preconnect Fonts & Resource Prefetch -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://wa.me">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <!-- Structured Data -->
@@ -89,7 +90,7 @@ body {
 .gold-text { color: var(--accent-gold); }
 
 button, input, select, textarea { font: inherit; }
-button { cursor: pointer; }
+button { cursor: pointer; border: none; background: none; }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; height: auto; }
 
@@ -109,14 +110,14 @@ img { max-width: 100%; display: block; height: auto; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.promo-track { display: flex; width: max-content; animation: marquee 22s linear infinite; }
+.promo-track { display: flex; width: max-content; animation: marquee 22s linear infinite; will-change: transform; }
 .promo-track span { padding-right: 60px; }
 .promo-track strong { color: var(--accent-gold); text-decoration: underline; font-weight: 700; }
 .promo-bar:hover .promo-track { animation-play-state: paused; }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
 /* Accessibility */
@@ -130,7 +131,6 @@ img { max-width: 100%; display: block; height: auto; }
   padding: 12px 16px;
   border-radius: 8px;
   font: 12px "DM Mono";
-  transition: top .2s;
 }
 .skip-link:focus { top: 12px; }
 
@@ -145,6 +145,7 @@ header {
   top: 0;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid var(--border-teal);
 }
@@ -205,7 +206,7 @@ nav {
   text-transform: uppercase;
   color: var(--text-dark);
   opacity: .8;
-  transition: opacity .2s, color .2s;
+  transition: opacity .15s ease;
 }
 
 .navlink:hover, .navlink.active {
@@ -241,7 +242,6 @@ nav {
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--text-dark);
-  transition: background 0.2s, color 0.2s;
 }
 
 .dropdown-menu a:hover, .dropdown-menu a.active-link {
@@ -262,14 +262,13 @@ nav {
   font: 10px "DM Mono";
   letter-spacing: .16em;
   text-transform: uppercase;
-  transition: background .2s, transform .2s;
   border: 1px solid var(--primary-green);
+  transition: background .15s ease;
 }
 
 .nav-book:hover {
   background: var(--accent-gold);
   border-color: var(--accent-gold);
-  transform: translateY(-1px);
 }
 
 .mobile-menu {
@@ -278,7 +277,6 @@ nav {
   height: 40px;
   border: 1px solid var(--border-teal);
   border-radius: 50%;
-  background: none;
   color: var(--text-dark);
   font-size: 18px;
 }
@@ -312,9 +310,11 @@ nav {
   padding: 0 20px;
 }
 
-/* Standard Section Layout */
+/* Standard Section Layout & Rendering Optimization */
 section {
   padding: 36px 0;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 400px;
 }
 
 .eyebrow {
@@ -339,6 +339,7 @@ section {
   background: var(--bg-white);
   border-bottom: 1px solid var(--border-teal);
   padding: 40px 0 30px;
+  content-visibility: visible;
 }
 
 .hero-grid {
@@ -433,15 +434,14 @@ section {
   letter-spacing: .14em;
   text-transform: uppercase;
   font-weight: 600;
-  transition: all .2s;
   border: 1px solid var(--primary-green);
   text-align: center;
+  transition: background .15s ease;
 }
 
 .btn-cta:hover {
   background: var(--accent-gold);
   border-color: var(--accent-gold);
-  transform: translateY(-2px);
 }
 
 .btn-cta-outline {
@@ -457,7 +457,6 @@ section {
   letter-spacing: .14em;
   text-transform: uppercase;
   font-weight: 600;
-  transition: all .2s;
   border: 1px solid var(--text-dark);
   text-align: center;
 }
@@ -494,11 +493,9 @@ section {
   border-radius: 16px;
   padding: 20px;
   background: var(--bg-soft);
-  transition: transform .2s, border-color .2s;
 }
 
 .card:hover {
-  transform: translateY(-2px);
   border-color: var(--primary-green);
 }
 
@@ -564,7 +561,6 @@ section {
   color: var(--text-dark);
   font-size: 13px;
   font-family: "DM Sans", sans-serif;
-  transition: border-color .2s;
 }
 
 .field input:focus, .field select:focus, .field textarea:focus {
@@ -626,7 +622,7 @@ section {
   border-color: var(--accent-gold);
 }
 
-/* FAQ Accordion */
+/* Instant FAQ Accordion */
 .faq-item {
   border: 1px solid var(--border-teal);
   border-radius: 12px;
@@ -638,8 +634,6 @@ section {
 .faq-q {
   width: 100%;
   padding: 16px 20px;
-  background: none;
-  border: none;
   text-align: left;
   font: 14px "DM Sans", sans-serif;
   font-weight: 600;
@@ -653,26 +647,16 @@ section {
 .faq-q .icon {
   font-size: 16px;
   color: var(--accent-gold);
-  transition: transform .2s;
   flex-shrink: 0;
 }
 
-.faq-q.open .icon {
-  transform: rotate(180deg);
-}
-
 .faq-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .3s ease;
-  padding: 0 20px;
+  display: none;
+  padding: 0 20px 16px;
 }
 
-.faq-a p {
-  padding-bottom: 16px;
-  font-size: 12px;
-  opacity: .85;
-  line-height: 1.5;
+.faq-item.open .faq-a {
+  display: block;
 }
 
 /* Premium Grid Locations Box */
@@ -717,14 +701,12 @@ section {
   font-size: 11px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.25s ease;
 }
 
 .area-pill:hover {
   background: var(--primary-green);
   color: var(--bg-white);
   border-color: var(--primary-green);
-  transform: translateY(-1px);
 }
 
 /* Footer */
@@ -733,6 +715,7 @@ footer {
   padding: 28px 0 20px;
   margin-top: 30px;
   background: var(--bg-white);
+  content-visibility: auto;
 }
 
 .footer-top {
@@ -881,9 +864,9 @@ footer {
 <!-- TOP PROMO BANNER -->
 <div class="promo-bar" aria-label="Promotion Banner">
   <div class="promo-track">
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical &amp; IV Drip Services! Use Code: <strong>SAVE15</strong></span>
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical &amp; IV Drip Services! Use Code: <strong>SAVE15</strong></span>
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical &amp; IV Drip Services! Use Code: <strong>SAVE15</strong></span>
   </div>
 </div>
 
@@ -897,7 +880,7 @@ footer {
         <img src="/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async">
       </span>
       <span>
-        <small>Home Doctor & Medical Service</small>
+        <small>Home Doctor &amp; Medical Service</small>
         <strong>Dripwell <i>Bali</i></strong>
       </span>
     </a>
@@ -1006,7 +989,7 @@ footer {
         </div>
 
         <div class="photo-frame">
-          <img src="home-doctor.jpg" alt="Doctor home visit consultation in a villa in Bali" loading="eager" onerror="this.onerror=null;this.src='home-doctor.jpeg';">
+          <img src="home-doctor.jpg" alt="Doctor home visit consultation in a villa in Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.src='home-doctor.jpeg';">
           <div class="photo-badge">✦ Private &amp; Convenient Medical Care</div>
         </div>
       </div>
@@ -1304,7 +1287,7 @@ footer {
 
     <div style="max-width: 900px; margin: 0 auto;">
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button type="button" class="faq-q" onclick="toggleFaq(this)">
           <span>How long does it take for the doctor to arrive?</span>
           <span class="icon">⌄</span>
         </button>
@@ -1314,7 +1297,7 @@ footer {
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button type="button" class="faq-q" onclick="toggleFaq(this)">
           <span>Can a doctor visit my villa or hotel?</span>
           <span class="icon">⌄</span>
         </button>
@@ -1324,7 +1307,7 @@ footer {
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button type="button" class="faq-q" onclick="toggleFaq(this)">
           <span>What areas does Dripwell Bali cover?</span>
           <span class="icon">⌄</span>
         </button>
@@ -1334,7 +1317,7 @@ footer {
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button type="button" class="faq-q" onclick="toggleFaq(this)">
           <span>What information should I provide when booking?</span>
           <span class="icon">⌄</span>
         </button>
@@ -1344,7 +1327,7 @@ footer {
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button type="button" class="faq-q" onclick="toggleFaq(this)">
           <span>Can the doctor prescribe medications?</span>
           <span class="icon">⌄</span>
         </button>
@@ -1354,7 +1337,7 @@ footer {
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button type="button" class="faq-q" onclick="toggleFaq(this)">
           <span>Can I request a medical report?</span>
           <span class="icon">⌄</span>
         </button>
@@ -1364,7 +1347,7 @@ footer {
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button type="button" class="faq-q" onclick="toggleFaq(this)">
           <span>What happens if I need hospital care?</span>
           <span class="icon">⌄</span>
         </button>
@@ -1374,7 +1357,7 @@ footer {
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">
+        <button type="button" class="faq-q" onclick="toggleFaq(this)">
           <span>How do I book a Home Doctor Visit?</span>
           <span class="icon">⌄</span>
         </button>
@@ -1431,57 +1414,53 @@ footer {
 </div>
 
 <script>
+// Optimized Navigation Toggle
 function toggleMenu(){
-  const panel = document.getElementById("mobilePanel");
-  const btn = document.querySelector(".mobile-menu");
-  const open = panel.classList.toggle("show");
+  var panel = document.getElementById("mobilePanel");
+  var btn = document.querySelector(".mobile-menu");
+  var open = panel.classList.toggle("show");
   btn.setAttribute("aria-expanded", String(open));
   btn.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
 }
 
 function closeMenu(){
-  const panel = document.getElementById("mobilePanel");
-  const btn = document.querySelector(".mobile-menu");
+  var panel = document.getElementById("mobilePanel");
+  var btn = document.querySelector(".mobile-menu");
   panel.classList.remove("show");
   btn.setAttribute("aria-expanded", "false");
   btn.setAttribute("aria-label", "Open navigation menu");
 }
 
+// Optimized Instant FAQ Toggle
 function toggleFaq(btn){
-  const item = btn.parentElement;
-  const answer = item.querySelector('.faq-a');
-  const open = btn.classList.toggle('open');
-  
-  if(open) {
-    answer.style.maxHeight = answer.scrollHeight + "px";
-  } else {
-    answer.style.maxHeight = "0";
-  }
+  var item = btn.parentElement;
+  item.classList.toggle('open');
 }
 
+// Fast WhatsApp Form Submission
 function submitForm(e) {
   e.preventDefault();
   
-  const name = document.getElementById('fullName').value;
-  const phone = document.getElementById('waNumber').value;
-  const email = document.getElementById('email').value;
-  const hotel = document.getElementById('hotelName').value;
-  const area = document.getElementById('locationArea').value;
-  const date = document.getElementById('prefDate').value;
-  const time = document.getElementById('prefTime').value;
-  const symptoms = document.getElementById('symptoms').value;
+  var name = document.getElementById('fullName').value;
+  var phone = document.getElementById('waNumber').value;
+  var email = document.getElementById('email').value;
+  var hotel = document.getElementById('hotelName').value;
+  var area = document.getElementById('locationArea').value;
+  var date = document.getElementById('prefDate').value;
+  var time = document.getElementById('prefTime').value;
+  var symptoms = document.getElementById('symptoms').value;
 
-  const text = `Hello DripWell Bali, I would like to request a Home Doctor Visit booking (Claiming 15% OFF - Code: SAVE15):%0A%0A` +
-               `• Full Name: ${encodeURIComponent(name)}%0A` +
-               `• WhatsApp Number: ${encodeURIComponent(phone)}%0A` +
-               `• Email: ${encodeURIComponent(email)}%0A` +
-               `• Hotel/Villa Name: ${encodeURIComponent(hotel)}%0A` +
-               `• Location/Area: ${encodeURIComponent(area)}%0A` +
-               `• Preferred Date: ${encodeURIComponent(date)}%0A` +
-               `• Preferred Time: ${encodeURIComponent(time)}%0A` +
-               `• Medical Concern: ${encodeURIComponent(symptoms)}`;
+  var text = `Hello DripWell Bali, I would like to request a Home Doctor Visit booking (Claiming 15% OFF - Code: SAVE15):%0A%0A` +
+             `• Full Name: ${encodeURIComponent(name)}%0A` +
+             `• WhatsApp Number: ${encodeURIComponent(phone)}%0A` +
+             `• Email: ${encodeURIComponent(email)}%0A` +
+             `• Hotel/Villa Name: ${encodeURIComponent(hotel)}%0A` +
+             `• Location/Area: ${encodeURIComponent(area)}%0A` +
+             `• Preferred Date: ${encodeURIComponent(date)}%0A` +
+             `• Preferred Time: ${encodeURIComponent(time)}%0A` +
+             `• Medical Concern: ${encodeURIComponent(symptoms)}`;
 
-  window.open(`https://wa.me/6282221614966?text=${text}`, '_blank');
+  window.open(`https://wa.me/6282221614966?text=${text}`, '_blank', 'noopener,noreferrer');
 }
 </script>
 
