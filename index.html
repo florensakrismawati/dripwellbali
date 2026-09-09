@@ -160,6 +160,46 @@
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; height: auto; }
 
+  /* Top Promo Banner (Seamless Running Text) */
+  .promo-bar {
+    background: var(--primary-coral);
+    color: var(--bg-white);
+    padding: 10px 0;
+    font: 11px "DM Mono", monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+  }
+
+  .promo-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 22s linear infinite;
+  }
+
+  .promo-track span {
+    padding-right: 60px;
+  }
+
+  .promo-track strong {
+    text-decoration: underline;
+    font-weight: 700;
+  }
+
+  /* Stop running text on hover */
+  .promo-bar:hover .promo-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
   /* Accessibility */
   .skip-link {
     position: fixed;
@@ -517,11 +557,26 @@
     flex-direction: column;
     justify-content: space-between;
     transition: transform .25s ease, border-color .25s ease;
+    position: relative;
   }
 
   .treatment-card:hover {
     transform: translateY(-4px);
     border-color: var(--primary-coral);
+  }
+
+  .card-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--primary-coral);
+    color: #fff;
+    font: 9px "DM Mono";
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
   }
 
   .treatment-card h3 {
@@ -539,6 +594,14 @@
     margin: 6px 0 12px;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--border-teal);
+  }
+
+  .treatment-card .price .old-price {
+    text-decoration: line-through;
+    opacity: 0.45;
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-right: 6px;
   }
 
   .treatment-card .desc {
@@ -881,6 +944,16 @@
 
 <body id="top">
 
+<!-- TOP PROMO BANNER (SEAMLESS RUNNING TEXT) -->
+<div class="promo-bar" aria-label="Promotion Banner">
+  <div class="promo-track">
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
+  </div>
+</div>
+
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <!-- HEADER -->
@@ -928,7 +1001,7 @@
       <a class="navlink" href="https://www.dripwellbali.com/blog/">Blog</a>
       <a class="navlink" href="https://www.dripwellbali.com/faq/">FAQ</a>
       <a class="navlink" href="https://www.dripwellbali.com/contact/">Contact</a>
-      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20visit." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer">Claim 15% Off</a>
     </nav>
 
     <button type="button" class="mobile-menu" aria-label="Open navigation menu" aria-controls="mobilePanel" aria-expanded="false" onclick="toggleMenu()">
@@ -964,7 +1037,7 @@
     <a href="https://www.dripwellbali.com/blog/" onclick="closeMenu()">Blog</a>
     <a href="https://www.dripwellbali.com/faq/" onclick="closeMenu()">FAQ</a>
     <a href="https://www.dripwellbali.com/contact/" onclick="closeMenu()">Contact</a>
-    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20visit." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Chat on WhatsApp</a>
+    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Claim 15% Off on WhatsApp</a>
   </div>
 </header>
 
@@ -980,10 +1053,10 @@
           <span class="coral-text">Wherever You Are.</span>
         </h1>
         <p>
-          DripWell Bali brings certified doctors, IV drip therapy, and physiotherapy directly to your villa or hotel. Attentive care from experienced medical professionals.
+          DripWell Bali brings certified doctors, IV drip therapy, and physiotherapy directly to your villa or hotel. Enjoy <strong>15% OFF</strong> all treatments today with code <strong>SAVE15</strong>.
         </p>
         <div class="hero-actions">
-          <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20visit." target="_blank" rel="noopener noreferrer" class="btn-cta">Chat on WhatsApp →</a>
+          <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer" class="btn-cta">Claim 15% Off via WhatsApp →</a>
         </div>
       </div>
 
@@ -1000,12 +1073,12 @@
       <div class="packages-head">
         <div>
           <div class="eyebrow">01 — Choose Your Care</div>
-          <h2 class="display">Targeted Treatments.<br><i>Delivered Fast.</i></h2>
+          <h2 class="display">Targeted Treatments.<br><i>Delivered Fast with 15% Off.</i></h2>
         </div>
 
         <div class="tabs" role="tablist">
-          <button id="vitTab" class="active" onclick="setCategory('vitamin')">IV Drips Vitamin</button>
-          <button id="healthTab" onclick="setCategory('health')">Health Packages</button>
+          <button id="healthTab" class="active" onclick="setCategory('health')">Health Packages</button>
+          <button id="vitTab" onclick="setCategory('vitamin')">IV Drips Vitamin</button>
         </div>
       </div>
 
@@ -1026,7 +1099,7 @@
           <span class="step-num">01</span>
           <div>
             <strong>Contact Us via WhatsApp</strong>
-            <p style="font-size: 14px; opacity: .8;">Share your symptoms, location, and preferred treatment time with our 24/7 team.</p>
+            <p style="font-size: 14px; opacity: .8;">Share your symptoms, location, and mention promo code <strong>SAVE15</strong> to unlock 15% off.</p>
           </div>
         </div>
 
@@ -1108,6 +1181,16 @@
 
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
+          How do I claim the 15% discount promo?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Simply mention the promo code <strong>SAVE15</strong> when messaging us on WhatsApp or booking your appointment. The 15% discount will be applied directly to your total package cost.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
           Is DripWell Bali available 24/7?
           <span class="icon">+</span>
         </button>
@@ -1171,7 +1254,7 @@
       </div>
 
       <div class="footer-actions">
-        <a href="https://wa.me/6282221614966" target="_blank" rel="noopener noreferrer" class="coral-text">✦ Chat on WhatsApp</a>
+        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer" class="coral-text">✦ Claim 15% Off on WhatsApp</a>
         <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
         <div>
           <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
@@ -1189,109 +1272,134 @@
 
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
-  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20visit." target="_blank" rel="noopener noreferrer">✦ Chat on WhatsApp →</a>
+  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer">✦ Claim 15% Off via WhatsApp →</a>
 </div>
 
 <script>
-const vitaminPackages = [
-  { 
-    name: "Jetlag Package", 
-    price: "Rp 975.000", 
-    desc: "Reset your body clock and support recovery from travel fatigue.",
-    includes: ["Saline Solution", "Vitamin B Complex", "Stomach Protector"],
-    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
-    link: "https://www.dripwellbali.com/jetlag-package/"
-  },
-  { 
-    name: "Energy Booster Package", 
-    price: "Rp 2.325.000", 
-    desc: "Replenish essential nutrients and support your energy levels.",
-    includes: ["Saline Solution", "Multivitamin", "Stomach Protector"],
-    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
-    link: "https://www.dripwellbali.com/energy-booster-package/"
-  },
-  { 
-    name: "Immune Booster Basic", 
-    price: "Rp 1.350.000", 
-    desc: "Essential hydration and nutritional support for everyday wellness.",
-    includes: ["Saline Solution", "Vitamin C", "Stomach Protector"],
-    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
-    link: "https://www.dripwellbali.com/immune-booster-basic/"
-  },
-  { 
-    name: "Immune Booster Standard Package", 
-    price: "Rp 2.625.000", 
-    desc: "Enhanced nutritional support designed to complement your wellness routine.",
-    includes: ["Saline Solution", "Vitamin B Complex", "Multivitamin", "Stomach Protector"],
-    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
-    link: "https://www.dripwellbali.com/immune-booster-standard-package/"
-  },
-  { 
-    name: "Ultimate Immune Booster", 
-    price: "Rp 2.925.000", 
-    desc: "Comprehensive hydration and nutritional support for optimal wellness.",
-    includes: ["Saline Solution", "Vitamin B Complex", "Multivitamin", "Vitamin C", "Stomach Protector"],
-    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
-    link: "https://www.dripwellbali.com/ultimate-immune-booster/"
-  }
-];
-
+// 1. Health Packages (Prioritas Utama untuk Lead Konversi)
 const healthPackages = [
   { 
     name: "Bali Belly Package", 
-    price: "Rp 2.025.000", 
-    desc: "Support your digestive recovery and restore your body's balance.",
+    badge: "MOST POPULAR",
+    oldPrice: "Rp 2.025.000",
+    price: "Rp 1.721.250", 
+    desc: "Fast relief for acute stomach issues, nausea, and dehydration directly at your villa.",
     includes: ["Electrolyte Solution", "Anti Nausea", "Anti Vomiting", "Stomach Protector", "Stomach Ache Relief", "Vitamin B Complex"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
-    link: "https://www.dripwellbali.com/bali-belly-package/"
+    link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Bali%20Belly%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
   { 
     name: "Hangover Package", 
-    price: "Rp 2.475.000", 
-    desc: "Rehydrate, replenish, and help your body recover after a long night.",
+    badge: "FAST RECOVERY",
+    oldPrice: "Rp 2.475.000",
+    price: "Rp 2.103.750", 
+    desc: "Rehydrate, replenish, and eliminate headaches or nausea after a long night out.",
     includes: ["Electrolyte Solution", "Anti Nausea", "Anti Vomiting", "Stomach Protector", "Multivitamin"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
-    link: "https://www.dripwellbali.com/hangover-package/"
-  },
-  { 
-    name: "Fever Package", 
-    price: "Rp 3.125.000", 
-    desc: "Support recovery and hydration when you're feeling unwell.",
-    includes: ["Electrolyte Solution", "Stomach Protector", "Multivitamin", "Fever Reducer"],
-    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
-    link: "https://www.dripwellbali.com/fever-package/"
+    link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Hangover%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
   { 
     name: "Flu Relief Package", 
-    price: "Rp 1.850.000", 
-    desc: "Support hydration and recovery while helping relieve common flu symptoms.",
+    badge: "SAVE 15%",
+    oldPrice: "Rp 1.850.000",
+    price: "Rp 1.572.500", 
+    desc: "Support hydration and recovery while helping relieve common flu and cold symptoms.",
     includes: ["Saline Solution", "Vitamin B Complex", "Vitamin C", "Stomach Protector", "Anti-Inflammatory"],
     serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
-    link: "https://www.dripwellbali.com/flu-relief-package/"
+    link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Flu%20Relief%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
+  },
+  { 
+    name: "Fever Package", 
+    badge: "SAVE 15%",
+    oldPrice: "Rp 3.125.000",
+    price: "Rp 2.656.250", 
+    desc: "Comprehensive medical hydration and symptom relief when feeling unwell with fever.",
+    includes: ["Electrolyte Solution", "Stomach Protector", "Multivitamin", "Fever Reducer"],
+    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation", "Travel Insurance Report"],
+    link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Fever%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
   },
   { 
     name: "Physiotherapy Package", 
-    price: "Rp 500.000", 
-    desc: "Professional physiotherapy support to improve mobility and physical comfort.",
+    badge: "SAVE 15%",
+    oldPrice: "Rp 500.000",
+    price: "Rp 425.000", 
+    desc: "Professional physiotherapy support to improve mobility and relieve physical aches.",
     includes: ["Ultrasound Therapy", "Transcutaneous Electrical Nerve Stimulation", "Infrared Lamp"],
     serviceIncludes: ["Physiotherapist", "Consultation"],
-    link: "https://www.dripwellbali.com/physiotherapy-bali/"
+    link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Physiotherapy%20with%2015%%20Discount%20(Code:%20SAVE15)"
+  }
+];
+
+// 2. IV Drips Vitamin
+const vitaminPackages = [
+  { 
+    name: "Jetlag Package", 
+    badge: "TRAVEL FAVORITE",
+    oldPrice: "Rp 975.000",
+    price: "Rp 828.750", 
+    desc: "Reset your body clock and support fast recovery from long travel fatigue.",
+    includes: ["Saline Solution", "Vitamin B Complex", "Stomach Protector"],
+    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
+    link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Jetlag%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
+  },
+  { 
+    name: "Immune Booster Basic", 
+    badge: "BEST VALUE",
+    oldPrice: "Rp 1.350.000",
+    price: "Rp 1.147.500", 
+    desc: "Essential hydration and daily vitamin C support for everyday wellness.",
+    includes: ["Saline Solution", "Vitamin C", "Stomach Protector"],
+    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
+    link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Immune%20Booster%20Basic%20with%2015%%20Discount%20(Code:%20SAVE15)"
+  },
+  { 
+    name: "Energy Booster Package", 
+    badge: "SAVE 15%",
+    oldPrice: "Rp 2.325.000",
+    price: "Rp 1.976.250", 
+    desc: "Replenish essential nutrients and restore optimal stamina for active days.",
+    includes: ["Saline Solution", "Multivitamin", "Stomach Protector"],
+    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
+    link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Energy%20Booster%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
+  },
+  { 
+    name: "Immune Booster Standard Package", 
+    badge: "SAVE 15%",
+    oldPrice: "Rp 2.625.000",
+    price: "Rp 2.231.250", 
+    desc: "Enhanced nutritional support designed to complement your wellness routine.",
+    includes: ["Saline Solution", "Vitamin B Complex", "Multivitamin", "Stomach Protector"],
+    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
+    link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Immune%20Booster%20Standard%20Package%20with%2015%%20Discount%20(Code:%20SAVE15)"
+  },
+  { 
+    name: "Ultimate Immune Booster", 
+    badge: "ULTIMATE CARE",
+    oldPrice: "Rp 2.925.000",
+    price: "Rp 2.486.250", 
+    desc: "Comprehensive hydration and maximum nutritional support for total immunity.",
+    includes: ["Saline Solution", "Vitamin B Complex", "Multivitamin", "Vitamin C", "Stomach Protector"],
+    serviceIncludes: ["Nurse + Doctor Visit", "Doctor Consultation"],
+    link: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20the%20Ultimate%20Immune%20Booster%20with%2015%%20Discount%20(Code:%20SAVE15)"
   }
 ];
 
 function setCategory(cat) {
-  document.getElementById('vitTab').classList.toggle('active', cat === 'vitamin');
   document.getElementById('healthTab').classList.toggle('active', cat === 'health');
-  renderCards(cat === 'vitamin' ? vitaminPackages : healthPackages);
+  document.getElementById('vitTab').classList.toggle('active', cat === 'vitamin');
+  renderCards(cat === 'health' ? healthPackages : vitaminPackages);
 }
 
 function renderCards(list) {
   const container = document.getElementById('cardsContainer');
   container.innerHTML = list.map(item => `
     <div class="treatment-card">
+      <span class="card-badge">${item.badge}</span>
       <div>
         <h3>${item.name}</h3>
-        <div class="price">${item.price}</div>
+        <div class="price">
+          <span class="old-price">${item.oldPrice}</span>${item.price}
+        </div>
         <p class="desc">${item.desc}</p>
         
         <div class="section-title">Includes:</div>
@@ -1304,7 +1412,7 @@ function renderCards(list) {
           ${item.serviceIncludes.map(s => `<li>${s}</li>`).join('')}
         </ul>
       </div>
-      <a href="${item.link}" class="btn-card-book">book treatment →</a>
+      <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn-card-book">book with 15% off →</a>
     </div>
   `).join('');
 }
@@ -1328,8 +1436,8 @@ function toggleFaq(btn) {
   item.classList.toggle("open");
 }
 
-// Initial Render Default to Vitamin Packages
-renderCards(vitaminPackages);
+// Initial Render Default Set to Health Packages
+renderCards(healthPackages);
 </script>
 
 </body>
