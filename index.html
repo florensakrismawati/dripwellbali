@@ -315,33 +315,10 @@
   }
 
   .catalog-card .desc {
-    font-size: 13px;
-    opacity: 0.85;
-    margin-bottom: 16px;
-    line-height: 1.45;
-  }
-
-  .comp-tag-list {
-    list-style: none;
-    margin-bottom: 20px;
-    border-top: 1px solid var(--border-teal);
-    padding-top: 14px;
-  }
-
-  .comp-tag-list li {
-    font-size: 12.5px;
-    margin-bottom: 6px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text-dark);
-  }
-
-  .comp-tag-list li::before {
-    content: "•";
-    color: var(--accent-gold);
-    font-weight: bold;
     font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 24px;
+    line-height: 1.5;
   }
 
   .card-actions {
@@ -833,73 +810,43 @@
 </div>
 
 <script>
-// Data elemen medis (Format Kartu Katalog Baru)
+// Data elemen medis (Tanpa daftar komponen, fokus pada deskripsi dan aksi Book Now)
 const healthPackages = [
   { 
     eyebrow: "GASTROENTERITIS CARE",
     name: "Bali Belly Package", 
     oldPrice: "Rp 2.025.000",
     price: "Rp 1.721.250", 
-    desc: "Rapid clinical relief for acute food poisoning, severe nausea, vomiting, watery diarrhea, and abdominal stomach cramps.",
-    components: [
-      "Electrolyte Solution",
-      "Anti Nausea",
-      "Anti Vomiting",
-      "Stomach Protector",
-      "Stomach Ache Relief",
-      "Vitamin B Complex"
-    ],
+    desc: "Rapid clinical relief delivered directly to your villa for acute food poisoning, severe nausea, vomiting, watery diarrhea, and abdominal cramps so you can recover quickly.",
     detailsUrl: "https://www.dripwellbali.com/bali-belly-package/",
-    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20a%20Special%20Offer%20for%20Bali%20Belly%20Package%20(Code:%20SAVE15)"
+    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Bali%20Belly%20Package%20(Code:%20SAVE15)"
   },
   { 
     eyebrow: "POST-PARTY DETOX",
     name: "Hangover Package", 
     oldPrice: "Rp 2.475.000",
     price: "Rp 2.103.750", 
-    desc: "Rehydrate, replenish, and eliminate headaches, severe spinning nausea, and alcohol toxicity after a long night out.",
-    components: [
-      "Electrolyte Solution",
-      "Anti Nausea",
-      "Anti Vomiting",
-      "Stomach Protector",
-      "Multivitamin"
-    ],
+    desc: "Rehydrate, replenish, and eliminate headaches, severe spinning nausea, and alcohol toxicity after a long night out in the comfort of your room.",
     detailsUrl: "https://www.dripwellbali.com/hangover-package/",
-    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20a%20Special%20Offer%20for%20Hangover%20Package%20(Code:%20SAVE15)"
+    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Hangover%20Package%20(Code:%20SAVE15)"
   },
   { 
     eyebrow: "VIRAL RECOVERY",
     name: "Flu Relief Package", 
     oldPrice: "Rp 1.850.000",
     price: "Rp 1.572.500", 
-    desc: "Soothe painful sore throat, severe body aches, viral exhaustion, and nasal congestion with anti-inflammatory care.",
-    components: [
-      "Saline Solution",
-      "Vitamin B Complex",
-      "Vitamin C",
-      "Stomach Protector",
-      "Anti-Inflammatory"
-    ],
+    desc: "Soothe painful sore throat, severe body aches, viral exhaustion, and nasal congestion with specialized anti-inflammatory medical care.",
     detailsUrl: "https://www.dripwellbali.com/flu-relief-package/",
-    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20a%20Special%20Offer%20for%20Flu%20Relief%20Package%20(Code:%20SAVE15)"
+    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Flu%20Relief%20Package%20(Code:%20SAVE15)"
   },
   { 
     eyebrow: "FEVER & PAIN RELIEF",
     name: "Fever Package", 
     oldPrice: "Rp 1.850.000",
     price: "Rp 1.572.500", 
-    desc: "Comprehensive medical hydration and symptom relief when feeling unwell with fever, high temperature, and chills.",
-    components: [
-      "Saline Solution",
-      "Fever Reducer",
-      "Anti-Inflammatory",
-      "Stomach Protector",
-      "Vitamin B Complex",
-      "Vitamin C"
-    ],
+    desc: "Comprehensive medical hydration and fast symptom relief when feeling unwell with sudden fever, high temperature, and body chills.",
     detailsUrl: "https://www.dripwellbali.com/fever-package/",
-    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20a%20Special%20Offer%20for%20Fever%20Package%20(Code:%20SAVE15)"
+    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Fever%20Package%20(Code:%20SAVE15)"
   }
 ];
 
@@ -909,73 +856,45 @@ const vitaminPackages = [
     name: "Jetlag Package", 
     oldPrice: "Rp 975.000",
     price: "Rp 828.750", 
-    desc: "Essential rehydration to reset your sleep cycle, relieve travel fatigue, and recover from long-haul flights.",
-    components: [
-      "Saline Solution",
-      "Vitamin B Complex",
-      "Stomach Protector"
-    ],
+    desc: "Essential rehydration infusion designed to reset your sleep cycle, relieve travel fatigue, and recover smoothly from long-haul flights.",
     detailsUrl: "https://www.dripwellbali.com/jetlag-package/",
-    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20a%20Special%20Offer%20for%20Jetlag%20Package%20(Code:%20SAVE15)"
+    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Jetlag%20Package%20(Code:%20SAVE15)"
   },
   { 
     eyebrow: "VITALITY & PERFORMANCE",
     name: "Energy Booster Package", 
     oldPrice: "Rp 2.325.000",
     price: "Rp 1.976.250", 
-    desc: "High-potency multivitamin infusion to eliminate burnout, restore physical stamina, and clear mental fog.",
-    components: [
-      "Saline Solution",
-      "Multivitamin",
-      "Stomach Protector"
-    ],
+    desc: "High-potency multivitamin infusion to eliminate physical burnout, restore peak stamina, and clear mental fog instantly.",
     detailsUrl: "https://www.dripwellbali.com/energy-booster-package/",
-    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20a%20Special%20Offer%20for%20Energy%20Booster%20Package%20(Code:%20SAVE15)"
+    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Energy%20Booster%20Package%20(Code:%20SAVE15)"
   },
   { 
     eyebrow: "DAILY DEFENSE",
     name: "Immune Booster Basic", 
     oldPrice: "Rp 1.150.000",
     price: "Rp 977.500", 
-    desc: "Essential defense drip to strengthen immune resilience, combat low energy, and maintain peak wellness.",
-    components: [
-      "Saline Solution",
-      "Vitamin C",
-      "Vitamin B Complex"
-    ],
+    desc: "Essential defense drip to strengthen immune resilience, combat low energy, and maintain peak wellness throughout your trip.",
     detailsUrl: "https://www.dripwellbali.com/immune-booster-basic/",
-    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20a%20Special%20Offer%20for%20Immune%20Booster%20Basic%20(Code:%20SAVE15)"
+    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Immune%20Booster%20Basic%20(Code:%20SAVE15)"
   },
   { 
     eyebrow: "BALANCED PROTECTION",
     name: "Immune Booster Standard Package", 
     oldPrice: "Rp 1.650.000",
     price: "Rp 1.402.500", 
-    desc: "Balanced combination of antioxidant boosters and metabolic vitamins to defend against viral infections.",
-    components: [
-      "Saline Solution",
-      "Vitamin C",
-      "Vitamin B Complex",
-      "Multivitamin"
-    ],
+    desc: "Balanced combination of antioxidant boosters and metabolic vitamins to defend your body effectively against tropical viral infections.",
     detailsUrl: "https://www.dripwellbali.com/immune-booster-standard-package/",
-    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20a%20Special%20Offer%20for%20Immune%20Booster%20Standard%20Package%20(Code:%20SAVE15)"
+    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Immune%20Booster%20Standard%20Package%20(Code:%20SAVE15)"
   },
   { 
     eyebrow: "MAXIMUM DEFENSE",
     name: "Ultimate Immune Booster", 
     oldPrice: "Rp 2.850.000",
     price: "Rp 2.422.500", 
-    desc: "Our most comprehensive immune formula combining high-dose antioxidants, detoxifying agents, and full vitamins.",
-    components: [
-      "Saline Solution",
-      "High-Dose Vitamin C",
-      "Glutathione Booster",
-      "Multivitamin",
-      "Stomach Protector"
-    ],
+    desc: "Our most comprehensive immune formula combining high-dose antioxidants, detoxifying agents, and full vitamins for complete protection.",
     detailsUrl: "https://www.dripwellbali.com/ultimate-immune-booster/",
-    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20a%20Special%20Offer%20for%20Ultimate%20Immune%20Booster%20(Code:%20SAVE15)"
+    waLink: "https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Ultimate%20Immune%20Booster%20(Code:%20SAVE15)"
   }
 ];
 
@@ -998,15 +917,11 @@ function renderCards(list) {
             <span class="old-price">${item.oldPrice}</span>${item.price}
           </div>
           <p class="desc">${item.desc}</p>
-          
-          <ul class="comp-tag-list">
-            ${item.components.map(c => `<li>${c}</li>`).join('')}
-          </ul>
         </div>
 
         <div class="card-actions">
           <a href="${item.detailsUrl}" class="btn-outline">VIEW DETAILS</a>
-          <a href="${item.waLink}" target="_blank" rel="noopener noreferrer" class="btn-cta" style="padding: 10px 18px; font-size: 9.5px;">GET SPECIAL OFFER →</a>
+          <a href="${item.waLink}" target="_blank" rel="noopener noreferrer" class="btn-cta" style="padding: 10px 18px; font-size: 9.5px;">BOOK NOW →</a>
         </div>
       </div>
     `;
