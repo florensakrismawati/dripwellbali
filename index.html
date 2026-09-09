@@ -616,7 +616,7 @@
     line-height: 1.5;
   }
 
-  /* Accordion / Collapsible Style untuk Kartu */
+  /* Accordion Style untuk Kartu */
   .accordion-group {
     margin-top: 10px;
   }
@@ -971,18 +971,10 @@
 
   .sticky-bar { display: none; }
 
-  /* Responsive Media Queries */
+  /* Responsive Media Queries untuk Mobile & HP */
   @media (max-width: 1024px) {
     body {
       padding-bottom: 75px;
-    }
-
-    section {
-      padding: 40px 0;
-    }
-
-    .wrap {
-      padding: 0 16px;
     }
 
     nav { display: none; }
@@ -1016,10 +1008,10 @@
     
     .hero-grid { 
       grid-template-columns: 1fr; 
-      gap: 30px; 
+      gap: 20px; 
     }
 
-    .photo-frame { height: 280px; }
+    .photo-frame { height: 240px; }
     
     .sticky-bar {
       display: block;
@@ -1047,7 +1039,56 @@
     .footer-top { flex-direction: column; }
     .footer-actions { align-items: flex-start; }
     .copyright { flex-direction: column; gap: 8px; }
-    .coverage-card, .faq-card, .why-choose-card { padding: 24px; }
+  }
+
+  /* OPTIMASI PADDING DAN SPACING KHUSUS LAYAR HP (< 768px) */
+  @media (max-width: 768px) {
+    section {
+      padding: 24px 0 !important;
+    }
+
+    .hero {
+      padding: 20px 0 16px !important;
+    }
+
+    .packages-section {
+      padding: 24px 0 !important;
+    }
+
+    .packages-head {
+      margin-bottom: 16px !important;
+      gap: 10px !important;
+    }
+
+    .packages-head h2 {
+      font-size: 26px !important;
+      line-height: 1.2 !important;
+    }
+
+    .eyebrow {
+      margin-bottom: 6px !important;
+    }
+
+    .tabs {
+      margin-top: 6px;
+      width: 100%;
+      display: flex;
+    }
+
+    .tabs button {
+      flex: 1;
+      padding: 8px 10px !important;
+      font-size: 9px !important;
+      text-align: center;
+    }
+
+    .cards-grid {
+      gap: 14px !important;
+    }
+
+    .coverage-card, .faq-card, .why-choose-card { 
+      padding: 20px !important; 
+    }
   }
   </style>
 </head>
