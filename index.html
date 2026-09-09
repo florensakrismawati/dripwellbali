@@ -127,10 +127,10 @@
     --bg-white: #ffffff;
     --bg-soft: #f8faf9;
     --text-dark: #133e3d;
-    --primary-coral: #d26b52;
-    --accent-gold: #c28e38;
+    --primary-green: #133e3d; /* Forest Green */
+    --accent-gold: #c28e38;    /* Muted Gold */
     --border-teal: rgba(19, 62, 61, 0.15);
-    --border-coral: rgba(210, 107, 82, 0.25);
+    --border-gold: rgba(194, 142, 56, 0.3);
     --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
   }
 
@@ -153,7 +153,8 @@
 
   .mono { font-family: "DM Mono", monospace; }
   .display { font-family: "Playfair Display", Georgia, serif; }
-  .coral-text { color: var(--primary-coral); }
+  .green-text { color: var(--primary-green); }
+  .gold-text { color: var(--accent-gold); }
 
   button, input, select, textarea { font: inherit; }
   button { cursor: pointer; }
@@ -162,7 +163,7 @@
 
   /* Top Promo Banner (Seamless Running Text) */
   .promo-bar {
-    background: var(--primary-coral);
+    background: var(--primary-green);
     color: var(--bg-white);
     padding: 10px 0;
     font: 11px "DM Mono", monospace;
@@ -173,6 +174,7 @@
     white-space: nowrap;
     position: relative;
     display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .promo-track {
@@ -186,6 +188,7 @@
   }
 
   .promo-track strong {
+    color: var(--accent-gold);
     text-decoration: underline;
     font-weight: 700;
   }
@@ -216,7 +219,7 @@
   .skip-link:focus { top: 12px; }
 
   button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-    outline: 3px solid var(--primary-coral);
+    outline: 3px solid var(--primary-green);
     outline-offset: 3px;
   }
 
@@ -261,7 +264,7 @@
     font: 10px "DM Mono";
     letter-spacing: .16em;
     text-transform: uppercase;
-    color: var(--primary-coral);
+    color: var(--accent-gold);
   }
 
   .brand strong {
@@ -287,7 +290,7 @@
 
   .navlink:hover, .navlink.active {
     opacity: 1;
-    color: var(--primary-coral);
+    color: var(--primary-green);
     font-weight: 700;
   }
 
@@ -323,7 +326,7 @@
 
   .dropdown-menu a:hover {
     background: var(--bg-soft);
-    color: var(--primary-coral);
+    color: var(--primary-green);
     font-weight: bold;
   }
 
@@ -332,7 +335,7 @@
   }
 
   .nav-book {
-    background: var(--primary-coral);
+    background: var(--primary-green);
     color: var(--bg-white);
     padding: 10px 20px;
     border-radius: 999px;
@@ -340,9 +343,11 @@
     letter-spacing: .16em;
     text-transform: uppercase;
     transition: background .2s, transform .2s;
+    border: 1px solid var(--primary-green);
   }
   .nav-book:hover { 
-    background: var(--text-dark); 
+    background: var(--accent-gold); 
+    border-color: var(--accent-gold);
     transform: translateY(-1px);
   }
 
@@ -381,7 +386,7 @@
     font: 11px "DM Mono";
     letter-spacing: .2em;
     text-transform: uppercase;
-    color: var(--primary-coral);
+    color: var(--accent-gold);
     margin-bottom: 12px;
   }
 
@@ -389,7 +394,7 @@
     display: inline-block;
     width: 24px;
     height: 1px;
-    background: var(--primary-coral);
+    background: var(--accent-gold);
     vertical-align: middle;
     margin-right: 8px;
   }
@@ -419,7 +424,7 @@
   .hero h1 em {
     font-style: italic;
     font-weight: 400;
-    color: var(--primary-coral);
+    color: var(--primary-green);
   }
 
   .hero p {
@@ -443,7 +448,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: var(--primary-coral);
+    background: var(--primary-green);
     color: var(--bg-white);
     padding: 14px 28px;
     border-radius: 999px;
@@ -452,12 +457,12 @@
     text-transform: uppercase;
     font-weight: 600;
     transition: all .2s;
-    border: 1px solid var(--primary-coral);
+    border: 1px solid var(--primary-green);
   }
 
   .btn-cta:hover {
-    background: var(--text-dark);
-    border-color: var(--text-dark);
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
     transform: translateY(-2px);
   }
 
@@ -536,7 +541,7 @@
   }
 
   .tabs button.active {
-    background: var(--primary-coral);
+    background: var(--primary-green);
     color: var(--bg-white);
     opacity: 1;
     font-weight: 600;
@@ -562,14 +567,14 @@
 
   .treatment-card:hover {
     transform: translateY(-4px);
-    border-color: var(--primary-coral);
+    border-color: var(--accent-gold);
   }
 
   .card-badge {
     position: absolute;
     top: 16px;
     right: 16px;
-    background: var(--primary-coral);
+    background: var(--accent-gold);
     color: #fff;
     font: 9px "DM Mono";
     padding: 4px 8px;
@@ -589,7 +594,7 @@
   .treatment-card .price {
     font-family: "Playfair Display", Georgia, serif;
     font-size: 22px;
-    color: var(--primary-coral);
+    color: var(--primary-green);
     font-weight: 700;
     margin: 6px 0 12px;
     padding-bottom: 8px;
@@ -615,7 +620,7 @@
     font: 10px "DM Mono";
     text-transform: uppercase;
     letter-spacing: .12em;
-    color: var(--primary-coral);
+    color: var(--accent-gold);
     margin-top: 12px;
     margin-bottom: 6px;
     font-weight: 600;
@@ -635,7 +640,7 @@
 
   .treatment-card ul.includes-list li::before {
     content: "• ";
-    color: var(--primary-coral);
+    color: var(--accent-gold);
     font-weight: bold;
   }
 
@@ -645,13 +650,13 @@
 
   .treatment-card ul.service-list li::before {
     content: "✓ ";
-    color: var(--primary-coral);
+    color: var(--primary-green);
     font-weight: bold;
   }
 
   .btn-card-book {
     display: block;
-    background: var(--text-dark);
+    background: var(--primary-green);
     color: var(--bg-white);
     border: none;
     padding: 12px;
@@ -668,18 +673,16 @@
   }
 
   .btn-card-book:hover {
-    background: var(--primary-coral);
+    background: var(--accent-gold);
     color: var(--bg-white);
   }
 
-  /* Info Section */
-  .info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+  /* WHY CHOOSE US SECTION STYLES */
+  .why-choose-section {
+    padding-top: 20px;
   }
 
-  .info-card {
+  .why-choose-card {
     border: 1px solid var(--border-teal);
     border-radius: 28px;
     padding: 40px;
@@ -687,21 +690,68 @@
     box-shadow: var(--shadow-soft);
   }
 
-  .step-item {
+  .why-choose-title {
+    font-size: clamp(28px, 3.5vw, 40px);
+    margin-bottom: 30px;
+  }
+
+  .why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .why-item {
     display: flex;
+    align-items: flex-start;
     gap: 16px;
-    margin-top: 20px;
-    border-top: 1px solid var(--border-teal);
-    padding-top: 16px;
+    padding: 18px;
+    border-radius: 16px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border-teal);
+    transition: transform 0.2s ease, border-color 0.2s ease;
   }
 
-  .step-num {
-    font: 12px "DM Mono";
-    color: var(--primary-coral);
+  .why-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-gold);
+  }
+
+  .why-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    border-radius: 50%;
+    background: rgba(19, 62, 61, 0.08);
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .why-item h4 {
+    font-size: 15px;
     font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+    line-height: 1.3;
   }
 
-  /* Coverage List & Pills */
+  .why-item p {
+    font-size: 13px;
+    opacity: 0.8;
+    line-height: 1.4;
+  }
+
+  /* Service Coverage Full-Width Card */
+  .coverage-card {
+    border: 1px solid var(--border-teal);
+    border-radius: 28px;
+    padding: 40px;
+    background: var(--bg-white);
+    box-shadow: var(--shadow-soft);
+  }
+
   .accommodations-list {
     list-style: none;
     margin-top: 12px;
@@ -716,7 +766,7 @@
 
   .accommodations-list li::before {
     content: "✦ ";
-    color: var(--primary-coral);
+    color: var(--accent-gold);
   }
 
   .areas-flex {
@@ -739,11 +789,11 @@
   }
 
   .area-pill:hover {
-    background: var(--primary-coral);
+    background: var(--primary-green);
     color: var(--bg-white);
-    border-color: var(--primary-coral);
+    border-color: var(--primary-green);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(210, 107, 82, 0.25);
+    box-shadow: 0 4px 12px rgba(19, 62, 61, 0.25);
   }
 
   /* FAQ Section */
@@ -785,7 +835,7 @@
   .faq-question span.icon {
     font-size: 18px;
     transition: transform .3s ease;
-    color: var(--primary-coral);
+    color: var(--accent-gold);
   }
 
   .faq-answer {
@@ -839,7 +889,7 @@
   }
 
   .footer-map-link {
-    color: var(--primary-coral);
+    color: var(--accent-gold);
     font-weight: 600;
     transition: color 0.2s ease;
   }
@@ -904,7 +954,7 @@
 
     .mobile-panel a:last-child { border-bottom: 0; }
     
-    .hero-grid, .info-grid { 
+    .hero-grid { 
       grid-template-columns: 1fr; 
       gap: 30px; 
     }
@@ -924,27 +974,27 @@
       display: block;
       width: 100%;
       text-align: center;
-      background: var(--primary-coral);
+      background: var(--primary-green);
       color: var(--bg-white);
       border-radius: 999px;
       padding: 14px;
       font: 11px "DM Mono";
       letter-spacing: .14em;
       text-transform: uppercase;
-      box-shadow: 0 8px 20px rgba(210, 107, 82, 0.35);
+      box-shadow: 0 8px 20px rgba(19, 62, 61, 0.35);
     }
 
     .footer-top { flex-direction: column; }
     .footer-actions { align-items: flex-start; }
     .copyright { flex-direction: column; gap: 8px; }
-    .info-card, .faq-card { padding: 24px; }
+    .coverage-card, .faq-card, .why-choose-card { padding: 24px; }
   }
   </style>
 </head>
 
 <body id="top">
 
-<!-- TOP PROMO BANNER (SEAMLESS RUNNING TEXT) -->
+<!-- TOP PROMO BANNER (SEAMLESS RUNNING TEXT IN FOREST GREEN) -->
 <div class="promo-bar" aria-label="Promotion Banner">
   <div class="promo-track">
     <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
@@ -1050,7 +1100,7 @@
         <div class="eyebrow"><span></span> 24/7 Mobile Medical Service · Bali</div>
         <h1 class="display">
           Feel <i>Well,</i><br>
-          <span class="coral-text">Wherever You Are.</span>
+          <span class="green-text">Wherever You Are.</span>
         </h1>
         <p>
           DripWell Bali brings certified doctors, IV drip therapy, and physiotherapy directly to your villa or hotel. Enjoy <strong>15% OFF</strong> all treatments today with code <strong>SAVE15</strong>.
@@ -1087,89 +1137,123 @@
     </div>
   </section>
 
-  <!-- INFO SECTION -->
+  <!-- WHY CHOOSE US SECTION -->
+  <section class="wrap why-choose-section">
+    <div class="why-choose-card">
+      <div class="eyebrow"><span></span> Our Guarantees</div>
+      <h2 class="display why-choose-title">
+        Why Choose <span class="green-text">Dripwell Bali?</span>
+      </h2>
+
+      <div class="why-choose-grid">
+        <!-- Item 1 -->
+        <div class="why-item">
+          <div class="why-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h4>24/7 Non-Stop Medical Service</h4>
+            <p>Our medical team is available on call anytime, 24/7 across all villas and hotels in Bali.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="why-item">
+          <div class="why-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div>
+            <h4>Fast Response &amp; Arrival &lt; 45 Mins</h4>
+            <p>Our doctors and nurses arrive at your location within 30–60 minutes after confirmation.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="why-item">
+          <div class="why-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div>
+            <h4>Licensed Doctors &amp; Nurses</h4>
+            <p>All medical procedures are conducted by certified and experienced healthcare professionals.</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="why-item">
+          <div class="why-icon">
+            <span style="font-family: 'DM Mono', monospace; font-weight: 700; font-size: 15px;">En</span>
+          </div>
+          <div>
+            <h4>English-Speaking Doctors</h4>
+            <p>Smooth and clear communication with no language barriers for international travelers.</p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="why-item">
+          <div class="why-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h4>Travel Insurance Claim Support</h4>
+            <p>Includes official medical documents &amp; Travel Insurance Reports for easy reimbursement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVERAGE SECTION -->
   <section class="wrap">
-    <div class="info-grid">
+    <div class="coverage-card">
+      <div class="eyebrow"><span></span> Service Coverage</div>
+      <h3 class="display" style="font-size: 28px; margin-bottom: 8px;">Serving Bali, Wherever You Are</h3>
+      <p style="font-size: 14px; opacity: .85;">DripWell Bali provides mobile wellness services across Bali, bringing professional care directly to your preferred location.</p>
       
-      <div class="info-card">
-        <div class="eyebrow">Simple Process</div>
-        <h3 class="display" style="font-size: 28px; margin-bottom: 16px;">How It Works</h3>
-        
-        <div class="step-item">
-          <span class="step-num">01</span>
-          <div>
-            <strong>Contact Us via WhatsApp</strong>
-            <p style="font-size: 14px; opacity: .8;">Share your symptoms, location, and mention promo code <strong>SAVE15</strong> to unlock 15% off.</p>
-          </div>
-        </div>
+      <div style="margin-top: 24px;">
+        <strong style="font-size: 11px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .12em; color: var(--accent-gold);">We Provide Services At:</strong>
+        <ul class="accommodations-list">
+          <li>Private Villas</li>
+          <li>Hotels & Resorts</li>
+          <li>Private Residences</li>
+          <li>Selected Accommodations</li>
+        </ul>
+      </div>
 
-        <div class="step-item">
-          <span class="step-num">02</span>
-          <div>
-            <strong>Medical Consultation & Dispatch</strong>
-            <p style="font-size: 14px; opacity: .8;">Our licensed doctor and nurse arrive at your villa or hotel with full medical gear.</p>
-          </div>
-        </div>
-
-        <div class="step-item">
-          <span class="step-num">03</span>
-          <div>
-            <strong>Recover in Comfort</strong>
-            <p style="font-size: 14px; opacity: .8;">Receive safe, monitored IV treatment or medical consultation without leaving your bed.</p>
-          </div>
+      <div style="margin-top: 24px;">
+        <strong style="font-size: 11px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .12em; color: var(--accent-gold);">◆ Covered Areas In Bali:</strong>
+        <div class="areas-flex">
+          <span class="area-pill">Canggu</span>
+          <span class="area-pill">Berawa</span>
+          <span class="area-pill">Batu Bolong</span>
+          <span class="area-pill">Echo Beach</span>
+          <span class="area-pill">Batu Belig</span>
+          <span class="area-pill">Pererenan</span>
+          <span class="area-pill">Seseh</span>
+          <span class="area-pill">Tumbak Bayuh</span>
+          <span class="area-pill">Padonan</span>
+          <span class="area-pill">Babakan</span>
+          <span class="area-pill">Tibubeneng</span>
+          <span class="area-pill">Dalung</span>
+          <span class="area-pill">Seminyak</span>
+          <span class="area-pill">Petitenget</span>
+          <span class="area-pill">Kerobokan</span>
+          <span class="area-pill">Umalas</span>
+          <span class="area-pill">Munggu</span>
+          <span class="area-pill">Kedungu</span>
+          <span class="area-pill">Tabanan</span>
+          <span class="area-pill">Yeh Gangga</span>
+          <span class="area-pill">Tanah Lot</span>
+          <span class="area-pill">Cemagi</span>
+          <span class="area-pill">Beraban</span>
+          <span class="area-pill">Nuanu Area</span>
+          <span class="area-pill">Mengwi</span>
+          <span class="area-pill">Others</span>
         </div>
       </div>
 
-      <div class="info-card">
-        <div class="eyebrow">Service Coverage</div>
-        <h3 class="display" style="font-size: 28px; margin-bottom: 8px;">Serving Bali, Wherever You Are</h3>
-        <p style="font-size: 14px; opacity: .85;">DripWell Bali provides mobile wellness services across Bali, bringing professional care directly to your preferred location.</p>
-        
-        <div style="margin-top: 18px;">
-          <strong style="font-size: 11px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .12em; color: var(--primary-coral);">We Provide Services At:</strong>
-          <ul class="accommodations-list">
-            <li>Private Villas</li>
-            <li>Hotels & Resorts</li>
-            <li>Private Residences</li>
-            <li>Selected Accommodations</li>
-          </ul>
-        </div>
-
-        <div>
-          <strong style="font-size: 11px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .12em; color: var(--primary-coral);">◆ Covered Areas In Bali:</strong>
-          <div class="areas-flex">
-            <span class="area-pill">Canggu</span>
-            <span class="area-pill">Berawa</span>
-            <span class="area-pill">Batu Bolong</span>
-            <span class="area-pill">Echo Beach</span>
-            <span class="area-pill">Batu Belig</span>
-            <span class="area-pill">Pererenan</span>
-            <span class="area-pill">Seseh</span>
-            <span class="area-pill">Tumbak Bayuh</span>
-            <span class="area-pill">Padonan</span>
-            <span class="area-pill">Babakan</span>
-            <span class="area-pill">Tibubeneng</span>
-            <span class="area-pill">Dalung</span>
-            <span class="area-pill">Seminyak</span>
-            <span class="area-pill">Petitenget</span>
-            <span class="area-pill">Kerobokan</span>
-            <span class="area-pill">Umalas</span>
-            <span class="area-pill">Munggu</span>
-            <span class="area-pill">Kedungu</span>
-            <span class="area-pill">Tabanan</span>
-            <span class="area-pill">Yeh Gangga</span>
-            <span class="area-pill">Tanah Lot</span>
-            <span class="area-pill">Cemagi</span>
-            <span class="area-pill">Beraban</span>
-            <span class="area-pill">Nuanu Area</span>
-            <span class="area-pill">Mengwi</span>
-            <span class="area-pill">Others</span>
-          </div>
-        </div>
-
-        <p style="font-size: 12px; opacity: .75; margin-top: 16px;">Service availability may vary depending on location and scheduling. Contact our team to check availability.</p>
-      </div>
-
+      <p style="font-size: 12px; opacity: .75; margin-top: 20px;">Service availability may vary depending on location and scheduling. Contact our team to check availability.</p>
     </div>
   </section>
 
@@ -1254,7 +1338,7 @@
       </div>
 
       <div class="footer-actions">
-        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer" class="coral-text">✦ Claim 15% Off on WhatsApp</a>
+        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer" class="gold-text">✦ Claim 15% Off on WhatsApp</a>
         <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
         <div>
           <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
