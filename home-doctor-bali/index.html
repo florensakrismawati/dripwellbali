@@ -7,14 +7,16 @@
 <title>Home Doctor Visit Bali | Private Medical Care | DripWell Bali</title>
 
 <meta name="description" content="Professional medical care delivered directly to your villa, hotel, resort, or private residence in Bali. Private doctor consultations and health assessments.">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="keywords" content="home doctor bali, mobile doctor visit seminyak, private medical care canggu, villa doctor bali, emergency doctor home service ubud">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="Dripwell Bali">
 <meta name="theme-color" content="#133e3d">
 
+<!-- Canonical Tag & Favicon -->
 <link rel="canonical" href="https://www.dripwellbali.com/home-doctor-bali/">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://www.dripwellbali.com/favicon.svg" type="image/svg+xml">
 
-<!-- Open Graph -->
+<!-- Open Graph / Social Media -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.dripwellbali.com/home-doctor-bali/">
 <meta property="og:site_name" content="Dripwell Bali">
@@ -23,13 +25,13 @@
 <meta property="og:description" content="Doctor Visits, Delivered to You. Convenient Home Doctor Visits for guests and residents in Bali.">
 <meta property="og:image" content="https://www.dripwellbali.com/home-doctor-bali/home-doctor.jpg">
 
-<!-- Preconnect Fonts & Resource Prefetch -->
+<!-- Fonts & Resource Preconnect for Performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://wa.me">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
 
-<!-- Structured Data -->
+<!-- STRUCTURED DATA (JSON-LD) FOR GOOGLE SEO -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -42,14 +44,14 @@
       "description": "On-demand doctor home visits in Bali providing medical consultations, physical examinations, prescriptions, and health assessments at guest accommodations."
     },
     {
-      "@type": "MedicalBusiness",
-      "@id": "https://www.dripwellbali.com/#medicalbusiness",
+      "@type": "MedicalClinic",
+      "@id": "https://www.dripwellbali.com/#organization",
       "name": "Dripwell Bali",
       "url": "https://www.dripwellbali.com/",
       "logo": "https://www.dripwellbali.com/dripwell-logo.jpeg",
       "telephone": "+6282221614966",
       "email": "dripwellbali@gmail.com",
-      "hasMap": "https://share.google/eC4kjAxjvGdGjutWF"
+      "areaServed": ["Canggu", "Seminyak", "Pererenan", "Uluwatu", "Ubud", "Kuta", "Sanur", "Tabanan"]
     }
   ]
 }
@@ -67,22 +69,9 @@
   --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--bg-white);
-  color: var(--text-dark);
-  font-family: "DM Sans", Arial, sans-serif;
-  line-height: 1.6;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg-white); color: var(--text-dark); font-family: "DM Sans", Arial, sans-serif; line-height: 1.6; }
 
 .mono { font-family: "DM Mono", monospace; }
 .display { font-family: "Playfair Display", Georgia, serif; }
@@ -94,7 +83,7 @@ button { cursor: pointer; border: none; background: none; }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; height: auto; }
 
-/* Promo Banner */
+/* Top Promo Bar */
 .promo-bar {
   background: var(--primary-green);
   color: var(--bg-white);
@@ -121,17 +110,7 @@ img { max-width: 100%; display: block; height: auto; }
 }
 
 /* Accessibility */
-.skip-link {
-  position: fixed;
-  left: 12px;
-  top: -60px;
-  z-index: 100;
-  background: var(--text-dark);
-  color: var(--bg-white);
-  padding: 12px 16px;
-  border-radius: 8px;
-  font: 12px "DM Mono";
-}
+.skip-link { position: fixed; left: 12px; top: -60px; z-index: 100; background: var(--text-dark); color: var(--bg-white); padding: 12px 16px; border-radius: 8px; font: 12px "DM Mono"; transition: top .2s; }
 .skip-link:focus { top: 12px; }
 
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
@@ -159,698 +138,140 @@ header {
   justify-content: space-between;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo { width: 44px; height: 44px; flex: 0 0 44px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-teal); }
+.logo img { width: 100%; height: 100%; object-fit: cover; }
+.brand small { display: block; font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-gold); }
+.brand strong { font: 24px "Playfair Display"; line-height: 1; color: var(--text-dark); }
 
-.logo {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--border-teal);
-}
+nav { display: flex; align-items: center; gap: 14px; }
+.navlink { font: 10px "DM Mono"; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dark); opacity: .8; transition: opacity .2s, color .2s; white-space: nowrap; }
+.navlink:hover, .navlink.active { opacity: 1; color: var(--primary-green); font-weight: 700; }
 
-.logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.dropdown { position: relative; display: inline-block; }
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--bg-white); min-width: 220px; box-shadow: var(--shadow-soft); border: 1px solid var(--border-teal); border-radius: 12px; padding: 8px 0; z-index: 1001; }
+.dropdown-menu a { display: block; padding: 10px 16px; font: 10px "DM Mono"; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dark); transition: background 0.2s, color 0.2s; }
+.dropdown-menu a:hover, .dropdown-menu a.active-link { background: var(--bg-soft); color: var(--primary-green); font-weight: bold; }
+.dropdown:hover .dropdown-menu { display: block; }
 
-.brand small {
-  display: block;
-  font: 10px "DM Mono";
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--accent-gold);
-}
+.nav-book { background: var(--primary-green); color: var(--bg-white); padding: 10px 20px; border-radius: 999px; font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; transition: background .2s, transform .2s; border: 1px solid var(--primary-green); white-space: nowrap; }
+.nav-book:hover { background: var(--accent-gold); border-color: var(--accent-gold); transform: translateY(-1px); }
 
-.brand strong {
-  font: 24px "Playfair Display";
-  line-height: 1;
-  color: var(--text-dark);
-}
+.mobile-menu { display: none; width: 40px; height: 40px; border: 1px solid var(--border-teal); border-radius: 50%; background: none; color: var(--text-dark); font-size: 18px; }
+.mobile-panel { display: none; max-height: 80vh; overflow-y: auto; }
+.mobile-submenu { padding-left: 16px; background: rgba(19, 62, 61, 0.03); }
+.mobile-submenu a { font-size: 9px !important; opacity: 0.85; }
+.mobile-submenu a.active-link { color: var(--primary-green); font-weight: bold; opacity: 1; }
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
+main { position: relative; z-index: 1; }
+.wrap { max-width: 1280px; margin: auto; padding: 0 20px; }
+section { padding: 36px 0; content-visibility: auto; contain-intrinsic-size: 1px 500px; }
+.hero { content-visibility: visible; }
 
-.navlink {
-  font: 10px "DM Mono";
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--text-dark);
-  opacity: .8;
-  transition: opacity .15s ease;
-}
-
-.navlink:hover, .navlink.active {
-  opacity: 1;
-  color: var(--primary-green);
-  font-weight: 700;
-}
-
-/* Dropdown Menu CSS */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--bg-white);
-  min-width: 220px;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--border-teal);
-  border-radius: 12px;
-  padding: 8px 0;
-  z-index: 1001;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 10px 16px;
-  font: 10px "DM Mono";
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--text-dark);
-}
-
-.dropdown-menu a:hover, .dropdown-menu a.active-link {
-  background: var(--bg-soft);
-  color: var(--primary-green);
-  font-weight: bold;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.nav-book {
-  background: var(--primary-green);
-  color: var(--bg-white);
-  padding: 10px 20px;
-  border-radius: 999px;
-  font: 10px "DM Mono";
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  border: 1px solid var(--primary-green);
-  transition: background .15s ease;
-}
-
-.nav-book:hover {
-  background: var(--accent-gold);
-  border-color: var(--accent-gold);
-}
-
-.mobile-menu {
-  display: none;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--border-teal);
-  border-radius: 50%;
-  color: var(--text-dark);
-  font-size: 18px;
-}
-
-.mobile-panel { 
-  display: none; 
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-.mobile-submenu {
-  padding-left: 16px;
-  background: rgba(19, 62, 61, 0.03);
-}
-
-.mobile-submenu a {
-  font-size: 9px !important;
-  opacity: 0.85;
-}
-
-.mobile-submenu a.active-link {
-  color: var(--primary-green);
-  font-weight: bold;
-  opacity: 1;
-}
-
-/* Container Wrapper */
-.wrap {
-  max-width: 1280px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-/* Standard Section Layout & Rendering Optimization */
-section {
-  padding: 36px 0;
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 400px;
-}
-
-.eyebrow {
-  font: 11px "DM Mono";
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--accent-gold);
-  margin-bottom: 8px;
-}
-
-.eyebrow span {
-  display: inline-block;
-  width: 20px;
-  height: 1px;
-  background: var(--accent-gold);
-  vertical-align: middle;
-  margin-right: 6px;
-}
+.eyebrow { font: 11px "DM Mono"; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 8px; }
+.eyebrow span { display: inline-block; width: 20px; height: 1px; background: var(--accent-gold); vertical-align: middle; margin-right: 6px; }
 
 /* Hero Section */
-.hero {
-  background: var(--bg-white);
-  border-bottom: 1px solid var(--border-teal);
-  padding: 40px 0 30px;
-  content-visibility: visible;
-}
+.hero { background: var(--bg-white); border-bottom: 1px solid var(--border-teal); padding: 40px 0 30px; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; align-items: center; }
+.hero h1 { font-size: clamp(34px, 5vw, 60px); line-height: 1.1; letter-spacing: -.03em; margin-top: 8px; color: var(--text-dark); }
+.hero h1 em { font-style: italic; font-weight: 400; color: var(--primary-green); }
+.hero p { font-size: 15px; margin-top: 14px; color: var(--text-dark); opacity: .9; max-width: 580px; }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.tag { border: 1px solid var(--border-teal); border-radius: 999px; background: var(--bg-soft); padding: 4px 12px; font-size: 10px; font-family: "DM Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dark); }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 30px;
-  align-items: center;
-}
+.photo-frame { position: relative; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-teal); height: 380px; background: var(--bg-soft); box-shadow: var(--shadow-soft); }
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.photo-badge { position: absolute; bottom: 12px; left: 12px; background: rgba(255, 255, 255, 0.95); color: var(--text-dark); padding: 6px 12px; border-radius: 999px; font: 9px "DM Mono"; text-transform: uppercase; letter-spacing: .12em; border: 1px solid var(--border-teal); font-weight: 700; }
 
-.hero h1 {
-  font-size: clamp(34px, 5vw, 60px);
-  line-height: 1.1;
-  letter-spacing: -.03em;
-  margin-top: 8px;
-  color: var(--text-dark);
-}
+.btn-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--primary-green); color: var(--bg-white); padding: 12px 24px; border-radius: 999px; font: 10px "DM Mono"; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; transition: all .2s; border: 1px solid var(--primary-green); }
+.btn-cta:hover { background: var(--accent-gold); border-color: var(--accent-gold); transform: translateY(-2px); }
 
-.hero h1 em {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--primary-green);
-}
+/* Grids & Cards */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 14px; }
 
-.hero p {
-  font-size: 15px;
-  margin-top: 14px;
-  color: var(--text-dark);
-  opacity: .9;
-  max-width: 580px;
-}
+.card { border: 1px solid var(--border-teal); border-radius: 16px; padding: 20px; background: var(--bg-soft); transition: transform .2s, border-color .2s; }
+.card:hover { transform: translateY(-2px); border-color: var(--primary-green); }
+.card .icon { font-size: 18px; color: var(--accent-gold); margin-bottom: 10px; }
+.card h3 { font: 16px "Playfair Display", Georgia, serif; color: var(--primary-green); margin-bottom: 6px; font-weight: 600; }
+.card p { font-size: 12px; color: var(--text-dark); opacity: .85; line-height: 1.4; }
 
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 16px;
-}
+/* Dispatch CTA Banner */
+.dispatch-banner { border: 1px solid var(--primary-green); background: var(--primary-green); color: var(--bg-white); border-radius: 24px; padding: 40px 24px; text-align: center; margin: 20px 0; }
+.dispatch-banner h2 { font-size: clamp(26px, 4vw, 42px); line-height: 1.1; margin-bottom: 12px; color: var(--bg-white); }
+.dispatch-banner p { font-size: 14px; max-width: 600px; margin: 0 auto 20px; opacity: .95; }
+.dispatch-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items: center; margin-top: 20px; text-align: left; }
+.dispatch-list { list-style: none; margin: 14px 0; }
+.dispatch-list li { font-size: 13.5px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.dispatch-list li:before { content: "✦"; color: var(--accent-gold); }
+.dispatch-banner .btn-cta { background: var(--bg-white); color: var(--primary-green); border-color: var(--bg-white); }
+.dispatch-banner .btn-cta:hover { background: var(--accent-gold); color: var(--bg-white); border-color: var(--accent-gold); }
 
-.tag {
-  border: 1px solid var(--border-teal);
-  border-radius: 999px;
-  background: var(--bg-soft);
-  padding: 4px 12px;
-  font-size: 10px;
-  font-family: "DM Mono", monospace;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--text-dark);
-}
+/* FAQ Accordion */
+.faq-card { border: 1px solid var(--border-teal); border-radius: 24px; padding: 28px; background: var(--bg-white); box-shadow: var(--shadow-soft); }
+.faq-item { border-bottom: 1px solid var(--border-teal); padding: 12px 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-question { width: 100%; background: none; border: none; text-align: left; font: 14px "DM Sans", sans-serif; font-weight: 600; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.faq-question span.icon { font-size: 16px; color: var(--accent-gold); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding-top .3s ease; font-size: 12px; opacity: .85; line-height: 1.5; }
+.faq-item.open .faq-answer { max-height: 200px; padding-top: 8px; }
 
-.photo-frame {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid var(--border-teal);
-  height: 360px;
-  background: var(--bg-soft);
-  box-shadow: var(--shadow-soft);
-}
-
-.photo-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-}
-
-.photo-badge {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--text-dark);
-  padding: 6px 12px;
-  border-radius: 999px;
-  font: 9px "DM Mono";
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  border: 1px solid var(--border-teal);
-}
-
-.btn-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: var(--primary-green);
-  color: var(--bg-white);
-  padding: 12px 24px;
-  border-radius: 999px;
-  font: 10px "DM Mono";
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  font-weight: 600;
-  border: 1px solid var(--primary-green);
-  text-align: center;
-  transition: background .15s ease;
-}
-
-.btn-cta:hover {
-  background: var(--accent-gold);
-  border-color: var(--accent-gold);
-}
-
-.btn-cta-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: transparent;
-  color: var(--text-dark);
-  padding: 12px 24px;
-  border-radius: 999px;
-  font: 10px "DM Mono";
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  font-weight: 600;
-  border: 1px solid var(--text-dark);
-  text-align: center;
-}
-
-.btn-cta-outline:hover {
-  background: var(--primary-green);
-  color: var(--bg-white);
-  border-color: var(--primary-green);
-}
-
-/* Grid & Card Component */
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.card {
-  border: 1px solid var(--border-teal);
-  border-radius: 16px;
-  padding: 20px;
-  background: var(--bg-soft);
-}
-
-.card:hover {
-  border-color: var(--primary-green);
-}
-
-.card .icon {
-  font-size: 18px;
-  color: var(--accent-gold);
-  margin-bottom: 10px;
-}
-
-.card h3 {
-  font: 16px "Playfair Display", Georgia, serif;
-  color: var(--primary-green);
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.card p {
-  font-size: 12px;
-  color: var(--text-dark);
-  opacity: .85;
-  line-height: 1.4;
-}
-
-/* Booking Form Section */
-.booking-section {
-  border: 1px solid var(--border-teal);
-  border-radius: 24px;
-  padding: 32px 24px 24px;
-  background: var(--bg-soft);
-  box-shadow: var(--shadow-soft);
-  max-width: 900px;
-  margin: auto;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 16px;
-  margin-top: 20px;
-}
-
-.field-full {
-  grid-column: 1 / -1;
-}
-
-.field label {
-  display: block;
-  font: 10px "DM Mono", monospace;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: var(--text-dark);
-  opacity: .85;
-  margin-bottom: 5px;
-  font-weight: 700;
-}
-
-.field input, .field select, .field textarea {
-  width: 100%;
-  border: 1px solid var(--border-teal);
-  border-radius: 10px;
-  background: var(--bg-white);
-  padding: 12px 14px;
-  color: var(--text-dark);
-  font-size: 13px;
-  font-family: "DM Sans", sans-serif;
-}
-
-.field input:focus, .field select:focus, .field textarea:focus {
-  border-color: var(--primary-green);
-  outline: none;
-}
-
-/* Conversion / Dispatch Box */
-.dispatch-banner {
-  border: 1px solid var(--primary-green);
-  background: var(--primary-green);
-  color: var(--bg-white);
-  border-radius: 24px;
-  padding: 40px 24px;
-  margin: 20px 0;
-}
-
-.dispatch-banner h2 {
-  color: var(--bg-white);
-  font-size: clamp(26px, 4vw, 42px);
-  margin-bottom: 10px;
-}
-
-.dispatch-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 24px;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.dispatch-list {
-  list-style: none;
-  margin: 14px 0;
-}
-
-.dispatch-list li {
-  font-size: 13.5px;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.dispatch-list li:before {
-  content: "✦";
-  color: var(--accent-gold);
-}
-
-.dispatch-banner .btn-cta {
-  background: var(--bg-white);
-  color: var(--primary-green);
-  border-color: var(--bg-white);
-}
-
-.dispatch-banner .btn-cta:hover {
-  background: var(--accent-gold);
-  color: var(--bg-white);
-  border-color: var(--accent-gold);
-}
-
-/* Instant FAQ Accordion */
-.faq-item {
-  border: 1px solid var(--border-teal);
-  border-radius: 12px;
-  margin-bottom: 10px;
-  background: var(--bg-white);
-  overflow: hidden;
-}
-
-.faq-q {
-  width: 100%;
-  padding: 16px 20px;
-  text-align: left;
-  font: 14px "DM Sans", sans-serif;
-  font-weight: 600;
-  color: var(--text-dark);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
-
-.faq-q .icon {
-  font-size: 16px;
-  color: var(--accent-gold);
-  flex-shrink: 0;
-}
-
-.faq-a {
-  display: none;
-  padding: 0 20px 16px;
-}
-
-.faq-item.open .faq-a {
-  display: block;
-}
-
-/* Premium Grid Locations Box */
-.locations-box {
-  border: 1px solid var(--border-teal);
-  border-radius: 24px;
-  padding: 28px;
-  background: var(--bg-white);
-  box-shadow: var(--shadow-soft);
-}
-
-.accommodations-list {
-  list-style: none;
-  margin-top: 8px;
-  margin-bottom: 16px;
-}
-
-.accommodations-list li {
-  font-size: 12px;
-  margin-bottom: 4px;
-  font-weight: 500;
-}
-
-.accommodations-list li::before {
-  content: "✦ ";
-  color: var(--accent-gold);
-}
-
-.areas-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 8px;
-}
-
-.area-pill {
-  border: 1px solid var(--border-teal);
-  border-radius: 999px;
-  background: var(--bg-white);
-  color: var(--text-dark);
-  padding: 4px 12px;
-  font-size: 11px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.area-pill:hover {
-  background: var(--primary-green);
-  color: var(--bg-white);
-  border-color: var(--primary-green);
-}
+/* Locations Box */
+.locations-box { border: 1px solid var(--border-teal); border-radius: 24px; padding: 28px; background: var(--bg-white); box-shadow: var(--shadow-soft); }
+.accommodations-list { list-style: none; margin-top: 8px; margin-bottom: 16px; }
+.accommodations-list li { font-size: 12px; margin-bottom: 4px; font-weight: 500; }
+.accommodations-list li::before { content: "✦ "; color: var(--accent-gold); }
+.areas-flex { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.area-pill { border: 1px solid var(--border-teal); border-radius: 999px; background: var(--bg-white); color: var(--text-dark); padding: 4px 12px; font-size: 11px; font-weight: 500; }
 
 /* Footer */
 footer {
   border-top: 1px solid var(--border-teal);
-  padding: 28px 0 20px;
-  margin-top: 30px;
+  padding: 40px 0 30px;
+  margin-top: 60px;
   background: var(--bg-white);
   content-visibility: auto;
 }
 
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border-teal);
-}
-
-.footer-brand p {
-  max-width: 300px;
-  font-size: 12px;
-  color: var(--text-dark);
-  opacity: .8;
-  margin-top: 6px;
-}
-
-.footer-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-  font-size: 12px;
-}
-
-.copyright {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 14px;
-  font: 9px "DM Mono";
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  color: var(--text-dark);
-  opacity: .7;
-}
+.footer-top { display: flex; justify-content: space-between; gap: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--border-teal); }
+.footer-brand p { max-width: 320px; font-size: 13px; color: var(--text-dark); opacity: .8; margin-top: 8px; }
+.footer-phone { display: inline-block; margin-top: 10px; font-weight: 700; color: var(--primary-green); font-size: 14px; text-decoration: none; }
+.footer-phone:hover { color: var(--accent-gold); }
+.footer-map-link { color: var(--accent-gold); font-weight: 600; text-decoration: none; }
+.footer-map-link:hover { text-decoration: underline; }
+.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: 13px; }
+.copyright { display: flex; justify-content: space-between; padding-top: 20px; font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
 
 .sticky-bar { display: none; }
 
 /* Mobile Optimizations */
+@media (max-width: 1200px) {
+  nav { gap: 10px; }
+  .navlink { font-size: 9px; }
+}
+
 @media (max-width: 1024px) {
-  body {
-    padding-bottom: 100px !important;
-  }
-
-  section {
-    padding: 20px 0 !important;
-  }
-
-  .wrap {
-    padding: 0 16px;
-  }
-
+  body { padding-bottom: 110px !important; }
   nav { display: none; }
   .mobile-menu { display: block; }
 
-  .mobile-panel {
-    position: absolute;
-    top: 60px;
-    left: 16px;
-    right: 16px;
-    background: var(--bg-white);
-    border: 1px solid var(--border-teal);
-    border-radius: 16px;
-    padding: 8px;
-    box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12);
-  }
-
+  .mobile-panel { position: absolute; top: 60px; left: 16px; right: 16px; background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 16px; padding: 8px; box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12); }
   .mobile-panel.show { display: block; }
-
-  .mobile-panel a {
-    display: block;
-    width: 100%;
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border-teal);
-    font: 10px "DM Mono";
-    text-transform: uppercase;
-    letter-spacing: .12em;
-  }
-
+  .mobile-panel a { display: block; width: 100%; padding: 10px 12px; border-bottom: 1px solid var(--border-teal); font: 10px "DM Mono"; text-transform: uppercase; letter-spacing: .12em; }
   .mobile-panel a:last-child { border-bottom: 0; }
 
-  .hero {
-    padding: 16px 0 12px !important;
-  }
+  .hero-grid, .grid-2, .grid-3, .grid-4, .dispatch-grid { grid-template-columns: 1fr; gap: 16px; }
+  .photo-frame { height: 280px; margin-top: 10px; }
+  .locations-box, .dispatch-banner, .faq-card { padding: 20px 16px; }
 
-  .hero-grid, .grid-2, .grid-3, .grid-4, .dispatch-grid, .form-grid { 
-    grid-template-columns: 1fr; 
-    gap: 16px; 
-  }
-
-  .photo-frame { 
-    height: 250px;
-    margin-top: 10px;
-  }
-
-  .booking-section, .locations-box, .dispatch-banner { 
-    padding: 18px 14px !important; 
-    border-radius: 20px;
-  }
-
-  .card {
-    padding: 16px;
-  }
-
-  .btn-cta, .btn-cta-outline {
-    width: 100%;
-  }
-
-  .sticky-bar {
-    display: block;
-    position: fixed;
-    bottom: 12px;
-    left: 12px;
-    right: 12px;
-    z-index: 1000;
-  }
-
-  .sticky-bar a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: var(--primary-green);
-    color: var(--bg-white);
-    border-radius: 999px;
-    padding: 13px;
-    font: 10px "DM Mono";
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35);
-  }
+  .sticky-bar { display: block; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 1000; }
+  .sticky-bar a { display: block; width: 100%; text-align: center; background: var(--primary-green); color: var(--bg-white); border-radius: 999px; padding: 14px; font: 10px "DM Mono"; letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35); }
 
   .footer-top { flex-direction: column; }
   .footer-actions { align-items: flex-start; }
-  .copyright { flex-direction: column; gap: 6px; }
+  .copyright { flex-direction: column; gap: 8px; }
 }
 
 @media (max-width: 600px) {
@@ -864,9 +285,9 @@ footer {
 <!-- TOP PROMO BANNER -->
 <div class="promo-bar" aria-label="Promotion Banner">
   <div class="promo-track">
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical &amp; IV Drip Services! Use Code: <strong>SAVE15</strong></span>
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical &amp; IV Drip Services! Use Code: <strong>SAVE15</strong></span>
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical &amp; IV Drip Services! Use Code: <strong>SAVE15</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
   </div>
 </div>
 
@@ -875,9 +296,9 @@ footer {
 <!-- HEADER -->
 <header>
   <div class="nav">
-    <a class="brand" href="/" aria-label="Dripwell Bali home">
+    <a class="brand" href="https://www.dripwellbali.com/" aria-label="Dripwell Bali home">
       <span class="logo">
-        <img src="/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async">
+        <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async">
       </span>
       <span>
         <small>Home Doctor &amp; Medical Service</small>
@@ -886,38 +307,38 @@ footer {
     </a>
 
     <nav aria-label="Main navigation">
-      <a class="navlink" href="/">Home</a>
-      <a class="navlink" href="/about/">About Us</a>
+      <a class="navlink" href="https://www.dripwellbali.com/">HOME</a>
+      <a class="navlink" href="https://www.dripwellbali.com/about/">ABOUT US</a>
       
       <!-- HEALTH PACKAGES DROPDOWN -->
       <div class="dropdown">
-        <a class="navlink" href="/health-packages/">Health Packages ▾</a>
+        <a class="navlink" href="https://www.dripwellbali.com/health-packages/">HEALTH PACKAGES ▾</a>
         <div class="dropdown-menu">
-          <a href="/bali-belly-package/">Bali Belly Package</a>
-          <a href="/hangover-package/">Hangover Package</a>
-          <a href="/fever-package/">Fever Package</a>
-          <a href="/flu-relief-package/">Flu Relief Package</a>
+          <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly Package</a>
+          <a href="https://www.dripwellbali.com/hangover-package/">Hangover Package</a>
+          <a href="https://www.dripwellbali.com/fever-package/">Fever Package</a>
+          <a href="https://www.dripwellbali.com/flu-relief-package/">Flu Relief Package</a>
         </div>
       </div>
 
       <!-- IV DRIPS VITAMIN DROPDOWN -->
       <div class="dropdown">
-        <a class="navlink" href="/iv-drip-bali/">IV Drips Vitamin ▾</a>
+        <a class="navlink" href="https://www.dripwellbali.com/iv-drip-bali/">IV DRIPS VITAMIN ▾</a>
         <div class="dropdown-menu">
-          <a href="/jetlag-package/">Jetlag Package</a>
-          <a href="/energy-booster-package/">Energy Booster Package</a>
-          <a href="/immune-booster-basic/">Immune Booster Basic</a>
-          <a href="/immune-booster-standard-package/">Immune Booster Standard Package</a>
-          <a href="/ultimate-immune-booster/">Ultimate Immune Booster</a>
+          <a href="https://www.dripwellbali.com/jetlag-package/">Jetlag Package</a>
+          <a href="https://www.dripwellbali.com/energy-booster-package/">Energy Booster Package</a>
+          <a href="https://www.dripwellbali.com/immune-booster-basic/">Immune Booster Basic</a>
+          <a href="https://www.dripwellbali.com/immune-booster-standard-package/">Immune Booster Standard Package</a>
+          <a href="https://www.dripwellbali.com/ultimate-immune-booster/">Ultimate Immune Booster</a>
         </div>
       </div>
 
-      <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
-      <a class="navlink active" href="/home-doctor-bali/">Home Doctor</a>
-      <a class="navlink" href="/blog/">Blog</a>
-      <a class="navlink" href="/faq/">FAQ</a>
-      <a class="navlink" href="/contact/">Contact</a>
-      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Home%20Doctor." target="_blank" rel="noopener noreferrer">Claim 15% Off</a>
+      <a class="navlink" href="https://www.dripwellbali.com/physiotherapy-bali/">PHYSIOTHERAPY</a>
+      <a class="navlink active" href="https://www.dripwellbali.com/home-doctor-bali/">HOME DOCTOR</a>
+      <a class="navlink" href="https://www.dripwellbali.com/blog/">BLOG</a>
+      <a class="navlink" href="https://www.dripwellbali.com/faq/">FAQ</a>
+      <a class="navlink" href="https://www.dripwellbali.com/contact/">CONTACT</a>
+      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Home%20Doctor%20Visit." target="_blank" rel="noopener noreferrer">Get Special Offer</a>
     </nav>
 
     <button type="button" class="mobile-menu" aria-label="Open navigation menu" aria-controls="mobilePanel" aria-expanded="false" onclick="toggleMenu()">
@@ -926,32 +347,32 @@ footer {
   </div>
 
   <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
-    <a href="/" onclick="closeMenu()">Home</a>
-    <a href="/about/" onclick="closeMenu()">About Us</a>
+    <a href="https://www.dripwellbali.com/" onclick="closeMenu()">HOME</a>
+    <a href="https://www.dripwellbali.com/about/" onclick="closeMenu()">ABOUT US</a>
     
-    <a href="/health-packages/" onclick="closeMenu()"><strong>Health Packages</strong></a>
+    <a href="https://www.dripwellbali.com/health-packages/" onclick="closeMenu()"><strong>HEALTH PACKAGES ▾</strong></a>
     <div class="mobile-submenu">
-      <a href="/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
-      <a href="/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
-      <a href="/fever-package/" onclick="closeMenu()">— Fever Package</a>
-      <a href="/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
+      <a href="https://www.dripwellbali.com/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
+      <a href="https://www.dripwellbali.com/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
+      <a href="https://www.dripwellbali.com/fever-package/" onclick="closeMenu()">— Fever Package</a>
+      <a href="https://www.dripwellbali.com/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
     </div>
 
-    <a href="/iv-drip-bali/" onclick="closeMenu()"><strong>IV Drips Vitamin</strong></a>
+    <a href="https://www.dripwellbali.com/iv-drip-bali/" onclick="closeMenu()"><strong>IV DRIPS VITAMIN ▾</strong></a>
     <div class="mobile-submenu">
-      <a href="/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
-      <a href="/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
-      <a href="/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
-      <a href="/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
-      <a href="/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
+      <a href="https://www.dripwellbali.com/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
+      <a href="https://www.dripwellbali.com/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
+      <a href="https://www.dripwellbali.com/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
+      <a href="https://www.dripwellbali.com/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
+      <a href="https://www.dripwellbali.com/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
     </div>
 
-    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
-    <a href="/home-doctor-bali/" class="active-link" onclick="closeMenu()">Home Doctor</a>
-    <a href="/blog/" onclick="closeMenu()">Blog</a>
-    <a href="/faq/" onclick="closeMenu()">FAQ</a>
-    <a href="/contact/" onclick="closeMenu()">Contact</a>
-    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Home%20Doctor." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Claim 15% Off on WhatsApp</a>
+    <a href="https://www.dripwellbali.com/physiotherapy-bali/" onclick="closeMenu()">PHYSIOTHERAPY</a>
+    <a href="https://www.dripwellbali.com/home-doctor-bali/" class="active-link" onclick="closeMenu()">HOME DOCTOR</a>
+    <a href="https://www.dripwellbali.com/blog/" onclick="closeMenu()">BLOG</a>
+    <a href="https://www.dripwellbali.com/faq/" onclick="closeMenu()">FAQ</a>
+    <a href="https://www.dripwellbali.com/contact/" onclick="closeMenu()">CONTACT</a>
+    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Home%20Doctor%20Visit." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Get Special Offer on WhatsApp</a>
   </div>
 </header>
 
@@ -974,23 +395,20 @@ footer {
           <div class="hero-tags">
             <span class="tag">✦ Private Doctor Consultation</span>
             <span class="tag">✦ Villa &amp; Hotel Visits</span>
-            <span class="tag">✦ Personalized Medical Assessment</span>
-            <span class="tag">✦ Convenient Mobile Medical Care</span>
+            <span class="tag">✦ Personalized Assessment</span>
+            <span class="tag">✦ Mobile Medical Care</span>
           </div>
 
           <div style="margin-top: 18px;">
-            <a href="#booking-form" class="btn-cta">
-              Request a Doctor Visit with 15% Off →
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Home%20Doctor%20Visit." target="_blank" rel="noopener noreferrer" class="btn-cta">
+              Get Special Offer on WhatsApp →
             </a>
-            <p class="mono" style="font-size: 10px; margin-top: 8px; opacity: .7; text-align: center;">
-              Check availability for your location
-            </p>
           </div>
         </div>
 
         <div class="photo-frame">
-          <img src="home-doctor.jpg" alt="Doctor home visit consultation in a villa in Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.src='home-doctor.jpeg';">
-          <div class="photo-badge">✦ Private &amp; Convenient Medical Care</div>
+          <img src="https://www.dripwellbali.com/home-doctor-bali/home-doctor.jpg" alt="Doctor home visit consultation in a villa in Bali" loading="eager" decoding="async">
+          <div class="photo-badge">✦ DRIPWELL BALI — RECOVER • REHYDRATE • REVIVE</div>
         </div>
       </div>
     </div>
@@ -1091,73 +509,9 @@ footer {
     </p>
   </section>
 
-  <!-- 05 — BOOKING FORM SECTION -->
-  <section id="booking-form" class="wrap">
-    <div class="booking-section">
-      <div style="text-align: center; max-width: 600px; margin: 0 auto 16px;">
-        <div class="eyebrow">Fast &amp; Direct Service</div>
-        <h2 class="display" style="font-size: clamp(26px, 4vw, 36px);">Book Your Doctor Visit</h2>
-        <p style="margin-top: 8px; opacity: .85; font-size: 13px;">
-          We Come To You. Complete the form below and our medical team will contact you on WhatsApp immediately.
-        </p>
-      </div>
-
-      <form onsubmit="submitForm(event)" class="form-grid">
-        <div class="field">
-          <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" placeholder="Enter your full name" required>
-        </div>
-
-        <div class="field">
-          <label for="waNumber">WhatsApp Number</label>
-          <input type="tel" id="waNumber" placeholder="Enter WhatsApp number (e.g. +62...)" required>
-        </div>
-
-        <div class="field">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="Enter email address" required>
-        </div>
-
-        <div class="field">
-          <label for="hotelName">Hotel / Villa Name</label>
-          <input type="text" id="hotelName" placeholder="Enter hotel or villa name" required>
-        </div>
-
-        <div class="field">
-          <label for="locationArea">Location / Area</label>
-          <input type="text" id="locationArea" placeholder="e.g. Canggu, Seminyak, Ubud" required>
-        </div>
-
-        <div class="field">
-          <label for="prefDate">Preferred Date</label>
-          <input type="date" id="prefDate" required>
-        </div>
-
-        <div class="field field-full">
-          <label for="prefTime">Preferred Time</label>
-          <input type="text" id="prefTime" placeholder="e.g. As soon as possible / 2:00 PM" required>
-        </div>
-
-        <div class="field field-full">
-          <label for="symptoms">Your Current Symptoms / Medical Concern</label>
-          <textarea id="symptoms" rows="3" placeholder="Tell us briefly about your medical concern (e.g. fever, nausea, headaches, severe fatigue)" required></textarea>
-        </div>
-
-        <div class="field field-full" style="text-align: center; margin-top: 10px;">
-          <button type="submit" class="btn-cta" style="width: 100%;">
-            SEND BOOKING REQUEST VIA WHATSAPP (15% OFF — CODE: SAVE15) →
-          </button>
-          <p class="mono" style="font-size: 10px; margin-top: 10px; opacity: .7;">
-            Our team will contact you shortly to confirm your booking and availability.
-          </p>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- 07 — WHAT TO EXPECT DURING YOUR VISIT -->
+  <!-- 05 — WHAT TO EXPECT DURING YOUR VISIT -->
   <section class="wrap">
-    <div class="card" style="border: 1px solid var(--border-teal); border-radius: 20px; padding: 24px; background: var(--bg-soft);">
+    <div class="card" style="border: 1px solid var(--border-teal); border-radius: 20px; padding: 28px; background: var(--bg-soft);">
       <div class="eyebrow">YOUR CONSULTATION</div>
       <h2 class="display" style="font-size: clamp(24px, 3.5vw, 36px); margin-bottom: 10px;">
         Professional Care, Personally Delivered.
@@ -1186,7 +540,7 @@ footer {
     </div>
   </section>
 
-  <!-- 10 — COVERAGE AREAS -->
+  <!-- 06 — COVERAGE AREAS -->
   <section class="wrap">
     <div class="locations-box">
       <div>
@@ -1241,13 +595,13 @@ footer {
     </div>
   </section>
 
-  <!-- 11 — DOCTOR DISPATCH CTA -->
+  <!-- 07 — DOCTOR DISPATCH CTA BANNER -->
   <section class="wrap">
     <div class="dispatch-banner">
       <div class="eyebrow" style="color: var(--bg-white); opacity: .9;">DOCTOR DISPATCH</div>
-      <h2>Need a Doctor?</h2>
+      <h2>Need a Doctor Visit in Bali?</h2>
       <p style="font-size: 14px; opacity: .9;">
-        Feeling unwell while staying in Bali? Contact our medical team to check current Home Doctor Visit availability for your location with 15% off (Code: <strong>SAVE15</strong>).
+        Feeling unwell while staying in Bali? Contact our medical team to check current Home Doctor Visit availability for your accommodation.
       </p>
 
       <div class="dispatch-grid">
@@ -1256,113 +610,109 @@ footer {
             To help us assist you, please share:
           </p>
           <ul class="dispatch-list">
-            <li>Your Name</li>
-            <li>Current Location</li>
+            <li>Your Full Name</li>
+            <li>Current Location / Area</li>
             <li>Villa or Hotel Name</li>
             <li>Brief Description of Your Medical Concern</li>
           </ul>
         </div>
 
         <div style="text-align: center;">
-          <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Home%20Doctor.%0A%0A*Name:*%20%0A*Location:*%20%0A*Villa/Hotel:*%20%0A*Medical%20Concern:*%20" target="_blank" rel="noopener noreferrer" class="btn-cta">
+          <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Home%20Doctor%20Visit.%0A%0A*Name:*%20%0A*Location:*%20%0A*Villa/Hotel:*%20%0A*Medical%20Concern:*%20" target="_blank" rel="noopener noreferrer" class="btn-cta">
             Check Doctor Availability ↗
           </a>
         </div>
       </div>
 
       <p style="font-size: 11px; opacity: .7; text-align: center; margin-top: 16px; font-style: italic;">
-        Availability and arrival times are subject to location and current service availability.
+        Availability and arrival times are subject to location and current service scheduling.
       </p>
     </div>
   </section>
 
-  <!-- 12 — FAQ SECTION -->
+  <!-- 08 — FAQ SECTION -->
   <section class="wrap">
-    <div style="text-align: center; max-width: 600px; margin: 0 auto 20px;">
+    <div class="faq-card">
       <div class="eyebrow">FREQUENTLY ASKED QUESTIONS</div>
-      <h2 class="display" style="font-size: clamp(26px, 4vw, 38px);">
-        Home Doctor Visit in Bali.
-      </h2>
-    </div>
+      <h3 class="display" style="font-size: 24px; margin-bottom: 14px;">Home Doctor Visit in Bali</h3>
 
-    <div style="max-width: 900px; margin: 0 auto;">
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">
-          <span>How long does it take for the doctor to arrive?</span>
-          <span class="icon">⌄</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          How long does it take for the doctor to arrive?
+          <span class="icon">+</span>
         </button>
-        <div class="faq-a">
-          <p>Doctor arrival times depend on your location, traffic conditions, and current availability. Once you share your villa, hotel, or location pin, our team will provide an estimated arrival time.</p>
+        <div class="faq-answer">
+          Doctor arrival times depend on your location, traffic conditions, and current availability. Once you share your villa, hotel, or location pin, our team will provide an estimated arrival time.
         </div>
       </div>
 
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">
-          <span>Can a doctor visit my villa or hotel?</span>
-          <span class="icon">⌄</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          Can a doctor visit my villa or hotel?
+          <span class="icon">+</span>
         </button>
-        <div class="faq-a">
-          <p>Yes. Dripwell Bali provides Home Doctor Visits to selected villas, hotels, resorts, and private residences within our service coverage areas.</p>
+        <div class="faq-answer">
+          Yes. Dripwell Bali provides Home Doctor Visits to selected villas, hotels, resorts, and private residences within our service coverage areas.
         </div>
       </div>
 
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">
-          <span>What areas does Dripwell Bali cover?</span>
-          <span class="icon">⌄</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          What areas does Dripwell Bali cover?
+          <span class="icon">+</span>
         </button>
-        <div class="faq-a">
-          <p>Our Home Doctor and medical services are available across selected areas including Canggu, Pererenan, Seseh, Munggu, Kedungu, Tabanan, Yeh Gangga, Tanah Lot, Cemagi, Beraban, Nuanu Area, Berawa, Batu Bolong, Echo Beach, and Mengwi.</p>
+        <div class="faq-answer">
+          Our Home Doctor and medical services are available across selected areas including Canggu, Pererenan, Seseh, Munggu, Kedungu, Tabanan, Yeh Gangga, Tanah Lot, Cemagi, Beraban, Nuanu Area, Berawa, Batu Bolong, Echo Beach, and Mengwi.
         </div>
       </div>
 
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">
-          <span>What information should I provide when booking?</span>
-          <span class="icon">⌄</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          What information should I provide when booking?
+          <span class="icon">+</span>
         </button>
-        <div class="faq-a">
-          <p>Please share your name, current location, villa or hotel name, and a brief description of your medical concern. This helps our team check availability and coordinate your visit.</p>
+        <div class="faq-answer">
+          Please share your name, current location, villa or hotel name, and a brief description of your medical concern. This helps our team check availability and coordinate your visit.
         </div>
       </div>
 
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">
-          <span>Can the doctor prescribe medications?</span>
-          <span class="icon">⌄</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          Can the doctor prescribe medications?
+          <span class="icon">+</span>
         </button>
-        <div class="faq-a">
-          <p>Where medically appropriate, prescriptions may be provided following an individual consultation and professional medical assessment.</p>
+        <div class="faq-answer">
+          Where medically appropriate, prescriptions may be provided following an individual consultation and professional medical assessment.
         </div>
       </div>
 
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">
-          <span>Can I request a medical report?</span>
-          <span class="icon">⌄</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          Can I request a medical report?
+          <span class="icon">+</span>
         </button>
-        <div class="faq-a">
-          <p>Medical reports or supporting documentation may be available when clinically appropriate and subject to the attending doctor's professional assessment.</p>
+        <div class="faq-answer">
+          Medical reports or supporting documentation may be available when clinically appropriate and subject to the attending doctor's professional assessment.
         </div>
       </div>
 
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">
-          <span>What happens if I need hospital care?</span>
-          <span class="icon">⌄</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          What happens if I need hospital care?
+          <span class="icon">+</span>
         </button>
-        <div class="faq-a">
-          <p>If your condition requires a higher level of medical attention, the attending doctor may recommend further evaluation or referral to an appropriate medical facility.</p>
+        <div class="faq-answer">
+          If your condition requires a higher level of medical attention, the attending doctor may recommend further evaluation or referral to an appropriate medical facility.
         </div>
       </div>
 
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">
-          <span>How do I book a Home Doctor Visit?</span>
-          <span class="icon">⌄</span>
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          How do I book a Home Doctor Visit?
+          <span class="icon">+</span>
         </button>
-        <div class="faq-a">
-          <p>Simply contact DripWell Bali via WhatsApp and share your location and medical concern. Our team will check availability and assist with arranging your Doctor Visit.</p>
+        <div class="faq-answer">
+          Simply contact DripWell Bali via WhatsApp and share your location and medical concern. Our team will check availability and assist with arranging your Doctor Visit.
         </div>
       </div>
     </div>
@@ -1375,27 +725,27 @@ footer {
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="/" aria-label="Back to Dripwell Bali homepage">
+        <a class="brand" href="https://www.dripwellbali.com/">
           <span class="logo">
-            <img src="/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" loading="lazy" decoding="async">
+            <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell logo" loading="lazy">
           </span>
-          <span>
-            <strong>Dripwell <i>Bali</i></strong>
-          </span>
+          <span><strong>Dripwell <i>Bali</i></strong></span>
         </a>
-        <p style="margin-top: 6px; font-weight: 500;">Recover • Rehydrate • Revive</p>
-        <p>
-          Doctor &amp; Nurse Home Service • Professional Care • Hotel &amp; Villa Service • Safe &amp; Private • Available 24/7
+        <p>Recover • Rehydrate • Revive</p>
+        <p style="margin-top: 6px;">Available 24/7 across Bali for villa visits and medical consultations.</p>
+        <a href="tel:+6282221614966" class="footer-phone">📞 Phone: +62 822 2161 4966</a>
+        <p style="margin-top: 6px;">
+          📍 <a href="https://maps.app.goo.gl/pkGnDAKp4qALJbZq5" target="_blank" rel="noopener noreferrer" class="footer-map-link">Dripwell Bali | 24/7 Home Doctor &amp; Medical Service</a>
         </p>
       </div>
 
       <div class="footer-actions">
-        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer" class="gold-text" style="font-weight: 600;">
-          ✦ Claim 15% Off on WhatsApp
-        </a>
-        <a href="mailto:dripwellbali@gmail.com">
-          dripwellbali@gmail.com
-        </a>
+        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" class="gold-text" style="font-weight: 600;">✦ Get Special Offer on WhatsApp</a>
+        <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
+        <div>
+          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
+          <a href="tel:+6282221614966">Call +62 822 2161 4966</a>
+        </div>
       </div>
     </div>
 
@@ -1408,14 +758,11 @@ footer {
 
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
-  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Home%20Doctor." target="_blank" rel="noopener noreferrer">
-    ✦ Claim 15% Off via WhatsApp →
-  </a>
+  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Home%20Doctor%20Visit." target="_blank" rel="noopener noreferrer">✦ Get Special Offer via WhatsApp →</a>
 </div>
 
 <script>
-// Optimized Navigation Toggle
-function toggleMenu(){
+function toggleMenu() {
   var panel = document.getElementById("mobilePanel");
   var btn = document.querySelector(".mobile-menu");
   var open = panel.classList.toggle("show");
@@ -1423,7 +770,7 @@ function toggleMenu(){
   btn.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
 }
 
-function closeMenu(){
+function closeMenu() {
   var panel = document.getElementById("mobilePanel");
   var btn = document.querySelector(".mobile-menu");
   panel.classList.remove("show");
@@ -1431,36 +778,9 @@ function closeMenu(){
   btn.setAttribute("aria-label", "Open navigation menu");
 }
 
-// Optimized Instant FAQ Toggle
-function toggleFaq(btn){
+function toggleFaq(btn) {
   var item = btn.parentElement;
   item.classList.toggle('open');
-}
-
-// Fast WhatsApp Form Submission
-function submitForm(e) {
-  e.preventDefault();
-  
-  var name = document.getElementById('fullName').value;
-  var phone = document.getElementById('waNumber').value;
-  var email = document.getElementById('email').value;
-  var hotel = document.getElementById('hotelName').value;
-  var area = document.getElementById('locationArea').value;
-  var date = document.getElementById('prefDate').value;
-  var time = document.getElementById('prefTime').value;
-  var symptoms = document.getElementById('symptoms').value;
-
-  var text = `Hello DripWell Bali, I would like to request a Home Doctor Visit booking (Claiming 15% OFF - Code: SAVE15):%0A%0A` +
-             `• Full Name: ${encodeURIComponent(name)}%0A` +
-             `• WhatsApp Number: ${encodeURIComponent(phone)}%0A` +
-             `• Email: ${encodeURIComponent(email)}%0A` +
-             `• Hotel/Villa Name: ${encodeURIComponent(hotel)}%0A` +
-             `• Location/Area: ${encodeURIComponent(area)}%0A` +
-             `• Preferred Date: ${encodeURIComponent(date)}%0A` +
-             `• Preferred Time: ${encodeURIComponent(time)}%0A` +
-             `• Medical Concern: ${encodeURIComponent(symptoms)}`;
-
-  window.open(`https://wa.me/6282221614966?text=${text}`, '_blank', 'noopener,noreferrer');
 }
 </script>
 
