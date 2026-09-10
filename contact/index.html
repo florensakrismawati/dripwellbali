@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
 <title>Contact DripWell Bali | 24/7 Home Doctor & IV Drip Service</title>
 
@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#133e3d">
 
 <link rel="canonical" href="https://www.dripwellbali.com/contact/">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="https://www.dripwellbali.com/favicon.svg" type="image/svg+xml">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -26,6 +26,7 @@
 <!-- Preconnect Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://wa.me">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
 
 <style>
@@ -40,15 +41,8 @@
   --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg-white);
@@ -63,7 +57,7 @@ body {
 .gold-text { color: var(--accent-gold); }
 
 button, input, select, textarea { font: inherit; }
-button { cursor: pointer; }
+button { cursor: pointer; border: none; background: none; }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; height: auto; }
 
@@ -83,471 +77,169 @@ img { max-width: 100%; display: block; height: auto; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.promo-track { display: flex; width: max-content; animation: marquee 22s linear infinite; }
+.promo-track { display: flex; width: max-content; animation: marquee 22s linear infinite; will-change: transform; }
 .promo-track span { padding-right: 60px; }
 .promo-track strong { color: var(--accent-gold); text-decoration: underline; font-weight: 700; }
 .promo-bar:hover .promo-track { animation-play-state: paused; }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
 /* Accessibility */
 .skip-link {
-  position: fixed;
-  left: 12px;
-  top: -60px;
-  z-index: 100;
-  background: var(--text-dark);
-  color: var(--bg-white);
-  padding: 12px 16px;
-  border-radius: 8px;
-  font: 12px "DM Mono";
-  transition: top .2s;
+  position: fixed; left: 12px; top: -60px; z-index: 100;
+  background: var(--text-dark); color: var(--bg-white);
+  padding: 12px 16px; border-radius: 8px; font: 12px "DM Mono"; transition: top .2s;
 }
 .skip-link:focus { top: 12px; }
 
-button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+button:focus-visible, a:focus-visible {
   outline: 3px solid var(--accent-gold);
   outline-offset: 3px;
 }
 
 /* Header Navigation */
 header {
-  position: sticky;
-  top: 0;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid var(--border-teal);
+  position: sticky; top: 0;
+  background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000; border-bottom: 1px solid var(--border-teal);
 }
 
 .nav {
-  max-width: 1280px;
-  margin: auto;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  max-width: 1280px; margin: auto; padding: 16px 20px;
+  display: flex; align-items: center; justify-content: space-between;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+.brand { display: flex; align-items: center; gap: 12px; }
+.logo { width: 44px; height: 44px; flex: 0 0 44px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-teal); }
+.logo img { width: 100%; height: 100%; object-fit: cover; }
+.brand small { display: block; font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-gold); }
+.brand strong { font: 24px "Playfair Display"; line-height: 1; color: var(--text-dark); }
 
-.logo {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--border-teal);
-}
-
-.logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.brand small {
-  display: block;
-  font: 10px "DM Mono";
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  color: var(--accent-gold);
-}
-
-.brand strong {
-  font: 24px "Playfair Display";
-  line-height: 1;
-  color: var(--text-dark);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.navlink {
-  font: 10px "DM Mono";
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--text-dark);
-  opacity: .8;
-  transition: opacity .2s, color .2s;
-}
-
-.navlink:hover, .navlink.active {
-  opacity: 1;
-  color: var(--primary-green);
-  font-weight: 700;
-}
+nav { display: flex; align-items: center; gap: 14px; }
+.navlink { font: 10px "DM Mono"; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dark); opacity: .8; transition: opacity .2s, color .2s; white-space: nowrap; }
+.navlink:hover, .navlink.active { opacity: 1; color: var(--primary-green); font-weight: 700; }
 
 /* Dropdown Menu CSS */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--bg-white);
-  min-width: 220px;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--border-teal);
-  border-radius: 12px;
-  padding: 8px 0;
-  z-index: 1001;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 10px 16px;
-  font: 10px "DM Mono";
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--text-dark);
-  transition: background 0.2s, color 0.2s;
-}
-
-.dropdown-menu a:hover, .dropdown-menu a.active-link {
-  background: var(--bg-soft);
-  color: var(--primary-green);
-  font-weight: bold;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+.dropdown { position: relative; display: inline-block; }
+.dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: var(--bg-white); min-width: 220px; box-shadow: var(--shadow-soft); border: 1px solid var(--border-teal); border-radius: 12px; padding: 8px 0; z-index: 1001; }
+.dropdown-menu a { display: block; padding: 10px 16px; font: 10px "DM Mono"; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dark); transition: background 0.2s, color 0.2s; }
+.dropdown-menu a:hover, .dropdown-menu a.active-link { background: var(--bg-soft); color: var(--primary-green); font-weight: bold; }
+.dropdown:hover .dropdown-menu { display: block; }
 
 .nav-book {
-  background: var(--primary-green);
-  color: var(--bg-white);
-  padding: 10px 20px;
-  border-radius: 999px;
-  font: 10px "DM Mono";
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  transition: background .2s, transform .2s;
-  border: 1px solid var(--primary-green);
+  background: var(--primary-green); color: var(--bg-white);
+  padding: 10px 20px; border-radius: 999px;
+  font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; transition: background .2s, transform .2s;
+  border: 1px solid var(--primary-green); white-space: nowrap;
 }
+.nav-book:hover { background: var(--accent-gold); border-color: var(--accent-gold); transform: translateY(-1px); }
 
-.nav-book:hover {
-  background: var(--accent-gold);
-  border-color: var(--accent-gold);
-  transform: translateY(-1px);
-}
+.mobile-menu { display: none; width: 40px; height: 40px; border: 1px solid var(--border-teal); border-radius: 50%; background: none; color: var(--text-dark); font-size: 18px; }
+.mobile-panel { display: none; max-height: 80vh; overflow-y: auto; }
+.mobile-submenu { padding-left: 16px; background: rgba(19, 62, 61, 0.03); }
+.mobile-submenu a { font-size: 9px !important; opacity: 0.85; }
+.mobile-submenu a.active-link { color: var(--primary-green); font-weight: bold; opacity: 1; }
 
-.mobile-menu {
-  display: none;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--border-teal);
-  border-radius: 50%;
-  background: none;
-  color: var(--text-dark);
-  font-size: 18px;
-}
+main { position: relative; z-index: 1; }
+.wrap { max-width: 1280px; margin: auto; padding: 0 20px; }
+section { padding: 36px 0; content-visibility: auto; contain-intrinsic-size: 1px 500px; }
 
-.mobile-panel { 
-  display: none; 
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-.mobile-submenu {
-  padding-left: 16px;
-  background: rgba(19, 62, 61, 0.03);
-}
-
-.mobile-submenu a {
-  font-size: 9px !important;
-  opacity: 0.85;
-}
-
-.mobile-submenu a.active-link {
-  color: var(--primary-green);
-  font-weight: bold;
-  opacity: 1;
-}
-
-/* Container Wrapper */
-.wrap {
-  max-width: 1280px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-section {
-  padding: 36px 0;
-}
-
-.eyebrow {
-  font: 11px "DM Mono";
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--accent-gold);
-  margin-bottom: 8px;
-}
-
-.eyebrow span {
-  display: inline-block;
-  width: 20px;
-  height: 1px;
-  background: var(--accent-gold);
-  vertical-align: middle;
-  margin-right: 6px;
-}
+.eyebrow { font: 11px "DM Mono"; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 8px; }
+.eyebrow span { display: inline-block; width: 20px; height: 1px; background: var(--accent-gold); vertical-align: middle; margin-right: 6px; }
 
 /* Hero Section */
-.hero {
-  background: var(--bg-white);
-  border-bottom: 1px solid var(--border-teal);
-  padding: 40px 0 30px;
-}
+.hero { background: var(--bg-white); border-bottom: 1px solid var(--border-teal); padding: 40px 0 30px; }
+.hero h1 { font-size: clamp(34px, 5vw, 60px); line-height: 1.1; letter-spacing: -.03em; margin-top: 8px; color: var(--text-dark); }
+.hero p { font-size: 15px; margin-top: 14px; color: var(--text-dark); opacity: .9; max-width: 650px; }
 
-.hero h1 {
-  font-size: clamp(34px, 5vw, 60px);
-  line-height: 1.1;
-  letter-spacing: -.03em;
-  margin-top: 8px;
-  color: var(--text-dark);
-}
-
-.hero p {
-  font-size: 15px;
-  margin-top: 14px;
-  color: var(--text-dark);
-  opacity: .9;
-  max-width: 650px;
-}
-
-/* Contact Grid Layout */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 30px;
-  align-items: start;
-}
-
-.contact-info-box {
-  border: 1px solid var(--border-teal);
-  border-radius: 24px;
-  padding: 32px;
-  background: var(--bg-soft);
-  box-shadow: var(--shadow-soft);
-}
-
-.contact-info-item {
-  margin-bottom: 24px;
-}
-
-.contact-info-item:last-child {
-  margin-bottom: 0;
-}
-
-.contact-info-item h3 {
-  font: 16px "Playfair Display", Georgia, serif;
-  color: var(--primary-green);
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.contact-info-item p, .contact-info-item a {
-  font-size: 13.5px;
-  color: var(--text-dark);
-  opacity: .85;
-}
-
-.contact-info-item a:hover {
-  color: var(--accent-gold);
-  text-decoration: underline;
-}
-
-/* Booking Form Section */
-.booking-section {
-  border: 1px solid var(--border-teal);
-  border-radius: 24px;
-  padding: 32px 24px 24px;
-  background: var(--bg-white);
-  box-shadow: var(--shadow-soft);
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 16px;
-  margin-top: 20px;
-}
-
-.field-full {
-  grid-column: 1 / -1;
-}
-
-.field label {
-  display: block;
-  font: 10px "DM Mono", monospace;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: var(--text-dark);
-  opacity: .85;
-  margin-bottom: 5px;
-  font-weight: 700;
-}
-
-.field input, .field select, .field textarea {
-  width: 100%;
-  border: 1px solid var(--border-teal);
-  border-radius: 10px;
-  background: var(--bg-soft);
-  padding: 12px 14px;
-  color: var(--text-dark);
-  font-size: 13px;
-  font-family: "DM Sans", sans-serif;
-  transition: border-color .2s;
-}
-
-.field input:focus, .field select:focus, .field textarea:focus {
-  border-color: var(--primary-green);
-  outline: none;
-}
+/* Contact Container */
+.contact-container { max-width: 900px; margin: 0 auto; }
+.contact-info-box { border: 1px solid var(--border-teal); border-radius: 24px; padding: 40px; background: var(--bg-soft); box-shadow: var(--shadow-soft); }
+.contact-info-item { margin-bottom: 28px; }
+.contact-info-item:last-child { margin-bottom: 0; }
+.contact-info-item h3 { font: 16px "Playfair Display", Georgia, serif; color: var(--primary-green); margin-bottom: 6px; font-weight: 600; }
+.contact-info-item p, .contact-info-item a { font-size: 14px; color: var(--text-dark); opacity: .85; }
+.contact-info-item a:hover { color: var(--accent-gold); text-decoration: underline; }
 
 .btn-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: var(--primary-green);
-  color: var(--bg-white);
-  padding: 12px 24px;
-  border-radius: 999px;
-  font: 10px "DM Mono";
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: all .2s;
-  border: 1px solid var(--primary-green);
-  text-align: center;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--primary-green); color: var(--bg-white);
+  padding: 14px 28px; border-radius: 999px; font: 10px "DM Mono";
+  letter-spacing: .14em; text-transform: uppercase; font-weight: 600;
+  transition: all .2s; border: 1px solid var(--primary-green); text-align: center;
 }
+.btn-cta:hover { background: var(--accent-gold); border-color: var(--accent-gold); transform: translateY(-2px); }
 
-.btn-cta:hover {
-  background: var(--accent-gold);
-  border-color: var(--accent-gold);
-  transform: translateY(-2px);
-}
-
+/* Footer */
 footer {
   border-top: 1px solid var(--border-teal);
-  padding: 28px 0 20px;
-  margin-top: 30px;
+  padding: 40px 0 30px;
+  margin-top: 60px;
   background: var(--bg-white);
+  content-visibility: auto;
 }
 
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border-teal);
-}
+.footer-top { display: flex; justify-content: space-between; gap: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--border-teal); }
+.footer-brand p { max-width: 320px; font-size: 13px; color: var(--text-dark); opacity: .8; margin-top: 8px; }
+.footer-phone { display: inline-block; margin-top: 10px; font-weight: 700; color: var(--primary-green); font-size: 14px; text-decoration: none; }
+.footer-phone:hover { color: var(--accent-gold); }
+.footer-map-link { color: var(--accent-gold); font-weight: 600; text-decoration: none; }
+.footer-map-link:hover { text-decoration: underline; }
 
-.footer-brand p {
-  max-width: 300px;
-  font-size: 12px;
-  color: var(--text-dark);
-  opacity: .8;
-  margin-top: 6px;
-}
-
-.footer-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-  font-size: 12px;
-}
+.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: 13px; }
 
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 14px;
-  font: 9px "DM Mono";
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  color: var(--text-dark);
-  opacity: .7;
+  display: flex; justify-content: space-between; padding-top: 20px;
+  font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7;
 }
 
 .sticky-bar { display: none; }
 
+@media (max-width: 1200px) {
+  nav { gap: 10px; }
+  .navlink { font-size: 9px; }
+}
+
 @media (max-width: 1024px) {
-  body { padding-bottom: 100px !important; }
+  body { padding-bottom: 110px !important; }
   nav { display: none; }
   .mobile-menu { display: block; }
 
   .mobile-panel {
-    position: absolute;
-    top: 60px;
-    left: 16px;
-    right: 16px;
-    background: var(--bg-white);
-    border: 1px solid var(--border-teal);
-    border-radius: 16px;
-    padding: 8px;
-    box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12);
+    position: absolute; top: 60px; left: 16px; right: 16px;
+    background: var(--bg-white); border: 1px solid var(--border-teal);
+    border-radius: 16px; padding: 8px; box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12);
   }
 
   .mobile-panel.show { display: block; }
 
   .mobile-panel a {
-    display: block;
-    width: 100%;
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--border-teal);
-    font: 10px "DM Mono";
-    text-transform: uppercase;
-    letter-spacing: .12em;
+    display: block; width: 100%; padding: 10px 12px;
+    border-bottom: 1px solid var(--border-teal); font: 10px "DM Mono"; text-transform: uppercase; letter-spacing: .12em;
   }
 
   .mobile-panel a:last-child { border-bottom: 0; }
 
-  .contact-grid { grid-template-columns: 1fr; gap: 20px; }
-  .contact-info-box, .booking-section { padding: 20px 16px; }
+  .contact-info-box { padding: 24px 20px; }
 
   .sticky-bar {
-    display: block;
-    position: fixed;
-    bottom: 12px;
-    left: 12px;
-    right: 12px;
-    z-index: 1000;
+    display: block; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 1000;
   }
 
   .sticky-bar a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: var(--primary-green);
-    color: var(--bg-white);
-    border-radius: 999px;
-    padding: 13px;
-    font: 10px "DM Mono";
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35);
+    display: block; width: 100%; text-align: center;
+    background: var(--primary-green); color: var(--bg-white);
+    border-radius: 999px; padding: 14px; font: 10px "DM Mono";
+    letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35);
   }
 
   .footer-top { flex-direction: column; }
   .footer-actions { align-items: flex-start; }
-  .copyright { flex-direction: column; gap: 6px; }
+  .copyright { flex-direction: column; gap: 8px; }
 }
 </style>
 </head>
@@ -557,9 +249,9 @@ footer {
 <!-- TOP PROMO BANNER -->
 <div class="promo-bar" aria-label="Promotion Banner">
   <div class="promo-track">
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
   </div>
 </div>
 
@@ -568,49 +260,49 @@ footer {
 <!-- HEADER -->
 <header>
   <div class="nav">
-    <a class="brand" href="/" aria-label="Dripwell Bali home">
+    <a class="brand" href="https://www.dripwellbali.com/" aria-label="Dripwell Bali home">
       <span class="logo">
-        <img src="/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async">
+        <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async">
       </span>
       <span>
-        <small>Home Doctor & Medical Service</small>
+        <small>Home Doctor &amp; Medical Service</small>
         <strong>Dripwell <i>Bali</i></strong>
       </span>
     </a>
 
     <nav aria-label="Main navigation">
-      <a class="navlink" href="/">Home</a>
-      <a class="navlink" href="/about/">About Us</a>
+      <a class="navlink" href="https://www.dripwellbali.com/">HOME</a>
+      <a class="navlink" href="https://www.dripwellbali.com/about/">ABOUT US</a>
       
       <!-- HEALTH PACKAGES DROPDOWN -->
       <div class="dropdown">
-        <a class="navlink" href="/health-packages/">Health Packages ▾</a>
+        <a class="navlink" href="https://www.dripwellbali.com/health-packages/">HEALTH PACKAGES ▾</a>
         <div class="dropdown-menu">
-          <a href="/bali-belly-package/">Bali Belly Package</a>
-          <a href="/hangover-package/">Hangover Package</a>
-          <a href="/fever-package/">Fever Package</a>
-          <a href="/flu-relief-package/">Flu Relief Package</a>
+          <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly Package</a>
+          <a href="https://www.dripwellbali.com/hangover-package/">Hangover Package</a>
+          <a href="https://www.dripwellbali.com/fever-package/">Fever Package</a>
+          <a href="https://www.dripwellbali.com/flu-relief-package/">Flu Relief Package</a>
         </div>
       </div>
 
       <!-- IV DRIPS VITAMIN DROPDOWN -->
       <div class="dropdown">
-        <a class="navlink" href="/iv-drip-bali/">IV Drips Vitamin ▾</a>
+        <a class="navlink" href="https://www.dripwellbali.com/iv-drip-bali/">IV DRIPS VITAMIN ▾</a>
         <div class="dropdown-menu">
-          <a href="/jetlag-package/">Jetlag Package</a>
-          <a href="/energy-booster-package/">Energy Booster Package</a>
-          <a href="/immune-booster-basic/">Immune Booster Basic</a>
-          <a href="/immune-booster-standard-package/">Immune Booster Standard Package</a>
-          <a href="/ultimate-immune-booster/">Ultimate Immune Booster</a>
+          <a href="https://www.dripwellbali.com/jetlag-package/">Jetlag Package</a>
+          <a href="https://www.dripwellbali.com/energy-booster-package/">Energy Booster Package</a>
+          <a href="https://www.dripwellbali.com/immune-booster-basic/">Immune Booster Basic</a>
+          <a href="https://www.dripwellbali.com/immune-booster-standard-package/">Immune Booster Standard Package</a>
+          <a href="https://www.dripwellbali.com/ultimate-immune-booster/">Ultimate Immune Booster</a>
         </div>
       </div>
 
-      <a class="navlink" href="/physiotherapy-bali/">Physiotherapy</a>
-      <a class="navlink" href="/home-doctor-bali/">Home Doctor</a>
-      <a class="navlink" href="/blog/">Blog</a>
-      <a class="navlink" href="/faq/">FAQ</a>
-      <a class="navlink active" href="/contact/">Contact</a>
-      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Contact%20Inquiry." target="_blank" rel="noopener noreferrer">Claim 15% Off</a>
+      <a class="navlink" href="https://www.dripwellbali.com/physiotherapy-bali/">PHYSIOTHERAPY</a>
+      <a class="navlink" href="https://www.dripwellbali.com/home-doctor-bali/">HOME DOCTOR</a>
+      <a class="navlink" href="https://www.dripwellbali.com/blog/">BLOG</a>
+      <a class="navlink" href="https://www.dripwellbali.com/faq/">FAQ</a>
+      <a class="navlink active" href="https://www.dripwellbali.com/contact/">CONTACT</a>
+      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer">Get Special Offer</a>
     </nav>
 
     <button type="button" class="mobile-menu" aria-label="Open navigation menu" aria-controls="mobilePanel" aria-expanded="false" onclick="toggleMenu()">
@@ -619,32 +311,32 @@ footer {
   </div>
 
   <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
-    <a href="/" onclick="closeMenu()">Home</a>
-    <a href="/about/" onclick="closeMenu()">About Us</a>
+    <a href="https://www.dripwellbali.com/" onclick="closeMenu()">HOME</a>
+    <a href="https://www.dripwellbali.com/about/" onclick="closeMenu()">ABOUT US</a>
     
-    <a href="/health-packages/" onclick="closeMenu()"><strong>Health Packages</strong></a>
+    <a href="https://www.dripwellbali.com/health-packages/" onclick="closeMenu()"><strong>HEALTH PACKAGES ▾</strong></a>
     <div class="mobile-submenu">
-      <a href="/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
-      <a href="/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
-      <a href="/fever-package/" onclick="closeMenu()">— Fever Package</a>
-      <a href="/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
+      <a href="https://www.dripwellbali.com/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
+      <a href="https://www.dripwellbali.com/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
+      <a href="https://www.dripwellbali.com/fever-package/" onclick="closeMenu()">— Fever Package</a>
+      <a href="https://www.dripwellbali.com/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
     </div>
 
-    <a href="/iv-drip-bali/" onclick="closeMenu()"><strong>IV Drips Vitamin</strong></a>
+    <a href="https://www.dripwellbali.com/iv-drip-bali/" onclick="closeMenu()"><strong>IV DRIPS VITAMIN ▾</strong></a>
     <div class="mobile-submenu">
-      <a href="/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
-      <a href="/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
-      <a href="/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
-      <a href="/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
-      <a href="/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
+      <a href="https://www.dripwellbali.com/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
+      <a href="https://www.dripwellbali.com/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
+      <a href="https://www.dripwellbali.com/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
+      <a href="https://www.dripwellbali.com/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
+      <a href="https://www.dripwellbali.com/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
     </div>
 
-    <a href="/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
-    <a href="/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
-    <a href="/blog/" onclick="closeMenu()">Blog</a>
-    <a href="/faq/" onclick="closeMenu()">FAQ</a>
-    <a href="/contact/" class="active-link" onclick="closeMenu()">Contact</a>
-    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Contact%20Inquiry." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Claim 15% Off on WhatsApp</a>
+    <a href="https://www.dripwellbali.com/physiotherapy-bali/" onclick="closeMenu()">PHYSIOTHERAPY</a>
+    <a href="https://www.dripwellbali.com/home-doctor-bali/" onclick="closeMenu()">HOME DOCTOR</a>
+    <a href="https://www.dripwellbali.com/blog/" onclick="closeMenu()">BLOG</a>
+    <a href="https://www.dripwellbali.com/faq/" onclick="closeMenu()">FAQ</a>
+    <a href="https://www.dripwellbali.com/contact/" class="active-link" onclick="closeMenu()">CONTACT</a>
+    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Get Special Offer on WhatsApp</a>
   </div>
 </header>
 
@@ -663,17 +355,17 @@ footer {
 
   <!-- CONTACT CONTENT SECTION -->
   <section class="wrap">
-    <div class="contact-grid">
+    <div class="contact-container">
       
-      <!-- CONTACT INFO COLUMN -->
+      <!-- CONTACT INFO BOX -->
       <div class="contact-info-box">
         <div class="eyebrow">Direct Assistance</div>
-        <h2 class="display" style="font-size: 24px; margin-bottom: 20px;">We're Here 24/7</h2>
+        <h2 class="display" style="font-size: 26px; margin-bottom: 24px;">We're Here 24/7</h2>
 
         <div class="contact-info-item">
           <h3>WhatsApp Dispatch (Fastest)</h3>
-          <p><a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer">+62 822 2161 4966</a></p>
-          <p style="font-size: 11px; opacity: .7; margin-top: 2px;">Available for instant booking and 15% discount (Code: SAVE15).</p>
+          <p><a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer">+62 822 2161 4966</a></p>
+          <p style="font-size: 12px; opacity: .7; margin-top: 2px;">Available for instant booking and inquiries.</p>
         </div>
 
         <div class="contact-info-item">
@@ -690,63 +382,12 @@ footer {
           <h3>Operating Hours</h3>
           <p>24 Hours / 7 Days a Week (Mobile Home &amp; Villa Care)</p>
         </div>
-      </div>
 
-      <!-- BOOKING / CONTACT FORM COLUMN -->
-      <div class="booking-section">
-        <div style="margin-bottom: 16px;">
-          <div class="eyebrow">Quick Inquiry Form</div>
-          <h2 class="display" style="font-size: 24px;">Send Us a Message</h2>
-          <p style="font-size: 13px; opacity: .85; margin-top: 4px;">Fill out the form below to connect directly with our medical dispatch team on WhatsApp.</p>
+        <div style="margin-top: 32px; text-align: center;">
+          <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" class="btn-cta" style="width: 100%;">
+            Get Special Offer on WhatsApp →
+          </a>
         </div>
-
-        <form onsubmit="submitContactForm(event)" class="form-grid">
-          <div class="field">
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" placeholder="Enter your full name" required>
-          </div>
-
-          <div class="field">
-            <label for="waNumber">WhatsApp Number</label>
-            <input type="tel" id="waNumber" placeholder="Enter WhatsApp number (e.g. +62...)" required>
-          </div>
-
-          <div class="field field-full">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="Enter email address" required>
-          </div>
-
-          <div class="field">
-            <label for="serviceType">Service Required</label>
-            <select id="serviceType" required>
-              <option value="" disabled selected>Select a service</option>
-              <option value="Home Doctor Visit">Home Doctor Visit</option>
-              <option value="IV Drip Therapy">IV Drip / Vitamin Therapy</option>
-              <option value="Health Package (Bali Belly/Fever/Flu/Hangover)">Health Package (Bali Belly / Fever / Flu / Hangover)</option>
-              <option value="Physiotherapy">Physiotherapy</option>
-              <option value="General Inquiry">General Inquiry</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="locationArea">Location / Area in Bali</label>
-            <input type="text" id="locationArea" placeholder="e.g. Canggu, Pererenan, Seminyak" required>
-          </div>
-
-          <div class="field field-full">
-            <label for="message">Your Message or Medical Concern</label>
-            <textarea id="message" rows="4" placeholder="Tell us how we can help you (mentioning Code: SAVE15 for 15% off)..." required></textarea>
-          </div>
-
-          <div class="field field-full" style="text-align: center; margin-top: 8px;">
-            <button type="submit" class="btn-cta" style="width: 100%;">
-              SEND INQUIRY VIA WHATSAPP (15% OFF — CODE: SAVE15) →
-            </button>
-            <p class="mono" style="font-size: 10px; margin-top: 8px; opacity: .7;">
-              Your message will automatically open in WhatsApp for immediate response.
-            </p>
-          </div>
-        </form>
       </div>
 
     </div>
@@ -759,9 +400,9 @@ footer {
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="/" aria-label="Back to Dripwell Bali homepage">
+        <a class="brand" href="https://www.dripwellbali.com/" aria-label="Back to Dripwell Bali homepage">
           <span class="logo">
-            <img src="/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" loading="lazy" decoding="async">
+            <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" loading="lazy" decoding="async">
           </span>
           <span>
             <strong>Dripwell <i>Bali</i></strong>
@@ -771,15 +412,23 @@ footer {
         <p>
           Doctor &amp; Nurse Home Service • Professional Care • Hotel &amp; Villa Service • Safe &amp; Private • Available 24/7
         </p>
+        <a href="tel:+6282221614966" class="footer-phone">📞 Phone: +62 822 2161 4966</a>
+        <p style="margin-top: 6px;">
+          📍 <a href="https://maps.app.goo.gl/pkGnDAKp4qALJbZq5" target="_blank" rel="noopener noreferrer" class="footer-map-link">Dripwell Bali | 24/7 Home Doctor &amp; Medical Service</a>
+        </p>
       </div>
 
       <div class="footer-actions">
-        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer" class="gold-text" style="font-weight: 600;">
-          ✦ Claim 15% Off on WhatsApp
+        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" class="gold-text" style="font-weight: 600;">
+          ✦ Get Special Offer on WhatsApp
         </a>
         <a href="mailto:dripwellbali@gmail.com">
           dripwellbali@gmail.com
         </a>
+        <div>
+          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
+          <a href="tel:+6282221614966">Call +62 822 2161 4966</a>
+        </div>
       </div>
     </div>
 
@@ -792,8 +441,8 @@ footer {
 
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
-  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Contact%20Inquiry." target="_blank" rel="noopener noreferrer">
-    ✦ Claim 15% Off via WhatsApp →
+  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer">
+    ✦ Get Special Offer via WhatsApp →
   </a>
 </div>
 
@@ -812,27 +461,6 @@ function closeMenu(){
   panel.classList.remove("show");
   btn.setAttribute("aria-expanded", "false");
   btn.setAttribute("aria-label", "Open navigation menu");
-}
-
-function submitContactForm(e) {
-  e.preventDefault();
-  
-  const name = document.getElementById('fullName').value;
-  const phone = document.getElementById('waNumber').value;
-  const email = document.getElementById('email').value;
-  const service = document.getElementById('serviceType').value;
-  const area = document.getElementById('locationArea').value;
-  const message = document.getElementById('message').value;
-
-  const text = `Hello DripWell Bali, I am submitting a contact inquiry (Claiming 15% OFF - Code: SAVE15):%0A%0A` +
-               `• Full Name: ${encodeURIComponent(name)}%0A` +
-               `• WhatsApp Number: ${encodeURIComponent(phone)}%0A` +
-               `• Email: ${encodeURIComponent(email)}%0A` +
-               `• Service Required: ${encodeURIComponent(service)}%0A` +
-               `• Location/Area: ${encodeURIComponent(area)}%0A` +
-               `• Message: ${encodeURIComponent(message)}`;
-
-  window.open(`https://wa.me/6282221614966?text=${text}`, '_blank');
 }
 </script>
 
