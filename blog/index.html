@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
 <!-- SEO Meta Tags -->
 <title>Health & Wellness Blog Bali | IV Therapy Tips & Doctor Insights | DripWell Bali</title>
@@ -12,7 +12,7 @@
 <meta name="author" content="Dripwell Bali">
 <meta name="theme-color" content="#133e3d">
 
-<!-- Canonical Tag -->
+<!-- Canonical Tag & Favicon -->
 <link rel="canonical" href="https://www.dripwellbali.com/blog/">
 <link rel="icon" href="https://www.dripwellbali.com/favicon.svg" type="image/svg+xml">
 
@@ -32,31 +32,25 @@
 <meta name="twitter:description" content="Discover practical health tips, travel recovery guides, and expert advice on IV vitamin therapy and home doctor visits in Bali.">
 <meta name="twitter:image" content="https://www.dripwellbali.com/dripwell-logo.jpeg">
 
-<!-- Preconnect Fonts -->
+<!-- Preconnect Fonts & Resource Prefetch -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://wa.me">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
 
-<!-- Interconnected Graph Schema (Structured Data JSON-LD) -->
+<!-- Structured Data (JSON-LD) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "MedicalBusiness",
-      "@id": "https://www.dripwellbali.com/#medicalbusiness",
+      "@type": "MedicalClinic",
+      "@id": "https://www.dripwellbali.com/#organization",
       "name": "Dripwell Bali",
       "url": "https://www.dripwellbali.com/",
       "logo": "https://www.dripwellbali.com/dripwell-logo.jpeg",
-      "image": "https://www.dripwellbali.com/home.jpg",
       "telephone": "+6282221614966",
       "email": "dripwellbali@gmail.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Bali",
-        "addressCountry": "ID"
-      },
       "areaServed": ["Canggu", "Pererenan", "Tabanan", "Kedungu", "Seseh", "Seminyak", "Kerobokan", "Umalas", "Munggu"]
     },
     {
@@ -65,7 +59,7 @@
       "name": "Dripwell Bali Health & Wellness Blog",
       "description": "Medical insights, travel health advice, and IV therapy guides for travelers and residents in Canggu, Pererenan, and Tabanan.",
       "publisher": {
-        "@id": "https://www.dripwellbali.com/#medicalbusiness"
+        "@id": "https://www.dripwellbali.com/#organization"
       }
     }
   ]
@@ -100,11 +94,11 @@ body {
 .gold-text { color: var(--accent-gold); }
 
 button, input, select, textarea { font: inherit; }
-button { cursor: pointer; }
+button { cursor: pointer; border: none; background: none; }
 a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; display: block; height: auto; }
 
-/* Promo Banner */
+/* Top Promo Bar */
 .promo-bar {
   background: var(--primary-green);
   color: var(--bg-white);
@@ -120,14 +114,14 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.promo-track { display: flex; width: max-content; animation: marquee 22s linear infinite; }
+.promo-track { display: flex; width: max-content; animation: marquee 22s linear infinite; will-change: transform; }
 .promo-track span { padding-right: 60px; }
 .promo-track strong { color: var(--accent-gold); text-decoration: underline; font-weight: 700; }
 .promo-bar:hover .promo-track { animation-play-state: paused; }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
 }
 
 /* Accessibility */
@@ -142,6 +136,7 @@ img { max-width: 100%; display: block; }
 header {
   position: sticky; top: 0;
   background: rgba(255, 255, 255, 0.96); backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 1000; border-bottom: 1px solid var(--border-teal);
 }
 
@@ -166,11 +161,11 @@ header {
 
 .brand strong { font: 24px "Playfair Display"; line-height: 1; color: var(--text-dark); }
 
-nav { display: flex; align-items: center; gap: 16px; }
+nav { display: flex; align-items: center; gap: 14px; }
 
 .navlink {
   font: 10px "DM Mono"; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--text-dark); opacity: .8; transition: opacity .2s, color .2s;
+  color: var(--text-dark); opacity: .8; transition: opacity .2s, color .2s; white-space: nowrap;
 }
 
 .navlink:hover, .navlink.active { opacity: 1; color: var(--primary-green); font-weight: 700; }
@@ -196,11 +191,11 @@ nav { display: flex; align-items: center; gap: 16px; }
 .nav-book {
   background: var(--primary-green); color: var(--bg-white);
   padding: 10px 20px; border-radius: 999px;
-  font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; transition: background .2s;
-  border: 1px solid var(--primary-green);
+  font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; transition: background .2s, transform .2s;
+  border: 1px solid var(--primary-green); white-space: nowrap;
 }
 
-.nav-book:hover { background: var(--accent-gold); border-color: var(--accent-gold); }
+.nav-book:hover { background: var(--accent-gold); border-color: var(--accent-gold); transform: translateY(-1px); }
 
 .mobile-menu {
   display: none; width: 40px; height: 40px;
@@ -213,8 +208,9 @@ nav { display: flex; align-items: center; gap: 16px; }
 .mobile-submenu { padding-left: 16px; background: rgba(19, 62, 61, 0.03); }
 .mobile-submenu a { font-size: 9px !important; opacity: 0.85; }
 
+main { position: relative; z-index: 1; }
 .wrap { max-width: 1280px; margin: auto; padding: 0 20px; }
-section { padding: 40px 0; }
+section { padding: 36px 0; content-visibility: auto; contain-intrinsic-size: 1px 500px; }
 
 .eyebrow {
   font: 11px "DM Mono"; letter-spacing: .2em;
@@ -302,25 +298,40 @@ section { padding: 40px 0; }
 .btn-cta:hover { background: var(--accent-gold); color: var(--bg-white); border-color: var(--accent-gold); }
 
 /* Footer */
-footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-top: 30px; background: var(--bg-white); }
-
-.footer-top {
-  display: flex; justify-content: space-between; gap: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border-teal);
+footer {
+  border-top: 1px solid var(--border-teal);
+  padding: 40px 0 30px;
+  margin-top: 60px;
+  background: var(--bg-white);
+  content-visibility: auto;
 }
 
-.footer-brand p { max-width: 300px; font-size: 12px; color: var(--text-dark); opacity: .8; margin-top: 6px; }
+.footer-top {
+  display: flex; justify-content: space-between; gap: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--border-teal);
+}
 
-.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; font-size: 12px; }
+.footer-brand p { max-width: 320px; font-size: 13px; color: var(--text-dark); opacity: .8; margin-top: 8px; }
+.footer-phone { display: inline-block; margin-top: 10px; font-weight: 700; color: var(--primary-green); font-size: 14px; text-decoration: none; }
+.footer-phone:hover { color: var(--accent-gold); }
+.footer-map-link { color: var(--accent-gold); font-weight: 600; text-decoration: none; }
+.footer-map-link:hover { text-decoration: underline; }
+
+.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: 13px; }
 
 .copyright {
-  display: flex; justify-content: space-between; padding-top: 14px;
-  font: 9px "DM Mono"; text-transform: uppercase; letter-spacing: .12em; color: var(--text-dark); opacity: .7;
+  display: flex; justify-content: space-between; padding-top: 20px;
+  font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7;
 }
 
 .sticky-bar { display: none; }
 
+@media (max-width: 1200px) {
+  nav { gap: 10px; }
+  .navlink { font-size: 9px; }
+}
+
 @media (max-width: 1024px) {
-  body { padding-bottom: 90px !important; }
+  body { padding-bottom: 110px !important; }
   nav { display: none; }
   .mobile-menu { display: block; }
 
@@ -349,13 +360,13 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
   .sticky-bar a {
     display: block; width: 100%; text-align: center;
     background: var(--primary-green); color: var(--bg-white);
-    border-radius: 999px; padding: 13px; font: 10px "DM Mono";
+    border-radius: 999px; padding: 14px; font: 10px "DM Mono";
     letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35);
   }
 
   .footer-top { flex-direction: column; }
   .footer-actions { align-items: flex-start; }
-  .copyright { flex-direction: column; gap: 6px; }
+  .copyright { flex-direction: column; gap: 8px; }
 }
 </style>
 </head>
@@ -365,9 +376,9 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
 <!-- TOP PROMO BANNER -->
 <div class="promo-bar" aria-label="Promotion Banner">
   <div class="promo-track">
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
-    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical & IV Drip Services! Use Code: <strong>SAVE15</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
   </div>
 </div>
 
@@ -381,18 +392,18 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
         <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async">
       </span>
       <span>
-        <small>Home Doctor & Medical Service</small>
+        <small>Home Doctor &amp; Medical Service</small>
         <strong>Dripwell <i>Bali</i></strong>
       </span>
     </a>
 
     <nav aria-label="Main navigation">
-      <a class="navlink" href="https://www.dripwellbali.com/">Home</a>
-      <a class="navlink" href="https://www.dripwellbali.com/about/">About Us</a>
+      <a class="navlink" href="https://www.dripwellbali.com/">HOME</a>
+      <a class="navlink" href="https://www.dripwellbali.com/about/">ABOUT US</a>
       
       <!-- HEALTH PACKAGES DROPDOWN -->
       <div class="dropdown">
-        <a class="navlink" href="https://www.dripwellbali.com/health-packages/">Health Packages ▾</a>
+        <a class="navlink" href="https://www.dripwellbali.com/health-packages/">HEALTH PACKAGES ▾</a>
         <div class="dropdown-menu">
           <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly Package</a>
           <a href="https://www.dripwellbali.com/hangover-package/">Hangover Package</a>
@@ -403,7 +414,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
 
       <!-- IV DRIPS VITAMIN DROPDOWN -->
       <div class="dropdown">
-        <a class="navlink" href="https://www.dripwellbali.com/iv-drip-bali/">IV Drips Vitamin ▾</a>
+        <a class="navlink" href="https://www.dripwellbali.com/iv-drip-bali/">IV DRIPS VITAMIN ▾</a>
         <div class="dropdown-menu">
           <a href="https://www.dripwellbali.com/jetlag-package/">Jetlag Package</a>
           <a href="https://www.dripwellbali.com/energy-booster-package/">Energy Booster Package</a>
@@ -413,12 +424,12 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
         </div>
       </div>
 
-      <a class="navlink" href="https://www.dripwellbali.com/physiotherapy-bali/">Physiotherapy</a>
-      <a class="navlink" href="https://www.dripwellbali.com/home-doctor-bali/">Home Doctor</a>
-      <a class="navlink active" href="https://www.dripwellbali.com/blog/">Blog</a>
+      <a class="navlink" href="https://www.dripwellbali.com/physiotherapy-bali/">PHYSIOTHERAPY</a>
+      <a class="navlink" href="https://www.dripwellbali.com/home-doctor-bali/">HOME DOCTOR</a>
+      <a class="navlink active" href="https://www.dripwellbali.com/blog/">BLOG</a>
       <a class="navlink" href="https://www.dripwellbali.com/faq/">FAQ</a>
-      <a class="navlink" href="https://www.dripwellbali.com/contact/">Contact</a>
-      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Blog%20Inquiry." target="_blank" rel="noopener noreferrer">Claim 15% Off</a>
+      <a class="navlink" href="https://www.dripwellbali.com/contact/">CONTACT</a>
+      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer">Get Special Offer</a>
     </nav>
 
     <button type="button" class="mobile-menu" aria-label="Open navigation menu" aria-controls="mobilePanel" aria-expanded="false" onclick="toggleMenu()">
@@ -427,10 +438,10 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
   </div>
 
   <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
-    <a href="https://www.dripwellbali.com/" onclick="closeMenu()">Home</a>
-    <a href="https://www.dripwellbali.com/about/" onclick="closeMenu()">About Us</a>
+    <a href="https://www.dripwellbali.com/" onclick="closeMenu()">HOME</a>
+    <a href="https://www.dripwellbali.com/about/" onclick="closeMenu()">ABOUT US</a>
     
-    <a href="https://www.dripwellbali.com/health-packages/" onclick="closeMenu()"><strong>Health Packages</strong></a>
+    <a href="https://www.dripwellbali.com/health-packages/" onclick="closeMenu()"><strong>HEALTH PACKAGES ▾</strong></a>
     <div class="mobile-submenu">
       <a href="https://www.dripwellbali.com/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
       <a href="https://www.dripwellbali.com/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
@@ -438,7 +449,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
       <a href="https://www.dripwellbali.com/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
     </div>
 
-    <a href="https://www.dripwellbali.com/iv-drip-bali/" onclick="closeMenu()"><strong>IV Drips Vitamin</strong></a>
+    <a href="https://www.dripwellbali.com/iv-drip-bali/" onclick="closeMenu()"><strong>IV DRIPS VITAMIN ▾</strong></a>
     <div class="mobile-submenu">
       <a href="https://www.dripwellbali.com/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
       <a href="https://www.dripwellbali.com/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
@@ -447,12 +458,12 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
       <a href="https://www.dripwellbali.com/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
     </div>
 
-    <a href="https://www.dripwellbali.com/physiotherapy-bali/" onclick="closeMenu()">Physiotherapy</a>
-    <a href="https://www.dripwellbali.com/home-doctor-bali/" onclick="closeMenu()">Home Doctor</a>
-    <a href="https://www.dripwellbali.com/blog/" class="active-link" onclick="closeMenu()">Blog</a>
+    <a href="https://www.dripwellbali.com/physiotherapy-bali/" onclick="closeMenu()">PHYSIOTHERAPY</a>
+    <a href="https://www.dripwellbali.com/home-doctor-bali/" onclick="closeMenu()">HOME DOCTOR</a>
+    <a href="https://www.dripwellbali.com/blog/" class="active-link" onclick="closeMenu()">BLOG</a>
     <a href="https://www.dripwellbali.com/faq/" onclick="closeMenu()">FAQ</a>
-    <a href="https://www.dripwellbali.com/contact/" onclick="closeMenu()">Contact</a>
-    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Blog%20Inquiry." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Claim 15% Off on WhatsApp</a>
+    <a href="https://www.dripwellbali.com/contact/" onclick="closeMenu()">CONTACT</a>
+    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Get Special Offer on WhatsApp</a>
   </div>
 </header>
 
@@ -695,10 +706,10 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
       <div class="eyebrow" style="color: var(--bg-white); opacity: .9;">Feeling Unwell in Canggu, Pererenan, or Tabanan?</div>
       <h2 class="display">Medical Care Delivered Directly to Your Villa</h2>
       <p>
-        Doctor &amp; Nurse Home Service — Rapid 30-60 min arrival across Canggu, Pererenan, Seseh, Kedungu, and Tabanan.<br>Available 24/7 with 15% off using code <strong>SAVE15</strong>.
+        Doctor &amp; Nurse Home Service — Rapid 30-60 min arrival across Canggu, Pererenan, Seseh, Kedungu, and Tabanan.<br>Available 24/7. Get your special offer today!
       </p>
-      <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Blog%20Inquiry." target="_blank" rel="noopener noreferrer" class="btn-cta">
-        Claim 15% Off on WhatsApp →
+      <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" class="btn-cta">
+        Get Special Offer on WhatsApp →
       </a>
     </div>
   </section>
@@ -722,15 +733,23 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
         <p>
           Doctor &amp; Nurse Home Service • Professional Care • Hotel &amp; Villa Service • Safe &amp; Private • Available 24/7 in Canggu, Pererenan, Tabanan &amp; Surrounding Areas.
         </p>
+        <a href="tel:+6282221614966" class="footer-phone">📞 Phone: +62 822 2161 4966</a>
+        <p style="margin-top: 6px;">
+          📍 <a href="https://maps.app.goo.gl/pkGnDAKp4qALJbZq5" target="_blank" rel="noopener noreferrer" class="footer-map-link">Dripwell Bali | 24/7 Home Doctor &amp; Medical Service</a>
+        </p>
       </div>
 
       <div class="footer-actions">
-        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer" class="gold-text" style="font-weight: 600;">
-          ✦ Claim 15% Off on WhatsApp
+        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" class="gold-text" style="font-weight: 600;">
+          ✦ Get Special Offer on WhatsApp
         </a>
         <a href="mailto:dripwellbali@gmail.com">
           dripwellbali@gmail.com
         </a>
+        <div>
+          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
+          <a href="tel:+6282221614966">Call +62 822 2161 4966</a>
+        </div>
       </div>
     </div>
 
@@ -743,8 +762,8 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
 
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
-  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)%20for%20Blog%20Inquiry." target="_blank" rel="noopener noreferrer">
-    ✦ Claim 15% Off via WhatsApp →
+  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer">
+    ✦ Get Special Offer via WhatsApp →
   </a>
 </div>
 
