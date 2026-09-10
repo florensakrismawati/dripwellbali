@@ -14,7 +14,7 @@
 
   <!-- Canonical Tag & Favicon -->
   <link rel="canonical" href="https://www.dripwellbali.com/iv-drip-bali/">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="https://www.dripwellbali.com/favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph / Social Media SEO -->
   <meta property="og:type" content="website">
@@ -22,8 +22,16 @@
   <meta property="og:site_name" content="Dripwell Bali">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="IV Drip Therapy & Vitamin Treatments Bali | DripWell Bali">
-  <meta property="og:description" content="Fast 24/7 villa delivery for IV drip vitamin therapy in Bali. Get special offer via WhatsApp.">
-  <meta property="og:image" content="https://www.dripwellbali.com/dripwell-logo.jpeg">
+  <meta property="og:description" content="Fast 24/7 villa delivery for IV drip vitamin therapy in Bali. Book directly via WhatsApp.">
+  <meta property="og:image" content="https://www.dripwellbali.com/iv-drip-bali/iv-drip.jpg">
+  <meta property="og:image:alt" content="IV Drip Vitamin Therapy in Villa Bali">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.dripwellbali.com/iv-drip-bali/">
+  <meta name="twitter:title" content="IV Drip Therapy & Vitamin Treatments Bali | DripWell Bali">
+  <meta name="twitter:description" content="Fast 24/7 villa delivery for IV drip vitamin therapy across Bali.">
+  <meta name="twitter:image" content="https://www.dripwellbali.com/iv-drip-bali/iv-drip.jpg">
 
   <!-- Fonts & Resource Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +50,7 @@
         "name": "DripWell Bali",
         "url": "https://www.dripwellbali.com/",
         "logo": "https://www.dripwellbali.com/dripwell-logo.jpeg",
+        "image": "https://www.dripwellbali.com/iv-drip-bali/iv-drip.jpg",
         "telephone": "+6282221614966",
         "email": "dripwellbali@gmail.com",
         "areaServed": ["Canggu", "Seminyak", "Pererenan", "Uluwatu", "Ubud", "Kuta", "Sanur", "Tabanan"]
@@ -82,6 +91,14 @@
   button { cursor: pointer; border: none; background: none; }
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; height: auto; }
+
+  /* Accessibility */
+  .skip-link {
+    position: fixed; left: 12px; top: -60px; z-index: 100;
+    background: var(--text-dark); color: var(--bg-white);
+    padding: 12px 16px; border-radius: 8px; font: 12px "DM Mono"; transition: top .2s;
+  }
+  .skip-link:focus { top: 12px; }
 
   /* Header Navigation */
   header {
@@ -453,12 +470,14 @@
 
 <body id="top">
 
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <!-- HEADER NAV LENGKAP -->
 <header>
   <div class="nav">
-    <a class="brand" href="/" aria-label="Dripwell Bali home">
+    <a class="brand" href="https://www.dripwellbali.com/" aria-label="Dripwell Bali home">
       <span class="logo">
-        <img src="/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async">
+        <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async">
       </span>
       <span>
         <small>Home Doctor &amp; Medical Service</small>
@@ -466,39 +485,39 @@
       </span>
     </a>
 
-    <!-- Navigasi Utama Persis Seperti Gambar -->
+    <!-- Navigasi Utama -->
     <nav aria-label="Main navigation">
-      <a class="navlink" href="/">HOME</a>
-      <a class="navlink" href="/about/">ABOUT US</a>
+      <a class="navlink" href="https://www.dripwellbali.com/">HOME</a>
+      <a class="navlink" href="https://www.dripwellbali.com/about/">ABOUT US</a>
       
       <div class="dropdown">
-        <a class="navlink" href="/health-packages/">HEALTH PACKAGES ▾</a>
+        <a class="navlink" href="https://www.dripwellbali.com/health-packages/">HEALTH PACKAGES ▾</a>
         <div class="dropdown-menu">
-          <a href="/bali-belly-package/">Bali Belly Package</a>
-          <a href="/hangover-package/">Hangover Package</a>
-          <a href="/fever-package/">Fever Package</a>
-          <a href="/flu-relief-package/">Flu Relief Package</a>
+          <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly Package</a>
+          <a href="https://www.dripwellbali.com/hangover-package/">Hangover Package</a>
+          <a href="https://www.dripwellbali.com/fever-package/">Fever Package</a>
+          <a href="https://www.dripwellbali.com/flu-relief-package/">Flu Relief Package</a>
         </div>
       </div>
 
       <div class="dropdown">
-        <a class="navlink active" href="/iv-drip-bali/">IV DRIPS VITAMIN ▾</a>
+        <a class="navlink active" href="https://www.dripwellbali.com/iv-drip-bali/">IV DRIPS VITAMIN ▾</a>
         <div class="dropdown-menu">
-          <a href="/jetlag-package/">Jetlag Package</a>
-          <a href="/energy-booster-package/">Energy Booster Package</a>
-          <a href="/immune-booster-basic/">Immune Booster Basic</a>
-          <a href="/immune-booster-standard-package/">Immune Booster Standard Package</a>
-          <a href="/ultimate-immune-booster/">Ultimate Immune Booster</a>
+          <a href="https://www.dripwellbali.com/jetlag-package/">Jetlag Package</a>
+          <a href="https://www.dripwellbali.com/energy-booster-package/">Energy Booster Package</a>
+          <a href="https://www.dripwellbali.com/immune-booster-basic/">Immune Booster Basic</a>
+          <a href="https://www.dripwellbali.com/immune-booster-standard-package/">Immune Booster Standard Package</a>
+          <a href="https://www.dripwellbali.com/ultimate-immune-booster/">Ultimate Immune Booster</a>
         </div>
       </div>
 
-      <a class="navlink" href="/physiotherapy-bali/">PHYSIOTHERAPY</a>
-      <a class="navlink" href="/home-doctor-bali/">HOME DOCTOR</a>
-      <a class="navlink" href="/blog/">BLOG</a>
-      <a class="navlink" href="/faq/">FAQ</a>
-      <a class="navlink" href="/contact/">CONTACT</a>
+      <a class="navlink" href="https://www.dripwellbali.com/physiotherapy-bali/">PHYSIOTHERAPY</a>
+      <a class="navlink" href="https://www.dripwellbali.com/home-doctor-bali/">HOME DOCTOR</a>
+      <a class="navlink" href="https://www.dripwellbali.com/blog/">BLOG</a>
+      <a class="navlink" href="https://www.dripwellbali.com/faq/">FAQ</a>
+      <a class="navlink" href="https://www.dripwellbali.com/contact/">CONTACT</a>
 
-      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer">Get Special Offer</a>
+      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20an%20IV%20Drip%20Vitamin%20Treatment." target="_blank" rel="noopener noreferrer">Book Now</a>
     </nav>
 
     <button type="button" class="mobile-menu" aria-label="Open navigation menu" aria-controls="mobilePanel" aria-expanded="false" onclick="toggleMenu()">
@@ -507,32 +526,32 @@
   </div>
 
   <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
-    <a href="/" onclick="closeMenu()">HOME</a>
-    <a href="/about/" onclick="closeMenu()">ABOUT US</a>
+    <a href="https://www.dripwellbali.com/" onclick="closeMenu()">HOME</a>
+    <a href="https://www.dripwellbali.com/about/" onclick="closeMenu()">ABOUT US</a>
     
-    <a href="/health-packages/" onclick="closeMenu()"><strong>HEALTH PACKAGES ▾</strong></a>
+    <a href="https://www.dripwellbali.com/health-packages/" onclick="closeMenu()">HEALTH PACKAGES ▾</a>
     <div class="mobile-submenu">
-      <a href="/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
-      <a href="/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
-      <a href="/fever-package/" onclick="closeMenu()">— Fever Package</a>
-      <a href="/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
+      <a href="https://www.dripwellbali.com/bali-belly-package/" onclick="closeMenu()">— Bali Belly Package</a>
+      <a href="https://www.dripwellbali.com/hangover-package/" onclick="closeMenu()">— Hangover Package</a>
+      <a href="https://www.dripwellbali.com/fever-package/" onclick="closeMenu()">— Fever Package</a>
+      <a href="https://www.dripwellbali.com/flu-relief-package/" onclick="closeMenu()">— Flu Relief Package</a>
     </div>
 
-    <a href="/iv-drip-bali/" onclick="closeMenu()"><strong>IV DRIPS VITAMIN ▾</strong></a>
+    <a href="https://www.dripwellbali.com/iv-drip-bali/" onclick="closeMenu()"><strong>IV DRIPS VITAMIN ▾</strong></a>
     <div class="mobile-submenu">
-      <a href="/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
-      <a href="/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
-      <a href="/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
-      <a href="/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
-      <a href="/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
+      <a href="https://www.dripwellbali.com/jetlag-package/" onclick="closeMenu()">— Jetlag Package</a>
+      <a href="https://www.dripwellbali.com/energy-booster-package/" onclick="closeMenu()">— Energy Booster Package</a>
+      <a href="https://www.dripwellbali.com/immune-booster-basic/" onclick="closeMenu()">— Immune Booster Basic</a>
+      <a href="https://www.dripwellbali.com/immune-booster-standard-package/" onclick="closeMenu()">— Immune Booster Standard Package</a>
+      <a href="https://www.dripwellbali.com/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
     </div>
 
-    <a href="/physiotherapy-bali/" onclick="closeMenu()">PHYSIOTHERAPY</a>
-    <a href="/home-doctor-bali/" onclick="closeMenu()">HOME DOCTOR</a>
-    <a href="/blog/" onclick="closeMenu()">BLOG</a>
-    <a href="/faq/" onclick="closeMenu()">FAQ</a>
-    <a href="/contact/" onclick="closeMenu()">CONTACT</a>
-    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Get Special Offer</a>
+    <a href="https://www.dripwellbali.com/physiotherapy-bali/" onclick="closeMenu()">PHYSIOTHERAPY</a>
+    <a href="https://www.dripwellbali.com/home-doctor-bali/" onclick="closeMenu()">HOME DOCTOR</a>
+    <a href="https://www.dripwellbali.com/blog/" onclick="closeMenu()">BLOG</a>
+    <a href="https://www.dripwellbali.com/faq/" onclick="closeMenu()">FAQ</a>
+    <a href="https://www.dripwellbali.com/contact/" onclick="closeMenu()">CONTACT</a>
+    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20an%20IV%20Drip%20Vitamin%20Treatment." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Book via WhatsApp</a>
   </div>
 </header>
 
@@ -547,14 +566,14 @@
           <h1 class="display">IV Drip &amp; Vitamin Therapy</h1>
           <p>Customized IV drip vitamin treatments delivered straight to your villa, resort, or hotel room across Bali. Fast 30–60 minute response time by certified doctors and registered nurses.</p>
           <div style="margin-top: 20px;">
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" class="btn-cta">
-              GET SPECIAL OFFER VIA WHATSAPP →
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20an%20IV%20Drip%20Vitamin%20Treatment." target="_blank" rel="noopener noreferrer" class="btn-cta">
+              BOOK NOW VIA WHATSAPP →
             </a>
           </div>
         </div>
 
         <div class="photo-frame">
-          <img src="/home-doctor.jpg" alt="IV Drip Vitamin Therapy in Villa Bali" loading="eager" decoding="async" onerror="this.onerror=null;this.src='/home-doctor.jpeg';">
+          <img src="https://www.dripwellbali.com/iv-drip-bali/iv-drip.jpg" alt="IV Drip Vitamin Therapy in Villa Bali" width="600" height="360" loading="eager" fetchpriority="high" decoding="async">
           <div class="photo-badge">✦ Professional Mobile IV Vitamin Therapy</div>
         </div>
       </div>
@@ -608,8 +627,8 @@
         <div class="feature-box">
           <div class="feature-icon-circle">🛡️</div>
           <div class="feature-content">
-            <h3>Travel Insurance Claim Support</h3>
-            <p>Includes Travel Insurance Report documents for easy reimbursement.</p>
+            <h3>Medical report to support travel insurance</h3>
+            <p>Official medical reports, doctor diagnosis certificates, and itemized receipts to ensure smooth reimbursement with international travel insurance providers.</p>
           </div>
         </div>
 
@@ -638,8 +657,8 @@
             <p class="desc">Essential rehydration infusion designed to reset your sleep cycle, relieve travel fatigue, and recover smoothly from long-haul flights.</p>
           </div>
           <div class="card-actions">
-            <a href="/jetlag-package/" class="btn-outline">VIEW DETAILS</a>
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20Special%20Offer%20for%20Jetlag%20Package" target="_blank" rel="noopener noreferrer" class="btn-cta">GET SPECIAL OFFER →</a>
+            <a href="https://www.dripwellbali.com/jetlag-package/" class="btn-outline">VIEW DETAILS</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Jetlag%20Package" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
           </div>
         </div>
 
@@ -652,50 +671,50 @@
             <p class="desc">High-potency multivitamin infusion to eliminate physical burnout, restore peak stamina, and clear mental fog instantly.</p>
           </div>
           <div class="card-actions">
-            <a href="/energy-booster-package/" class="btn-outline">VIEW DETAILS</a>
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20Special%20Offer%20for%20Energy%20Booster%20Package" target="_blank" rel="noopener noreferrer" class="btn-cta">GET SPECIAL OFFER →</a>
+            <a href="https://www.dripwellbali.com/energy-booster-package/" class="btn-outline">VIEW DETAILS</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Energy%20Booster%20Package" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
           </div>
         </div>
 
-        <!-- Package 3: Immune Booster Basic -->
+        <!-- Package 3: Immune Booster Basic (HARGA REVISI RESMI) -->
         <div class="catalog-card">
           <div>
             <div class="card-category-eyebrow">DAILY DEFENSE</div>
             <h3>Immune Booster Basic</h3>
-            <div class="price">Rp 1.150.000</div>
+            <div class="price">Rp 1.350.000</div>
             <p class="desc">Essential defense drip to strengthen immune resilience, combat low energy, and maintain peak wellness throughout your trip.</p>
           </div>
           <div class="card-actions">
-            <a href="/immune-booster-basic/" class="btn-outline">VIEW DETAILS</a>
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20Special%20Offer%20for%20Immune%20Booster%20Basic" target="_blank" rel="noopener noreferrer" class="btn-cta">GET SPECIAL OFFER →</a>
+            <a href="https://www.dripwellbali.com/immune-booster-basic/" class="btn-outline">VIEW DETAILS</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Immune%20Booster%20Basic" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
           </div>
         </div>
 
-        <!-- Package 4: Immune Booster Standard Package -->
+        <!-- Package 4: Immune Booster Standard Package (HARGA REVISI RESMI) -->
         <div class="catalog-card">
           <div>
             <div class="card-category-eyebrow">BALANCED PROTECTION</div>
             <h3>Immune Booster Standard Package</h3>
-            <div class="price">Rp 1.650.000</div>
+            <div class="price">Rp 2.625.000</div>
             <p class="desc">Balanced combination of antioxidant boosters and metabolic vitamins to defend your body effectively against tropical viral infections.</p>
           </div>
           <div class="card-actions">
-            <a href="/immune-booster-standard-package/" class="btn-outline">VIEW DETAILS</a>
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20Special%20Offer%20for%20Immune%20Booster%20Standard%20Package" target="_blank" rel="noopener noreferrer" class="btn-cta">GET SPECIAL OFFER →</a>
+            <a href="https://www.dripwellbali.com/immune-booster-standard-package/" class="btn-outline">VIEW DETAILS</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Immune%20Booster%20Standard%20Package" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
           </div>
         </div>
 
-        <!-- Package 5: Ultimate Immune Booster -->
+        <!-- Package 5: Ultimate Immune Booster (HARGA REVISI RESMI) -->
         <div class="catalog-card">
           <div>
             <div class="card-category-eyebrow">MAXIMUM DEFENSE</div>
             <h3>Ultimate Immune Booster</h3>
-            <div class="price">Rp 2.850.000</div>
+            <div class="price">Rp 2.925.000</div>
             <p class="desc">Our most comprehensive immune formula combining high-dose antioxidants, detoxifying agents, and full vitamins for complete protection.</p>
           </div>
           <div class="card-actions">
-            <a href="/ultimate-immune-booster/" class="btn-outline">VIEW DETAILS</a>
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20get%20Special%20Offer%20for%20Ultimate%20Immune%20Booster" target="_blank" rel="noopener noreferrer" class="btn-cta">GET SPECIAL OFFER →</a>
+            <a href="https://www.dripwellbali.com/ultimate-immune-booster/" class="btn-outline">VIEW DETAILS</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Ultimate%20Immune%20Booster" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
           </div>
         </div>
 
@@ -710,9 +729,9 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="/" aria-label="Back to home">
+        <a class="brand" href="https://www.dripwellbali.com/" aria-label="Back to home">
           <span class="logo">
-            <img src="/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell logo" loading="lazy">
+            <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell logo" loading="lazy" decoding="async">
           </span>
           <span>
             <strong>Dripwell <i>Bali</i></strong>
@@ -727,7 +746,7 @@
       </div>
 
       <div class="footer-actions">
-        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" class="gold-text">✦ Get Special Offer on WhatsApp</a>
+        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20an%20IV%20Drip%20Vitamin%20Treatment." target="_blank" rel="noopener noreferrer" class="gold-text">✦ Book via WhatsApp</a>
         <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
         <div>
           <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
@@ -745,7 +764,7 @@
 
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
-  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer">✦ Get Special Offer via WhatsApp →</a>
+  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20an%20IV%20Drip%20Vitamin%20Treatment." target="_blank" rel="noopener noreferrer">✦ Book via WhatsApp →</a>
 </div>
 
 <!-- Fast Script Execution -->
