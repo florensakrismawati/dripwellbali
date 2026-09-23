@@ -1,15 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <!-- Google tag (gtag.js) Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17000832555"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17000832555');
+  </script>
+  
+  <!-- Google tag (gtag.js) GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-95Y04XGSFQ');
+  </script>
+
+  <!-- Event snippet for Contact conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
- <title>Bali Belly IV Drip & Villa Doctor 24/7 Tabanan, Kedungu, Seseh, Pererenan & Canggu | Dripwell Bali</title>
-
-<meta name="description" content="Get 15% OFF with code SAVE15! Fast 24/7 Bali Belly IV drip & villa doctor visit in Tabanan, Kedungu, Seseh, Pererenan & Canggu. Stop nausea, vomiting & diarrhea fast.">
-<meta name="keywords" content="bali belly iv drip tabanan, bali belly doctor kedungu, food poisoning treatment seseh, bali belly villa visit pererenan, anti nausea iv therapy canggu, hangover drip kedungu">
+  <!-- SEO MAIN TAGS -->
+  <title>Bali Belly IV Drip & Villa Doctor 24/7 Tabanan, Kedungu, Seseh, Pererenan & Canggu | Dripwell Bali</title>
+  <meta name="description" content="Get 15% OFF with code SAVE15! Fast 24/7 Bali Belly IV drip & villa doctor visit in Tabanan, Kedungu, Seseh, Pererenan & Canggu. Stop nausea, vomiting & diarrhea fast.">
+  <meta name="keywords" content="bali belly iv drip tabanan, bali belly doctor kedungu, food poisoning treatment seseh, bali belly villa visit pererenan, anti nausea iv therapy canggu, hangover drip kedungu">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="author" content="Dripwell Bali">
+  <meta name="author" content="Dripwell Bali Medical Team">
   <meta name="theme-color" content="#133e3d">
 
   <!-- Canonical Tag & Favicon -->
@@ -18,14 +53,22 @@
   <link rel="icon" href="https://www.dripwellbali.com/favicon-96x96.png" sizes="96x96" type="image/png">
   <link rel="apple-touch-icon" href="https://www.dripwellbali.com/favicon-182x182.png">
 
-  <!-- Open Graph / Social Media -->
+  <!-- Open Graph / Social Media & WhatsApp Preview (SEKARANG SUDAH SINKRON) -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.dripwellbali.com/bali-belly-package/">
   <meta property="og:site_name" content="Dripwell Bali">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="Bali Belly Recovery & IV Hydration at Villa | DripWell Bali">
-  <meta property="og:description" content="Instant relief for food poisoning, nausea, diarrhea, and stomach cramps. Medical IV hydration and anti-emetic care delivered to your accommodation in Bali.">
+  <meta property="og:title" content="Bali Belly IV Drip & Villa Doctor 24/7 Tabanan, Kedungu, Seseh, Pererenan & Canggu | Dripwell Bali">
+  <meta property="og:description" content="Get 15% OFF with code SAVE15! Fast 24/7 Bali Belly IV drip & villa doctor visit in Tabanan, Kedungu, Seseh, Pererenan & Canggu. Stop nausea, vomiting & diarrhea fast.">
   <meta property="og:image" content="https://www.dripwellbali.com/bali-belly-package/bali-belly-hero.jpg">
+  <meta property="og:image:alt" content="Bali Belly IV drip therapy at villa in Bali">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.dripwellbali.com/bali-belly-package/">
+  <meta name="twitter:title" content="Bali Belly IV Drip & Villa Doctor 24/7 Tabanan, Kedungu, Seseh, Pererenan & Canggu | Dripwell Bali">
+  <meta name="twitter:description" content="Get 15% OFF with code SAVE15! Fast 24/7 Bali Belly IV drip & villa doctor visit in Tabanan, Kedungu, Seseh, Pererenan & Canggu. Stop nausea, vomiting & diarrhea fast.">
+  <meta name="twitter:image" content="https://www.dripwellbali.com/bali-belly-package/bali-belly-hero.jpg">
 
   <!-- Fonts & Resource Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,12 +84,12 @@
       {
         "@type": "MedicalClinic",
         "@id": "https://www.dripwellbali.com/#organization",
-        "name": "DripWell Bali",
+        "name": "Dripwell Bali",
         "url": "https://www.dripwellbali.com/",
         "logo": "https://www.dripwellbali.com/dripwell-logo.jpeg",
         "telephone": "+6282221614966",
         "email": "dripwellbali@gmail.com",
-        "areaServed": ["Canggu", "Seminyak", "Pererenan", "Uluwatu", "Ubud", "Kuta", "Sanur", "Tabanan"]
+        "areaServed": ["Tabanan", "Kedungu", "Seseh", "Pererenan", "Canggu", "Seminyak", "Uluwatu", "Ubud"]
       },
       {
         "@type": "Product",
@@ -55,11 +98,11 @@
         "description": "Complete medical IV therapy combining Electrolyte Solution, Anti Nausea, Anti Vomiting, Stomach Protector, Stomach Ache medication, and Vitamin B Complex for instant gastroenteritis relief in Bali.",
         "brand": {
           "@type": "Brand",
-          "name": "DripWell Bali"
+          "name": "Dripwell Bali"
         },
         "offers": {
           "@type": "Offer",
-          "price": "2025000",
+          "price": "1721250",
           "priceCurrency": "IDR",
           "availability": "https://schema.org/InStock",
           "url": "https://www.dripwellbali.com/bali-belly-package/"
@@ -122,7 +165,7 @@
   .gold-text { color: var(--accent-gold); }
 
   button, input, select, textarea { font: inherit; }
-  button { cursor: pointer; }
+  button { cursor: pointer; border: none; background: none; }
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; height: auto; }
 
@@ -261,7 +304,8 @@
   .package-header-flex { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; border-bottom: 1px solid var(--border-teal); padding-bottom: 16px; margin-bottom: 18px; flex-wrap: wrap; }
   .package-header-flex h2 { font-size: clamp(24px, 3.5vw, 36px); color: var(--text-dark); line-height: 1.1; }
   .package-price-wrap { text-align: right; }
-  .package-price-wrap .price { font-family: "Playfair Display", Georgia, serif; font-size: 28px; color: var(--primary-green); font-weight: 700; }
+  .package-price-wrap .price { font-family: "Playfair Display", Georgia, serif; font-size: 28px; color: var(--accent-gold); font-weight: 700; }
+  .package-price-wrap .old-price { text-decoration: line-through; opacity: 0.45; font-size: 18px; color: var(--text-dark); margin-right: 6px; }
 
   .composition-details-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; margin-top: 18px; }
   .comp-box-card { background: var(--bg-soft); border: 1px solid var(--border-teal); border-radius: 14px; padding: 18px; }
@@ -316,7 +360,7 @@
   .faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding-top .3s ease; font-size: 12px; opacity: .85; line-height: 1.5; }
   .faq-item.open .faq-answer { max-height: 200px; padding-top: 8px; }
 
-  /* FOOTER (LIGHTWEIGHT, SUPER CEPAT, SEO FRIENDLY) */
+  /* FOOTER */
   footer {
     border-top: 1px solid var(--border-teal);
     padding: 40px 0 30px;
@@ -432,9 +476,10 @@
 <!-- TOP PROMO BANNER -->
 <div class="promo-bar" aria-label="Promotion Banner">
   <div class="promo-track">
-    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
-    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
-    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> Bali Belly IV Drip Therapy! Use Code: <strong>SAVE15</strong></span>
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> Bali Belly IV Drip Therapy! Use Code: <strong>SAVE15</strong></span>
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> Bali Belly IV Drip Therapy! Use Code: <strong>SAVE15</strong></span>
+    <span>🌴 Vacation Saver Promo: Get <strong>15% OFF</strong> Bali Belly IV Drip Therapy! Use Code: <strong>SAVE15</strong></span>
   </div>
 </div>
 
@@ -485,7 +530,7 @@
       <a class="navlink" href="https://www.dripwellbali.com/blog/">BLOG</a>
       <a class="navlink" href="https://www.dripwellbali.com/faq/">FAQ</a>
       <a class="navlink" href="https://www.dripwellbali.com/contact/">CONTACT</a>
-      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Bali%20Belly%20Package." target="_blank" rel="noopener noreferrer">Get Special Offer</a>
+      <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%25%20Discount%20for%20Bali%20Belly%20Package%20(Code:%20SAVE15)." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">Claim 15% Off via WhatsApp →</a>
     </nav>
 
     <button type="button" class="mobile-menu" aria-label="Open navigation menu" onclick="toggleMenu()">☰</button>
@@ -514,7 +559,7 @@
     <a href="https://www.dripwellbali.com/blog/" onclick="closeMenu()">BLOG</a>
     <a href="https://www.dripwellbali.com/faq/" onclick="closeMenu()">FAQ</a>
     <a href="https://www.dripwellbali.com/contact/" onclick="closeMenu()">CONTACT</a>
-    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Bali%20Belly%20Package." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Get Special Offer on WhatsApp</a>
+    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%25%20Discount%20for%20Bali%20Belly%20Package%20(Code:%20SAVE15)." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">Claim 15% Off via WhatsApp →</a>
   </div>
 </header>
 
@@ -536,7 +581,7 @@
         </div>
 
         <div style="margin-top: 18px;">
-          <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Bali%20Belly%20Package." target="_blank" rel="noopener noreferrer" class="btn-cta">Get Special Offer on WhatsApp →</a>
+          <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%25%20Discount%20for%20Bali%20Belly%20Package%20(Code:%20SAVE15)." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">Claim 15% Off via WhatsApp →</a>
         </div>
       </div>
 
@@ -586,7 +631,7 @@
         </div>
 
         <div class="package-price-wrap">
-          <div><span class="price">Rp 2.025.000</span></div>
+          <div><span class="old-price">Rp 2.025.000</span><span class="price">Rp 1.721.250</span></div>
         </div>
       </div>
 
@@ -629,7 +674,7 @@
           </div>
 
           <div style="margin-top: 18px;">
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Bali%20Belly%20Package." target="_blank" rel="noopener noreferrer" class="btn-cta" style="width: 100%;">Get Special Offer on WhatsApp →</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%25%20Discount%20for%20Bali%20Belly%20Package%20(Code:%20SAVE15)." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta" style="width: 100%;">Claim 15% Off via WhatsApp →</a>
           </div>
         </div>
       </div>
@@ -697,8 +742,8 @@
         Professional Doctor &amp; Nurse Home Visit.<br>
         Available 24/7 across Bali with travel insurance documents included.
       </p>
-      <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Bali%20Belly%20Package." target="_blank" rel="noopener noreferrer" class="btn-cta">
-        Get Special Offer on WhatsApp →
+      <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%25%20Discount%20for%20Bali%20Belly%20Package%20(Code:%20SAVE15)." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">
+        Claim 15% Off via WhatsApp →
       </a>
     </div>
   </section>
@@ -712,7 +757,7 @@
       <div style="margin-top: 12px;">
         <strong style="font-size: 10px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-gold);">◆ Service Areas:</strong>
         <div class="areas-flex">
-          <span class="area-pill">Canggu</span><span class="area-pill">Berawa</span><span class="area-pill">Batu Bolong</span><span class="area-pill">Echo Beach</span><span class="area-pill">Batu Belig</span><span class="area-pill">Pererenan</span><span class="area-pill">Seminyak</span><span class="area-pill">Petitenget</span><span class="area-pill">Kerobokan</span><span class="area-pill">Umalas</span><span class="area-pill">Kedungu</span><span class="area-pill">Tabanan</span><span class="area-pill">Tanah Lot</span><span class="area-pill">Others</span>
+          <span class="area-pill">Canggu</span><span class="area-pill">Berawa</span><span class="area-pill">Batu Bolong</span><span class="area-pill">Echo Beach</span><span class="area-pill">Batu Belig</span><span class="area-pill">Pererenan</span><span class="area-pill">Seseh</span><span class="area-pill">Seminyak</span><span class="area-pill">Petitenget</span><span class="area-pill">Kerobokan</span><span class="area-pill">Umalas</span><span class="area-pill">Kedungu</span><span class="area-pill">Tabanan</span><span class="area-pill">Tanah Lot</span><span class="area-pill">Others</span>
         </div>
       </div>
     </div>
@@ -758,7 +803,7 @@
 
 </main>
 
-<!-- FOOTER (LIGHTWEIGHT, SUPER CEPAT, SEO FRIENDLY) -->
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-top">
@@ -778,7 +823,7 @@
       </div>
 
       <div class="footer-actions">
-        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" class="gold-text" style="font-weight: 600;">✦ Get Special Offer on WhatsApp</a>
+        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%25%20Discount%20for%20Bali%20Belly%20Package%20(Code:%20SAVE15)." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="gold-text" style="font-weight: 600;">✦ Claim 15% Off via WhatsApp</a>
         <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
         <div>
           <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
@@ -796,7 +841,7 @@
 
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
-  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Bali%20Belly%20Package." target="_blank" rel="noopener noreferrer">✦ Get Special Offer via WhatsApp →</a>
+  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%25%20Discount%20for%20Bali%20Belly%20Package%20(Code:%20SAVE15)." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">✦ Claim 15% Off via WhatsApp →</a>
 </div>
 
 <script>
