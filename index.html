@@ -43,66 +43,144 @@ function gtag_report_conversion(url) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17000832555"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17000832555');
+  </script>
+  
+  <!-- Google tag (gtag.js) GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-95Y04XGSFQ');
+  </script>
+
+  <!-- Event snippet for Contact conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- SEO MAIN TAGS -->
   <title>24/7 Mobile IV Drip & Home Doctor Tabanan, Kedungu, Seseh & Canggu | Dripwell Bali</title>
-
-<meta name="description" content="Get 15% OFF today with code SAVE15! Fast response <45 mins 24/7 mobile IV drip therapy & villa doctor visit in Tabanan, Kedungu, Seseh, Canggu & Pererenan. English-speaking doctors." />
-<meta name="keywords" content="iv drip tabanan, home doctor kedungu, doctor visit seseh, iv therapy canggu, bali belly treatment tabanan, mobile doctor pererenan, iv drip villa call out bali, hangover drip kedungu" />
-
-<!-- Schema Markup Lengkap untuk Local SEO & Peta Google (24/7 Open) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "Dripwell Bali",
-  "image": "https://www.dripwellbali.com/dripwell-logo.jpeg",
-  "url": "https://www.dripwellbali.com",
-  "telephone": "+6281234567890",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Tabanan",
-    "addressRegion": "Bali",
-    "addressCountry": "ID"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -8.6189,
-    "longitude": 115.1278
-  },
-  "areaServed": [
-    {
-      "@type": "AdministrativeArea",
-      "name": "Tabanan"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Kedungu"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Seseh"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Canggu"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Pererenan"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Seminyak"
-    }
-  ],
-  "openingHours": "Mo-Su 00:00-24:00"
-}
-</script>
+  <meta name="description" content="Get 15% OFF today with code SAVE15! Fast response <45 mins 24/7 mobile IV drip therapy & villa doctor visit in Tabanan, Kedungu, Seseh, Canggu & Pererenan. English-speaking doctors." />
+  <meta name="keywords" content="iv drip tabanan, home doctor kedungu, doctor visit seseh, iv therapy canggu, bali belly treatment tabanan, mobile doctor pererenan, iv drip villa call out bali, hangover drip kedungu" />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="Dripwell Bali Medical Team">
   <meta name="theme-color" content="#133e3d">
 
-  
+  <!-- Canonical Tag & Favicon -->
+  <link rel="canonical" href="https://www.dripwellbali.com/">
+  <link rel="icon" href="https://www.dripwellbali.com/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="https://www.dripwellbali.com/favicon-96x96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="https://www.dripwellbali.com/favicon-182x182.png">
+
+  <!-- Open Graph / Social Media & WhatsApp Preview (SUDAH DISESUAIKAN) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.dripwellbali.com/">
+  <meta property="og:site_name" content="Dripwell Bali">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="24/7 Mobile IV Drip & Home Doctor Tabanan, Kedungu, Seseh & Canggu | Dripwell Bali">
+  <meta property="og:description" content="Get 15% OFF today with code SAVE15! Fast response <45 mins 24/7 mobile IV drip therapy & villa doctor visit directly to your villa across Tabanan, Kedungu, Seseh & Canggu.">
+  <meta property="og:image" content="https://www.dripwellbali.com/home.jpg">
+  <meta property="og:image:alt" content="Dripwell Bali medical team providing treatment at a villa">
+
+  <!-- Twitter Card (SUDAH DISESUAIKAN) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.dripwellbali.com/">
+  <meta name="twitter:title" content="24/7 Mobile IV Drip & Home Doctor Tabanan, Kedungu, Seseh & Canggu | Dripwell Bali">
+  <meta name="twitter:description" content="Get 15% OFF today with code SAVE15! Fast response <45 mins 24/7 mobile IV drip therapy & villa doctor visit directly to your villa across Tabanan, Kedungu, Seseh & Canggu.">
+  <meta name="twitter:image" content="https://www.dripwellbali.com/home.jpg">
+
+  <!-- Fonts & Resource Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://wa.me">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- STRUCTURED DATA (JSON-LD) TERPADU UNTUK GOOGLE LOCAL SEO & FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalBusiness",
+        "@id": "https://www.dripwellbali.com/#organization",
+        "name": "Dripwell Bali",
+        "url": "https://www.dripwellbali.com/",
+        "logo": "https://www.dripwellbali.com/dripwell-logo.jpeg",
+        "image": "https://www.dripwellbali.com/home.jpg",
+        "telephone": "+6282221614966",
+        "email": "dripwellbali@gmail.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tabanan",
+          "addressRegion": "Bali",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -8.6189,
+          "longitude": 115.1278
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Tabanan" },
+          { "@type": "AdministrativeArea", "name": "Kedungu" },
+          { "@type": "AdministrativeArea", "name": "Seseh" },
+          { "@type": "AdministrativeArea", "name": "Canggu" },
+          { "@type": "AdministrativeArea", "name": "Pererenan" },
+          { "@type": "AdministrativeArea", "name": "Seminyak" },
+          { "@type": "AdministrativeArea", "name": "Uluwatu" },
+          { "@type": "AdministrativeArea", "name": "Ubud" }
+        ],
+        "openingHours": "Mo-Su 00:00-24:00"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I claim the 15% discount promo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Simply mention the promo code SAVE15 when messaging us on WhatsApp or booking your appointment. The 15% discount will be applied directly to your total package cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is DripWell Bali available 24/7?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, DripWell Bali provides round-the-clock home doctor visits, IV drip therapy, and mobile medical services 24 hours a day, 7 days a week across Bali."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Canonical Tag & Favicon -->
   <link rel="canonical" href="https://www.dripwellbali.com/">
