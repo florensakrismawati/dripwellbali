@@ -126,7 +126,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--bg-white); color: var(--text-dark); font-family: "DM Sans", Arial, sans-serif; line-height: 1.6; }
+body { background: var(--bg-white); color: var(--text-dark); font-family: "DM Sans", Arial, sans-serif; line-height: 1.6; padding-bottom: 0; }
 
 .mono { font-family: "DM Mono", monospace; }
 .display { font-family: "Playfair Display", Georgia, serif; }
@@ -180,12 +180,12 @@ header {
   z-index: 1000; border-bottom: 1px solid var(--border-teal);
 }
 
-.nav { max-width: 1280px; margin: auto; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; }
+.nav { max-width: 1280px; margin: auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
 .brand { display: flex; align-items: center; gap: 12px; }
-.logo { width: 44px; height: 44px; flex: 0 0 44px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-teal); }
+.logo { width: 40px; height: 40px; flex: 0 0 40px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-teal); }
 .logo img { width: 100%; height: 100%; object-fit: cover; }
-.brand small { display: block; font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-gold); }
-.brand strong { font: 24px "Playfair Display"; line-height: 1; color: var(--text-dark); }
+.brand small { display: block; font: 9px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-gold); }
+.brand strong { font: 20px "Playfair Display"; line-height: 1; color: var(--text-dark); }
 
 nav { display: flex; align-items: center; gap: 14px; }
 .navlink { font: 10px "DM Mono"; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dark); opacity: .8; transition: opacity .2s, color .2s; white-space: nowrap; }
@@ -197,102 +197,103 @@ nav { display: flex; align-items: center; gap: 14px; }
 .dropdown-menu a:hover, .dropdown-menu a.active-link { background: var(--bg-soft); color: var(--primary-green); font-weight: bold; }
 .dropdown:hover .dropdown-menu { display: block; }
 
-.nav-book { background: var(--primary-green); color: var(--bg-white); padding: 10px 20px; border-radius: 999px; font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; transition: background .2s, transform .2s; border: 1px solid var(--primary-green); white-space: nowrap; }
+.nav-book { background: var(--primary-green); color: var(--bg-white); padding: 10px 18px; border-radius: 999px; font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; transition: background .2s, transform .2s; border: 1px solid var(--primary-green); white-space: nowrap; }
 .nav-book:hover { background: var(--accent-gold); border-color: var(--accent-gold); transform: translateY(-1px); }
 
-.mobile-menu { display: none; width: 40px; height: 40px; border: 1px solid var(--border-teal); border-radius: 50%; background: none; color: var(--text-dark); font-size: 18px; }
-.mobile-panel { display: none; max-height: 80vh; overflow-y: auto; }
+.mobile-menu { display: none; width: 38px; height: 38px; border: 1px solid var(--border-teal); border-radius: 50%; background: none; color: var(--text-dark); font-size: 16px; align-items: center; justify-content: center; }
+.mobile-panel { display: none; max-height: 75vh; overflow-y: auto; }
 
 main { position: relative; z-index: 1; }
 .wrap { max-width: 1280px; margin: auto; padding: 0 20px; }
-section { padding: 50px 0; }
+section { padding: 40px 0; }
 
-.eyebrow { font: 11px "DM Mono"; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 8px; }
-.eyebrow span { display: inline-block; width: 20px; height: 1px; background: var(--accent-gold); vertical-align: middle; margin-right: 6px; }
+.eyebrow { font: 11px "DM Mono"; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 6px; }
+.eyebrow span { display: inline-block; width: 16px; height: 1px; background: var(--accent-gold); vertical-align: middle; margin-right: 6px; }
 
 /* Hero Section */
-.hero { background: var(--bg-white); border-bottom: 1px solid var(--border-teal); padding: 60px 0 50px; }
-.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
-.hero h1 { font-size: clamp(32px, 4.5vw, 52px); line-height: 1.15; letter-spacing: -.02em; margin-top: 8px; color: var(--text-dark); }
-.hero p { font-size: 15px; margin-top: 14px; color: var(--text-dark); opacity: .9; max-width: 580px; line-height: 1.6; }
-.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-.tag { border: 1px solid var(--border-teal); border-radius: 999px; background: var(--bg-soft); padding: 6px 14px; font-size: 10px; font-family: "DM Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dark); font-weight: 500; }
+.hero { background: var(--bg-white); border-bottom: 1px solid var(--border-teal); padding: 45px 0 35px; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; align-items: center; }
+.hero h1 { font-size: clamp(28px, 4vw, 48px); line-height: 1.15; letter-spacing: -.02em; margin-top: 6px; color: var(--text-dark); }
+.hero p { font-size: 14.5px; margin-top: 12px; color: var(--text-dark); opacity: .9; max-width: 580px; line-height: 1.6; }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.tag { border: 1px solid var(--border-teal); border-radius: 999px; background: var(--bg-soft); padding: 5px 12px; font-size: 9.5px; font-family: "DM Mono", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--text-dark); font-weight: 500; }
 
-.photo-frame { position: relative; border-radius: 20px; overflow: hidden; border: 1px solid var(--border-teal); height: 380px; background: var(--bg-soft); box-shadow: var(--shadow-soft); }
+.photo-frame { position: relative; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-teal); height: 320px; background: var(--bg-soft); box-shadow: var(--shadow-soft); }
 .photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-.photo-badge { position: absolute; bottom: 12px; left: 12px; background: rgba(255, 255, 255, 0.95); color: var(--text-dark); padding: 6px 12px; border-radius: 999px; font: 9px "DM Mono"; text-transform: uppercase; letter-spacing: .12em; border: 1px solid var(--border-teal); font-weight: 700; }
+.photo-badge { position: absolute; bottom: 10px; left: 10px; background: rgba(255, 255, 255, 0.95); color: var(--text-dark); padding: 5px 10px; border-radius: 999px; font: 8.5px "DM Mono"; text-transform: uppercase; letter-spacing: .12em; border: 1px solid var(--border-teal); font-weight: 700; }
 
-.btn-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--primary-green); color: var(--bg-white); padding: 14px 28px; border-radius: 999px; font: 10px "DM Mono"; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; transition: all .2s; border: 1px solid var(--primary-green); }
+.btn-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--primary-green); color: var(--bg-white); padding: 13px 24px; border-radius: 999px; font: 10px "DM Mono"; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; transition: all .2s; border: 1px solid var(--primary-green); text-align: center; }
 .btn-cta:hover { background: var(--accent-gold); border-color: var(--accent-gold); transform: translateY(-2px); }
 
 /* Steps Section */
-.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 24px; }
-.step-card { border: 1px solid var(--border-teal); border-radius: 16px; padding: 24px; background: var(--bg-white); box-shadow: var(--shadow-soft); }
-.step-number { font: 12px "DM Mono"; color: var(--accent-gold); letter-spacing: .15em; text-transform: uppercase; margin-bottom: 6px; font-weight: 700; }
-.step-card h3 { font: 16px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 6px; }
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
+.step-card { border: 1px solid var(--border-teal); border-radius: 14px; padding: 20px; background: var(--bg-white); box-shadow: var(--shadow-soft); }
+.step-number { font: 11px "DM Mono"; color: var(--accent-gold); letter-spacing: .15em; text-transform: uppercase; margin-bottom: 4px; font-weight: 700; }
+.step-card h3 { font: 15px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 4px; }
 .step-card p { font-size: 13px; opacity: .85; line-height: 1.5; }
 
 /* Dispatch CTA Banner */
-.dispatch-banner { border: 1px solid var(--primary-green); background: var(--primary-green); color: var(--bg-white); border-radius: 24px; padding: 48px 32px; text-align: center; margin: 40px 0; }
-.dispatch-banner h2 { font-size: clamp(26px, 4vw, 42px); line-height: 1.15; margin-bottom: 14px; color: var(--bg-white); }
-.dispatch-banner p { font-size: 14.5px; max-width: 650px; margin: 0 auto 24px; opacity: .95; line-height: 1.6; }
+.dispatch-banner { border: 1px solid var(--primary-green); background: var(--primary-green); color: var(--bg-white); border-radius: 20px; padding: 36px 24px; text-align: center; margin: 30px 0; }
+.dispatch-banner h2 { font-size: clamp(24px, 3.5vw, 36px); line-height: 1.15; margin-bottom: 12px; color: var(--bg-white); }
+.dispatch-banner p { font-size: 14px; max-width: 600px; margin: 0 auto 20px; opacity: .95; line-height: 1.6; }
 
 /* FAQ Accordion */
-.faq-card { border: 1px solid var(--border-teal); border-radius: 24px; padding: 36px; background: var(--bg-white); box-shadow: var(--shadow-soft); margin-top: 40px; }
-.faq-item { border-bottom: 1px solid var(--border-teal); padding: 16px 0; }
+.faq-card { border: 1px solid var(--border-teal); border-radius: 20px; padding: 28px; background: var(--bg-white); box-shadow: var(--shadow-soft); margin-top: 30px; }
+.faq-item { border-bottom: 1px solid var(--border-teal); padding: 14px 0; }
 .faq-item:last-child { border-bottom: none; }
-.faq-question { width: 100%; background: none; border: none; text-align: left; font: 15px "DM Sans", sans-serif; font-weight: 600; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center; gap: 12px; cursor: pointer; }
-.faq-question span.icon { font-size: 18px; color: var(--accent-gold); transition: transform 0.3s; }
+.faq-question { width: 100%; background: none; border: none; text-align: left; font: 14.5px "DM Sans", sans-serif; font-weight: 600; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center; gap: 12px; cursor: pointer; }
+.faq-question span.icon { font-size: 16px; color: var(--accent-gold); transition: transform 0.3s; }
 .faq-item.open .faq-question span.icon { transform: rotate(45deg); }
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding-top .3s ease; font-size: 13px; opacity: .85; line-height: 1.6; }
-.faq-item.open .faq-answer { max-height: 250px; padding-top: 10px; }
+.faq-item.open .faq-answer { max-height: 250px; padding-top: 8px; }
 
 /* Locations Box */
-.locations-box { border: 1px solid var(--border-teal); border-radius: 24px; padding: 36px; background: var(--bg-soft); box-shadow: var(--shadow-soft); }
+.locations-box { border: 1px solid var(--border-teal); border-radius: 20px; padding: 28px; background: var(--bg-soft); box-shadow: var(--shadow-soft); }
 
 /* Doctor Profile Box */
-.doctor-profile-box { border: 1px solid var(--border-teal); border-radius: 24px; padding: 36px; background: var(--bg-soft); box-shadow: var(--shadow-soft); margin-top: 40px; display: grid; grid-template-columns: 240px 1fr; gap: 30px; align-items: center; }
-.doctor-img-wrap { width: 100%; height: 280px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-teal); background: var(--bg-white); }
+.doctor-profile-box { border: 1px solid var(--border-teal); border-radius: 20px; padding: 28px; background: var(--bg-soft); box-shadow: var(--shadow-soft); margin-top: 30px; display: grid; grid-template-columns: 220px 1fr; gap: 24px; align-items: center; }
+.doctor-img-wrap { width: 100%; height: 240px; border-radius: 14px; overflow: hidden; border: 1px solid var(--border-teal); background: var(--bg-white); }
 .doctor-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-.doctor-profile-box h3 { font: 22px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 4px; }
-.doctor-profile-box .licence { font: 12px "DM Mono", monospace; color: var(--accent-gold); margin-bottom: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.doctor-profile-box h3 { font: 20px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 4px; }
+.doctor-profile-box .licence { font: 11.5px "DM Mono", monospace; color: var(--accent-gold); margin-bottom: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
 
 /* Safety Notice Box */
-.safety-box { border: 1px solid rgba(194, 142, 56, 0.4); border-left: 4px solid var(--accent-gold); border-radius: 0 16px 16px 0; padding: 24px; background: var(--bg-soft); margin-top: 40px; }
-.safety-box h3 { font: 18px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 8px; }
-.safety-box p { font-size: 13.5px; opacity: .9; line-height: 1.6; }
+.safety-box { border: 1px solid rgba(194, 142, 56, 0.4); border-left: 4px solid var(--accent-gold); border-radius: 0 14px 14px 0; padding: 20px; background: var(--bg-soft); margin-top: 30px; }
+.safety-box h3 { font: 17px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 6px; }
+.safety-box p { font-size: 13px; opacity: .9; line-height: 1.6; }
 
-/* Conditions Grid 2 Kolom */
-.conditions-container { max-width: 1000px; margin: 24px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.condition-card { background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 14px; box-shadow: var(--shadow-soft); transition: transform .2s, border-color .2s; }
+/* Conditions Grid 2 Kolom (Compact Layout) */
+.conditions-container { max-width: 1000px; margin: 20px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.condition-card { background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow-soft); transition: transform .2s, border-color .2s; }
 .condition-card:hover { transform: translateY(-2px); border-color: var(--primary-green); }
-.condition-img { width: 100%; height: 140px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-teal); background: var(--bg-soft); }
+.condition-img { width: 100%; height: 110px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-teal); background: var(--bg-soft); }
 .condition-img img { width: 100%; height: 100%; object-fit: cover; }
-.condition-content h3 { font: 18px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 4px; }
-.condition-content p { font-size: 13.5px; opacity: .85; line-height: 1.5; }
+.condition-content h3 { font: 16px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 2px; }
+.condition-content p { font-size: 13px; opacity: .85; line-height: 1.4; }
 
-/* Related Services Grid 4 Kolom */
-.related-services-container { max-width: 1200px; margin: 24px auto 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.related-service-card { background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 12px; box-shadow: var(--shadow-soft); transition: transform .2s, border-color .2s; }
+/* Related Services Grid 4 Kolom (Compact Layout) */
+.related-services-container { max-width: 1200px; margin: 20px auto 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.related-service-card { background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow-soft); transition: transform .2s, border-color .2s; }
 .related-service-card:hover { transform: translateY(-2px); border-color: var(--primary-green); }
-.related-service-img { width: 100%; height: 130px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border-teal); background: var(--bg-soft); }
+.related-service-img { width: 100%; height: 100px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-teal); background: var(--bg-soft); }
 .related-service-img img { width: 100%; height: 100%; object-fit: cover; }
-.related-service-content h3 { font: 16px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 4px; }
-.related-service-content p { font-size: 13px; opacity: .85; line-height: 1.4; margin-bottom: 10px; }
-.related-service-link { font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--primary-green); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: auto; }
+.related-service-content h3 { font: 15px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 2px; }
+.related-service-content p { font-size: 12.5px; opacity: .85; line-height: 1.35; margin-bottom: 8px; }
+.related-service-link { font: 9.5px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--primary-green); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: auto; }
 .related-service-link:hover { color: var(--accent-gold); }
 
 /* Footer */
-footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-top: 60px; background: var(--bg-white); }
-.footer-top { display: flex; justify-content: space-between; gap: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--border-teal); }
-.footer-brand p { max-width: 320px; font-size: 13px; color: var(--text-dark); opacity: .8; margin-top: 8px; }
-.footer-phone { display: inline-block; margin-top: 10px; font-weight: 700; color: var(--primary-green); font-size: 14px; text-decoration: none; }
+footer { border-top: 1px solid var(--border-teal); padding: 40px 0 90px; margin-top: 50px; background: var(--bg-white); }
+.footer-top { display: flex; justify-content: space-between; gap: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border-teal); }
+.footer-brand p { max-width: 320px; font-size: 13px; color: var(--text-dark); opacity: .8; margin-top: 6px; }
+.footer-phone { display: inline-block; margin-top: 8px; font-weight: 700; color: var(--primary-green); font-size: 13.5px; text-decoration: none; }
 .footer-phone:hover { color: var(--accent-gold); }
 .footer-map-link { color: var(--accent-gold); font-weight: 600; text-decoration: none; }
 .footer-map-link:hover { text-decoration: underline; }
-.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: 13px; }
-.copyright { display: flex; justify-content: space-between; padding-top: 20px; font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
+.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; font-size: 13px; }
+.copyright { display: flex; justify-content: space-between; padding-top: 16px; font: 9.5px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
 
+/* Sticky Mobile CTA Bar */
 .sticky-bar { display: none; }
 
 @media (max-width: 1024px) {
@@ -300,20 +301,29 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
 }
 
 @media (max-width: 768px) {
-  body { padding-bottom: 110px !important; }
+  body { padding-bottom: 80px; }
   nav { display: none; }
-  .mobile-menu { display: block; }
-  .mobile-panel { position: absolute; top: 60px; left: 16px; right: 16px; background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 16px; padding: 8px; box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12); }
+  .mobile-menu { display: flex; }
+  .mobile-panel { position: absolute; top: 60px; left: 12px; right: 12px; background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 14px; padding: 6px; box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12); }
   .mobile-panel.show { display: block; }
-  .mobile-panel a { display: block; width: 100%; padding: 10px 12px; border-bottom: 1px solid var(--border-teal); font: 10px "DM Mono"; text-transform: uppercase; letter-spacing: .12em; }
-  .hero-grid, .dispatch-grid, .doctor-profile-box, .conditions-container, .related-services-container { grid-template-columns: 1fr; gap: 20px; }
-  .photo-frame, .doctor-img-wrap { height: 280px; }
-  .locations-box, .dispatch-banner, .faq-card, .doctor-profile-box { padding: 24px 16px; }
-  .sticky-bar { display: block; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 1000; }
-  .sticky-bar a { display: block; width: 100%; text-align: center; background: var(--primary-green); color: var(--bg-white); border-radius: 999px; padding: 14px; font: 10px "DM Mono"; letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35); }
+  .mobile-panel a { display: block; width: 100%; padding: 10px 12px; border-bottom: 1px solid var(--border-teal); font: 9.5px "DM Mono"; text-transform: uppercase; letter-spacing: .12em; }
+  
+  /* Ukuran gambar sangat pas dan compact di HP */
+  .hero-grid, .dispatch-grid, .doctor-profile-box, .conditions-container, .related-services-container { grid-template-columns: 1fr; gap: 14px; }
+  .photo-frame { height: 220px; }
+  .doctor-img-wrap { height: 200px; }
+  .condition-img { height: 130px; }
+  .related-service-img { height: 130px; }
+  
+  .locations-box, .dispatch-banner, .faq-card, .doctor-profile-box { padding: 20px 14px; }
+  
+  /* Sticky Floating WhatsApp Button Khusus Mobile User */
+  .sticky-bar { display: block; position: fixed; bottom: 10px; left: 10px; right: 10px; z-index: 1000; }
+  .sticky-bar a { display: block; width: 100%; text-align: center; background: #25d366; color: #ffffff; border-radius: 999px; padding: 13px; font: 10.5px "DM Mono"; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+  
   .footer-top { flex-direction: column; }
   .footer-actions { align-items: flex-start; }
-  .copyright { flex-direction: column; gap: 8px; }
+  .copyright { flex-direction: column; gap: 6px; }
 }
 </style>
 </head>
@@ -336,7 +346,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
   <div class="nav">
     <a class="brand" href="https://www.dripwellbali.com/" aria-label="Dripwell Bali home">
       <span class="logo">
-        <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async">
+        <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="40" height="40" alt="Dripwell Bali logo" decoding="async">
       </span>
       <span>
         <small>Home Doctor &amp; Medical Service</small>
@@ -418,7 +428,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
             <span class="tag">✦ Selected Areas in Bali</span>
           </div>
 
-          <div style="margin-top: 24px;">
+          <div style="margin-top: 20px;">
             <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20check%20Doctor%20Availability%20on%20WhatsApp." target="_blank" rel="noopener noreferrer" class="btn-cta">
               Check Doctor Availability on WhatsApp →
             </a>
@@ -437,13 +447,13 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
   <section class="wrap">
     <div style="max-width: 800px; margin: 0 auto;">
       <div class="eyebrow">MOBILE MEDICAL SERVICE</div>
-      <h2 class="display" style="font-size: clamp(26px, 4vw, 38px); margin-bottom: 16px;">
+      <h2 class="display" style="font-size: clamp(24px, 3.5vw, 36px); margin-bottom: 14px;">
         A Convenient Way to See a Doctor in Bali
       </h2>
-      <p style="font-size: 14.5px; opacity: .9; margin-bottom: 14px; line-height: 1.6;">
+      <p style="font-size: 14px; opacity: .9; margin-bottom: 12px; line-height: 1.6;">
         When you feel unwell during a trip, finding appropriate medical care in an unfamiliar destination can be challenging. DripWell Bali helps visitors and residents request a doctor consultation at selected villas, hotels, resorts, and private residences without having to arrange transport yourself.
       </p>
-      <p style="font-size: 14.5px; opacity: .9; line-height: 1.6;">
+      <p style="font-size: 14px; opacity: .9; line-height: 1.6;">
         During the consultation, the doctor will review your symptoms, consider your medical history, perform an appropriate assessment, and recommend suitable treatment or further care when indicated.
       </p>
     </div>
@@ -451,12 +461,12 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
 
   <!-- 3. WHEN SHOULD YOU REQUEST A HOME DOCTOR VISIT -->
   <section class="wrap" style="background: var(--bg-soft); border-top: 1px solid var(--border-teal); border-bottom: 1px solid var(--border-teal);">
-    <div style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
+    <div style="text-align: center; max-width: 700px; margin: 0 auto 24px;">
       <div class="eyebrow">MEDICAL SUPPORT</div>
-      <h2 class="display" style="font-size: clamp(26px, 4vw, 38px);">
+      <h2 class="display" style="font-size: clamp(24px, 3.5vw, 36px);">
         When to Request a Home Doctor in Bali
       </h2>
-      <p style="font-size: 14px; opacity: .85; margin-top: 8px;">
+      <p style="font-size: 13.5px; opacity: .85; margin-top: 6px;">
         You may contact DripWell Bali to ask about a medical consultation for concerns such as:
       </p>
     </div>
@@ -508,17 +518,17 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
   <section class="wrap">
     <div style="max-width: 800px; margin: 0 auto;">
       <div class="eyebrow">YOUR CONSULTATION</div>
-      <h2 class="display" style="font-size: clamp(26px, 4vw, 38px); margin-bottom: 16px;">
+      <h2 class="display" style="font-size: clamp(24px, 3.5vw, 36px); margin-bottom: 14px;">
         What Happens During a Home Doctor Consultation?
       </h2>
-      <p style="font-size: 14.5px; opacity: .9; margin-bottom: 16px; line-height: 1.6;">
+      <p style="font-size: 14px; opacity: .9; margin-bottom: 14px; line-height: 1.6;">
         Depending on your clinical circumstances, the visit may include:
       </p>
-      <ul style="list-style: none; margin-bottom: 20px;">
-        <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Discussion of your current symptoms and concerns</li>
-        <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Review of medical history, allergies and current medications</li>
-        <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Appropriate clinical examination and vital signs assessment</li>
-        <li style="margin-bottom: 10px; display: flex; gap: 10px; align-items: center; font-size: 14px;">✓ Medical advice and treatment recommendations when indicated</li>
+      <ul style="list-style: none; margin-bottom: 16px;">
+        <li style="margin-bottom: 8px; display: flex; gap: 8px; align-items: center; font-size: 13.5px;">✓ Discussion of your current symptoms and concerns</li>
+        <li style="margin-bottom: 8px; display: flex; gap: 8px; align-items: center; font-size: 13.5px;">✓ Review of medical history, allergies and current medications</li>
+        <li style="margin-bottom: 8px; display: flex; gap: 8px; align-items: center; font-size: 13.5px;">✓ Appropriate clinical examination and vital signs assessment</li>
+        <li style="margin-bottom: 8px; display: flex; gap: 8px; align-items: center; font-size: 13.5px;">✓ Medical advice and treatment recommendations when indicated</li>
       </ul>
     </div>
   </section>
@@ -533,10 +543,10 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
         <div class="eyebrow">MEDICAL LEADERSHIP</div>
         <h3>dr. Florensa Krismawati, S.Ked</h3>
         <div class="licence">Medical Licence (SIP): 503/3577/DPMPTSP/2026</div>
-        <p style="font-size: 14px; opacity: .9; line-height: 1.6; margin-bottom: 12px;">
+        <p style="font-size: 13.5px; opacity: .9; line-height: 1.6; margin-bottom: 10px;">
           DripWell Bali aims to provide a convenient and clearly coordinated way to request medical consultations at selected accommodation locations in Bali.
         </p>
-        <p style="font-size: 14px; opacity: .9; line-height: 1.6;">
+        <p style="font-size: 13.5px; opacity: .9; line-height: 1.6;">
           Our approach focuses on individual assessment, clear communication and recommendations that reflect each patient's health concerns.
         </p>
       </div>
@@ -547,12 +557,12 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
   <section class="wrap" style="background: var(--bg-soft); border-top: 1px solid var(--border-teal); border-bottom: 1px solid var(--border-teal);">
     <div style="text-align: center; max-width: 700px; margin: 0 auto 10px;">
       <div class="eyebrow">SIMPLE PROCESS</div>
-      <h2 class="display" style="font-size: clamp(26px, 4vw, 38px);">
+      <h2 class="display" style="font-size: clamp(24px, 3.5vw, 36px);">
         How to Request a Home Doctor Visit in Bali
       </h2>
     </div>
 
-    <div class="steps-grid" style="max-width: 1000px; margin: 24px auto 0;">
+    <div class="steps-grid" style="max-width: 1000px; margin: 20px auto 0;">
       <div class="step-card">
         <div class="step-number">Step 1</div>
         <h3>Contact Us on WhatsApp</h3>
@@ -580,27 +590,27 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
   <section class="wrap">
     <div class="locations-box" style="max-width: 800px; margin: 0 auto;">
       <div class="eyebrow">Service Coverage</div>
-      <h3 class="display" style="font-size: 26px; margin-bottom: 8px;">Home Doctor Service Areas in Bali</h3>
-      <p style="font-size: 14px; opacity: .85; margin-bottom: 16px;">DripWell Bali accepts home doctor visit requests in selected areas, including:</p>
+      <h3 class="display" style="font-size: 24px; margin-bottom: 6px;">Home Doctor Service Areas in Bali</h3>
+      <p style="font-size: 13.5px; opacity: .85; margin-bottom: 14px;">DripWell Bali accepts home doctor visit requests in selected areas, including:</p>
       
-      <div style="margin-bottom: 16px;">
-        <strong style="font-size: 12px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-gold);">Canggu &amp; Surrounding Areas</strong>
-        <p style="font-size: 13.5px; opacity: .9; margin-top: 4px;">Canggu, Berawa, Batu Bolong, Echo Beach, Pererenan, Seseh, Munggu.</p>
+      <div style="margin-bottom: 14px;">
+        <strong style="font-size: 11.5px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-gold);">Canggu &amp; Surrounding Areas</strong>
+        <p style="font-size: 13px; opacity: .9; margin-top: 3px;">Canggu, Berawa, Batu Bolong, Echo Beach, Pererenan, Seseh, Munggu.</p>
       </div>
 
-      <div style="margin-bottom: 16px;">
-        <strong style="font-size: 12px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-gold);">Tabanan &amp; Surrounding Areas</strong>
-        <p style="font-size: 13.5px; opacity: .9; margin-top: 4px;">Tabanan, Kedungu, Yeh Gangga, Tanah Lot, Cemagi, Beraban, Nuanu Area, Mengwi.</p>
+      <div style="margin-bottom: 14px;">
+        <strong style="font-size: 11.5px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-gold);">Tabanan &amp; Surrounding Areas</strong>
+        <p style="font-size: 13px; opacity: .9; margin-top: 3px;">Tabanan, Kedungu, Yeh Gangga, Tanah Lot, Cemagi, Beraban, Nuanu Area, Mengwi.</p>
       </div>
 
-      <div style="margin-bottom: 16px;">
-        <strong style="font-size: 12px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-gold);">Seminyak &amp; Ubud</strong>
-        <p style="font-size: 13.5px; opacity: .9; margin-top: 4px;">Available subject to location, scheduling, and medical team availability.</p>
+      <div style="margin-bottom: 14px;">
+        <strong style="font-size: 11.5px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-gold);">Seminyak &amp; Ubud</strong>
+        <p style="font-size: 13px; opacity: .9; margin-top: 3px;">Available subject to location, scheduling, and medical team availability.</p>
       </div>
 
-      <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-teal);">
-        <strong style="font-size: 12px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .1em; color: var(--text-dark);">Staying Somewhere Else?</strong>
-        <p style="font-size: 13.5px; opacity: .9; margin-top: 6px; margin-bottom: 14px;">Send your accommodation name or location pin on WhatsApp to check service availability.</p>
+      <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border-teal);">
+        <strong style="font-size: 11.5px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .1em; color: var(--text-dark);">Staying Somewhere Else?</strong>
+        <p style="font-size: 13px; opacity: .9; margin-top: 4px; margin-bottom: 12px;">Send your accommodation name or location pin on WhatsApp to check service availability.</p>
         <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20check%20my%20location%20on%20WhatsApp." target="_blank" rel="noopener noreferrer" class="btn-cta">
           Check Your Location on WhatsApp →
         </a>
@@ -610,7 +620,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
 
   <!-- 8. EXPLORE RELATED MEDICAL SERVICES -->
   <section class="wrap">
-    <div style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
+    <div style="text-align: center; max-width: 700px; margin: 0 auto 24px;">
       <div class="eyebrow">EXPLORE OUR SERVICES</div>
       <h2 class="display" style="font-size: clamp(24px, 3.5vw, 36px);">
         Explore More Medical Services in Bali
@@ -676,7 +686,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
   <section class="wrap">
     <div class="faq-card" style="max-width: 800px; margin: 0 auto;">
       <div class="eyebrow">FREQUENTLY ASKED QUESTIONS</div>
-      <h3 class="display" style="font-size: 26px; margin-bottom: 16px;">Frequently Asked Questions</h3>
+      <h3 class="display" style="font-size: 24px; margin-bottom: 14px;">Frequently Asked Questions</h3>
 
       <div class="faq-item">
         <button type="button" class="faq-question" onclick="toggleFaq(this)">
@@ -725,7 +735,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
     <div class="safety-box" style="max-width: 800px; margin: 0 auto;">
       <div class="eyebrow" style="color: var(--accent-gold);">IMPORTANT NOTICE</div>
       <h3>Important Medical Information</h3>
-      <p style="margin-bottom: 10px;">
+      <p style="margin-bottom: 8px;">
         This page is for general informational purposes and does not replace an individual medical consultation.
       </p>
       <p>
@@ -736,18 +746,18 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
 
   <!-- 11. NEED A DOCTOR IN BALI / FINAL CTA -->
   <section class="wrap">
-    <div class="dispatch-banner" style="max-width: 900px; margin: 40px auto 0;">
+    <div class="dispatch-banner" style="max-width: 900px; margin: 30px auto 0;">
       <div class="eyebrow" style="color: var(--bg-white); opacity: .9;">NEED A DOCTOR IN BALI?</div>
       <h2>Need a Doctor in Bali?</h2>
       <p>
         If you feel unwell during your stay, contact DripWell Bali to discuss your medical concern and check whether a doctor visit can be arranged.
       </p>
 
-      <div style="margin-top: 24px; text-align: center;">
+      <div style="margin-top: 20px; text-align: center;">
         <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20contact%20DripWell%20Bali%20on%20WhatsApp." target="_blank" rel="noopener noreferrer" class="btn-cta">
           Contact DripWell Bali on WhatsApp →
         </a>
-        <p class="mono" style="font-size: 11.5px; margin-top: 14px; color: rgba(255,255,255,0.8);">WhatsApp: +62 822 2161 4966</p>
+        <p class="mono" style="font-size: 11px; margin-top: 12px; color: rgba(255,255,255,0.8);">WhatsApp: +62 822 2161 4966</p>
       </div>
     </div>
   </section>
@@ -761,7 +771,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
       <div class="footer-brand">
         <a class="brand" href="https://www.dripwellbali.com/">
           <span class="logo">
-            <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell logo" loading="lazy">
+            <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="40" height="40" alt="Dripwell logo" loading="lazy">
           </span>
           <span><strong>Dripwell <i>Bali</i></strong></span>
         </a>
@@ -790,10 +800,10 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 30px; margin-
   </div>
 </footer>
 
-<!-- STICKY MOBILE CTA BAR -->
+<!-- STICKY MOBILE CTA BAR (Selalu Muncul di Bawah Layar HP) -->
 <div class="sticky-bar">
-  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20request%20a%20Doctor%20Visit." target="_blank" rel="noopener noreferrer">✦ Contact on WhatsApp →</a>
-}
+  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20request%20a%20Doctor%20Visit." target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp Now →</a>
+</div>
 
 <script>
 function toggleMenu() {
