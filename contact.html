@@ -359,6 +359,62 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 80px; margin-
   .copyright { flex-direction: column; gap: 8px; padding-top: 18px; font-size: 9px; }
 }
 
+
+
+/* Contact page footer: reliable single-column layout on phones */
+@media screen and (max-width: 767px) {
+  footer { padding: 30px 0 34px !important; margin-top: 12px; }
+  footer > .wrap { width: 100%; padding-left: 20px; padding-right: 20px; }
+  footer .footer-top {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 28px !important;
+    width: 100%;
+    padding-bottom: 24px;
+  }
+  footer .footer-brand,
+  footer #priority-service-locations,
+  footer #priority-service-locations .service-locations-box,
+  footer #priority-service-locations .service-location-group {
+    display: block;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+  footer #priority-service-locations .service-locations-box {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+  }
+  footer .footer-brand .brand { display: flex; align-items: center; gap: 12px; }
+  footer .footer-brand .brand strong { font-size: 22px; }
+  footer .footer-brand p { max-width: none; overflow-wrap: anywhere; }
+  footer .footer-contact-links { gap: 8px; }
+  footer .footer-contact-links a,
+  footer .footer-phone,
+  footer #priority-service-locations .service-location-list a {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  footer #priority-service-locations .service-location-group h3 {
+    max-width: 100%; margin-bottom: 8px; line-height: 1.5;
+  }
+  footer #priority-service-locations .service-location-list li { padding: 10px 0; }
+  footer .accepted-payment { padding-top: 22px; }
+  footer .payment-methods { display: flex; flex-wrap: wrap; gap: 8px; }
+  footer .payment-logo { width: 72px; min-width: 72px; height: 32px; }
+  footer .payment-logo svg { width: 54px; height: 22px; }
+  footer .copyright { display: flex; flex-direction: column; gap: 7px; line-height: 1.6; letter-spacing: .08em; }
+  .sticky-bar { left: 12px; right: 12px; bottom: 12px; }
+  .sticky-bar a { padding: 14px 10px; font-size: 10px; letter-spacing: .08em; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer .footer-top { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) !important; }
+  footer #priority-service-locations .service-locations-box { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; }
+}
+
 </style>
 </head>
 
