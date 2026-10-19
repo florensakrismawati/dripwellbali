@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -179,7 +178,7 @@
   --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { background: var(--bg-white); color: var(--text-dark); font-family: "DM Sans", Arial, sans-serif; line-height: 1.6; }
 
@@ -364,16 +363,69 @@ section.bg-soft-section { background: var(--bg-soft); border-top: 1px solid var(
 .related-service-link { font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--primary-green); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: auto; }
 .related-service-link:hover { color: var(--accent-gold); }
 
-/* Footer */
-footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin-top: 20px; background: var(--bg-white); }
-.footer-top { display: flex; justify-content: space-between; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid var(--border-teal); }
-.footer-brand p { max-width: 320px; font-size: 13px; color: var(--text-dark); opacity: .8; margin-top: 8px; }
-.footer-phone { display: inline-block; margin-top: 10px; font-weight: 700; color: var(--primary-green); font-size: 13.5px; text-decoration: none; }
+/* Footer Styles Terstandarisasi */
+footer {
+  border-top: 1px solid var(--border-teal);
+  padding: 50px 0 80px;
+  margin-top: 20px;
+  background: var(--bg-white);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.6fr);
+  align-items: start;
+  gap: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-teal);
+}
+
+.footer-brand .brand { display: flex; align-items: center; gap: 12px; font-family: "Playfair Display", Georgia, serif; }
+.footer-brand .logo { width: 40px; height: 40px; flex: 0 0 40px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-teal); }
+.footer-brand .logo img { width: 100%; height: 100%; object-fit: cover; }
+.footer-brand .brand strong { font: 20px "Playfair Display"; line-height: 1; color: var(--text-dark); }
+.footer-brand .brand strong i { font-style: italic; }
+
+.footer-brand p { max-width: 320px; font-size: 12px; line-height: 1.55; color: var(--text-dark); opacity: .8; margin-top: 6px; }
+.footer-phone { display: inline-block; margin-top: 8px; font-weight: 600; color: var(--primary-green); font-size: 12px; line-height: 1.5; text-decoration: none; }
 .footer-phone:hover { color: var(--accent-gold); }
-.footer-map-link { color: var(--accent-gold); font-weight: 600; text-decoration: none; }
+
+.footer-contact-links {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+.footer-contact-links a { color: var(--text-dark); text-decoration: none; }
+.footer-contact-links a:hover { color: var(--accent-gold); text-decoration: underline; }
+
+.footer-map-link { color: var(--accent-gold) !important; font-weight: 600; font-size: 11.5px; text-decoration: none; display: inline-block; margin-top: 4px; }
 .footer-map-link:hover { text-decoration: underline; }
-.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: 13px; }
-.copyright { display: flex; justify-content: space-between; padding-top: 20px; font: 9.5px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
+
+#priority-service-locations { padding: 0; min-width: 0; }
+#priority-service-locations .service-locations-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.service-location-group h3 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; }
+.service-location-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0; }
+.service-location-list li { border-bottom: 1px solid var(--border-teal); padding: 7px 0; font-size: 12px; line-height: 1.4; }
+.service-location-list a { color: #176b79; text-decoration: none; display: block; }
+.service-location-list a:hover { color: var(--primary-green); text-decoration: underline; }
+
+/* Accepted Payment */
+.accepted-payment { padding: 22px 0 6px; }
+.accepted-payment h2 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 12px; }
+.payment-methods { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.payment-logo { display: flex; align-items: center; justify-content: center; min-width: 76px; height: 34px; padding: 5px 10px; border: 1px solid var(--border-teal); border-radius: 7px; background: #fff; }
+.payment-logo svg { display: block; width: 62px; height: 26px; }
+
+.copyright { display: flex; justify-content: space-between; padding-top: 20px; font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
 
 /* Sticky Mobile CTA Bar */
 .sticky-bar { display: none; }
@@ -383,14 +435,15 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin
 }
 
 @media (max-width: 768px) {
-  body { padding-bottom: 80px; }
+  body { padding-bottom: 110px !important; }
   nav { display: none; }
   .mobile-menu { display: flex; }
   .mobile-panel { position: absolute; top: 60px; left: 12px; right: 12px; background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 14px; padding: 6px; box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12); }
   .mobile-panel.show { display: block; }
   .mobile-panel a { display: block; width: 100%; padding: 10px 12px; border-bottom: 1px solid var(--border-teal); font: 9.5px "DM Mono"; text-transform: uppercase; letter-spacing: .12em; }
   
-  section { padding: 44px 0; }
+  section { padding: 36px 0; }
+  section.wrap { padding-top: 36px; padding-bottom: 36px; }
   .hero-grid, .dispatch-grid, .doctor-profile-box, .conditions-container, .related-services-container { grid-template-columns: 1fr; gap: 16px; }
   .photo-frame { height: 220px; }
   .doctor-img-wrap { height: 200px; }
@@ -398,43 +451,24 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin
   
   .locations-box, .dispatch-banner, .faq-card, .doctor-profile-box, .safety-box { padding: 24px 16px; }
   
+  /* Footer Responsif HP */
+  footer { padding: 28px 0 28px !important; }
+  .footer-top { display: flex !important; flex-direction: column !important; align-items: stretch !important; gap: 22px !important; padding-bottom: 22px !important; }
+  .footer-brand p { max-width: 100% !important; font-size: 12px; }
+  #priority-service-locations .service-locations-box { display: grid !important; grid-template-columns: 1fr !important; gap: 16px !important; }
+  
+  .copyright { flex-direction: column !important; gap: 8px !important; font-size: 9px; padding-top: 18px; }
+  
   .sticky-bar { display: block; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 1000; }
-  .sticky-bar a { display: block; width: 100%; text-align: center; background: var(--primary-green); color: var(--bg-white); border-radius: 999px; padding: 14px; font: 10px "DM Mono"; letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35); }
-
-  .footer-top { flex-direction: column; }
-  .footer-actions { align-items: flex-start; }
-  .copyright { flex-direction: column; gap: 8px; }
+  .sticky-bar a {
+    display: block; width: 100%; text-align: center;
+    background: var(--primary-green); color: var(--bg-white);
+    border-radius: 999px; padding: 14px;
+    font: 10px "DM Mono", monospace; letter-spacing: .12em;
+    text-transform: uppercase; font-weight: 600;
+    box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35);
+  }
 }
-
-/* Priority service locations */
-.service-locations-box { max-width: 1000px; }
-.service-locations-intro { font-size: 14px; line-height: 1.65; opacity: .9; margin: 10px 0 24px; max-width: 760px; }
-.service-location-group { margin-top: 24px; }
-.service-location-group h3 { font: 700 13px "DM Mono", monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 14px; }
-.service-location-list { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; }
-.service-location-list li { border-bottom: 1px solid var(--border-teal); padding: 0 0 12px; color: #176b79; font-size: 15px; }
-.service-locations-note { font-size: 12.5px; line-height: 1.6; opacity: .8; margin: 24px 0 18px; }
-@media (max-width: 600px) {
-  .service-location-list { grid-template-columns: 1fr; gap: 0; }
-  #priority-service-locations { padding-top: 22px; padding-bottom: 22px; }
-  #priority-service-locations .service-locations-box { padding: 18px 14px; }
-  #priority-service-locations #priority-locations-heading { font-size: 22px !important; line-height: 1.3; margin-bottom: 6px !important; }
-  #priority-service-locations .service-locations-intro { font-size: 13px; line-height: 1.55; margin: 8px 0 16px; }
-  #priority-service-locations .service-location-group { margin-top: 17px; }
-  #priority-service-locations .service-location-group h3 { font-size: 11.5px; line-height: 1.45; letter-spacing: .09em; margin-bottom: 7px; }
-  #priority-service-locations .service-location-list li { font-size: 14px; line-height: 1.45; padding: 8px 0; }
-  #priority-service-locations .service-locations-note { font-size: 11.5px; line-height: 1.5; margin: 16px 0 14px; }
-}
-
-
-/* Accepted Payment */
-.accepted-payment { padding: 28px 0 8px; }
-.accepted-payment h2 { font: 700 18px "DM Sans", Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 22px; }
-.payment-methods { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
-.payment-logo { width: 42px; height: 30px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 2px; box-shadow: 0 3px 14px rgba(19,62,61,.10); padding: 5px; }
-.payment-logo svg { display: block; width: 100%; height: 100%; }
-@media (max-width: 768px) { .accepted-payment { padding-top: 24px; } .accepted-payment h2 { font-size: 16px; margin-bottom: 16px; } .payment-methods { gap: 12px; } }
-
 
 
 /* IV Drip Canggu landing page */
@@ -618,7 +652,7 @@ footer { margin-top: 0; }
 <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." rel="noopener noreferrer" target="_blank">Get Special Offer</a>
 </nav>
 <button aria-controls="mobilePanel" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu" onclick="toggleMenu()" type="button">
-      ☰
+     ☰
     </button>
 </div>
 <div aria-label="Mobile navigation" class="mobile-panel" id="mobilePanel">
@@ -691,58 +725,72 @@ footer { margin-top: 0; }
 </main>
 <!-- FOOTER -->
 <footer>
-<div class="wrap">
-<div class="footer-top">
-<div class="footer-brand">
-<a class="brand" href="https://www.dripwellbali.com/">
-<span class="logo">
-<img alt="Dripwell logo" height="40" loading="lazy" src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="40"/>
-</span>
-<span><strong>Dripwell <i>Bali</i></strong></span>
-</a>
-<p>Recover • Rehydrate • Revive</p>
-<p style="margin-top: 8px;">Home doctor visits are available at selected locations, subject to confirmation of the exact address and schedule.</p>
-<a class="footer-phone" href="tel:+6282221614966">📞 Phone: +62 822 2161 4966</a>
-<p style="margin-top: 8px;">
-          📍 <a class="footer-map-link" href="https://maps.app.goo.gl/pkGnDAKp4qALJbZq5" rel="noopener noreferrer" target="_blank">Dripwell Bali | Home Doctor &amp; Medical Service</a>
-</p>
-</div>
-<div class="footer-actions">
-<a class="gold-text" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20check%20IV%20drip%20availability%20in%20Canggu." rel="noopener noreferrer" style="font-weight: 600;" target="_blank">✦ Check IV Drip Availability on WhatsApp</a>
-<a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
-<div>
-<a href="https://instagram.com/dripwellbali" rel="noopener noreferrer" target="_blank">Instagram</a>  · 
-          <a href="tel:+6282221614966">Call +62 822 2161 4966</a>
-</div>
-</div>
-</div>
-<section aria-labelledby="accepted-payment-title" class="accepted-payment">
-<h2 id="accepted-payment-title">Accepted Payment</h2>
-<div aria-label="Accepted payment methods: Wise, Mastercard and Visa" class="payment-methods">
-<div aria-label="Wise" class="payment-logo" title="Wise">
-<svg aria-hidden="true" role="img" viewbox="0 0 80 30" xmlns="http://www.w3.org/2000/svg">
-<text fill="#9FE870" font-family="Arial, sans-serif" font-size="20" font-style="italic" font-weight="700" text-anchor="middle" x="40" y="21">wise</text>
-</svg>
-</div>
-<div aria-label="Mastercard" class="payment-logo" title="Mastercard">
-<svg aria-hidden="true" role="img" viewbox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
-<circle cx="24" cy="15" fill="#EB001B" r="10"></circle>
-<circle cx="36" cy="15" fill="#F79E1B" r="10"></circle>
-<path d="M30 7.1a10 10 0 0 1 0 15.8 10 10 0 0 1 0-15.8Z" fill="#FF5F00"></path>
-</svg>
-</div>
-<div aria-label="Visa" class="payment-logo" title="Visa">
-<svg aria-hidden="true" role="img" viewbox="0 0 70 30" xmlns="http://www.w3.org/2000/svg">
-<text fill="#1434CB" font-family="Arial, sans-serif" font-size="20" font-style="italic" font-weight="900" text-anchor="middle" x="35" y="21">VISA</text>
-</svg>
-</div>
-</div>
-</section>
-<div class="copyright">
-<span>© 2026 Dripwell Bali</span>
-<span>Medical care at selected locations in Bali.</span>
-</div>
-</div>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="https://www.dripwellbali.com/" aria-label="Back to Dripwell Bali homepage">
+          <span class="logo"><img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="40" height="40" alt="Dripwell Bali logo" loading="lazy" decoding="async"></span>
+          <span><strong>Dripwell <i>Bali</i></strong></span>
+        </a>
+        <p style="margin-top: 6px; font-weight: 500;">Recover • Rehydrate • Revive</p>
+        <p>Available 24/7 across Bali for villa visits and medical consultations.</p>
+        <a href="tel:+6282221614966" class="footer-phone">📞 Phone: +62 822 2161 4966</a>
+        <div class="footer-contact-links">
+          <a href="https://maps.app.goo.gl/79D7WnSwcSG9FgtA7" target="_blank" rel="noopener noreferrer" class="footer-map-link">📍 Dripwell Bali | 24/7 Home Doctor &amp; Medical Service</a>
+        </div>
+      </div>
+      <section id="priority-service-locations" aria-label="Explore DripWell Bali service locations" style="padding:0;">
+        <div class="service-locations-box">
+          <div class="service-location-group">
+            <h3>Bali Belly Treatment Locations</h3>
+            <ul class="service-location-list">
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-canggu/">Bali Belly Treatment in Canggu</a></li>
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-seminyak/">Bali Belly Treatment in Seminyak</a></li>
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-tabanan/">Bali Belly Treatment in Tabanan</a></li>
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-ubud/">Bali Belly Treatment in Ubud</a></li>
+            </ul>
+          </div>
+          <div class="service-location-group">
+            <h3>IV Drip Service Locations</h3>
+            <ul class="service-location-list">
+              <li><a href="https://www.dripwellbali.com/iv-drip-canggu/">IV Drip in Canggu</a></li>
+              <li><a href="https://www.dripwellbali.com/iv-drip-seminyak/">IV Drip in Seminyak</a></li>
+              <li><a href="https://www.dripwellbali.com/iv-drip-tabanan/">IV Drip in Tabanan</a></li>
+              <li><a href="https://www.dripwellbali.com/iv-drip-ubud/">IV Drip in Ubud</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="accepted-payment">
+      <h2>Accepted Payment</h2>
+      <div class="payment-methods" aria-label="Accepted payment methods: Wise, Mastercard and Visa">
+        <div class="payment-logo" aria-label="Wise" title="Wise">
+          <svg viewBox="0 0 80 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" font-style="italic" fill="#9FE870">wise</text>
+          </svg>
+        </div>
+        <div class="payment-logo" aria-label="Mastercard" title="Mastercard">
+          <svg viewBox="0 0 60 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="15" r="10" fill="#EB001B"/>
+            <circle cx="36" cy="15" r="10" fill="#F79E1B"/>
+            <path d="M30 7.7a10 10 0 0 1 0 14.6 10 10 0 0 1 0-14.6z" fill="#FF5F00"/>
+          </svg>
+        </div>
+        <div class="payment-logo" aria-label="Visa" title="Visa">
+          <svg viewBox="0 0 70 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" font-style="italic" fill="#1A1F71">VISA</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <span>© 2026 Dripwell Bali</span>
+      <span>Medical care at selected locations in Bali.</span>
+    </div>
+  </div>
 </footer>
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
