@@ -126,7 +126,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--bg-white); color: var(--text-dark); font-family: "DM Sans", Arial, sans-serif; line-height: 1.6; padding-bottom: 0; }
+body { background: var(--bg-white); color: var(--text-dark); font-family: "DM Sans", Arial, sans-serif; line-height: 1.6; }
 
 .mono { font-family: "DM Mono", monospace; }
 .display { font-family: "Playfair Display", Georgia, serif; }
@@ -262,20 +262,18 @@ section { padding: 40px 0; }
 .safety-box h3 { font: 17px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 6px; }
 .safety-box p { font-size: 13px; opacity: .9; line-height: 1.6; }
 
-/* Conditions Grid 2 Kolom (Compact Layout) */
+/* Conditions Grid 2 Kolom (Tanpa Gambar - Clean Text Card) */
 .conditions-container { max-width: 1000px; margin: 20px auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.condition-card { background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow-soft); transition: transform .2s, border-color .2s; }
+.condition-card { background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow-soft); transition: transform .2s, border-color .2s; }
 .condition-card:hover { transform: translateY(-2px); border-color: var(--primary-green); }
-.condition-img { width: 100%; height: 110px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-teal); background: var(--bg-soft); }
-.condition-img img { width: 100%; height: 100%; object-fit: cover; }
-.condition-content h3 { font: 16px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 2px; }
-.condition-content p { font-size: 13px; opacity: .85; line-height: 1.4; }
+.condition-card h3 { font: 17px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 2px; }
+.condition-card p { font-size: 13.5px; opacity: .85; line-height: 1.5; }
 
-/* Related Services Grid 4 Kolom (Compact Layout) */
+/* Related Services Grid 4 Kolom (Dengan Gambar Kecil Kompak) */
 .related-services-container { max-width: 1200px; margin: 20px auto 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .related-service-card { background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow-soft); transition: transform .2s, border-color .2s; }
 .related-service-card:hover { transform: translateY(-2px); border-color: var(--primary-green); }
-.related-service-img { width: 100%; height: 100px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-teal); background: var(--bg-soft); }
+.related-service-img { width: 100%; height: 110px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-teal); background: var(--bg-soft); }
 .related-service-img img { width: 100%; height: 100%; object-fit: cover; }
 .related-service-content h3 { font: 15px "Playfair Display", serif; color: var(--primary-green); margin-bottom: 2px; }
 .related-service-content p { font-size: 12.5px; opacity: .85; line-height: 1.35; margin-bottom: 8px; }
@@ -293,7 +291,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 90px; margin-
 .footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; font-size: 13px; }
 .copyright { display: flex; justify-content: space-between; padding-top: 16px; font: 9.5px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
 
-/* Sticky Mobile CTA Bar */
+/* Sticky Mobile CTA Bar (Disesuaikan dengan warna DripWell #133e3d & aksen gold) */
 .sticky-bar { display: none; }
 
 @media (max-width: 1024px) {
@@ -308,18 +306,15 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 90px; margin-
   .mobile-panel.show { display: block; }
   .mobile-panel a { display: block; width: 100%; padding: 10px 12px; border-bottom: 1px solid var(--border-teal); font: 9.5px "DM Mono"; text-transform: uppercase; letter-spacing: .12em; }
   
-  /* Ukuran gambar sangat pas dan compact di HP */
   .hero-grid, .dispatch-grid, .doctor-profile-box, .conditions-container, .related-services-container { grid-template-columns: 1fr; gap: 14px; }
   .photo-frame { height: 220px; }
   .doctor-img-wrap { height: 200px; }
-  .condition-img { height: 130px; }
-  .related-service-img { height: 130px; }
+  .related-service-img { height: 120px; }
   
   .locations-box, .dispatch-banner, .faq-card, .doctor-profile-box { padding: 20px 14px; }
   
-  /* Sticky Floating WhatsApp Button Khusus Mobile User */
   .sticky-bar { display: block; position: fixed; bottom: 10px; left: 10px; right: 10px; z-index: 1000; }
-  .sticky-bar a { display: block; width: 100%; text-align: center; background: #25d366; color: #ffffff; border-radius: 999px; padding: 13px; font: 10.5px "DM Mono"; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+  .sticky-bar a { display: block; width: 100%; text-align: center; background: var(--primary-green); color: var(--bg-white); border: 1px solid var(--accent-gold); border-radius: 999px; padding: 13px; font: 10.5px "DM Mono"; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; box-shadow: 0 6px 20px rgba(19, 62, 61, 0.35); }
   
   .footer-top { flex-direction: column; }
   .footer-actions { align-items: flex-start; }
@@ -451,10 +446,10 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 90px; margin-
         A Convenient Way to See a Doctor in Bali
       </h2>
       <p style="font-size: 14px; opacity: .9; margin-bottom: 12px; line-height: 1.6;">
-        When you feel unwell during a trip, finding appropriate medical care in an unfamiliar destination can be challenging. DripWell Bali helps visitors and residents request a doctor consultation at selected villas, hotels, resorts, and private residences without having to arrange transport yourself.
+        When you feel unwell during your trip, finding medical care can be difficult. DripWell Bali makes it easier to request a doctor visit at selected villas, hotels, resorts, or private residences, so you can receive care without travelling to a clinic.
       </p>
       <p style="font-size: 14px; opacity: .9; line-height: 1.6;">
-        During the consultation, the doctor will review your symptoms, consider your medical history, perform an appropriate assessment, and recommend suitable treatment or further care when indicated.
+        Our doctor will assess your symptoms, review your medical history, and recommend the right treatment or further care if needed.
       </p>
     </div>
   </section>
@@ -473,43 +468,23 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 90px; margin-
 
     <div class="conditions-container">
       <div class="condition-card">
-        <div class="condition-img">
-          <img src="https://www.dripwellbali.com/fever-package/fever-relief.jpg" alt="Fever and Flu Symptoms" loading="lazy">
-        </div>
-        <div class="condition-content">
-          <h3>Fever and Flu Symptoms</h3>
-          <p>Fever, cough, sore throat, body aches or flu-like symptoms that need medical assessment.</p>
-        </div>
+        <h3>Fever and Flu Symptoms</h3>
+        <p>Fever, cough, sore throat, body aches or flu-like symptoms that need medical assessment.</p>
       </div>
 
       <div class="condition-card">
-        <div class="condition-img">
-          <img src="https://www.dripwellbali.com/blog/bali-belly-treatment.jpg" alt="Digestive Problems and Bali Belly" loading="lazy">
-        </div>
-        <div class="condition-content">
-          <h3>Digestive Problems and Bali Belly</h3>
-          <p>Diarrhoea, nausea, vomiting or stomach discomfort that may require clinical evaluation.</p>
-        </div>
+        <h3>Digestive Problems and Bali Belly</h3>
+        <p>Diarrhoea, nausea, vomiting or stomach discomfort that may require clinical evaluation.</p>
       </div>
 
       <div class="condition-card">
-        <div class="condition-img">
-          <img src="https://www.dripwellbali.com/iv-drip-bali/iv-drip.jpg" alt="Fatigue and Weakness" loading="lazy">
-        </div>
-        <div class="condition-content">
-          <h3>Fatigue and Weakness</h3>
-          <p>Unusual tiredness, weakness or feeling unwell during your stay in Bali.</p>
-        </div>
+        <h3>Fatigue and Weakness</h3>
+        <p>Unusual tiredness, weakness or feeling unwell during your stay in Bali.</p>
       </div>
 
       <div class="condition-card">
-        <div class="condition-img">
-          <img src="https://www.dripwellbali.com/home-doctor-bali/home-doctor.jpg" alt="Headaches and Dizziness" loading="lazy">
-        </div>
-        <div class="condition-content">
-          <h3>Headaches and Dizziness</h3>
-          <p>Symptoms that require assessment to help determine the appropriate next step.</p>
-        </div>
+        <h3>Headaches and Dizziness</h3>
+        <p>Symptoms that require assessment to help determine the appropriate next step.</p>
       </div>
     </div>
   </section>
@@ -543,11 +518,8 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 90px; margin-
         <div class="eyebrow">MEDICAL LEADERSHIP</div>
         <h3>dr. Florensa Krismawati, S.Ked</h3>
         <div class="licence">Medical Licence (SIP): 503/3577/DPMPTSP/2026</div>
-        <p style="font-size: 13.5px; opacity: .9; line-height: 1.6; margin-bottom: 10px;">
-          DripWell Bali aims to provide a convenient and clearly coordinated way to request medical consultations at selected accommodation locations in Bali.
-        </p>
         <p style="font-size: 13.5px; opacity: .9; line-height: 1.6;">
-          Our approach focuses on individual assessment, clear communication and recommendations that reflect each patient's health concerns.
+          We focus on understanding each patient's needs, providing clear medical advice, and recommending appropriate care based on their condition.
         </p>
       </div>
     </div>
@@ -800,7 +772,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 90px; margin-
   </div>
 </footer>
 
-<!-- STICKY MOBILE CTA BAR (Selalu Muncul di Bawah Layar HP) -->
+<!-- STICKY MOBILE CTA BAR (Selaras dengan warna DripWell #133e3d & border gold) -->
 <div class="sticky-bar">
   <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20request%20a%20Doctor%20Visit." target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp Now →</a>
 </div>
