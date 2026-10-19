@@ -37,7 +37,7 @@
 <link rel="dns-prefetch" href="https://wa.me">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
 
-<!-- Structured data: describes the visible business, service, page, breadcrumb and FAQ content. -->
+<!-- Structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -203,23 +203,6 @@ button { cursor: pointer; border: none; background: none; }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; height: auto; }
 
-.service-label-bar {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  min-height: 34px;
-  padding: 7px 20px;
-  background: #ffffff;
-  color: #c28e38;
-  font: 12px/1.4 "DM Sans", Arial, sans-serif;
-  letter-spacing: .015em;
-  border-bottom: 1px solid rgba(19, 62, 61, .08);
-}
-.service-label-pin { font-size: 12px; line-height: 1; }
-@media (max-width: 480px) {
-  .service-label-bar { font-size: 11px; padding: 7px 14px; }
-}
-
 /* Top Promo Bar */
 .promo-bar {
   background: var(--primary-green);
@@ -342,16 +325,6 @@ section.bg-soft-section { background: var(--bg-soft); border-top: 1px solid var(
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding-top .3s ease; font-size: 13.5px; opacity: .85; line-height: 1.6; }
 .faq-item.open .faq-answer { max-height: 250px; padding-top: 10px; }
 
-/* Locations Box */
-.locations-box { border: 0; border-radius: 0; padding: 0; background: transparent; box-shadow: none; max-width: 1000px; margin: 0 auto; }
-.location-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 12px 0 24px 0; }
-.location-list li { font-size: 14px; display: flex; align-items: center; gap: 8px; color: var(--text-dark); font-weight: 500; }
-.location-list li::before { content: "✦"; color: var(--accent-gold); font-size: 12px; }
-
-.area-tags-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.area-tag { border: 1px solid var(--border-teal); border-radius: 999px; background: var(--bg-white); padding: 6px 16px; font-size: 12px; font-family: "DM Sans", sans-serif; color: var(--text-dark); font-weight: 500; transition: all .2s; }
-.area-tag:hover { border-color: var(--primary-green); background: var(--bg-soft); }
-
 /* Refined Medical Leadership Profile */
 .doctor-profile-box {
   position: relative;
@@ -406,12 +379,6 @@ section.bg-soft-section { background: var(--bg-soft); border-top: 1px solid var(
 .doctor-profile-box p { color: var(--text-dark); font: 400 14px/1.8 "DM Sans", sans-serif; margin: 0; max-width: 620px; }
 .doctor-profile-box p a { color: var(--primary-green); font-weight: 600; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .doctor-profile-box p a:hover { color: var(--accent-gold); }
-@media (max-width: 600px) {
-  .doctor-profile-box { grid-template-columns: 1fr; padding: 22px 18px 22px 22px; gap: 18px; }
-  .doctor-img-wrap { width: min(100%, 220px); height: 190px; }
-  .doctor-profile-box h3 { font-size: 25px; }
-  .doctor-profile-box p { font-size: 13.5px; line-height: 1.75; }
-}
 
 /* Safety Notice Box */
 .safety-box { border: 1px solid rgba(194, 142, 56, 0.4); border-left: 4px solid var(--accent-gold); border-radius: 0 16px 16px 0; padding: 24px; background: var(--bg-soft); max-width: 800px; margin: 0 auto; }
@@ -436,27 +403,52 @@ section.bg-soft-section { background: var(--bg-soft); border-top: 1px solid var(
 .related-service-link { font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--primary-green); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; margin-top: auto; }
 .related-service-link:hover { color: var(--accent-gold); }
 
-/* Footer */
-footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin-top: 20px; background: var(--bg-white); }
-.footer-top { display: grid; grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.6fr); align-items: start; gap: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border-teal); }
-.footer-brand .brand { font-family: "Playfair Display", Georgia, serif; font-size: 16px; }
+/* Footer Styles Disesuaikan agar rapi di HP */
+footer {
+  border-top: 1px solid var(--border-teal);
+  padding: 40px 0 90px;
+  margin-top: 20px;
+  background: var(--bg-white);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.6fr);
+  align-items: start;
+  gap: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-teal);
+}
+
+.footer-brand .brand { display: flex; align-items: center; gap: 10px; font-family: "Playfair Display", Georgia, serif; font-size: 16px; }
 .footer-brand p { max-width: 320px; font-size: 12px; line-height: 1.55; color: var(--text-dark); opacity: .8; margin-top: 6px; }
 .footer-phone { display: inline-block; margin-top: 8px; font-weight: 600; color: var(--primary-green); font-size: 12px; line-height: 1.5; text-decoration: none; }
 .footer-phone:hover { color: var(--accent-gold); }
-.footer-contact-links { margin-top: 8px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; font-family: "DM Sans", Arial, sans-serif; font-size: 12px; line-height: 1.5; }
-.footer-contact-links a { font: inherit; color: var(--text-dark); text-decoration: none; }
+.footer-contact-links { margin-top: 8px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; font-size: 12px; }
+.footer-contact-links a { color: var(--text-dark); text-decoration: none; }
 .footer-contact-links a:hover { color: var(--accent-gold); text-decoration: underline; }
-.footer-service-label { display: flex; align-items: baseline; gap: 7px; margin-top: 1px; color: #c8792c; font-size: 12px; line-height: 1.5; }
-.footer-service-label span { font-size: 11px; flex: 0 0 auto; }
-.footer-brand, .footer-actions, .footer-map-link, .footer-phone,
-#priority-service-locations .service-location-list,
-#priority-service-locations .service-location-list a {
-  font-family: "DM Sans", Arial, sans-serif;
+
+#priority-service-locations { padding: 0; min-width: 0; }
+#priority-service-locations .service-locations-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
 }
-.footer-map-link { color: var(--accent-gold); font-weight: 600; text-decoration: none; font-size: 13px; }
-.footer-map-link:hover { text-decoration: underline; }
-.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: 13px; }
-.copyright { display: flex; justify-content: space-between; padding-top: 20px; font: 9.5px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
+.service-location-group h3 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; }
+.service-location-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0; }
+.service-location-list li { border-bottom: 1px solid var(--border-teal); padding: 7px 0; font-size: 12px; }
+.service-location-list a { color: #176b79; text-decoration: none; display: block; }
+.service-location-list a:hover { color: var(--primary-green); text-decoration: underline; }
+
+/* Accepted Payment */
+.accepted-payment { padding: 22px 0 6px; }
+.accepted-payment h2 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 12px; }
+.payment-methods { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.payment-logo { display: flex; align-items: center; justify-content: center; min-width: 76px; height: 34px; padding: 5px 10px; border: 1px solid var(--border-teal); border-radius: 7px; background: #fff; }
+.payment-logo svg { display: block; width: 62px; height: 26px; }
+
+.copyright { display: flex; justify-content: space-between; padding-top: 20px; font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
 
 /* Sticky Mobile CTA Bar */
 .sticky-bar { display: none; }
@@ -482,58 +474,24 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin
   
   .locations-box, .dispatch-banner, .faq-card, .doctor-profile-box, .safety-box { padding: 24px 16px; }
   
+  /* PERBAIKAN FOOTER DI HP */
+  footer { padding: 30px 0 30px !important; }
+  .footer-top { display: flex !important; flex-direction: column !important; gap: 24px !important; }
+  .footer-brand p { max-width: 100% !important; }
+  #priority-service-locations .service-locations-box { display: flex !important; flex-direction: column !important; gap: 20px !important; }
+  
+  .copyright { flex-direction: column !important; gap: 8px !important; }
+  
   .sticky-bar { display: block; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 1000; }
   .sticky-bar a {
     display: block; width: 100%; text-align: center;
     background: #0b4f45; color: #ffffff;
-    border: 0; border-radius: 999px; padding: 14px;
+    border: 0; border-radius: 999px; padding: 14px 10px;
     font: 10px "DM Mono", monospace; letter-spacing: .12em;
     text-transform: uppercase; font-weight: 600;
     box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35);
   }
-  .sticky-bar a:hover, .sticky-bar a:focus-visible { background: var(--primary-green); }
-  
-  .footer-top { grid-template-columns: 1fr; gap: 18px; }
-  .footer-actions { align-items: flex-start; }
-  .copyright { flex-direction: column; gap: 8px; }
 }
-
-/* Compact service locations: one shared card with two service columns */
-#priority-service-locations { padding: 0; min-width: 0; }
-#priority-service-locations .service-locations-box {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-.service-location-group { margin-top: 0; min-width: 0; }
-.service-location-group h3 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; }
-.service-location-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0; }
-.service-location-list li { border-bottom: 1px solid var(--border-teal); padding: 7px 0; color: #176b79; font-size: 12.5px; line-height: 1.4; }
-.service-location-list a { color: #176b79; text-decoration: none; display: block; transition: color .2s ease; }
-.service-location-list a:hover, .service-location-list a:focus-visible { color: var(--primary-green); text-decoration: underline; text-underline-offset: 3px; }
-@media (max-width: 600px) {
-  #priority-service-locations { padding: 0; }
-  #priority-service-locations .service-locations-box { padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; grid-template-columns: 1fr; gap: 16px; }
-  #priority-service-locations .service-location-group h3 { font-size: 10.5px; line-height: 1.4; margin-bottom: 5px; }
-  #priority-service-locations .service-location-list li { font-size: 12px; line-height: 1.4; padding: 6px 0; }
-}
-
-/* Accepted Payment */
-.accepted-payment { padding: 28px 0 8px; }
-.accepted-payment h2 { font: 700 18px "DM Sans", Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 22px; }
-.payment-methods { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
-.payment-logo { width: 42px; height: 30px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 2px; box-shadow: 0 3px 14px rgba(19,62,61,.10); padding: 5px; }
-.payment-logo svg { display: block; width: 100%; height: 100%; }
-@media (max-width: 768px) { .accepted-payment { padding-top: 24px; } .accepted-payment h2 { font-size: 16px; margin-bottom: 16px; } .payment-methods { gap: 12px; } }
-@media (max-width: 600px) { .payment-methods { gap: 8px; } }
 </style>
 </head>
 
@@ -958,7 +916,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin
         </div>
       </div>
       <section id="priority-service-locations" aria-label="Explore DripWell Bali service locations" style="padding:0;">
-        <div class="service-locations-box" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;">
+        <div class="service-locations-box">
           <div class="service-location-group">
             <h3>Bali Belly Treatment Locations</h3>
             <ul class="service-location-list">
@@ -980,8 +938,9 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin
         </div>
       </section>
     </div>
-    <section class="accepted-payment" aria-labelledby="accepted-payment-title">
-      <h2 id="accepted-payment-title">Accepted Payment</h2>
+
+    <div class="accepted-payment">
+      <h2>Accepted Payment</h2>
       <div class="payment-methods" aria-label="Accepted payment methods: Wise, Mastercard and Visa">
         <div class="payment-logo" aria-label="Wise" title="Wise">
           <svg viewBox="0 0 80 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -1001,7 +960,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin
           </svg>
         </div>
       </div>
-    </section>
+    </div>
 
     <div class="copyright">
       <span>© 2026 Dripwell Bali</span>
