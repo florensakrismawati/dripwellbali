@@ -105,6 +105,8 @@ body {
 .display { font-family: "Playfair Display", Georgia, serif; }
 .green-text { color: var(--primary-green); }
 .gold-text { color: var(--accent-gold); }
+.content-link { color: #176b79; font-weight: 600; text-decoration: underline; text-decoration-color: rgba(23,107,121,.35); text-underline-offset: 3px; }
+.content-link:hover { color: var(--accent-gold); text-decoration-color: currentColor; }
 
 button, input, select, textarea { font: inherit; }
 button { cursor: pointer; border: none; background: none; }
@@ -822,9 +824,9 @@ footer {
 
 
 
-/* Shared footer + compact Accepted Payment — consistent across DripWell pages */
-footer { border-top: 1px solid var(--border-teal); padding: 40px 0 30px; margin-top: 40px; background: var(--bg-white); }
-.footer-top { display: grid; grid-template-columns: minmax(240px, .8fr) minmax(0, 1.6fr); gap: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border-teal); }
+/* Shared footer + Accepted Payment — aligned with Contact page */
+footer { border-top: 1px solid var(--border-teal); padding: 50px 0 80px; margin-top: 20px; background: var(--bg-white); content-visibility: auto; }
+.footer-top { display: grid; grid-template-columns: minmax(240px, .8fr) minmax(0, 1.6fr); align-items: start; gap: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border-teal); }
 .footer-brand .brand strong { font: 16px "Playfair Display", Georgia, serif; }
 .footer-brand p { max-width: 320px; font-size: 12px; line-height: 1.55; color: var(--text-dark); opacity: .8; margin-top: 6px; }
 .footer-phone { display: inline-block; margin-top: 8px; font-weight: 600; color: var(--primary-green); font-size: 12px; line-height: 1.5; text-decoration: none; }
@@ -833,21 +835,56 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 30px; margin-
 .footer-contact-links a { font: inherit; color: var(--text-dark); text-decoration: none; }
 .footer-contact-links a:hover { color: var(--accent-gold); text-decoration: underline; }
 .footer-map-link { color: var(--accent-gold) !important; font-weight: 600; font-size: 11.5px; }
-.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: 12px; }
+.footer-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; font-size: 11.5px; line-height: 1.45; }
 #priority-service-locations .service-location-group h3 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; }
 #priority-service-locations .service-location-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0; }
-#priority-service-locations .service-location-list li { border-bottom: 1px solid var(--border-teal); padding: 7px 0; }
-#priority-service-locations .service-location-list a { font: 12.5px "DM Sans", Arial, sans-serif; color: var(--text-dark); text-decoration: none; }
-#priority-service-locations .service-location-list a:hover { color: var(--accent-gold); }
-.accepted-payment { padding: 28px 0 8px; }
-.accepted-payment h2 { font: 700 18px "DM Sans", Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 22px; line-height: 1.4; }
-.payment-methods { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+#priority-service-locations .service-location-list li { border-bottom: 1px solid var(--border-teal); padding: 7px 0; font-size: 12px; line-height: 1.4; }
+#priority-service-locations .service-location-list a { font: 12.5px "DM Sans", Arial, sans-serif; color: #176b79; text-decoration: none; display: block; }
+#priority-service-locations .service-location-list a:hover { color: var(--primary-green); text-decoration: underline; text-underline-offset: 3px; }
+.accepted-payment { padding: 22px 0 6px; }
+.accepted-payment h2 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 12px; line-height: 1.4; }
+.payment-methods { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
 .payment-logo { display: flex; align-items: center; justify-content: center; min-width: 76px; height: 34px; padding: 5px 10px; border: 1px solid var(--border-teal); border-radius: 7px; background: #fff; }
 .payment-logo svg { display: block; width: 62px; height: 26px; }
-.copyright { display: flex; justify-content: space-between; padding-top: 24px; margin-top: 8px; font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
-@media (max-width: 768px) { .accepted-payment { padding-top: 24px; } .accepted-payment h2 { font-size: 16px; margin-bottom: 16px; } .payment-methods { gap: 12px; } }
-@media (max-width: 600px) { .payment-methods { gap: 8px; } .payment-logo { min-width: 68px; height: 32px; } #priority-service-locations .service-location-list a { font-size: 12px; } }
+.copyright { display: flex; justify-content: space-between; padding-top: 20px; margin-top: 0; font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
+@media (max-width: 768px) { .accepted-payment { padding-top: 18px; } .payment-methods { gap: 8px; } }
+@media (max-width: 600px) { .payment-logo { min-width: 68px; height: 32px; } #priority-service-locations .service-location-list a { font-size: 12px; } #priority-service-locations .service-locations-box { grid-template-columns: 1fr !important; gap: 16px !important; } }
 @media (max-width: 1024px) { body { padding-bottom: 110px !important; } .footer-top { grid-template-columns: 1fr; gap: 18px; } .footer-actions { align-items: flex-start; } .copyright { flex-direction: column; gap: 8px; } .sticky-bar a { font: 10px "DM Mono"; letter-spacing: .12em; box-shadow: 0 6px 18px rgba(19, 62, 61, .35); } }
+
+/* MOBILE FOOTER STANDARD — match the approved DripWell mobile reference */
+@media (max-width: 1024px) {
+  footer { padding: 28px 0 28px; margin-top: 20px; }
+  footer .wrap { padding-left: 20px; padding-right: 20px; }
+  .footer-top { display: flex; flex-direction: column; align-items: stretch; gap: 22px; padding-bottom: 22px; }
+  .footer-brand .brand { gap: 12px; align-items: center; }
+  .footer-brand .logo { width: 44px; height: 44px; flex: 0 0 44px; }
+  .footer-brand .brand strong { font: 16px "Playfair Display", Georgia, serif; }
+  .footer-brand p { max-width: 100%; font-size: 12px; line-height: 1.55; }
+  .footer-phone { font-size: 12px; margin-top: 8px; }
+  .footer-contact-links { margin-top: 8px; gap: 6px; font-size: 12px; line-height: 1.5; }
+  #priority-service-locations .service-locations-box { display: grid !important; grid-template-columns: 1fr !important; gap: 18px !important; }
+  #priority-service-locations .service-location-group h3 { font-size: 11px; line-height: 1.5; margin-bottom: 8px; }
+  #priority-service-locations .service-location-list li { padding: 7px 0; font-size: 12px; }
+  #priority-service-locations .service-location-list a { font-size: 12.5px; line-height: 1.5; }
+  .accepted-payment { padding: 20px 0 6px; }
+  .accepted-payment h2 { font-size: 11px; margin-bottom: 12px; }
+  .payment-methods { display: flex; flex-wrap: wrap; gap: 8px; }
+  .payment-logo { min-width: 68px; width: auto; height: 32px; padding: 4px 8px; }
+  .payment-logo svg { width: 54px; height: 22px; }
+  .copyright { display: flex; flex-direction: column; gap: 8px; padding-top: 18px; font-size: 9px; }
+  .sticky-bar { display: block; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 1000; }
+  .sticky-bar a { display: block; width: 100%; text-align: center; background: var(--primary-green); color: #fff; border-radius: 999px; padding: 14px 12px; font: 10px "DM Mono", monospace; letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 6px 18px rgba(19,62,61,.35); }
+  body { padding-bottom: 100px !important; }
+}
+@media (max-width: 600px) {
+  footer .wrap { padding-left: 20px; padding-right: 20px; }
+  .footer-top { gap: 20px; }
+  #priority-service-locations .service-locations-box { grid-template-columns: 1fr !important; gap: 16px !important; }
+  #priority-service-locations .service-location-list a { font-size: 12px; }
+  .sticky-bar { bottom: 12px; left: 12px; right: 12px; }
+  .sticky-bar a { padding: 13px 10px; font-size: 10px; }
+}
+
 </style>
 </head>
 
@@ -960,7 +997,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 30px; margin-
             <span class="green-text">comfort and care.</span>
           </h1>
           <p>
-            DripWell Bali offers a refined approach to mobile IV therapy and wellness services, bringing professional care directly to the comfort of your villa, hotel, resort, or private residence.
+            DripWell Bali provides mobile medical and wellness services at selected locations across Bali. Explore our <a href="https://www.dripwellbali.com/home-doctor-bali/" class="content-link">home doctor visits</a>, <a href="https://www.dripwellbali.com/iv-drip-bali/" class="content-link">mobile IV drip therapy</a>, and <a href="https://www.dripwellbali.com/bali-belly-package/" class="content-link">Bali Belly treatment options</a>. Appointments begin with consultation and assessment, and availability depends on your location and schedule.
           </p>
           <div style="margin-top: 18px;">
             <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20About%20Inquiry." target="_blank" rel="noopener noreferrer" class="btn-cta">
@@ -1043,7 +1080,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 30px; margin-
         </div>
         <div class="card" style="border-style: dashed; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;">
           <h3>Have Questions?</h3>
-          <p style="margin-bottom: 12px;">Our team is online to answer your questions and assist with bookings.</p>
+          <p style="margin-bottom: 12px;">Our team is online to answer your questions and assist with bookings. You can also browse our <a href="https://www.dripwellbali.com/faq/" class="content-link">frequently asked questions</a> before contacting us.</p>
           <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer" class="btn-cta-outline" style="padding: 10px 18px; font-size: 9.5px;">
             Chat on WhatsApp →
           </a>
@@ -1059,10 +1096,10 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 30px; margin-
         <div class="eyebrow">Our Philosophy</div>
         <h2 class="display">Wellness Should Feel Effortless</h2>
         <p>
-          At DripWell Bali, we believe that taking care of yourself should not require unnecessary inconvenience. Our philosophy combines professional wellness services with the comfort and flexibility of a premium mobile experience.
+          At DripWell Bali, we believe that taking care of yourself should not require unnecessary inconvenience. Our philosophy combines professional wellness services with the comfort and flexibility of a premium mobile experience. Learn more about our <a href="https://www.dripwellbali.com/health-packages/" class="content-link">health packages</a> and <a href="https://www.dripwellbali.com/iv-drip-bali/" class="content-link">IV drip options</a> to understand the services available for consultation.
         </p>
         <p>
-          By bringing our services directly to you, we create an experience that feels personal, convenient, and thoughtfully considered from beginning to end.
+          By bringing our services directly to you, we create an experience that feels personal, convenient, and thoughtfully considered from beginning to end. For practical wellness information, visit our <a href="https://www.dripwellbali.com/blog/" class="content-link">DripWell Bali blog</a>, or <a href="https://www.dripwellbali.com/contact/" class="content-link">contact our team</a> to check availability.
         </p>
         <p style="font-family: 'Playfair Display', serif; font-style: italic; margin-top: 12px; font-size: 15px;" class="gold-text">
           "Because wellness is not only about what you receive—it is also about how you experience it."
