@@ -1,6 +1,41 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <!-- Google tag (gtag.js) Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17000832555"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17000832555');
+  </script>
+  
+  <!-- Google tag (gtag.js) GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-95Y04XGSFQ');
+  </script>
+
+  <!-- Event snippet for Contact conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
@@ -122,7 +157,7 @@
   .gold-text { color: var(--accent-gold); }
 
   button, input, select, textarea { font: inherit; }
-  button { cursor: pointer; }
+  button { cursor: pointer; border: none; background: none; }
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; height: auto; }
 
@@ -297,11 +332,6 @@
   .faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding-top .3s ease; font-size: 12px; opacity: .85; line-height: 1.5; }
   .faq-item.open .faq-answer { max-height: 200px; padding-top: 8px; }
 
-  /* Locations Box */
-  .locations-box { border: 1px solid var(--border-teal); border-radius: 24px; padding: 28px; background: var(--bg-white); box-shadow: var(--shadow-soft); }
-  .areas-flex { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-  .area-pill { border: 1px solid var(--border-teal); border-radius: 999px; background: var(--bg-white); color: var(--text-dark); padding: 4px 12px; font-size: 11px; font-weight: 500; }
-
   /* CTA Banner */
   .cta-banner { border: 1px solid var(--primary-green); background: var(--primary-green); color: var(--bg-white); border-radius: 24px; padding: 40px 24px; text-align: center; margin: 20px 0; }
   .cta-banner h2 { font-size: clamp(26px, 4vw, 42px); line-height: 1.1; margin-bottom: 12px; }
@@ -309,61 +339,84 @@
   .cta-banner .btn-cta { background: var(--bg-white); color: var(--primary-green); border-color: var(--bg-white); }
   .cta-banner .btn-cta:hover { background: var(--accent-gold); color: var(--bg-white); border-color: var(--accent-gold); }
 
-  /* FOOTER */
+  /* FOOTER STYLES */
   footer {
     border-top: 1px solid var(--border-teal);
-    padding: 40px 0 30px;
-    margin-top: 60px;
+    padding: 40px 0 90px;
+    margin-top: 20px;
     background: var(--bg-white);
     content-visibility: auto;
   }
 
   .footer-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.6fr);
+    align-items: start;
+    gap: 28px;
+    padding-bottom: 28px;
     border-bottom: 1px solid var(--border-teal);
   }
 
-  .footer-brand p {
-    max-width: 320px;
-    font-size: 13px;
-    color: var(--text-dark);
-    opacity: .8;
+  .footer-brand .brand { display: flex; align-items: center; gap: 10px; }
+  .footer-brand p { max-width: 320px; font-size: 12px; line-height: 1.55; color: var(--text-dark); opacity: .8; margin-top: 6px; }
+  .footer-phone { display: inline-block; margin-top: 8px; font-weight: 600; color: var(--primary-green); font-size: 12px; line-height: 1.5; text-decoration: none; }
+  .footer-phone:hover { color: var(--accent-gold); }
+
+  .footer-contact-links {
     margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 11.5px;
+  }
+  .footer-contact-links a { color: var(--text-dark); text-decoration: none; }
+  .footer-contact-links a:hover { color: var(--accent-gold); text-decoration: underline; }
+  .footer-map-link { color: var(--accent-gold) !important; font-weight: 600; }
+
+  #priority-service-locations .service-locations-box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
   }
 
-  .footer-phone {
-    display: inline-block;
-    margin-top: 10px;
-    font-weight: 700;
+  #priority-service-locations .service-location-group h3 {
+    font: 700 11px "DM Mono", monospace;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+
+  #priority-service-locations .service-location-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  #priority-service-locations .service-location-list li {
+    border-bottom: 1px solid var(--border-teal);
+    padding: 7px 0;
+    font-size: 12px;
+  }
+
+  #priority-service-locations .service-location-list a {
+    color: #176b79;
+    text-decoration: none;
+    display: block;
+  }
+  #priority-service-locations .service-location-list a:hover {
     color: var(--primary-green);
-    font-size: 14px;
-    text-decoration: none;
-  }
-
-  .footer-phone:hover {
-    color: var(--accent-gold);
-  }
-
-  .footer-map-link {
-    color: var(--accent-gold);
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .footer-map-link:hover {
     text-decoration: underline;
   }
 
-  .footer-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-    font-size: 13px;
-  }
+  /* Accepted Payment */
+  .accepted-payment { padding: 22px 0 6px; }
+  .accepted-payment h2 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 12px; }
+  .payment-methods { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .payment-logo { display: flex; align-items: center; justify-content: center; min-width: 76px; height: 34px; padding: 5px 10px; border: 1px solid var(--border-teal); border-radius: 7px; background: #fff; }
+  .payment-logo svg { display: block; width: 62px; height: 26px; }
 
   .copyright {
     display: flex;
@@ -398,14 +451,35 @@
     .photo-frame { height: 280px; margin-top: 10px; }
     
     .grid-4 { grid-template-columns: 1fr 1fr; }
-    .locations-box, .cta-banner, .info-card { padding: 20px 16px; }
+    .cta-banner, .info-card { padding: 20px 16px; }
 
     .sticky-bar { display: block; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 1000; }
     .sticky-bar a { display: block; width: 100%; text-align: center; background: var(--primary-green); color: var(--bg-white); border-radius: 999px; padding: 14px; font: 10px "DM Mono"; letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35); }
 
-    .footer-top { flex-direction: column; }
-    .footer-actions { align-items: flex-start; }
-    .copyright { flex-direction: column; gap: 8px; }
+    footer {
+      padding: 30px 0 30px !important;
+    }
+    
+    .footer-top {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 24px !important;
+    }
+
+    .footer-brand p {
+      max-width: 100% !important;
+    }
+
+    #priority-service-locations .service-locations-box {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 20px !important;
+    }
+
+    .copyright {
+      flex-direction: column !important;
+      gap: 8px !important;
+    }
   }
 
   @media (max-width: 600px) {
@@ -472,7 +546,7 @@
       <a class="navlink" href="https://www.dripwellbali.com/blog/">BLOG</a>
       <a class="navlink" href="https://www.dripwellbali.com/faq/">FAQ</a>
       <a class="navlink" href="https://www.dripwellbali.com/contact/">CONTACT</a>
-      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." target="_blank" rel="noopener noreferrer">Get Special Offer</a>
+      <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">Get Special Offer</a>
     </nav>
 
     <button type="button" class="mobile-menu" aria-label="Open navigation menu" aria-controls="mobilePanel" aria-expanded="false" onclick="toggleMenu()">☰</button>
@@ -504,7 +578,7 @@
     <a href="https://www.dripwellbali.com/blog/" onclick="closeMenu()">BLOG</a>
     <a href="https://www.dripwellbali.com/faq/" onclick="closeMenu()">FAQ</a>
     <a href="https://www.dripwellbali.com/contact/" onclick="closeMenu()">CONTACT</a>
-    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Get Special Offer on WhatsApp</a>
+    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta" style="width: 100%; margin-top: 6px;">Get Special Offer on WhatsApp →</a>
   </div>
 </header>
 
@@ -532,7 +606,7 @@
           </div>
 
           <div style="margin-top: 18px;">
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." target="_blank" rel="noopener noreferrer" class="btn-cta">
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">
               Get Special Offer on WhatsApp →
             </a>
           </div>
@@ -627,7 +701,7 @@
           </div>
 
           <div style="margin-top: 18px;">
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." target="_blank" rel="noopener noreferrer" class="btn-cta" style="width: 100%;">
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta" style="width: 100%;">
               Get Special Offer on WhatsApp →
             </a>
           </div>
@@ -663,22 +737,6 @@
         <div>
           <strong>Recover &amp; Restore Motion</strong>
           <p style="font-size: 12px; opacity: .8; margin-top: 2px;">Receive targeted therapy modalities, pain management, and guided rehabilitation exercises in privacy.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COVERED AREAS -->
-  <section class="wrap">
-    <div class="locations-box">
-      <div class="eyebrow">Service Coverage</div>
-      <h3 class="display" style="font-size: 24px; margin-bottom: 6px;">Mobile Service Across Bali</h3>
-      <p style="font-size: 13px; opacity: .85;">Experience personalized physical therapy care without leaving the comfort of your accommodation. Dripwell Bali brings professional medical and physiotherapy services directly to you.</p>
-      
-      <div style="margin-top: 12px;">
-        <strong style="font-size: 10px; font-family: 'DM Mono'; text-transform: uppercase; letter-spacing: .1em; color: var(--accent-gold);">◆ Service Areas:</strong>
-        <div class="areas-flex">
-          <span class="area-pill">Canggu</span><span class="area-pill">Berawa</span><span class="area-pill">Batu Bolong</span><span class="area-pill">Echo Beach</span><span class="area-pill">Batu Belig</span><span class="area-pill">Pererenan</span><span class="area-pill">Seminyak</span><span class="area-pill">Petitenget</span><span class="area-pill">Kerobokan</span><span class="area-pill">Umalas</span><span class="area-pill">Kedungu</span><span class="area-pill">Tabanan</span><span class="area-pill">Tanah Lot</span><span class="area-pill">Others</span>
         </div>
       </div>
     </div>
@@ -751,7 +809,7 @@
         Professional Doctor, Nurse &amp; Physiotherapy Home Service.<br>
         Available 24/7 across Bali. Get your special offer today!
       </p>
-      <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." target="_blank" rel="noopener noreferrer" class="btn-cta">
+      <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">
         Get Special Offer on WhatsApp →
       </a>
     </div>
@@ -759,31 +817,68 @@
 
 </main>
 
-<!-- FOOTER (LIGHTWEIGHT, SUPER CEPAT, SEO FRIENDLY) -->
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="https://www.dripwellbali.com/">
-          <span class="logo">
-            <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell logo" loading="lazy">
-          </span>
+        <div class="brand">
+          <span class="logo"><img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="40" height="40" alt="Dripwell Bali logo" loading="lazy" decoding="async"></span>
           <span><strong>Dripwell <i>Bali</i></strong></span>
-        </a>
-        <p>Recover • Rehydrate • Revive</p>
-        <p style="margin-top: 6px;">Available 24/7 across Bali for villa visits and medical consultations.</p>
+        </div>
+        <p style="margin-top: 6px; font-weight: 500;">Recover • Rehydrate • Revive</p>
+        <p>Doctor &amp; Nurse Home Service • Professional Care • Hotel &amp; Villa Service • Available 24/7</p>
         <a href="tel:+6282221614966" class="footer-phone">📞 Phone: +62 822 2161 4966</a>
-        <p style="margin-top: 6px;">
-          📍 <a href="https://maps.app.goo.gl/pkGnDAKp4qALJbZq5" target="_blank" rel="noopener noreferrer" class="footer-map-link">Dripwell Bali | 24/7 Home Doctor &amp; Medical Service</a>
-        </p>
+        <div class="footer-contact-links">
+          <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
+          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://maps.app.goo.gl/79D7WnSwcSG9FgtA7" target="_blank" rel="noopener noreferrer" class="footer-map-link">📍 Dripwell Bali | Home Doctor &amp; Medical Service</a>
+        </div>
       </div>
 
-      <div class="footer-actions">
-        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer." target="_blank" rel="noopener noreferrer" class="gold-text" style="font-weight: 600;">✦ Get Special Offer on WhatsApp</a>
-        <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
-        <div>
-          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
-          <a href="tel:+6282221614966">Call +62 822 2161 4966</a>
+      <div id="priority-service-locations">
+        <div class="service-locations-box">
+          <div class="service-location-group">
+            <h3>Bali Belly Treatment Locations</h3>
+            <ul class="service-location-list">
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-canggu/">Bali Belly Treatment in Canggu</a></li>
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-seminyak/">Bali Belly Treatment in Seminyak</a></li>
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-tabanan/">Bali Belly Treatment in Tabanan</a></li>
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-ubud/">Bali Belly Treatment in Ubud</a></li>
+            </ul>
+          </div>
+          <div class="service-location-group">
+            <h3>IV Drip Service Locations</h3>
+            <ul class="service-location-list">
+              <li><a href="https://www.dripwellbali.com/iv-drip-canggu/">IV Drip in Canggu</a></li>
+              <li><a href="https://www.dripwellbali.com/iv-drip-seminyak/">IV Drip in Seminyak</a></li>
+              <li><a href="https://www.dripwellbali.com/iv-drip-tabanan/">IV Drip in Tabanan</a></li>
+              <li><a href="https://www.dripwellbali.com/iv-drip-ubud/">IV Drip in Ubud</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accepted-payment">
+      <h2>Accepted Payment</h2>
+      <div class="payment-methods">
+        <div class="payment-logo" title="Wise">
+          <svg viewBox="0 0 80 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" font-style="italic" fill="#9FE870">wise</text>
+          </svg>
+        </div>
+        <div class="payment-logo" title="Mastercard">
+          <svg viewBox="0 0 60 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="15" r="10" fill="#EB001B"/>
+            <circle cx="36" cy="15" r="10" fill="#F79E1B"/>
+            <path d="M30 7.7a10 10 0 0 1 0 14.6 10 10 0 0 1 0-14.6z" fill="#FF5F00"/>
+          </svg>
+        </div>
+        <div class="payment-logo" title="Visa">
+          <svg viewBox="0 0 70 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" font-style="italic" fill="#1A1F71">VISA</text>
+          </svg>
         </div>
       </div>
     </div>
@@ -797,7 +892,7 @@
 
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
-  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." target="_blank" rel="noopener noreferrer">✦ Get Special Offer via WhatsApp →</a>
+  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20Physiotherapy." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">✦ Get Special Offer on WhatsApp →</a>
 </div>
 
 <script>
