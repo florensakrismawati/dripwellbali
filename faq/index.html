@@ -500,7 +500,7 @@
   --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
 body {
@@ -597,7 +597,7 @@ nav { display: flex; align-items: center; gap: 14px; }
 }
 .nav-book:hover { background: var(--accent-gold); border-color: var(--accent-gold); transform: translateY(-1px); }
 
-.mobile-menu { display: none; width: 40px; height: 40px; border: 1px solid var(--border-teal); border-radius: 50%; background: none; color: var(--text-dark); font-size: 18px; }
+.mobile-menu { display: none; width: 38px; height: 38px; border: 1px solid var(--border-teal); border-radius: 50%; background: none; color: var(--text-dark); font-size: 16px; align-items: center; justify-content: center; }
 .mobile-panel { display: none; max-height: 80vh; overflow-y: auto; }
 .mobile-submenu { padding-left: 16px; background: rgba(19, 62, 61, 0.03); }
 .mobile-submenu a { font-size: 9px !important; opacity: 0.85; }
@@ -686,28 +686,69 @@ details p {
 }
 .btn-cta:hover { background: var(--accent-gold); color: var(--bg-white); border-color: var(--accent-gold); transform: translateY(-2px); }
 
-/* Footer */
-footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin-top: 20px; background: var(--bg-white); }
-.footer-top { display: grid; grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.6fr); align-items: start; gap: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border-teal); }
-.footer-brand .brand { font-family: "Playfair Display", Georgia, serif; font-size: 16px; }
+/* Footer Styles Terstandarisasi */
+footer {
+  border-top: 1px solid var(--border-teal);
+  padding: 50px 0 80px;
+  margin-top: 0;
+  background: var(--bg-white);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.6fr);
+  align-items: start;
+  gap: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border-teal);
+}
+
+.footer-brand .brand { display: flex; align-items: center; gap: 12px; font-family: "Playfair Display", Georgia, serif; }
+.footer-brand .logo { width: 40px; height: 40px; flex: 0 0 40px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-teal); }
+.footer-brand .logo img { width: 100%; height: 100%; object-fit: cover; }
+.footer-brand .brand strong { font: 20px "Playfair Display"; line-height: 1; color: var(--text-dark); }
+.footer-brand .brand strong i { font-style: italic; }
+
 .footer-brand p { max-width: 320px; font-size: 12px; line-height: 1.55; color: var(--text-dark); opacity: .8; margin-top: 6px; }
 .footer-phone { display: inline-block; margin-top: 8px; font-weight: 600; color: var(--primary-green); font-size: 12px; line-height: 1.5; text-decoration: none; }
 .footer-phone:hover { color: var(--accent-gold); }
-.footer-contact-links { margin-top: 8px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; font-family: "DM Sans", Arial, sans-serif; font-size: 12px; line-height: 1.5; }
-.footer-contact-links a { font: inherit; color: var(--text-dark); text-decoration: none; }
-.footer-contact-links a:hover { color: var(--accent-gold); text-decoration: underline; }
-.footer-service-label { display: flex; align-items: baseline; gap: 7px; margin-top: 1px; color: #c8792c; font-size: 12px; line-height: 1.5; }
-.footer-service-label span { font-size: 11px; flex: 0 0 auto; }
-/* Footer typography aligned with DripWell brand fonts */
-.footer-brand, .footer-actions, .footer-map-link, .footer-phone,
-#priority-service-locations .service-location-list,
-#priority-service-locations .service-location-list a {
-  font-family: "DM Sans", Arial, sans-serif;
+
+.footer-contact-links {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 11.5px;
+  line-height: 1.45;
 }
-.footer-map-link { color: var(--accent-gold); font-weight: 600; text-decoration: none; font-size: 13px; }
+.footer-contact-links a { color: var(--text-dark); text-decoration: none; }
+.footer-contact-links a:hover { color: var(--accent-gold); text-decoration: underline; }
+
+.footer-map-link { color: var(--accent-gold) !important; font-weight: 600; font-size: 11.5px; text-decoration: none; display: inline-block; margin-top: 4px; }
 .footer-map-link:hover { text-decoration: underline; }
-.footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: 13px; }
-.copyright { display: flex; justify-content: space-between; padding-top: 20px; font: 9.5px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
+
+#priority-service-locations { padding: 0; min-width: 0; }
+#priority-service-locations .service-locations-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.service-location-group h3 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; }
+.service-location-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0; }
+.service-location-list li { border-bottom: 1px solid var(--border-teal); padding: 7px 0; font-size: 12px; line-height: 1.4; }
+.service-location-list a { color: #176b79; text-decoration: none; display: block; }
+.service-location-list a:hover { color: var(--primary-green); text-decoration: underline; }
+
+/* Accepted Payment */
+.accepted-payment { padding: 22px 0 26px; border-bottom: 1px solid var(--border-teal); }
+.accepted-payment h2 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 12px; }
+.payment-methods { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.payment-logo { display: flex; align-items: center; justify-content: center; width: 58px; height: 36px; padding: 5px 10px; border: 1px solid #edf1ef; border-radius: 6px; background: #fff; }
+.payment-logo svg { display: block; width: 62px; height: 26px; }
+
+.copyright { display: flex; justify-content: space-between; padding-top: 20px; font: 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .09em; color: var(--text-dark); opacity: .7; }
 
 /* Sticky Mobile CTA Bar */
 .sticky-bar { display: none; }
@@ -744,49 +785,13 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin
   }
   .sticky-bar a:hover, .sticky-bar a:focus-visible { background: var(--primary-green); }
   
-  .footer-top { grid-template-columns: 1fr; gap: 18px; }
-  .footer-actions { align-items: flex-start; }
-  .copyright { flex-direction: column; gap: 8px; }
+  footer { padding: 28px 0 28px !important; }
+  .footer-top { display: flex !important; flex-direction: column !important; align-items: stretch !important; gap: 22px !important; padding-bottom: 22px !important; }
+  .footer-brand p { max-width: 100% !important; font-size: 12px; }
+  #priority-service-locations .service-locations-box { display: grid !important; grid-template-columns: 1fr !important; gap: 16px !important; }
+  
+  .copyright { flex-direction: column !important; gap: 8px !important; font-size: 8.5px; line-height: 1.7; padding-top: 18px; }
 }
-
-/* Compact service locations: one shared card with two service columns */
-#priority-service-locations { padding: 0; min-width: 0; }
-#priority-service-locations .service-locations-box {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-.service-location-group { margin-top: 0; min-width: 0; }
-.service-location-group h3 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 8px; }
-.service-location-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0; }
-.service-location-list li { border-bottom: 1px solid var(--border-teal); padding: 7px 0; color: #176b79; font-size: 12.5px; line-height: 1.4; }
-.service-location-list a { color: #176b79; text-decoration: none; display: block; transition: color .2s ease; }
-.service-location-list a:hover, .service-location-list a:focus-visible { color: var(--primary-green); text-decoration: underline; text-underline-offset: 3px; }
-@media (max-width: 600px) {
-  #priority-service-locations { padding: 0; }
-  #priority-service-locations .service-locations-box { padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; grid-template-columns: 1fr; gap: 16px; }
-  #priority-service-locations .service-location-group h3 { font-size: 10.5px; line-height: 1.4; margin-bottom: 5px; }
-  #priority-service-locations .service-location-list li { font-size: 12px; line-height: 1.4; padding: 6px 0; }
-}
-
-
-/* Accepted Payment */
-.accepted-payment { padding: 28px 0 8px; }
-.accepted-payment h2 { font: 700 18px "DM Sans", Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 22px; }
-.payment-methods { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
-.payment-logo { width: 42px; height: 30px; display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 2px; box-shadow: 0 3px 14px rgba(19,62,61,.10); padding: 5px; }
-.payment-logo svg { display: block; width: 100%; height: 100%; }
-@media (max-width: 768px) { .accepted-payment { padding-top: 24px; } .accepted-payment h2 { font-size: 16px; margin-bottom: 16px; } .payment-methods { gap: 12px; } }
-@media (max-width: 600px) { .payment-methods { gap: 8px; } }
-
 
 </style>
 </head>
@@ -1196,24 +1201,19 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="https://www.dripwellbali.com/">
-          <span class="logo">
-            <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="40" height="40" alt="Dripwell logo" loading="lazy">
-          </span>
+        <a class="brand" href="https://www.dripwellbali.com/" aria-label="Back to Dripwell Bali homepage">
+          <span class="logo"><img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="40" height="40" alt="Dripwell Bali logo" loading="lazy" decoding="async"></span>
           <span><strong>Dripwell <i>Bali</i></strong></span>
         </a>
-        <p>Recover • Rehydrate • Revive</p>
-        <p style="margin-top: 8px;">Home doctor visits are available at selected locations, subject to confirmation of the exact address and schedule.</p>
+        <p style="margin-top: 6px; font-weight: 500;">Recover • Rehydrate • Revive</p>
+        <p>Available 24/7 across Bali for villa visits and medical consultations.</p>
         <a href="tel:+6282221614966" class="footer-phone">📞 Phone: +62 822 2161 4966</a>
         <div class="footer-contact-links">
-          <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
-          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <span class="footer-service-label"><span aria-hidden="true">📍</span> Dripwell Bali | Home Doctor &amp; Medical Service</span>
+          <a href="https://maps.app.goo.gl/79D7WnSwcSG9FgtA7" target="_blank" rel="noopener noreferrer" class="footer-map-link">📍 Dripwell Bali | 24/7 Home Doctor &amp; Medical Service</a>
         </div>
       </div>
-
-      <section id="priority-service-locations" aria-labelledby="priority-locations-heading">
-        <div class="locations-box service-locations-box">
+      <section id="priority-service-locations" aria-labelledby="priority-locations-heading" style="padding:0;">
+        <div class="service-locations-box">
           <div class="service-location-group">
             <h3>Bali Belly Treatment Locations</h3>
             <ul class="service-location-list">
@@ -1235,8 +1235,9 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin
         </div>
       </section>
     </div>
-    <section class="accepted-payment" aria-labelledby="accepted-payment-title">
-      <h2 id="accepted-payment-title">Accepted Payment</h2>
+
+    <div class="accepted-payment">
+      <h2>Accepted Payment</h2>
       <div class="payment-methods" aria-label="Accepted payment methods: Wise, Mastercard and Visa">
         <div class="payment-logo" aria-label="Wise" title="Wise">
           <svg viewBox="0 0 80 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -1247,16 +1248,16 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 100px; margin
           <svg viewBox="0 0 60 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="15" r="10" fill="#EB001B"/>
             <circle cx="36" cy="15" r="10" fill="#F79E1B"/>
-            <path d="M30 7.1a10 10 0 0 1 0 15.8 10 10 0 0 1 0-15.8Z" fill="#FF5F00"/>
+            <path d="M30 7.7a10 10 0 0 1 0 14.6 10 10 0 0 1 0-14.6z" fill="#FF5F00"/>
           </svg>
         </div>
         <div class="payment-logo" aria-label="Visa" title="Visa">
           <svg viewBox="0 0 70 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <text x="35" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="900" font-style="italic" fill="#1434CB">VISA</text>
+            <text x="35" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" font-style="italic" fill="#1A1F71">VISA</text>
           </svg>
         </div>
       </div>
-    </section>
+    </div>
 
     <div class="copyright">
       <span>© 2026 Dripwell Bali</span>
