@@ -1,12 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <!-- Google tag (gtag.js) Google Ads -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17000832555"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17000832555');
+  </script>
+  
+  <!-- Google tag (gtag.js) GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-95Y04XGSFQ');
+  </script>
+
+  <!-- Event snippet for Contact conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
   <title>Medical Health Packages Bali | 24/7 Villa Visit Doctor | DripWell Bali</title>
 
-  <meta name="description" content="24/7 On-demand medical health packages delivered to your villa or hotel in Bali. Fast relief for Bali Belly, Hangover, High Fever, and Flu by licensed doctors.">
+  <meta name="description" content="24/7 On-demand medical health packages delivered to your villa or hotel in Bali with 15% OFF. Fast relief for Bali Belly, Hangover, High Fever, and Flu by licensed doctors.">
   <meta name="keywords" content="health packages bali, bali belly treatment, hangover iv bali, fever doctor bali, flu relief villa service, mobile doctor bali">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="Dripwell Bali Medical Team">
@@ -24,7 +59,7 @@
   <meta property="og:site_name" content="Dripwell Bali">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Medical Health Packages Bali | 24/7 Villa Visit Doctor | DripWell Bali">
-  <meta property="og:description" content="Fast 24/7 doctor villa visits for Bali Belly, Hangover, Fever, and Flu Relief across Bali. Book directly via WhatsApp.">
+  <meta property="og:description" content="Fast 24/7 doctor villa visits for Bali Belly, Hangover, Fever, and Flu Relief across Bali with 15% OFF. Book directly via WhatsApp.">
   <meta property="og:image" content="https://www.dripwellbali.com/health-packages/home-doctor.jpg">
   <meta property="og:image:alt" content="Villa Doctor Visit Medical Service Bali">
 
@@ -63,7 +98,7 @@
         "@id": "https://www.dripwellbali.com/health-packages/#webpage",
         "url": "https://www.dripwellbali.com/health-packages/",
         "name": "Medical Health Packages Bali",
-        "description": "Comprehensive range of 24/7 villa doctor medical health packages for acute illnesses in Bali."
+        "description": "Comprehensive range of 24/7 villa doctor medical health packages for acute illnesses in Bali with 15% discount promo."
       }
     ]
   }
@@ -94,6 +129,32 @@
   button { cursor: pointer; border: none; background: none; }
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; height: auto; }
+
+  /* Promo Banner */
+  .promo-bar {
+    background: var(--primary-green);
+    color: var(--bg-white);
+    padding: 10px 0;
+    font: 11px "DM Mono", monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .promo-track { display: flex; width: max-content; animation: marquee 22s linear infinite; will-change: transform; }
+  .promo-track span { padding-right: 60px; }
+  .promo-track strong { color: var(--accent-gold); text-decoration: underline; font-weight: 700; }
+  .promo-bar:hover .promo-track { animation-play-state: paused; }
+
+  @keyframes marquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+  }
 
   /* Accessibility */
   .skip-link {
@@ -342,12 +403,10 @@
     line-height: 1.2;
   }
 
-  .catalog-card .price {
-    font: 22px "Playfair Display", Georgia, serif;
-    color: var(--accent-gold);
-    font-weight: 700;
-    margin-bottom: 14px;
-  }
+  .package-price-wrap { margin-bottom: 14px; }
+  .old-price { font-family: "DM Mono", monospace; font-size: 13px; color: #888; text-decoration: line-through; display: block; margin-bottom: 2px; }
+  .catalog-card .price { font: 22px "Playfair Display", Georgia, serif; color: var(--primary-green); font-weight: 700; display: inline-block; }
+  .discount-badge { display: inline-block; background: rgba(194, 142, 56, 0.15); color: var(--accent-gold); font: 700 9px "DM Mono", monospace; padding: 3px 8px; border-radius: 6px; margin-left: 8px; text-transform: uppercase; letter-spacing: 0.1em; vertical-align: middle; }
 
   .catalog-card .desc {
     font-size: 14px;
@@ -404,12 +463,75 @@
 
   /* Footer */
   footer { border-top: 1px solid var(--border-teal); padding: 40px 0 30px; margin-top: 40px; background: var(--bg-white); content-visibility: auto; }
-  .footer-top { display: flex; justify-content: space-between; gap: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--border-teal); }
-  .footer-brand p { max-width: 320px; font-size: 13px; color: var(--text-dark); opacity: .8; margin-top: 8px; }
-  .footer-phone { display: inline-block; margin-top: 8px; font-weight: 700; color: var(--primary-green); font-size: 14px; }
+  .footer-top {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.6fr);
+    align-items: start;
+    gap: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border-teal);
+  }
+  .footer-brand .brand { display: flex; align-items: center; gap: 10px; }
+  .footer-brand p { max-width: 320px; font-size: 12px; line-height: 1.55; color: var(--text-dark); opacity: .8; margin-top: 6px; }
+  .footer-phone { display: inline-block; margin-top: 8px; font-weight: 600; color: var(--primary-green); font-size: 12px; line-height: 1.5; text-decoration: none; }
   .footer-phone:hover { color: var(--accent-gold); }
-  .footer-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-size: 13px; }
-  .footer-map-link { color: var(--accent-gold); font-weight: 600; }
+  
+  .footer-contact-links {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 11.5px;
+  }
+  .footer-contact-links a { color: var(--text-dark); text-decoration: none; }
+  .footer-contact-links a:hover { color: var(--accent-gold); text-decoration: underline; }
+  .footer-map-link { color: var(--accent-gold) !important; font-weight: 600; }
+
+  #priority-service-locations .service-locations-box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  #priority-service-locations .service-location-group h3 {
+    font: 700 11px "DM Mono", monospace;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+
+  #priority-service-locations .service-location-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  #priority-service-locations .service-location-list li {
+    border-bottom: 1px solid var(--border-teal);
+    padding: 7px 0;
+    font-size: 12px;
+  }
+
+  #priority-service-locations .service-location-list a {
+    color: #176b79;
+    text-decoration: none;
+    display: block;
+  }
+  #priority-service-locations .service-location-list a:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+  }
+
+  /* Accepted Payment */
+  .accepted-payment { padding: 22px 0 6px; }
+  .accepted-payment h2 { font: 700 11px "DM Mono", monospace; letter-spacing: .09em; text-transform: uppercase; color: var(--text-dark); margin-bottom: 12px; }
+  .payment-methods { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .payment-logo { display: flex; align-items: center; justify-content: center; min-width: 76px; height: 34px; padding: 5px 10px; border: 1px solid var(--border-teal); border-radius: 7px; background: #fff; }
+  .payment-logo svg { display: block; width: 62px; height: 26px; }
+
   .copyright { display: flex; justify-content: space-between; padding-top: 20px; font: 10px "DM Mono"; text-transform: uppercase; letter-spacing: .15em; color: var(--text-dark); opacity: .7; }
 
   .sticky-bar { display: none; }
@@ -421,7 +543,7 @@
   }
 
   @media (max-width: 1024px) {
-    body { padding-bottom: 75px; }
+    body { padding-bottom: 110px !important; }
     nav { display: none; }
     .mobile-menu { display: block; }
 
@@ -442,7 +564,7 @@
     .mobile-panel a:last-child { border-bottom: 0; }
     
     .sticky-bar { display: block; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 1000; }
-    .sticky-bar a { display: block; width: 100%; text-align: center; background: var(--primary-green); color: var(--bg-white); border-radius: 999px; padding: 14px; font: 11px "DM Mono"; letter-spacing: .14em; text-transform: uppercase; box-shadow: 0 8px 20px rgba(19, 62, 61, 0.35); }
+    .sticky-bar a { display: block; width: 100%; text-align: center; background: var(--primary-green); color: var(--bg-white); border-radius: 999px; padding: 14px; font: 10px "DM Mono"; letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 6px 18px rgba(19, 62, 61, 0.35); }
 
     .hero-grid {
       grid-template-columns: 1fr;
@@ -458,9 +580,30 @@
       gap: 12px !important;
     }
 
-    .footer-top { flex-direction: column; }
-    .footer-actions { align-items: flex-start; }
-    .copyright { flex-direction: column; gap: 8px; }
+    footer {
+      padding: 30px 0 30px !important;
+    }
+    
+    .footer-top {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 24px !important;
+    }
+
+    .footer-brand p {
+      max-width: 100% !important;
+    }
+
+    #priority-service-locations .service-locations-box {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 20px !important;
+    }
+
+    .copyright {
+      flex-direction: column !important;
+      gap: 8px !important;
+    }
   }
 
   @media (max-width: 768px) {
@@ -472,6 +615,15 @@
 </head>
 
 <body id="top">
+
+<!-- TOP PROMO BANNER -->
+<div class="promo-bar" aria-label="Promotion Banner">
+  <div class="promo-track">
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
+    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
+  </div>
+</div>
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
@@ -520,7 +672,7 @@
       <a class="navlink" href="https://www.dripwellbali.com/faq/">FAQ</a>
       <a class="navlink" href="https://www.dripwellbali.com/contact/">CONTACT</a>
 
-      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Medical%20Health%20Package." target="_blank" rel="noopener noreferrer">Book Now</a>
+      <a class="nav-book" href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Medical%20Health%20Package%20with%2015%25%20off." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">Book Now</a>
     </nav>
 
     <button type="button" class="mobile-menu" aria-label="Open navigation menu" aria-controls="mobilePanel" aria-expanded="false" onclick="toggleMenu()">
@@ -554,7 +706,7 @@
     <a href="https://www.dripwellbali.com/blog/" onclick="closeMenu()">BLOG</a>
     <a href="https://www.dripwellbali.com/faq/" onclick="closeMenu()">FAQ</a>
     <a href="https://www.dripwellbali.com/contact/" onclick="closeMenu()">CONTACT</a>
-    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Medical%20Health%20Package." target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Book via WhatsApp</a>
+    <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Medical%20Health%20Package%20with%2015%25%20off." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Book via WhatsApp</a>
   </div>
 </header>
 
@@ -565,12 +717,12 @@
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <div class="eyebrow"><span></span> 24/7 Mobile Medical Service</div>
+          <div class="eyebrow"><span></span> 24/7 Mobile Medical Service · 15% OFF Promo</div>
           <h1 class="display">Medical Health Packages</h1>
-          <p>Comprehensive clinical treatment and doctor villa visits delivered directly to your villa, hotel, or resort across Bali. Rapid 30–60 minute response time by licensed English-speaking physicians.</p>
+          <p>Comprehensive clinical treatment and doctor villa visits delivered directly to your villa, hotel, or resort across Bali with 15% OFF. Rapid 30–60 minute response time by licensed English-speaking physicians.</p>
           <div style="margin-top: 20px;">
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Medical%20Health%20Package." target="_blank" rel="noopener noreferrer" class="btn-cta">
-              BOOK NOW VIA WHATSAPP →
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Medical%20Health%20Package%20with%2015%25%20off." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">
+              CLAIM 15% OFF VIA WHATSAPP →
             </a>
           </div>
         </div>
@@ -641,11 +793,11 @@
     </div>
   </section>
 
-  <!-- TREATMENTS CATALOG SECTION (FOCUS: MEDICAL HEALTH PACKAGES ONLY) -->
+  <!-- TREATMENTS CATALOG SECTION (FOCUS: MEDICAL HEALTH PACKAGES ONLY WITH 15% OFF) -->
   <section id="treatments" class="packages-section">
     <div class="wrap">
       <div class="packages-head">
-        <div class="eyebrow">01 — Select Your Health Package</div>
+        <div class="eyebrow">01 — Select Your Health Package · 15% OFF Special Promo</div>
         <h2 class="display">On-Demand Medical Care for Fast &amp; Effective Relief.</h2>
         <p>Available 24/7 across Bali with licensed medical professionals.</p>
       </div>
@@ -657,12 +809,16 @@
           <div>
             <div class="card-category-eyebrow">GASTROENTERITIS CARE</div>
             <h3>Bali Belly Package</h3>
-            <div class="price">Rp 2.025.000</div>
+            <div class="package-price-wrap">
+              <span class="old-price">Rp 2.025.000</span>
+              <span class="price">Rp 1.721.250</span>
+              <span class="discount-badge">Promo 15% OFF</span>
+            </div>
             <p class="desc">Rapid clinical relief delivered directly to your villa for acute food poisoning, severe nausea, vomiting, watery diarrhea, and abdominal cramps so you can recover quickly.</p>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/bali-belly-package/" class="btn-outline">VIEW DETAILS</a>
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Bali%20Belly%20Package" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Bali%20Belly%20Package%20with%2015%25%20off" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
           </div>
         </div>
 
@@ -671,12 +827,16 @@
           <div>
             <div class="card-category-eyebrow">POST-PARTY DETOX</div>
             <h3>Hangover Package</h3>
-            <div class="price">Rp 2.475.000</div>
+            <div class="package-price-wrap">
+              <span class="old-price">Rp 2.475.000</span>
+              <span class="price">Rp 2.103.750</span>
+              <span class="discount-badge">Promo 15% OFF</span>
+            </div>
             <p class="desc">Rehydrate, replenish, and eliminate headaches, severe spinning nausea, and alcohol toxicity after a long night out in the comfort of your room.</p>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/hangover-package/" class="btn-outline">VIEW DETAILS</a>
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Hangover%20Package" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Hangover%20Package%20with%2015%25%20off" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
           </div>
         </div>
 
@@ -685,26 +845,34 @@
           <div>
             <div class="card-category-eyebrow">VIRAL RECOVERY</div>
             <h3>Flu Relief Package</h3>
-            <div class="price">Rp 1.850.000</div>
+            <div class="package-price-wrap">
+              <span class="old-price">Rp 1.850.000</span>
+              <span class="price">Rp 1.572.500</span>
+              <span class="discount-badge">Promo 15% OFF</span>
+            </div>
             <p class="desc">Soothe painful sore throat, severe body aches, viral exhaustion, and nasal congestion with specialized anti-inflammatory medical care.</p>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/flu-relief-package/" class="btn-outline">VIEW DETAILS</a>
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Flu%20Relief%20Package" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Flu%20Relief%20Package%20with%2015%25%20off" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
           </div>
         </div>
 
-        <!-- Package 4: Fever Package (HARGA NORMAL RESMI) -->
+        <!-- Package 4: Fever Package -->
         <div class="catalog-card">
           <div>
             <div class="card-category-eyebrow">FEVER &amp; PAIN RELIEF</div>
             <h3>Fever Package</h3>
-            <div class="price">Rp 3.125.000</div>
+            <div class="package-price-wrap">
+              <span class="old-price">Rp 3.125.000</span>
+              <span class="price">Rp 2.656.250</span>
+              <span class="discount-badge">Promo 15% OFF</span>
+            </div>
             <p class="desc">Comprehensive medical hydration and fast symptom relief when feeling unwell with sudden fever, high temperature, and body chills.</p>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/fever-package/" class="btn-outline">VIEW DETAILS</a>
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Fever%20Package" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Fever%20Package%20with%2015%25%20off" onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">BOOK NOW →</a>
           </div>
         </div>
 
@@ -719,28 +887,63 @@
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand" href="https://www.dripwellbali.com/" aria-label="Back to home">
-          <span class="logo">
-            <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell logo" loading="lazy" decoding="async">
-          </span>
-          <span>
-            <strong>Dripwell <i>Bali</i></strong>
-          </span>
-        </a>
-        <p>Recover • Rehydrate • Revive</p>
-        <p style="margin-top: 6px;">Available 24/7 across Bali for villa visits and medical consultations.</p>
+        <div class="brand">
+          <span class="logo"><img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="40" height="40" alt="Dripwell Bali logo" loading="lazy" decoding="async"></span>
+          <span><strong>Dripwell <i>Bali</i></strong></span>
+        </div>
+        <p style="margin-top: 6px; font-weight: 500;">Recover • Rehydrate • Revive</p>
+        <p>Doctor &amp; Nurse Home Service • Professional Care • Hotel &amp; Villa Service • Available 24/7</p>
         <a href="tel:+6282221614966" class="footer-phone">📞 Phone: +62 822 2161 4966</a>
-        <p style="margin-top: 6px;">
-          📍 <a href="https://maps.app.goo.gl/pkGnDAKp4qALJbZq5" target="_blank" rel="noopener noreferrer" class="footer-map-link">Dripwell Bali | 24/7 Home Doctor &amp; Medical Service</a>
-        </p>
+        <div class="footer-contact-links">
+          <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
+          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://maps.app.goo.gl/79D7WnSwcSG9FgtA7" target="_blank" rel="noopener noreferrer" class="footer-map-link">📍 Dripwell Bali | Home Doctor &amp; Medical Service</a>
+        </div>
       </div>
 
-      <div class="footer-actions">
-        <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Medical%20Health%20Package." target="_blank" rel="noopener noreferrer" class="gold-text">✦ Book via WhatsApp</a>
-        <a href="mailto:dripwellbali@gmail.com">dripwellbali@gmail.com</a>
-        <div>
-          <a href="https://instagram.com/dripwellbali" target="_blank" rel="noopener noreferrer">Instagram</a> &nbsp;·&nbsp;
-          <a href="tel:+6282221614966">Call +62 822 2161 4966</a>
+      <div id="priority-service-locations">
+        <div class="service-locations-box">
+          <div class="service-location-group">
+            <h3>Bali Belly Treatment Locations</h3>
+            <ul class="service-location-list">
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-canggu/">Bali Belly Treatment in Canggu</a></li>
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-seminyak/">Bali Belly Treatment in Seminyak</a></li>
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-tabanan/">Bali Belly Treatment in Tabanan</a></li>
+              <li><a href="https://www.dripwellbali.com/bali-belly-treatment-ubud/">Bali Belly Treatment in Ubud</a></li>
+            </ul>
+          </div>
+          <div class="service-location-group">
+            <h3>IV Drip Service Locations</h3>
+            <ul class="service-location-list">
+              <li><a href="https://www.dripwellbali.com/iv-drip-canggu/">IV Drip in Canggu</a></li>
+              <li><a href="https://www.dripwellbali.com/iv-drip-seminyak/">IV Drip in Seminyak</a></li>
+              <li><a href="https://www.dripwellbali.com/iv-drip-tabanan/">IV Drip in Tabanan</a></li>
+              <li><a href="https://www.dripwellbali.com/iv-drip-ubud/">IV Drip in Ubud</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accepted-payment">
+      <h2>Accepted Payment</h2>
+      <div class="payment-methods">
+        <div class="payment-logo" title="Wise">
+          <svg viewBox="0 0 80 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" font-style="italic" fill="#9FE870">wise</text>
+          </svg>
+        </div>
+        <div class="payment-logo" title="Mastercard">
+          <svg viewBox="0 0 60 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="15" r="10" fill="#EB001B"/>
+            <circle cx="36" cy="15" r="10" fill="#F79E1B"/>
+            <path d="M30 7.7a10 10 0 0 1 0 14.6 10 10 0 0 1 0-14.6z" fill="#FF5F00"/>
+          </svg>
+        </div>
+        <div class="payment-logo" title="Visa">
+          <svg viewBox="0 0 70 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <text x="35" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" font-style="italic" fill="#1A1F71">VISA</text>
+          </svg>
         </div>
       </div>
     </div>
@@ -754,7 +957,7 @@
 
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
-  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Medical%20Health%20Package." target="_blank" rel="noopener noreferrer">✦ Book via WhatsApp →</a>
+  <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20book%20a%20Medical%20Health%20Package%20with%2015%25%20off." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">✦ Claim 15% OFF via WhatsApp →</a>
 </div>
 
 <!-- Fast Script Execution -->
