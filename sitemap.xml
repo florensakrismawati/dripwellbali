@@ -81,58 +81,50 @@
     <priority>0.8</priority>
   </url>
   <url>
-   <loc>https://www.dripwellbali.com/blog/food-poisoning-emergency-protocol-tabanan/</loc>
+    <loc>https://www.dripwellbali.com/blog/food-poisoning-emergency-protocol-tabanan/</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-   <loc>https://www.dripwellbali.com/blog/villa-medical-care-tabanan-kedungu-seseh/</loc>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/blog/villa-medical-care-tabanan-kedungu-seseh/</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-   <loc>https://www.dripwellbali.com/blog/sick-in-bali-what-should-you-do/</loc>
-    <priority>0.8</priority>
-    </url>
-    <url>
+  </url>
+  <url>
     <loc>https://www.dripwellbali.com/blog/sick-in-bali-what-should-you-do/</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-    <loc>https://www.dripwellbali.com/blog/sick-in-bali-what-should-you-do/</loc>
-    <priority>0.8</priority>
-    </url>
+  </url>
 
-      
-    <!-- SEARCH ENGINE OPTIMIZATION -->
-    <url>
+  <!-- SEARCH ENGINE OPTIMIZATION / LOCAL LANDING PAGES -->
+  <url>
     <loc>https://www.dripwellbali.com/bali-belly-treatment-canggu/</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
+  </url>
+  <url>
     <loc>https://www.dripwellbali.com/bali-belly-treatment-seminyak/</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
+  </url>
+  <url>
     <loc>https://www.dripwellbali.com/bali-belly-treatment-tabanan/</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
+  </url>
+  <url>
     <loc>https://www.dripwellbali.com/bali-belly-treatment-ubud/</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
-   <loc>https://www.dripwellbali.com/iv-drip-canggu/</loc>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/iv-drip-canggu/</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
+  </url>
+  <url>
     <loc>https://www.dripwellbali.com/iv-drip-seminyak/</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
+  </url>
+  <url>
     <loc>https://www.dripwellbali.com/iv-drip-tabanan/</loc>
     <priority>0.8</priority>
-    </url>
-    <url>
+  </url>
+  <url>
     <loc>https://www.dripwellbali.com/iv-drip-ubud/</loc>
     <priority>0.8</priority>
-    </url>
+  </url>
+
 </urlset>
