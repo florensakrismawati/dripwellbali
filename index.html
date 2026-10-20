@@ -27,7 +27,7 @@
 
   <title>Dripwell Bali | 24/7 Home Doctor, IV Drip & Medical Service</title>
 
-  <meta name="description" content="Dripwell Bali provides 24/7 home doctor visits, IV drip therapy, physiotherapy and medical care delivered directly to hotels and villas across Bali. Book via WhatsApp.">
+  <meta name="description" content="Dripwell Bali provides 24/7 all-inclusive home doctor visits, IV drip therapy, and medical care delivered directly to hotels and villas across Bali. Book via WhatsApp.">
   <meta name="keywords" content="home doctor bali, iv drip bali, doctor call out bali, medical service bali, mobile medical care bali">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="author" content="Dripwell Bali Medical Team">
@@ -45,7 +45,7 @@
   <meta property="og:site_name" content="Dripwell Bali">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Dripwell Bali | 24/7 Home Doctor, IV Drip & Medical Service">
-  <meta property="og:description" content="Professional home doctor visits, IV drip therapy, physiotherapy and medical care delivered to your hotel or villa across Bali.">
+  <meta property="og:description" content="Professional all-inclusive home doctor visits, IV drip therapy, and medical care delivered to your hotel or villa across Bali.">
   <meta property="og:image" content="https://www.dripwellbali.com/home.jpg">
   <meta property="og:image:alt" content="Dripwell Bali medical team providing treatment at a villa">
 
@@ -53,7 +53,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.dripwellbali.com/">
   <meta name="twitter:title" content="Dripwell Bali | 24/7 Home Doctor, IV Drip & Medical Service">
-  <meta name="twitter:description" content="Professional home doctor visits, IV drip therapy, physiotherapy and medical care delivered to your hotel or villa across Bali.">
+  <meta name="twitter:description" content="Professional all-inclusive home doctor visits, IV drip therapy, and medical care delivered to your hotel or villa across Bali.">
   <meta name="twitter:image" content="https://www.dripwellbali.com/home.jpg">
 
   <!-- Fonts & Resource Preconnect for Performance -->
@@ -80,6 +80,24 @@
         "areaServed": ["Canggu", "Seminyak", "Pererenan", "Uluwatu", "Ubud", "Kuta", "Sanur", "Tabanan"]
       },
       {
+        "@type": "Product",
+        "name": "Bali Belly Package",
+        "description": "All-inclusive medical package for Bali Belly recovery including doctor visit, certified nurse, IV therapy, and medication.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Dripwell Bali"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "1721250",
+          "priceCurrency": "IDR",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "description": "Discounted price using promo code SAVE15. All-inclusive: includes doctor visit, nurse, IV fluids, and medication.",
+          "url": "https://www.dripwellbali.com/"
+        }
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           {
@@ -88,6 +106,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Simply mention the promo code SAVE15 when messaging us on WhatsApp or booking your appointment. The 15% discount will be applied directly to your total package cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are DripWell Bali prices all-inclusive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all our medical packages are 100% all-inclusive, covering everything including doctor consultation, nurse visit, IV therapy, and prescribed medication."
             }
           },
           {
@@ -302,18 +328,18 @@
   .tabs button { border: 0; background: none; color: var(--text-dark); opacity: 0.7; border-radius: 999px; padding: 10px 20px; font: 10px "DM Mono"; text-transform: uppercase; letter-spacing: .13em; }
   .tabs button.active { background: var(--primary-green); color: var(--bg-white); opacity: 1; font-weight: 600; }
 
-  /* Grid & Tampilan Kartu Katalog */
+  /* Grid & Tampilan Kartu Katalog yang Rapi */
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 24px;
   }
 
   .catalog-card {
     border: 1px solid var(--border-teal);
-    border-radius: 20px;
+    border-radius: 22px;
     background: var(--bg-white);
-    padding: 24px;
+    padding: 26px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -355,10 +381,50 @@
   }
 
   .catalog-card .desc {
-    font-size: 14px;
+    font-size: 13.5px;
     opacity: 0.9;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     line-height: 1.5;
+  }
+
+  /* Struktur Grid 2 Kolom untuk Komposisi dan Layanan */
+  .package-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .package-box {
+    background: var(--bg-soft);
+    border: 1px solid var(--border-teal);
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .package-box h4 {
+    font-family: "DM Mono", monospace;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary-green);
+    margin-bottom: 6px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border-teal);
+    padding-bottom: 4px;
+  }
+
+  .package-box ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .package-box li {
+    opacity: 0.85;
+    line-height: 1.35;
   }
 
   .card-actions {
@@ -420,7 +486,7 @@
   .faq-answer { display: none; padding-top: 10px; font-size: 14px; opacity: .85; line-height: 1.6; }
   .faq-item.open .faq-answer { display: block; }
 
-  /* FOOTER - Terstandarisasi dengan Halaman FAQ & Desain Gambar */
+  /* FOOTER */
   footer {
     border-top: 1px solid var(--border-teal);
     padding: 50px 0 80px;
@@ -536,6 +602,7 @@
     .tabs { margin-top: 6px; width: 100%; display: flex; }
     .tabs button { flex: 1; padding: 8px 10px !important; font-size: 9px !important; text-align: center; }
     .cards-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+    .package-details-grid { grid-template-columns: 1fr !important; }
     .faq-card, .why-choose-card { padding: 20px !important; }
   }
   </style>
@@ -595,7 +662,6 @@
         </div>
       </div>
 
-      <a class="navlink" href="https://www.dripwellbali.com/physiotherapy-bali/">PHYSIOTHERAPY</a>
       <a class="navlink" href="https://www.dripwellbali.com/home-doctor-bali/">HOME DOCTOR</a>
       <a class="navlink" href="https://www.dripwellbali.com/blog/">BLOG</a>
       <a class="navlink" href="https://www.dripwellbali.com/faq/">FAQ</a>
@@ -629,7 +695,6 @@
       <a href="https://www.dripwellbali.com/ultimate-immune-booster/" onclick="closeMenu()">— Ultimate Immune Booster</a>
     </div>
 
-    <a href="https://www.dripwellbali.com/physiotherapy-bali/" onclick="closeMenu()">PHYSIOTHERAPY</a>
     <a href="https://www.dripwellbali.com/home-doctor-bali/" onclick="closeMenu()">HOME DOCTOR</a>
     <a href="https://www.dripwellbali.com/blog/" onclick="closeMenu()">BLOG</a>
     <a href="https://www.dripwellbali.com/faq/" onclick="closeMenu()">FAQ</a>
@@ -650,7 +715,7 @@
           <span class="green-text">Right Where You Are.</span>
         </h1>
         <p>
-          DripWell Bali brings certified doctors, IV drip therapy, and physiotherapy directly to your villa or hotel. Enjoy <strong>15% OFF</strong> all treatments today with code <strong>SAVE15</strong>.
+          DripWell Bali brings certified doctors and IV drip therapy directly to your villa or hotel. All prices are <strong>100% all-inclusive</strong> (covering doctor visits, nurses, IV therapy, and medication). Enjoy <strong>15% OFF</strong> all treatments today with code <strong>SAVE15</strong>.
         </p>
         <div class="hero-actions">
           <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer" class="btn-cta">Claim 15% Off via WhatsApp →</a>
@@ -682,13 +747,35 @@
       <!-- Static DOM Grid for Instant Response -->
       <div class="cards-grid">
 
-        <!-- Health Package 1 -->
+        <!-- Health Package 1: Bali Belly -->
         <div class="catalog-card" data-cat="health">
           <div>
             <div class="card-category-eyebrow">GASTROENTERITIS CARE</div>
             <h3>Bali Belly Package</h3>
             <div class="price"><span class="old-price">Rp 2.025.000</span>Rp 1.721.250</div>
-            <p class="desc">Rapid clinical relief delivered directly to your villa for acute food poisoning, severe nausea, vomiting, watery diarrhea, and abdominal cramps so you can recover quickly.</p>
+            <p class="desc">Rapid clinical relief delivered directly to your villa for acute food poisoning, severe nausea, vomiting, watery diarrhea, and abdominal cramps.</p>
+            
+            <div class="package-details-grid">
+              <div class="package-box">
+                <h4>Composition:</h4>
+                <ul>
+                  <li>• Electrolyte Solution</li>
+                  <li>• Anti Nausea &amp; Vomiting</li>
+                  <li>• Stomach Protector</li>
+                  <li>• Stomach Ache Relief</li>
+                  <li>• Vitamin B Complex</li>
+                </ul>
+              </div>
+              <div class="package-box">
+                <h4>Service Includes:</h4>
+                <ul>
+                  <li>✓ Nurse + Doctor Visit</li>
+                  <li>✓ Doctor Consultation</li>
+                  <li>✓ Medical Report Document</li>
+                  <li>✓ 24/7 On-Call Support</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/bali-belly-package/" class="btn-outline">VIEW DETAILS</a>
@@ -696,13 +783,34 @@
           </div>
         </div>
 
-        <!-- Health Package 2 -->
+        <!-- Health Package 2: Hangover -->
         <div class="catalog-card" data-cat="health">
           <div>
             <div class="card-category-eyebrow">POST-PARTY DETOX</div>
             <h3>Hangover Package</h3>
             <div class="price"><span class="old-price">Rp 2.475.000</span>Rp 2.103.750</div>
-            <p class="desc">Rehydrate, replenish, and eliminate headaches, severe spinning nausea, and alcohol toxicity after a long night out in the comfort of your room.</p>
+            <p class="desc">Rehydrate, replenish, and eliminate headaches, severe spinning nausea, and alcohol toxicity after a long night out.</p>
+            
+            <div class="package-details-grid">
+              <div class="package-box">
+                <h4>Composition:</h4>
+                <ul>
+                  <li>• Electrolyte Solution</li>
+                  <li>• Anti Nausea &amp; Vomiting</li>
+                  <li>• Stomach Protector</li>
+                  <li>• Multivitamin</li>
+                </ul>
+              </div>
+              <div class="package-box">
+                <h4>Service Includes:</h4>
+                <ul>
+                  <li>✓ Nurse + Doctor Visit</li>
+                  <li>✓ Doctor Consultation</li>
+                  <li>✓ Medical Report Document</li>
+                  <li>✓ 24/7 On-Call Support</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/hangover-package/" class="btn-outline">VIEW DETAILS</a>
@@ -710,27 +818,34 @@
           </div>
         </div>
 
-        <!-- Health Package 3 -->
-        <div class="catalog-card" data-cat="health">
-          <div>
-            <div class="card-category-eyebrow">VIRAL RECOVERY</div>
-            <h3>Flu Relief Package</h3>
-            <div class="price"><span class="old-price">Rp 1.850.000</span>Rp 1.572.500</div>
-            <p class="desc">Soothe painful sore throat, severe body aches, viral exhaustion, and nasal congestion with specialized anti-inflammatory medical care.</p>
-          </div>
-          <div class="card-actions">
-            <a href="https://www.dripwellbali.com/flu-relief-package/" class="btn-outline">VIEW DETAILS</a>
-            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Flu%20Relief%20Package%20(Code:%20SAVE15)" target="_blank" rel="noopener noreferrer" class="btn-cta" style="padding: 10px 18px; font-size: 9.5px;">BOOK NOW →</a>
-          </div>
-        </div>
-
-        <!-- Health Package 4 -->
+        <!-- Health Package 3: Fever -->
         <div class="catalog-card" data-cat="health">
           <div>
             <div class="card-category-eyebrow">FEVER &amp; PAIN RELIEF</div>
             <h3>Fever Package</h3>
             <div class="price"><span class="old-price">Rp 3.125.000</span>Rp 2.656.250</div>
             <p class="desc">Comprehensive medical hydration and fast symptom relief when feeling unwell with sudden fever, high temperature, and body chills.</p>
+            
+            <div class="package-details-grid">
+              <div class="package-box">
+                <h4>Composition:</h4>
+                <ul>
+                  <li>• Electrolyte Solution</li>
+                  <li>• Stomach Protector</li>
+                  <li>• Multivitamin</li>
+                  <li>• Fever Reducer</li>
+                </ul>
+              </div>
+              <div class="package-box">
+                <h4>Service Includes:</h4>
+                <ul>
+                  <li>✓ Nurse + Doctor Visit</li>
+                  <li>✓ Doctor Consultation</li>
+                  <li>✓ Medical Report Document</li>
+                  <li>✓ 24/7 On-Call Support</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/fever-package/" class="btn-outline">VIEW DETAILS</a>
@@ -738,13 +853,67 @@
           </div>
         </div>
 
-        <!-- Vitamin Package 1 -->
+        <!-- Health Package 4: Flu Relief -->
+        <div class="catalog-card" data-cat="health">
+          <div>
+            <div class="card-category-eyebrow">VIRAL RECOVERY</div>
+            <h3>Flu Relief Package</h3>
+            <div class="price"><span class="old-price">Rp 1.850.000</span>Rp 1.572.500</div>
+            <p class="desc">Soothe painful sore throat, severe body aches, viral exhaustion, and nasal congestion with specialized anti-inflammatory care.</p>
+            
+            <div class="package-details-grid">
+              <div class="package-box">
+                <h4>Composition:</h4>
+                <ul>
+                  <li>• Saline Solution</li>
+                  <li>• Vitamin B Complex &amp; C</li>
+                  <li>• Stomach Protector</li>
+                  <li>• Anti-Inflammatory</li>
+                </ul>
+              </div>
+              <div class="package-box">
+                <h4>Service Includes:</h4>
+                <ul>
+                  <li>✓ Nurse + Doctor Visit</li>
+                  <li>✓ Doctor Consultation</li>
+                  <li>✓ Medical Report Document</li>
+                  <li>✓ 24/7 On-Call Support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-actions">
+            <a href="https://www.dripwellbali.com/flu-relief-package/" class="btn-outline">VIEW DETAILS</a>
+            <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20want%20to%20book%20Flu%20Relief%20Package%20(Code:%20SAVE15)" target="_blank" rel="noopener noreferrer" class="btn-cta" style="padding: 10px 18px; font-size: 9.5px;">BOOK NOW →</a>
+          </div>
+        </div>
+
+        <!-- Vitamin Package 1: Jetlag -->
         <div class="catalog-card is-hidden" data-cat="vitamin">
           <div>
             <div class="card-category-eyebrow">REHYDRATION &amp; ENERGY</div>
             <h3>Jetlag Package</h3>
             <div class="price"><span class="old-price">Rp 975.000</span>Rp 828.750</div>
             <p class="desc">Essential rehydration infusion designed to reset your sleep cycle, relieve travel fatigue, and recover smoothly from long-haul flights.</p>
+            
+            <div class="package-details-grid">
+              <div class="package-box">
+                <h4>Composition:</h4>
+                <ul>
+                  <li>• Saline Solution</li>
+                  <li>• Vitamin B Complex</li>
+                  <li>• Stomach Protector</li>
+                </ul>
+              </div>
+              <div class="package-box">
+                <h4>Service Includes:</h4>
+                <ul>
+                  <li>✓ Nurse + Doctor Visit</li>
+                  <li>✓ Doctor Consultation</li>
+                  <li>✓ Medical Report Document</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/jetlag-package/" class="btn-outline">VIEW DETAILS</a>
@@ -752,13 +921,32 @@
           </div>
         </div>
 
-        <!-- Vitamin Package 2 -->
+        <!-- Vitamin Package 2: Energy Booster -->
         <div class="catalog-card is-hidden" data-cat="vitamin">
           <div>
             <div class="card-category-eyebrow">VITALITY &amp; PERFORMANCE</div>
             <h3>Energy Booster Package</h3>
             <div class="price"><span class="old-price">Rp 2.325.000</span>Rp 1.976.250</div>
             <p class="desc">High-potency multivitamin infusion to eliminate physical burnout, restore peak stamina, and clear mental fog instantly.</p>
+            
+            <div class="package-details-grid">
+              <div class="package-box">
+                <h4>Composition:</h4>
+                <ul>
+                  <li>• Saline Solution</li>
+                  <li>• Multivitamin</li>
+                  <li>• Stomach Protector</li>
+                </ul>
+              </div>
+              <div class="package-box">
+                <h4>Service Includes:</h4>
+                <ul>
+                  <li>✓ Nurse + Doctor Visit</li>
+                  <li>✓ Doctor Consultation</li>
+                  <li>✓ Medical Report Document</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/energy-booster-package/" class="btn-outline">VIEW DETAILS</a>
@@ -766,13 +954,32 @@
           </div>
         </div>
 
-        <!-- Vitamin Package 3 -->
+        <!-- Vitamin Package 3: Immune Basic -->
         <div class="catalog-card is-hidden" data-cat="vitamin">
           <div>
             <div class="card-category-eyebrow">DAILY DEFENSE</div>
             <h3>Immune Booster Basic</h3>
             <div class="price"><span class="old-price">Rp 1.350.000</span>Rp 1.147.500</div>
             <p class="desc">Essential defense drip to strengthen immune resilience, combat low energy, and maintain peak wellness throughout your trip.</p>
+            
+            <div class="package-details-grid">
+              <div class="package-box">
+                <h4>Composition:</h4>
+                <ul>
+                  <li>• Saline Solution</li>
+                  <li>• Vitamin C</li>
+                  <li>• Stomach Protector</li>
+                </ul>
+              </div>
+              <div class="package-box">
+                <h4>Service Includes:</h4>
+                <ul>
+                  <li>✓ Nurse + Doctor Visit</li>
+                  <li>✓ Doctor Consultation</li>
+                  <li>✓ Medical Report Document</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/immune-booster-basic/" class="btn-outline">VIEW DETAILS</a>
@@ -780,13 +987,33 @@
           </div>
         </div>
 
-        <!-- Vitamin Package 4 -->
+        <!-- Vitamin Package 4: Immune Standard -->
         <div class="catalog-card is-hidden" data-cat="vitamin">
           <div>
             <div class="card-category-eyebrow">BALANCED PROTECTION</div>
             <h3>Immune Booster Standard Package</h3>
             <div class="price"><span class="old-price">Rp 2.625.000</span>Rp 2.231.250</div>
             <p class="desc">Balanced combination of antioxidant boosters and metabolic vitamins to defend your body effectively against tropical viral infections.</p>
+            
+            <div class="package-details-grid">
+              <div class="package-box">
+                <h4>Composition:</h4>
+                <ul>
+                  <li>• Saline Solution</li>
+                  <li>• Vitamin B Complex</li>
+                  <li>• Multivitamin</li>
+                  <li>• Stomach Protector</li>
+                </ul>
+              </div>
+              <div class="package-box">
+                <h4>Service Includes:</h4>
+                <ul>
+                  <li>✓ Nurse + Doctor Visit</li>
+                  <li>✓ Doctor Consultation</li>
+                  <li>✓ Medical Report Document</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/immune-booster-standard-package/" class="btn-outline">VIEW DETAILS</a>
@@ -794,13 +1021,33 @@
           </div>
         </div>
 
-        <!-- Vitamin Package 5 -->
+        <!-- Vitamin Package 5: Ultimate Immune -->
         <div class="catalog-card is-hidden" data-cat="vitamin">
           <div>
             <div class="card-category-eyebrow">MAXIMUM DEFENSE</div>
             <h3>Ultimate Immune Booster</h3>
             <div class="price"><span class="old-price">Rp 2.925.000</span>Rp 2.486.250</div>
             <p class="desc">Our most comprehensive immune formula combining high-dose antioxidants, detoxifying agents, and full vitamins for complete protection.</p>
+            
+            <div class="package-details-grid">
+              <div class="package-box">
+                <h4>Composition:</h4>
+                <ul>
+                  <li>• Saline Solution</li>
+                  <li>• Vitamin B Complex &amp; C</li>
+                  <li>• Multivitamin</li>
+                  <li>• Stomach Protector</li>
+                </ul>
+              </div>
+              <div class="package-box">
+                <h4>Service Includes:</h4>
+                <ul>
+                  <li>✓ Nurse + Doctor Visit</li>
+                  <li>✓ Doctor Consultation</li>
+                  <li>✓ Medical Report Document</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="card-actions">
             <a href="https://www.dripwellbali.com/ultimate-immune-booster/" class="btn-outline">VIEW DETAILS</a>
@@ -892,6 +1139,16 @@
 
       <div class="faq-item">
         <button type="button" class="faq-question" onclick="toggleFaq(this)">
+          Are DripWell Bali prices all-inclusive?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes, all our medical packages are <strong>100% all-inclusive</strong>. The price covers everything including doctor consultation, nurse visit, IV therapy, and prescribed medication.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button type="button" class="faq-question" onclick="toggleFaq(this)">
           Is DripWell Bali available 24/7?
           <span class="icon">+</span>
         </button>
@@ -917,16 +1174,6 @@
         </button>
         <div class="faq-answer">
           Yes, all treatments and IV drip therapies are performed by fully licensed, English-speaking Indonesian doctors and registered nurses experienced in home health services.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button type="button" class="faq-question" onclick="toggleFaq(this)">
-          Is it safe to receive an IV drip at my accommodation?
-          <span class="icon">+</span>
-        </button>
-        <div class="faq-answer">
-          Absolutely. We adhere to strict hygiene and medical protocols using sterile single-use equipment. Our team conducts a vitals check and health assessment prior to starting any treatment.
         </div>
       </div>
     </div>
