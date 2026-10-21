@@ -76,6 +76,12 @@
         "telephone": "+6282221614966",
         "email": "dripwellbali@gmail.com",
         "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tabanan",
+          "addressRegion": "Bali",
+          "addressCountry": "ID"
+        },
         "areaServed": ["Canggu", "Seminyak", "Ubud", "Tabanan"]
       },
       {
@@ -84,6 +90,14 @@
         "name": "Bali Belly & Medical Package - Dripwell Bali",
         "image": "https://www.dripwellbali.com/home.jpg",
         "description": "Complete medical package for Bali Belly recovery via doctor home visit and IV drip therapy. COMPOSITION: Electrolyte Solution, Anti Nausea, Anti Vomiting, Stomach Protector, Stomach Ache Relief, Vitamin B Complex. SERVICE INCLUDES: Nurse + Doctor Visit, Doctor Consultation, Medical Report Document, and 24/7 On-Call Medical Support.",
+        "telephone": "+6282221614966",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tabanan",
+          "addressRegion": "Bali",
+          "addressCountry": "ID"
+        },
         "brand": {
           "@type": "Brand",
           "name": "Dripwell Bali"
@@ -1238,7 +1252,7 @@
         </div>
         <div class="payment-logo" aria-label="Visa" title="Visa">
           <svg viewBox="0 0 70 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <text x="35" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" font-style="italic" fill="#1A1F71">VISA</text>
+            <text x="35" y="21" data-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" font-style="italic" fill="#1A1F71">VISA</text>
           </svg>
         </div>
       </div>
@@ -1254,7 +1268,7 @@
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
   <a href="https://wa.me/6282221614966?text=Hello%20DripWell%20Bali,%20I%20would%20like%20to%20claim%20my%2015%%20Discount%20(Code:%20SAVE15)." target="_blank" rel="noopener noreferrer">✦ Claim 15% Off via WhatsApp →</a>
-</div>
+  </div>
 
 <!-- High Performance JavaScript -->
 <script>
@@ -1289,7 +1303,8 @@ function closeMenu() {
 }
 
 function toggleFaq(btn) {
-  var item = btn.parentElement;
+  var item = btn.querySelector ? btn.parentElement : btn;
+  // keeping original toggleFaq function logic
   item.classList.toggle("open");
 }
 </script>
