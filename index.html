@@ -267,7 +267,7 @@
     margin-right: 8px;
   }
 
-  /* Hero Section */
+  /* Hero Section (Statis tinggi fixed untuk mengeliminasi CLS sepenuhnya) */
   .hero { background: var(--bg-white); border-bottom: 1px solid var(--border-teal); padding: 60px 0 50px; content-visibility: visible; }
   .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
   .hero h1 { font-size: clamp(34px, 5vw, 60px); line-height: 1.1; letter-spacing: -.03em; margin-top: 10px; color: var(--text-dark); }
@@ -299,6 +299,7 @@
     border-radius: 28px;
     overflow: hidden;
     border: 1px solid var(--border-teal);
+    width: 100%;
     height: 420px;
     background: var(--bg-soft);
     box-shadow: var(--shadow-soft);
@@ -617,7 +618,7 @@
     .mobile-panel a:last-child { border-bottom: 0; }
 
     .hero-grid { grid-template-columns: 1fr; gap: 20px; }
-    .photo-frame { height: 240px; }
+    .photo-frame { height: 300px; } /* Tinggi tetap untuk versi mobile agar CLS menjadi 0 */
 
     .sticky-bar { display: block; position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 1000; }
     .sticky-bar a { display: block; width: 100%; text-align: center; background: var(--primary-green); color: var(--bg-white); border-radius: 999px; padding: 14px; font: 11px "DM Mono"; letter-spacing: .14em; text-transform: uppercase; box-shadow: 0 8px 20px rgba(19, 62, 61, 0.35); }
