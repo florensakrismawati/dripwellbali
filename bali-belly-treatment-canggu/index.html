@@ -30,14 +30,110 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@graph":[
-    {"@type":"WebSite","@id":"https://www.dripwellbali.com/#website","url":"https://www.dripwellbali.com/","name":"DripWell Bali","inLanguage":"en"},
-    {"@type":"MedicalBusiness","@id":"https://www.dripwellbali.com/#medicalbusiness","name":"DripWell Bali","url":"https://www.dripwellbali.com/","telephone":"+62-822-2161-4966","areaServed":[{"@type":"Place","name":"Canggu, Bali"},{"@type":"Place","name":"Batu Bolong, Bali"},{"@type":"Place","name":"Berawa, Bali"},{"@type":"Place","name":"Echo Beach, Bali"},{"@type":"Place","name":"Pererenan, Bali"}],"availableLanguage":["English"]},
-    {"@type":"WebPage","@id":"https://www.dripwellbali.com/bali-belly-treatment-canggu/#webpage","url":"https://www.dripwellbali.com/bali-belly-treatment-canggu/","name":"Bali Belly Treatment in Canggu, Bali | DripWell Bali","description":"Doctor assessment and mobile medical visits for Bali belly symptoms at selected villas and hotels in Canggu, subject to availability.","inLanguage":"en","isPartOf":{"@id":"https://www.dripwellbali.com/#website"},"about":{"@id":"https://www.dripwellbali.com/#medicalbusiness"},"breadcrumb":{"@id":"https://www.dripwellbali.com/bali-belly-treatment-canggu/#breadcrumb"},"mainEntity":{"@id":"https://www.dripwellbali.com/bali-belly-treatment-canggu/#service"}},
-    {"@type":"BreadcrumbList","@id":"https://www.dripwellbali.com/bali-belly-treatment-canggu/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dripwellbali.com/"},{"@type":"ListItem","position":2,"name":"Bali Belly Treatment in Canggu","item":"https://www.dripwellbali.com/bali-belly-treatment-canggu/"}]},
-    {"@type":"Service","@id":"https://www.dripwellbali.com/bali-belly-treatment-canggu/#service","name":"Bali Belly Medical Assessment in Canggu","serviceType":"Mobile medical consultation for gastrointestinal symptoms","provider":{"@id":"https://www.dripwellbali.com/#medicalbusiness"},"areaServed":{"@type":"Place","name":"Canggu, Bali"},"url":"https://www.dripwellbali.com/bali-belly-treatment-canggu/","description":"Medical assessment for people experiencing symptoms commonly described as Bali belly. Treatment options depend on the clinician's assessment and individual needs."},
-    {"@type":"FAQPage","@id":"https://www.dripwellbali.com/bali-belly-treatment-canggu/#faq","mainEntity":[{"@type":"Question","name":"Which parts of Canggu can you cover?","acceptedAnswer":{"@type":"Answer","text":"Requests may be checked for Canggu and nearby areas listed on this page, including Batu Bolong, Berawa, Echo Beach, Batu Belig and Pererenan. Coverage is not guaranteed for every address; contact us with your location to confirm."}},{"@type":"Question","name":"What information should I send on WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"Send your villa or hotel name, Google Maps pin or full address, the reason for your enquiry and current symptoms if any, your preferred visit time, and relevant medical history or known medication allergies."}},{"@type":"Question","name":"How are mobile service requests confirmed?","acceptedAnswer":{"@type":"Answer","text":"Mobile service requests are confirmed individually based on your exact address, clinical assessment and team availability. A WhatsApp enquiry is a request only; please wait for the team to confirm your visit."}},{"@type":"Question","name":"Can I request a visit if I am staying in a hotel or villa?","acceptedAnswer":{"@type":"Answer","text":"You can enquire about a visit to your accommodation. Please include the property name and any access instructions needed to reach you. Availability is confirmed individually."}},{"@type":"Question","name":"When should I seek urgent medical care instead?","acceptedAnswer":{"@type":"Answer","text":"Seek urgent medical care for severe or worsening abdominal pain, blood in stool or vomit, fainting, confusion, inability to keep fluids down, very little urine or signs of severe dehydration. Do not wait for a mobile visit if symptoms may be an emergency."}}]}
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.dripwellbali.com/#organization",
+      "name": "DripWell Bali",
+      "alternateName": "Dripwell Bali",
+      "url": "https://www.dripwellbali.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.dripwellbali.com/dripwell-logo.jpeg"
+      },
+      "image": "https://www.dripwellbali.com/dripwell-logo.jpeg",
+      "telephone": "+6282221614966",
+      "email": "dripwellbali@gmail.com",
+      "sameAs": [
+        "https://www.instagram.com/dripwellbali/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+6282221614966",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Indonesian"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.dripwellbali.com/#website",
+      "url": "https://www.dripwellbali.com/",
+      "name": "DripWell Bali",
+      "publisher": {"@id": "https://www.dripwellbali.com/#organization"},
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dripwellbali.com/bali-belly-treatment-canggu/#webpage",
+      "url": "https://www.dripwellbali.com/bali-belly-treatment-canggu/",
+      "name": "Bali Belly Treatment in Canggu, Bali | DripWell Bali",
+      "description": "Need medical help for Bali belly in Canggu? DripWell Bali offers doctor assessment and mobile medical visits to selected villas and hotels, subject to availability.",
+      "isPartOf": {"@id": "https://www.dripwellbali.com/#website"},
+      "publisher": {"@id": "https://www.dripwellbali.com/#organization"},
+      "about": {"@id": "https://www.dripwellbali.com/#organization"},
+      "mainEntity": {"@id": "https://www.dripwellbali.com/bali-belly-treatment-canggu/#service"},
+      "breadcrumb": {"@id": "https://www.dripwellbali.com/bali-belly-treatment-canggu/#breadcrumb"},
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dripwellbali.com/bali-belly-treatment-canggu/#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dripwellbali.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Bali Belly Treatment in Canggu", "item": "https://www.dripwellbali.com/bali-belly-treatment-canggu/"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.dripwellbali.com/bali-belly-treatment-canggu/#service",
+      "name": "Bali Belly Medical Assessment in Canggu",
+      "serviceType": "Mobile medical consultation for gastrointestinal symptoms",
+      "url": "https://www.dripwellbali.com/bali-belly-treatment-canggu/",
+      "description": "DripWell Bali offers enquiries for mobile medical assessment for people experiencing symptoms commonly described as Bali belly. Visits to selected villas, hotels and residences are subject to address, clinical assessment and team availability. Treatment options depend on the clinician's assessment and individual needs.",
+      "provider": {"@id": "https://www.dripwellbali.com/#organization"},
+      "areaServed": [
+        {"@type": "Place", "name": "Canggu, Bali"},
+        {"@type": "Place", "name": "Batu Bolong, Bali"},
+        {"@type": "Place", "name": "Berawa, Bali"},
+        {"@type": "Place", "name": "Echo Beach, Bali"},
+        {"@type": "Place", "name": "Batu Belig, Bali"},
+        {"@type": "Place", "name": "Pererenan, Bali"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dripwellbali.com/bali-belly-treatment-canggu/#faq",
+      "url": "https://www.dripwellbali.com/bali-belly-treatment-canggu/",
+      "isPartOf": {"@id": "https://www.dripwellbali.com/bali-belly-treatment-canggu/#webpage"},
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which parts of Canggu can you cover?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Requests may be checked for Canggu and nearby areas listed on this page, including Batu Bolong, Berawa, Echo Beach, Batu Belig and Pererenan. Coverage is not guaranteed for every address; contact us with your location to confirm."}
+        },
+        {
+          "@type": "Question",
+          "name": "What information should I send on WhatsApp?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Send your villa or hotel name, Google Maps pin or full address, the reason for your enquiry and current symptoms if any, your preferred visit time, and relevant medical history or known medication allergies."}
+        },
+        {
+          "@type": "Question",
+          "name": "How are mobile service requests confirmed?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Mobile service requests are confirmed individually based on your exact address, clinical assessment and team availability. A WhatsApp enquiry is a request only; please wait for the team to confirm your visit."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can I request a visit if I am staying in a hotel or villa?",
+          "acceptedAnswer": {"@type": "Answer", "text": "You can enquire about a visit to your accommodation. Please include the property name and any access instructions needed to reach you. Availability is confirmed individually."}
+        },
+        {
+          "@type": "Question",
+          "name": "When should I seek urgent medical care instead?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Seek urgent medical care for severe or worsening abdominal pain, blood in stool or vomit, fainting, confusion, inability to keep fluids down, very little urine or signs of severe dehydration. Do not wait for a mobile visit if symptoms may be an emergency."}
+        }
+      ]
+    }
   ]
 }
 </script>
