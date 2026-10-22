@@ -77,69 +77,185 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
 
   <!-- STRUCTURED DATA (JSON-LD) FOR GOOGLE SEO & AI OPTIMIZATION -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalClinic",
-        "@id": "https://www.dripwellbali.com/#organization",
-        "name": "Dripwell Bali",
-        "url": "https://www.dripwellbali.com/",
-        "logo": "https://www.dripwellbali.com/dripwell-logo.jpeg",
+ 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.dripwellbali.com/#organization",
+      "name": "DripWell Bali",
+      "alternateName": "Dripwell Bali",
+      "url": "https://www.dripwellbali.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.dripwellbali.com/dripwell-logo.jpeg"
+      },
+      "image": "https://www.dripwellbali.com/home.jpg",
+      "description": "DripWell Bali provides mobile doctor home visits, nurse visits, Bali Belly medical care and IV drip therapy at hotels and villas in selected areas of Bali.",
+      "telephone": "+6282221614966",
+      "email": "dripwellbali@gmail.com",
+      "sameAs": [
+        "https://www.instagram.com/dripwellbali/",
+        "https://maps.app.goo.gl/pkGnDAKp4qALJbZq5"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
         "telephone": "+6282221614966",
         "email": "dripwellbali@gmail.com",
-        "areaServed": ["Tabanan", "Kedungu", "Seseh", "Pererenan", "Canggu", "Seminyak", "Uluwatu", "Ubud"]
+        "contactType": "appointments",
+        "availableLanguage": [
+          "English",
+          "Indonesian"
+        ],
+        "url": "https://wa.me/6282221614966"
       },
-      {
-        "@type": "Product",
-        "name": "Bali Belly Package IV Drip",
-        "image": "https://www.dripwellbali.com/bali-belly-package/bali-belly-hero.jpg",
-        "description": "Complete medical IV therapy combining Electrolyte Solution, Anti Nausea, Anti Vomiting, Stomach Protector, Stomach Ache medication, and Vitamin B Complex for instant gastroenteritis relief in Bali.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Dripwell Bali"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "1721250",
-          "priceCurrency": "IDR",
-          "availability": "https://schema.org/InStock",
-          "url": "https://www.dripwellbali.com/bali-belly-package/"
+      "areaServed": [
+        { "@type": "Place", "name": "Canggu, Bali, Indonesia" },
+        { "@type": "Place", "name": "Pererenan, Bali, Indonesia" },
+        { "@type": "Place", "name": "Seseh, Bali, Indonesia" },
+        { "@type": "Place", "name": "Munggu, Bali, Indonesia" },
+        { "@type": "Place", "name": "Kedungu, Bali, Indonesia" },
+        { "@type": "Place", "name": "Tabanan, Bali, Indonesia" },
+        { "@type": "Place", "name": "Yeh Gangga, Bali, Indonesia" },
+        { "@type": "Place", "name": "Tanah Lot, Bali, Indonesia" },
+        { "@type": "Place", "name": "Cemagi, Bali, Indonesia" },
+        { "@type": "Place", "name": "Beraban, Bali, Indonesia" },
+        { "@type": "Place", "name": "Nuanu Area, Bali, Indonesia" },
+        { "@type": "Place", "name": "Berawa, Bali, Indonesia" },
+        { "@type": "Place", "name": "Batu Bolong, Bali, Indonesia" },
+        { "@type": "Place", "name": "Echo Beach, Bali, Indonesia" },
+        { "@type": "Place", "name": "Mengwi, Bali, Indonesia" },
+        { "@type": "Place", "name": "Batu Belig, Bali, Indonesia" },
+        { "@type": "Place", "name": "Tumbak Bayuh, Bali, Indonesia" },
+        { "@type": "Place", "name": "Padonan, Bali, Indonesia" },
+        { "@type": "Place", "name": "Babakan, Bali, Indonesia" },
+        { "@type": "Place", "name": "Tibubeneng, Bali, Indonesia" },
+        { "@type": "Place", "name": "Seminyak, Bali, Indonesia" },
+        { "@type": "Place", "name": "Kuta, Bali, Indonesia" },
+        { "@type": "Place", "name": "Legian, Bali, Indonesia" },
+        { "@type": "Place", "name": "Uluwatu, Bali, Indonesia" },
+        { "@type": "Place", "name": "Jimbaran, Bali, Indonesia" },
+        { "@type": "Place", "name": "Nusa Dua, Bali, Indonesia" },
+        { "@type": "Place", "name": "Sanur, Bali, Indonesia" },
+        { "@type": "Place", "name": "Denpasar, Bali, Indonesia" },
+        { "@type": "Place", "name": "Ubud, Bali, Indonesia" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.dripwellbali.com/#website",
+      "url": "https://www.dripwellbali.com/",
+      "name": "DripWell Bali",
+      "publisher": {
+        "@id": "https://www.dripwellbali.com/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dripwellbali.com/bali-belly-package/#webpage",
+      "url": "https://www.dripwellbali.com/bali-belly-package/",
+      "name": "Bali Belly IV Drip & Villa Doctor 24/7 Tabanan, Kedungu, Seseh, Pererenan & Canggu | DripWell Bali",
+      "description": "Mobile Bali Belly medical assessment and treatment at villas and hotels, with doctor consultation, nurse and doctor visits, listed treatment components and medical documentation.",
+      "isPartOf": {
+        "@id": "https://www.dripwellbali.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dripwellbali.com/#bali-belly-service"
+      },
+      "publisher": {
+        "@id": "https://www.dripwellbali.com/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.dripwellbali.com/bali-belly-package/bali-belly-hero.jpg"
+      },
+      "inLanguage": "en",
+      "mainEntity": {
+        "@id": "https://www.dripwellbali.com/#bali-belly-service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.dripwellbali.com/#bali-belly-service",
+      "name": "Bali Belly Treatment Package",
+      "serviceType": "Mobile medical assessment and Bali Belly treatment",
+      "url": "https://www.dripwellbali.com/bali-belly-package/",
+      "provider": {
+        "@id": "https://www.dripwellbali.com/#organization"
+      },
+      "image": "https://www.dripwellbali.com/bali-belly-package/bali-belly-hero.jpg",
+      "description": "Mobile medical care for people experiencing symptoms commonly described as Bali Belly. The package page lists electrolyte solution, anti-nausea and anti-vomiting medication, stomach protector, stomach ache relief and Vitamin B Complex. It includes a doctor and nurse visit, doctor consultation, medical report document and 24/7 on-call medical support. Treatment suitability and medication are determined by the attending medical professional.",
+      "areaServed": [
+        { "@type": "Place", "name": "Tabanan, Bali, Indonesia" },
+        { "@type": "Place", "name": "Kedungu, Bali, Indonesia" },
+        { "@type": "Place", "name": "Seseh, Bali, Indonesia" },
+        { "@type": "Place", "name": "Pererenan, Bali, Indonesia" },
+        { "@type": "Place", "name": "Canggu, Bali, Indonesia" },
+        { "@type": "Place", "name": "Seminyak, Bali, Indonesia" },
+        { "@type": "Place", "name": "Uluwatu, Bali, Indonesia" },
+        { "@type": "Place", "name": "Ubud, Bali, Indonesia" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.dripwellbali.com/bali-belly-package/",
+        "priceCurrency": "IDR",
+        "price": "1721250",
+        "description": "Promotional price Rp 1,721,250, reduced from the regular price of Rp 2,025,000 with promo code SAVE15. Additional tablet medication or an additional IV, if medically required, is not included and may incur extra charges.",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@id": "https://www.dripwellbali.com/#organization"
         }
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How quickly does the Bali Belly IV drip start working?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Intravenous anti-nausea and anti-vomiting medications bypass the digestive system, bringing noticeable relief from stomach cramps and nausea within 15 to 30 minutes."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I claim this treatment through my travel insurance?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, our visiting doctor provides full clinical documentation and official medical fee receipts for travel insurance reimbursement claims."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is a doctor consultation included prior to administering the drip?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. A licensed medical doctor and certified nurse perform a full physical assessment and vitals check at your villa before starting any intravenous therapy."
-            }
-          }
-        ]
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://wa.me/6282221614966",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+6282221614966",
+          "contactType": "appointments"
+        }
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dripwellbali.com/bali-belly-package/#faq",
+      "url": "https://www.dripwellbali.com/bali-belly-package/",
+      "isPartOf": {
+        "@id": "https://www.dripwellbali.com/#website"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How quickly does the Bali Belly IV drip start working?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intravenous anti-nausea and anti-vomiting medications bypass the digestive system, bringing noticeable relief from stomach cramps and nausea within 15 to 30 minutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I claim this treatment through my travel insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our visiting doctor provides clinical documentation and medical fee receipts to support travel insurance reimbursement claims. Reimbursement depends on the terms of your insurance policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a doctor consultation included prior to administering the drip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A licensed medical doctor and nurse perform a physical assessment and vitals check at your villa before starting intravenous therapy."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <style>
   :root {
