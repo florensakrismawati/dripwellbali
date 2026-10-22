@@ -55,11 +55,16 @@
   <meta name="twitter:description" content="Professional doctor home visits, IV drip therapy, and Bali belly medical care delivered to your hotel or villa across Bali.">
   <meta name="twitter:image" content="https://www.dripwellbali.com/home.jpg">
 
-  <!-- Fonts & Resource Preconnect for Performance -->
+  <!-- Fonts & Resource Preconnect for Performance Optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://wa.me">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Non-blocking Google Fonts Loading -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+  </noscript>
 
   <!-- STRUCTURED DATA (JSON-LD) FOR GOOGLE SEO -->
   <script type="application/ld+json">
@@ -159,7 +164,7 @@
   }
   .skip-link:focus { top: 12px; }
 
-  /* Promo Banner (Diperlambat ke 35s & Tanpa Ikon Pohon) */
+  /* Promo Banner */
   .promo-bar {
     background: var(--primary-green);
     color: var(--bg-white);
@@ -484,7 +489,7 @@
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: scrollTestimonials 25s linear infinite;
+    animation: scrollTestimonials 45s linear infinite;
     will-change: transform;
   }
   .testimonials-scroll-container:hover .testimonials-track {
@@ -644,7 +649,7 @@
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- TOP PROMO BANNER (Perlambat & Tanpa Ikon Pohon) -->
+<!-- TOP PROMO BANNER -->
 <div class="promo-bar" aria-label="Promotion Banner">
   <div class="promo-track">
     <span>Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical &amp; IV Drip Services! Use Code: <strong>SAVE15</strong></span>
@@ -659,7 +664,7 @@
   <div class="nav">
     <a class="brand" href="https://www.dripwellbali.com/" aria-label="Dripwell Bali home">
       <span class="logo">
-        <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async">
+        <img src="https://www.dripwellbali.com/dripwell-logo.jpeg" width="44" height="44" alt="Dripwell Bali logo" decoding="async" loading="eager">
       </span>
       <span>
         <small>Home Doctor &amp; Medical Service</small>
@@ -770,9 +775,9 @@
           <h2 class="display">Targeted Treatments.<br><i>Delivered Fast with 15% Off.</i></h2>
         </div>
 
-        <div class="tabs" role="tablist">
-          <button id="healthTab" class="active" onclick="switchCategory('health')">Health Packages</button>
-          <button id="vitTab" onclick="switchCategory('vitamin')">IV Drips Vitamin</button>
+        <div class="tabs" role="tablist" aria-label="Treatment Categories">
+          <button id="healthTab" role="tab" aria-selected="true" class="active" onclick="switchCategory('health')">Health Packages</button>
+          <button id="vitTab" role="tab" aria-selected="false" onclick="switchCategory('vitamin')">IV Drips Vitamin</button>
         </div>
       </div>
 
@@ -1107,7 +1112,7 @@
       <div class="why-choose-grid">
         <div class="why-item">
           <div class="why-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 16 14"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 16 14"/></svg>
           </div>
           <div>
             <h4>24/7 Non-Stop Medical Service</h4>
@@ -1117,7 +1122,7 @@
 
         <div class="why-item">
           <div class="why-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </div>
           <div>
             <h4>Fast Response &amp; Arrival &lt; 45 Mins</h4>
@@ -1127,7 +1132,7 @@
 
         <div class="why-item">
           <div class="why-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           </div>
           <div>
             <h4>Licensed Doctors &amp; Nurses</h4>
@@ -1147,7 +1152,7 @@
 
         <div class="why-item">
           <div class="why-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
           </div>
           <div>
             <h4>Medical report to support travel insurance</h4>
@@ -1184,11 +1189,11 @@
 
       <!-- Auto-Scrolling Container -->
       <div class="testimonials-scroll-container">
-        <div class="testimonials-track">
+        <div class="testimonials-track" style="animation-duration: 45s;">
           <!-- Set 1 (Original Reviews) -->
           <div class="testimonial-card">
             <div style="color: var(--accent-gold); margin-bottom: 8px;">★★★★★</div>
-            <h4 style="margin-bottom: 6px; font-size: 15px;">Taryn Bourke</h4>
+            <h3 style="margin-bottom: 6px; font-size: 15px;">Taryn Bourke</h3>
             <p style="font-size: 13px; opacity: 0.85; line-height: 1.5;">
               "Had the best experience with dripwell, I unwell at 5am, the nurses got to our villa by 5:30am. Instantly felt much better! Our whole villa ended up getting sick and this incredible team went above and beyond taking care of us."
             </p>
@@ -1196,7 +1201,7 @@
 
           <div class="testimonial-card">
             <div style="color: var(--accent-gold); margin-bottom: 8px;">★★★★★</div>
-            <h4 style="margin-bottom: 6px; font-size: 15px;">Milliekate Lovell</h4>
+            <h3 style="margin-bottom: 6px; font-size: 15px;">Milliekate Lovell</h3>
             <p style="font-size: 13px; opacity: 0.85; line-height: 1.5;">
               "Dr Florensa and her team were so great! I was very unwell and today feel so much better and able to enjoy holiday. They were fairly priced, thorough and very prompt with replies. Couldn't recommend them enough."
             </p>
@@ -1204,7 +1209,7 @@
 
           <div class="testimonial-card">
             <div style="color: var(--accent-gold); margin-bottom: 8px;">★★★★★</div>
-            <h4 style="margin-bottom: 6px; font-size: 15px;">Elizabeth Gil</h4>
+            <h3 style="margin-bottom: 6px; font-size: 15px;">Elizabeth Gil</h3>
             <p style="font-size: 13px; opacity: 0.85; line-height: 1.5;">
               "She is a great professional! She treats you with great care and empathy. She keeps track of your progress and makes house calls quickly. Highly recommended!"
             </p>
@@ -1212,7 +1217,7 @@
 
           <div class="testimonial-card">
             <div style="color: var(--accent-gold); margin-bottom: 8px;">★★★★★</div>
-            <h4 style="margin-bottom: 6px; font-size: 15px;">afni laili</h4>
+            <h3 style="margin-bottom: 6px; font-size: 15px;">afni laili</h3>
             <p style="font-size: 13px; opacity: 0.85; line-height: 1.5;">
               "Such a great experience with dr. Florensa for my vitamin infusion. She is very humble, friendly, professional, and attentive. I felt comfortable and well cared for throughout the entire process."
             </p>
@@ -1221,7 +1226,7 @@
           <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
           <div class="testimonial-card">
             <div style="color: var(--accent-gold); margin-bottom: 8px;">★★★★★</div>
-            <h4 style="margin-bottom: 6px; font-size: 15px;">Taryn Bourke</h4>
+            <h3 style="margin-bottom: 6px; font-size: 15px;">Taryn Bourke</h3>
             <p style="font-size: 13px; opacity: 0.85; line-height: 1.5;">
               "Had the best experience with dripwell, I unwell at 5am, the nurses got to our villa by 5:30am. Instantly felt much better! Our whole villa ended up getting sick and this incredible team went above and beyond taking care of us."
             </p>
@@ -1229,7 +1234,7 @@
 
           <div class="testimonial-card">
             <div style="color: var(--accent-gold); margin-bottom: 8px;">★★★★★</div>
-            <h4 style="margin-bottom: 6px; font-size: 15px;">Milliekate Lovell</h4>
+            <h3 style="margin-bottom: 6px; font-size: 15px;">Milliekate Lovell</h3>
             <p style="font-size: 13px; opacity: 0.85; line-height: 1.5;">
               "Dr Florensa and her team were so great! I was very unwell and today feel so much better and able to enjoy holiday. They were fairly priced, thorough and very prompt with replies. Couldn't recommend them enough."
             </p>
@@ -1237,7 +1242,7 @@
 
           <div class="testimonial-card">
             <div style="color: var(--accent-gold); margin-bottom: 8px;">★★★★★</div>
-            <h4 style="margin-bottom: 6px; font-size: 15px;">Elizabeth Gil</h4>
+            <h3 style="margin-bottom: 6px; font-size: 15px;">Elizabeth Gil</h3>
             <p style="font-size: 13px; opacity: 0.85; line-height: 1.5;">
               "She is a great professional! She treats you with great care and empathy. She keeps track of your progress and makes house calls quickly. Highly recommended!"
             </p>
@@ -1245,7 +1250,7 @@
 
           <div class="testimonial-card">
             <div style="color: var(--accent-gold); margin-bottom: 8px;">★★★★★</div>
-            <h4 style="margin-bottom: 6px; font-size: 15px;">afni laili</h4>
+            <h3 style="margin-bottom: 6px; font-size: 15px;">afni laili</h3>
             <p style="font-size: 13px; opacity: 0.85; line-height: 1.5;">
               "Such a great experience with dr. Florensa for my vitamin infusion. She is very humble, friendly, professional, and attentive. I felt comfortable and well cared for throughout the entire process."
             </p>
@@ -1359,21 +1364,21 @@
 
     <div class="accepted-payment">
       <h2>Accepted Payment</h2>
-      <div class="payment-methods" aria-label="Accepted payment methods: Wise, Mastercard and Visa">
-        <div class="payment-logo" aria-label="Wise" title="Wise">
-          <svg viewBox="0 0 80 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <div class="payment-methods">
+        <div class="payment-logo" title="Wise">
+          <svg viewBox="0 0 80 30" role="img" aria-label="Wise logo" xmlns="http://www.w3.org/2000/svg">
             <text x="40" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" font-style="italic" fill="#9FE870">wise</text>
           </svg>
         </div>
-        <div class="payment-logo" aria-label="Mastercard" title="Mastercard">
-          <svg viewBox="0 0 60 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <div class="payment-logo" title="Mastercard">
+          <svg viewBox="0 0 60 30" role="img" aria-label="Mastercard logo" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="15" r="10" fill="#EB001B"/>
             <circle cx="36" cy="15" r="10" fill="#F79E1B"/>
             <path d="M30 7.7a10 10 0 0 1 0 14.6 10 10 0 0 1 0-14.6z" fill="#FF5F00"/>
           </svg>
         </div>
-        <div class="payment-logo" aria-label="Visa" title="Visa">
-          <svg viewBox="0 0 70 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <div class="payment-logo" title="Visa">
+          <svg viewBox="0 0 70 30" role="img" aria-label="Visa logo" xmlns="http://www.w3.org/2000/svg">
             <text x="35" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" font-style="italic" fill="#1A1F71">VISA</text>
           </svg>
         </div>
@@ -1396,8 +1401,14 @@
 <script>
 function switchCategory(cat) {
   var isHealth = cat === 'health';
-  document.getElementById('healthTab').classList.toggle('active', isHealth);
-  document.getElementById('vitTab').classList.toggle('active', !isHealth);
+  var healthBtn = document.getElementById('healthTab');
+  var vitBtn = document.getElementById('vitTab');
+  
+  healthBtn.classList.toggle('active', isHealth);
+  healthBtn.setAttribute('aria-selected', isHealth);
+  
+  vitBtn.classList.toggle('active', !isHealth);
+  vitBtn.setAttribute('aria-selected', !isHealth);
 
   var cards = document.querySelectorAll('.catalog-card');
   for (var i = 0; i < cards.length; i++) {
