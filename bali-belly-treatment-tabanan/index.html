@@ -33,10 +33,10 @@
   "@context":"https://schema.org",
   "@graph":[
     {"@type":"WebSite","@id":"https://www.dripwellbali.com/#website","url":"https://www.dripwellbali.com/","name":"DripWell Bali","inLanguage":"en"},
-    {"@type":"MedicalBusiness","@id":"https://www.dripwellbali.com/#medicalbusiness","name":"DripWell Bali","url":"https://www.dripwellbali.com/","telephone":"+62-822-2161-4966","areaServed":[{"@type":"Place","name":"Tabanan, Bali"},{"@type":"Place","name":"Kedungu, Bali"},{"@type":"Place","name":"Tanah Lot, Bali"},{"@type":"Place","name":"Yeh Gangga, Bali"},{"@type":"Place","name":"Munggu, Bali"}],"availableLanguage":["English"]},
-    {"@type":"WebPage","@id":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/#webpage","url":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/","name":"Bali Belly Treatment in Tabanan, Bali | DripWell Bali","description":"Doctor assessment and mobile medical visits for Bali belly symptoms at selected villas and hotels in Tabanan, subject to availability.","inLanguage":"en","isPartOf":{"@id":"https://www.dripwellbali.com/#website"},"about":{"@id":"https://www.dripwellbali.com/#medicalbusiness"},"breadcrumb":{"@id":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/#breadcrumb"},"mainEntity":{"@id":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/#service"}},
+    {"@type":"MedicalBusiness","@id":"https://www.dripwellbali.com/#organization","name":"DripWell Bali","url":"https://www.dripwellbali.com/","telephone":"+62-822-2161-4966","logo":"https://www.dripwellbali.com/dripwell-logo.jpeg","image":"https://www.dripwellbali.com/dripwell-logo.jpeg","areaServed":[{"@type":"Place","name":"Tabanan, Bali"},{"@type":"Place","name":"Kedungu, Bali"},{"@type":"Place","name":"Tanah Lot, Bali"},{"@type":"Place","name":"Yeh Gangga, Bali"},{"@type":"Place","name":"Munggu, Bali"}],"availableLanguage":["English","Indonesian"],"sameAs":["https://www.dripwellbali.com/"]},
+    {"@type":"WebPage","@id":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/#webpage","url":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/","name":"Bali Belly Treatment in Tabanan, Bali | DripWell Bali","description":"Doctor assessment and mobile medical visits for Bali belly symptoms at selected villas and hotels in Tabanan, subject to availability.","inLanguage":"en","isPartOf":{"@id":"https://www.dripwellbali.com/#website"},"about":{"@id":"https://www.dripwellbali.com/#organization"},"breadcrumb":{"@id":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/#breadcrumb"},"mainEntity":{"@id":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/#service"}},
     {"@type":"BreadcrumbList","@id":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dripwellbali.com/"},{"@type":"ListItem","position":2,"name":"Bali Belly Treatment in Tabanan","item":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/"}]},
-    {"@type":"Service","@id":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/#service","name":"Bali Belly Medical Assessment in Tabanan","serviceType":"Mobile medical consultation for gastrointestinal symptoms","provider":{"@id":"https://www.dripwellbali.com/#medicalbusiness"},"areaServed":{"@type":"Place","name":"Tabanan, Bali"},"url":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/","description":"Medical assessment for people experiencing symptoms commonly described as Bali belly. Treatment options depend on the clinician's assessment and individual needs."},
+    {"@type":"Service","@id":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/#service","name":"Bali Belly Medical Assessment in Tabanan","serviceType":"Mobile medical consultation for gastrointestinal symptoms","provider":{"@id":"https://www.dripwellbali.com/#organization"},"areaServed":{"@type":"Place","name":"Tabanan, Bali"},"url":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/","description":"Medical assessment for people experiencing symptoms commonly described as Bali belly. Treatment options depend on the clinician's assessment and individual needs."},
     {"@type":"FAQPage","@id":"https://www.dripwellbali.com/bali-belly-treatment-tabanan/#faq","mainEntity":[{"@type":"Question","name":"Which parts of Tabanan can you cover?","acceptedAnswer":{"@type":"Answer","text":"Requests may be checked for Tabanan and nearby areas listed on this page, including Kedungu, Tanah Lot, Yeh Gangga and Munggu. Coverage is not guaranteed for every address; contact us with your location to confirm."}},{"@type":"Question","name":"What information should I send on WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"Send your villa or hotel name, Google Maps pin or full address, the reason for your enquiry and current symptoms if any, your preferred visit time, and relevant medical history or known medication allergies."}},{"@type":"Question","name":"How are mobile service requests confirmed?","acceptedAnswer":{"@type":"Answer","text":"Mobile service requests are confirmed individually based on your exact address, clinical assessment and team availability. A WhatsApp enquiry is a request only; please wait for the team to confirm your visit."}},{"@type":"Question","name":"Can I request a visit if I am staying in a hotel or villa?","acceptedAnswer":{"@type":"Answer","text":"You can enquire about a visit to your accommodation. Please include the property name and any access instructions needed to reach you. Availability is confirmed individually."}},{"@type":"Question","name":"When should I seek urgent medical care instead?","acceptedAnswer":{"@type":"Answer","text":"Seek urgent medical care for severe or worsening abdominal pain, blood in stool or vomit, fainting, confusion, inability to keep fluids down, very little urine or signs of severe dehydration. Do not wait for a mobile visit if symptoms may be an emergency."}}]}
   ]
 }
@@ -310,7 +310,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  body { padding-bottom: 110px !important; }
+  body { padding-bottom: 90px !important; }
   nav { display: none; }
   .mobile-menu { display: flex; }
   .mobile-panel { position: absolute; top: 60px; left: 12px; right: 12px; background: var(--bg-white); border: 1px solid var(--border-teal); border-radius: 14px; padding: 6px; box-shadow: 0 10px 30px rgba(19, 62, 61, 0.12); }
@@ -347,7 +347,7 @@ footer {
 
 /* Bali Belly Tabanan landing page */
 .belly-hero { padding: 48px 0 54px; background: linear-gradient(135deg,#f5faf8 0%,#ffffff 72%); border-bottom:1px solid var(--border-teal); }
-.belly-hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:34px; align-items:center; }
+.belly-hero-grid { display:grid; grid-template-columns:minmax(0, 1fr); gap:34px; align-items:center; }
 .eyebrow { font:500 10px "DM Mono",monospace; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-gold); }
 .belly-hero h1 { font:500 clamp(31px,4.5vw,49px)/1.12 "Playfair Display",Georgia,serif; color:var(--text-dark); margin:12px 0 16px; letter-spacing:-.02em; }
 .belly-hero p { max-width:610px; font-size:16px; line-height:1.75; }
@@ -551,10 +551,10 @@ footer {
           <span><strong>Dripwell <i>Bali</i></strong></span>
         </a>
         <p style="margin-top: 6px; font-weight: 500;">Recover • Rehydrate • Revive</p>
-        <p>Available 24/7 across Bali for villa visits and medical consultations.</p>
+        <p>Mobile medical visits and consultations may be available at selected locations in Bali, subject to address, clinical assessment and team availability.</p>
         <a href="tel:+6282221614966" class="footer-phone">📞 Phone: +62 822 2161 4966</a>
         <div class="footer-contact-links">
-          <a href="https://maps.app.goo.gl/79D7WnSwcSG9FgtA7" target="_blank" rel="noopener noreferrer" class="footer-map-link">📍 Dripwell Bali | 24/7 Home Doctor &amp; Medical Service</a>
+          <a href="https://maps.app.goo.gl/79D7WnSwcSG9FgtA7" target="_blank" rel="noopener noreferrer" class="footer-map-link">📍 DripWell Bali | Mobile Home Doctor &amp; Medical Service</a>
         </div>
       </div>
       <section id="priority-service-locations" aria-label="Explore DripWell Bali service locations" style="padding:0;">
