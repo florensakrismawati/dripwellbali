@@ -43,6 +43,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.dripwellbali.com/jetlag-package/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/energy-booster-package/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/immune-booster-basic/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/immune-booster-standard-package/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/ultimate-immune-booster/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.dripwellbali.com/about/</loc>
     <priority>0.7</priority>
   </url>
