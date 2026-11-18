@@ -1,52 +1,39 @@
 <!doctype html>
 <html lang="en">
 <head>
-
-  <!-- Google tag (gtag.js) Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17000832555"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17000832555');
-  </script>
-  
-  <!-- Google tag (gtag.js) GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-95Y04XGSFQ');
-  </script>
-
-  <script>
-  /* GA4 click events for WhatsApp and phone links (Ads conversion is sent by the existing onclick handler) */
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
-    if (!a || typeof gtag !== 'function') return;
-    gtag('event', a.href.indexOf('tel:') === 0 ? 'click_call' : 'click_whatsapp', {'link_url': a.href, 'transport_type': 'beacon'});
-  });
-</script>
-
-  <!-- Event snippet for Contact conversion page -->
-  <script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_',
-        'event_callback': callback
+<!-- Google tag (gtag.js): GA4 + Google Ads. The library loads on the first tap/scroll, or 5 s after the page has loaded,
+     so it does not slow down the first view. WhatsApp and phone clicks are sent as conversions. -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-95Y04XGSFQ');
+  gtag('config', 'AW-17000832555');
+  (function () {
+    var loaded = false;
+    function loadGtag() {
+      if (loaded) return; loaded = true;
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ';
+      document.head.appendChild(s);
+    }
+    ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(function (ev) {
+      window.addEventListener(ev, loadGtag, {once: true, passive: true});
     });
-    return false;
-  }
-  </script>
+    window.addEventListener('load', function () { setTimeout(loadGtag, 5000); });
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
+      if (!a) return;
+      loadGtag();
+      gtag('event', 'conversion', {'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_', 'transport_type': 'beacon'});
+      gtag('event', a.href.indexOf('tel:') === 0 ? 'click_call' : 'click_whatsapp', {'link_url': a.href, 'transport_type': 'beacon'});
+    });
+  })();
+</script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="preload" as="image" href="https://www.dripwellbali.com/physiotherapy-bali/physiotherapy.webp" fetchpriority="high">
 
   <title>Physiotherapy Service Bali | Home Visits | Dripwell Bali</title>
 
@@ -138,7 +125,7 @@
     --bg-soft: #f8faf9;
     --text-dark: #133e3d;
     --primary-green: #133e3d;
-    --accent-gold: #c28e38;
+    --accent-gold: #c28e38; --gold-text: #8a6119;
     --border-teal: rgba(19, 62, 61, 0.15);
     --border-gold: rgba(194, 142, 56, 0.3);
     --shadow-soft: 0 10px 30px rgba(19, 62, 61, 0.08);
@@ -153,7 +140,7 @@
   .mono { font-family: "DM Mono", monospace; }
   .display { font-family: "Playfair Display", Georgia, serif; }
   .green-text { color: var(--primary-green); }
-  .gold-text { color: var(--accent-gold); }
+  .gold-text { color: var(--gold-text); }
 
   button, input, select, textarea { font: inherit; }
   button { cursor: pointer; border: none; background: none; }
@@ -176,7 +163,7 @@
   .brand { display: flex; align-items: center; gap: 12px; }
   .logo { width: 44px; height: 44px; flex: 0 0 44px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-teal); }
   .logo img { width: 100%; height: 100%; object-fit: cover; }
-  .brand small { display: block; font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-gold); }
+  .brand small { display: block; font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-text); }
   .brand strong { font: 24px "Playfair Display"; line-height: 1; color: var(--text-dark); }
   nav { display: flex; align-items: center; gap: 14px; }
   .navlink { font: 10px "DM Mono"; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dark); opacity: .8; transition: opacity .2s, color .2s; white-space: nowrap; }
@@ -202,7 +189,7 @@
   section { padding: 36px 0; content-visibility: auto; contain-intrinsic-size: 1px 500px; }
   .hero { content-visibility: visible; }
 
-  .eyebrow { font: 11px "DM Mono"; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 8px; }
+  .eyebrow { font: 11px "DM Mono"; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-text); margin-bottom: 8px; }
   .eyebrow span { display: inline-block; width: 20px; height: 1px; background: var(--accent-gold); vertical-align: middle; margin-right: 6px; }
 
   /* Hero Section */
@@ -256,7 +243,7 @@
 
   .card .icon {
     font-size: 18px;
-    color: var(--accent-gold);
+    color: var(--gold-text);
     margin-bottom: 10px;
   }
 
@@ -278,12 +265,12 @@
   .package-box { border: 1px solid var(--border-teal); border-radius: 24px; padding: 28px; background: var(--bg-white); box-shadow: var(--shadow-soft); margin: 10px 0; position: relative; }
   .package-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; border-bottom: 1px solid var(--border-teal); padding-bottom: 16px; margin-bottom: 18px; flex-wrap: wrap; }
   .package-header h2 { font-size: clamp(24px, 3.5vw, 36px); color: var(--text-dark); line-height: 1.1; }
-  .package-price { font-family: "Playfair Display", Georgia, serif; font-size: 26px; color: var(--accent-gold); font-weight: 700; }
+  .package-price { font-family: "Playfair Display", Georgia, serif; font-size: 26px; color: var(--gold-text); font-weight: 700; }
   .package-desc { font-size: 13.5px; opacity: .9; margin-bottom: 16px; }
 
   .composition-details-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; margin-top: 18px; }
   .comp-box-card { background: var(--bg-soft); border: 1px solid var(--border-teal); border-radius: 14px; padding: 18px; }
-  .comp-box-card h4 { font: 10px "DM Mono"; text-transform: uppercase; letter-spacing: .15em; color: var(--accent-gold); margin-bottom: 10px; font-weight: 700; }
+  .comp-box-card :is(h4,.h4) { font: 10px "DM Mono"; text-transform: uppercase; letter-spacing: .15em; color: var(--gold-text); margin-bottom: 10px; font-weight: 700; }
   .comp-detailed-list { list-style: none; }
   .comp-detailed-list li { font-size: 12px; margin-bottom: 10px; line-height: 1.45; }
   .comp-detailed-list li:last-child { margin-bottom: 0; }
@@ -295,14 +282,14 @@
   /* Info Card */
   .info-card { border: 1px solid var(--border-teal); border-radius: 24px; padding: 28px; background: var(--bg-white); box-shadow: var(--shadow-soft); }
   .step-item { display: flex; gap: 14px; margin-top: 14px; border-top: 1px solid var(--border-teal); padding-top: 14px; }
-  .step-num-simple { font: 11px "DM Mono"; color: var(--accent-gold); font-weight: 700; }
+  .step-num-simple { font: 11px "DM Mono"; color: var(--gold-text); font-weight: 700; }
 
   /* FAQ Section */
   .faq-card { border: 1px solid var(--border-teal); border-radius: 24px; padding: 28px; background: var(--bg-white); box-shadow: var(--shadow-soft); }
   .faq-item { border-bottom: 1px solid var(--border-teal); padding: 12px 0; }
   .faq-item:last-child { border-bottom: none; }
   .faq-question { width: 100%; background: none; border: none; text-align: left; font: 14px "DM Sans", sans-serif; font-weight: 600; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-  .faq-question span.icon { font-size: 16px; color: var(--accent-gold); }
+  .faq-question span.icon { font-size: 16px; color: var(--gold-text); }
   .faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding-top .3s ease; font-size: 12px; opacity: .85; line-height: 1.5; }
   .faq-item.open .faq-answer { max-height: 200px; padding-top: 8px; }
 
@@ -334,7 +321,7 @@
   .footer-brand .brand { display: flex; align-items: center; gap: 10px; }
   .footer-brand p { max-width: 320px; font-size: 12px; line-height: 1.55; color: var(--text-dark); opacity: .8; margin-top: 6px; }
   .footer-phone { display: inline-block; margin-top: 8px; font-weight: 600; color: var(--primary-green); font-size: 12px; line-height: 1.5; text-decoration: none; }
-  .footer-phone:hover { color: var(--accent-gold); }
+  .footer-phone:hover { color: var(--gold-text); }
 
   .footer-contact-links {
     margin-top: 8px;
@@ -345,8 +332,8 @@
     font-size: 11.5px;
   }
   .footer-contact-links a { color: var(--text-dark); text-decoration: none; }
-  .footer-contact-links a:hover { color: var(--accent-gold); text-decoration: underline; }
-  .footer-map-link { color: var(--accent-gold) !important; font-weight: 600; }
+  .footer-contact-links a:hover { color: var(--gold-text); text-decoration: underline; }
+  .footer-map-link { color: var(--gold-text) !important; font-weight: 600; }
 
   #priority-service-locations .service-locations-box {
     display: grid;
@@ -465,6 +452,18 @@
 <meta name="twitter:description" content="Mobile physiotherapy in Bali: ultrasound therapy, TENS pain relief and infrared lamp by certified physiotherapists at your villa or hotel, Rp 500.000.">
 <meta name="twitter:image" content="https://www.dripwellbali.com/physiotherapy-bali/physiotherapy.jpg">
 <style id="dw-shared-layout">
+/* Heading order fix: keep original look for re-levelled headings */
+:where(.h4){font-size:1em}
+
+/* Readability: darker text tones so small text meets WCAG AA contrast */
+html body .old-price{color:#5f6b6a!important;opacity:1!important}
+html body .belly-note,html body .blog-meta,html body .article-meta,html body .article-meta *,html body .contact-info-item a,html body .content-link{opacity:1!important}
+html body .blog-meta,html body .blog-meta span{color:#3d5553}
+html body .article-body a:not(.btn-cta){color:#7a5514}
+html body .content-link{color:#125864}
+/* Tap targets: footer links at least 24px tall */
+html body footer li a,html body .footer-contact-links a,html body .footer-map-link{display:inline-block;min-height:24px;line-height:24px}
+
 /* Shared footer and mobile booking bar (same on every page) */
 footer{border-top: 1px solid var(--border-teal);
   padding: 50px 0 80px;
@@ -483,7 +482,7 @@ footer{border-top: 1px solid var(--border-teal);
 .footer-brand .brand strong i{font-style: italic;}
 .footer-brand p{max-width: 320px; font-size: 12px; line-height: 1.55; color: var(--text-dark); opacity: .8; margin-top: 6px;}
 .footer-phone{display: inline-block; margin-top: 8px; font-weight: 600; color: var(--primary-green); font-size: 12px; line-height: 1.5; text-decoration: none;}
-.footer-phone:hover{color: var(--accent-gold);}
+.footer-phone:hover{color: var(--gold-text);}
 .footer-contact-links{margin-top: 8px;
   display: flex;
   flex-direction: column;
@@ -492,8 +491,8 @@ footer{border-top: 1px solid var(--border-teal);
   font-size: 11.5px;
   line-height: 1.45;}
 .footer-contact-links a{color: var(--text-dark); text-decoration: none;}
-.footer-contact-links a:hover{color: var(--accent-gold); text-decoration: underline;}
-.footer-map-link{color: var(--accent-gold) !important; font-weight: 600; font-size: 11.5px; text-decoration: none; display: inline-block; margin-top: 4px;}
+.footer-contact-links a:hover{color: var(--gold-text); text-decoration: underline;}
+.footer-map-link{color: var(--gold-text) !important; font-weight: 600; font-size: 11.5px; text-decoration: none; display: inline-block; margin-top: 4px;}
 .footer-map-link:hover{text-decoration: underline;}
 #priority-service-locations{padding: 0; min-width: 0;}
 #priority-service-locations .service-locations-box{width: 100%;
@@ -545,7 +544,7 @@ html body header .nav{max-width: 1280px; margin: auto; padding: 16px 20px; displ
 html body header .brand{display: flex; align-items: center; gap: 12px;}
 html body header .logo{width: 44px; height: 44px; flex: 0 0 44px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-teal);}
 html body header .logo img{width: 100%; height: 100%; object-fit: cover;}
-html body header .brand small{display: block; font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-gold);}
+html body header .brand small{display: block; font: 10px "DM Mono"; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-text);}
 html body header .brand strong{font: 24px "Playfair Display"; line-height: 1; color: var(--text-dark);}
 html body header nav{display: flex; align-items: center; gap: 14px;}
 html body header .navlink{font: 10px "DM Mono"; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dark); opacity: .8; transition: opacity .2s, color .2s; white-space: nowrap;}
@@ -619,7 +618,7 @@ html body header nav .btn-cta{margin:0}
       <a class="navlink" href="https://www.dripwellbali.com/blog/">BLOG</a>
       <a class="navlink" href="https://www.dripwellbali.com/faq/">FAQ</a>
       <a class="navlink" href="https://www.dripwellbali.com/contact/">CONTACT</a>
-      <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">Book Now</a>
+      <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." target="_blank" rel="noopener noreferrer" class="btn-cta">Book Now</a>
     </nav>
 
     <button type="button" class="mobile-menu" aria-label="Open navigation menu" onclick="toggleMenu()">☰</button>
@@ -648,7 +647,7 @@ html body header nav .btn-cta{margin:0}
     <a href="https://www.dripwellbali.com/blog/" onclick="closeMenu()">BLOG</a>
     <a href="https://www.dripwellbali.com/faq/" onclick="closeMenu()">FAQ</a>
     <a href="https://www.dripwellbali.com/contact/" onclick="closeMenu()">CONTACT</a>
-    <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">Book Now on WhatsApp</a>
+    <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." target="_blank" rel="noopener noreferrer" class="btn-cta">Book Now on WhatsApp</a>
   </div>
 </header>
 
@@ -676,14 +675,14 @@ html body header nav .btn-cta{margin:0}
           </div>
 
           <div style="margin-top: 18px;">
-            <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">
+            <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." target="_blank" rel="noopener noreferrer" class="btn-cta">
               Book Now (Rp 500.000) →
             </a>
           </div>
         </div>
 
         <div class="photo-frame">
-          <img src="https://www.dripwellbali.com/physiotherapy-bali/physiotherapy.webp" width="600" height="380" alt="Physiotherapy session at private villa in Bali" loading="eager" decoding="async">
+          <img src="https://www.dripwellbali.com/physiotherapy-bali/physiotherapy.webp" width="600" height="380" alt="Physiotherapy session at private villa in Bali" loading="eager" fetchpriority="high" decoding="async">
           <div class="photo-badge">✦ DRIPWELL BALI — RECOVER • REHYDRATE • REVIVE</div>
         </div>
       </div>
@@ -745,7 +744,7 @@ html body header nav .btn-cta{margin:0}
 
       <div class="composition-details-grid">
         <div class="comp-box-card">
-          <h4>Therapy Modalities &amp; Benefits:</h4>
+          <h3 class="h4">Therapy Modalities &amp; Benefits:</h3>
 
           <ul class="comp-detailed-list">
             <li>
@@ -762,7 +761,7 @@ html body header nav .btn-cta{margin:0}
 
         <div class="comp-box-card" style="display: flex; flex-direction: column; justify-content: space-between;">
           <div>
-            <h4>Service Includes:</h4>
+            <h3 class="h4">Service Includes:</h3>
             <ul class="service-includes-list">
               <li>Certified Physiotherapist Visit</li>
               <li>Comprehensive Assessment &amp; Consultation</li>
@@ -771,7 +770,7 @@ html body header nav .btn-cta{margin:0}
           </div>
 
           <div style="margin-top: 18px;">
-            <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta" style="width: 100%;">
+            <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." target="_blank" rel="noopener noreferrer" class="btn-cta" style="width: 100%;">
               Book Now (Rp 500.000) →
             </a>
           </div>
@@ -879,7 +878,7 @@ html body header nav .btn-cta{margin:0}
         Professional Doctor, Nurse &amp; Physiotherapy Home Service.<br>
         Available 24/7 across Bali. Book your session for Rp 500.000 today!
       </p>
-      <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">
+      <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." target="_blank" rel="noopener noreferrer" class="btn-cta">
         Book Now (Rp 500.000) →
       </a>
     </div>
@@ -937,19 +936,19 @@ html body header nav .btn-cta{margin:0}
     <div class="accepted-payment">
       <h2>Accepted Payment</h2>
       <div class="payment-methods" aria-label="Accepted payment methods: Wise, Mastercard, Visa, cash, bank transfer and QRIS">
-        <div class="payment-logo" aria-label="Wise" title="Wise">
+        <div class="payment-logo" role="img" aria-label="Wise" title="Wise">
           <svg viewBox="0 0 80 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <text x="40" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" font-style="italic" fill="#9FE870">wise</text>
           </svg>
         </div>
-        <div class="payment-logo" aria-label="Mastercard" title="Mastercard">
+        <div class="payment-logo" role="img" aria-label="Mastercard" title="Mastercard">
           <svg viewBox="0 0 60 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="15" r="10" fill="#EB001B"/>
             <circle cx="36" cy="15" r="10" fill="#F79E1B"/>
             <path d="M30 7.7a10 10 0 0 1 0 14.6 10 10 0 0 1 0-14.6z" fill="#FF5F00"/>
           </svg>
         </div>
-        <div class="payment-logo" aria-label="Visa" title="Visa">
+        <div class="payment-logo" role="img" aria-label="Visa" title="Visa">
           <svg viewBox="0 0 70 30" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <text x="35" y="21" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="700" font-style="italic" fill="#1A1F71">VISA</text>
           </svg>
@@ -967,7 +966,7 @@ html body header nav .btn-cta{margin:0}
 
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-bar">
-  <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer">
+  <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20Physiotherapy%20Session%20for%20Rp%20500.000." target="_blank" rel="noopener noreferrer">
     Book Now on WhatsApp →
   </a>
 </div>
