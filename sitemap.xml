@@ -186,4 +186,31 @@
     <priority>0.8</priority>
   </url>
 
+
+  <!-- IV DRIP BALI SELATAN -->
+  <url>
+    <loc>https://www.dripwellbali.com/iv-drip-kuta/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/iv-drip-jimbaran/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/iv-drip-uluwatu/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/iv-drip-nusa-dua/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dripwellbali.com/iv-drip-sanur/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
