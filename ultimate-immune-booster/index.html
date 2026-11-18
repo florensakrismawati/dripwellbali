@@ -74,13 +74,18 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
+      "@type": "Service",
       "name": "Ultimate Immune Booster IV Drip Package",
+      "serviceType": "Mobile IV drip therapy",
       "image": "https://www.dripwellbali.com/ultimate-immune-booster/ultimate-immune-hero.jpg",
       "description": "Premium all-in-one IV drip combining high-potency Vitamin C, Vitamin B Complex, essential Multivitamins, and fluid rehydration for maximum cellular immunity and recovery in Bali.",
-      "brand": {
-        "@type": "Brand",
+      "provider": {
+        "@id": "https://www.dripwellbali.com/#organization",
         "name": "Dripwell Bali"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Bali, Indonesia"
       },
       "offers": {
         "@type": "Offer",

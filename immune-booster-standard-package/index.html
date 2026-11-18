@@ -82,13 +82,18 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
+      "@type": "Service",
       "name": "Immune Booster Standard Package",
+      "serviceType": "Mobile IV drip therapy",
       "image": "https://www.dripwellbali.com/immune-booster-standard-package/immune-standard-hero.jpg",
       "description": "Comprehensive IV hydration with Vitamin B Complex and essential multivitamin infusion to strengthen immunity, fuel cellular recovery, and combat physical burnout in Bali.",
-      "brand": {
-        "@type": "Brand",
+      "provider": {
+        "@id": "https://www.dripwellbali.com/#organization",
         "name": "Dripwell Bali"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Bali, Indonesia"
       },
       "offers": {
         "@type": "Offer",

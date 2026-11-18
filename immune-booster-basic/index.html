@@ -74,13 +74,18 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
+      "@type": "Service",
       "name": "Immune Booster Basic IV Drip Package",
+      "serviceType": "Mobile IV drip therapy",
       "image": "https://www.dripwellbali.com/immune-booster-basic/immune-basic-hero.jpg",
       "description": "Essential IV hydration with Vitamin C and gastric defense to protect immunity and restore essential hydration in Bali.",
-      "brand": {
-        "@type": "Brand",
+      "provider": {
+        "@id": "https://www.dripwellbali.com/#organization",
         "name": "Dripwell Bali"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Bali, Indonesia"
       },
       "offers": {
         "@type": "Offer",

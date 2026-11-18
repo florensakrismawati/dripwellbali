@@ -74,13 +74,18 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
+      "@type": "Service",
       "name": "Energy Booster Package IV Drip",
+      "serviceType": "Mobile IV drip therapy",
       "image": "https://www.dripwellbali.com/energy-booster-package/energy-booster-hero.jpg",
       "description": "Revitalizing IV therapy combining Saline Solution, high-potency Multivitamin infusion, and Stomach Protector to eliminate fatigue, boost physical stamina, and restore vitality in Bali with 15% discount.",
-      "brand": {
-        "@type": "Brand",
+      "provider": {
+        "@id": "https://www.dripwellbali.com/#organization",
         "name": "Dripwell Bali"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Bali, Indonesia"
       },
       "offers": {
         "@type": "Offer",

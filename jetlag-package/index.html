@@ -74,13 +74,18 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
+      "@type": "Service",
       "name": "Jetlag Package IV Drip",
+      "serviceType": "Mobile IV drip therapy",
       "image": "https://www.dripwellbali.com/jetlag-package/jetlag-hero.jpg",
       "description": "Targeted IV hydration combining Saline Solution, Vitamin B Complex, and Stomach Protector to conquer travel fatigue, reset your body clock, and rehydrate after flights to Bali.",
-      "brand": {
-        "@type": "Brand",
+      "provider": {
+        "@id": "https://www.dripwellbali.com/#organization",
         "name": "Dripwell Bali"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Bali, Indonesia"
       },
       "offers": {
         "@type": "Offer",
