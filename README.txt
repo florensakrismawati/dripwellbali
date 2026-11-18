@@ -9,7 +9,7 @@ Business identity (keep identical everywhere - footer, contact page, JSON-LD, Go
 - Name: Dripwell Bali
 - Phone/WhatsApp: +62 822 2161 4966
 - Email: dripwellbali@gmail.com
-- Address: Perumahan Gria Batu Indah, Jl. Batu Sangian No. 5, Gubug, Tabanan, Bali 82115
+- Address: Jl. Batu Sangian, Perumahan Griya Batu Indah No. A5, Gubug, Tabanan, Bali 82115
 - Google Maps: https://maps.app.goo.gl/pkGnDAKp4qALJbZq5
 - Instagram: https://www.instagram.com/dripwellbali/
 
