@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js): GA4 + Google Ads, WhatsApp/phone clicks as conversions -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-95Y04XGSFQ');
+  gtag('config', 'AW-17000832555');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
+    if (!a) return;
+    gtag('event', 'conversion', {'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_', 'transport_type': 'beacon'});
+    gtag('event', a.href.indexOf('tel:') === 0 ? 'click_call' : 'click_whatsapp', {'link_url': a.href, 'transport_type': 'beacon'});
+  });
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="strict-origin-when-cross-origin" name="referrer"/>
@@ -143,10 +158,10 @@
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "IDR",
-        "lowPrice": "828750",
-        "highPrice": "2656250",
+        "lowPrice": "975000",
+        "highPrice": "3125000",
         "url": "https://www.dripwellbali.com/iv-drip-bali/",
-        "description": "Price includes the IV medications and recovery vitamins listed in the package, doctor visit, nurse care, transport and follow-up."
+        "description": "Price includes the IV medications and recovery vitamins listed in the package, doctor visit, nurse care, transport and follow-up. 15% off with code SAVE15."
       },
       "description": "Doctor-assessed mobile IV drip therapy and home doctor visits at villas, hotels and residences in Uluwatu, Bali. Usually 60–90 minutes after confirmation. Not every person or condition is suitable for an IV infusion."
     },

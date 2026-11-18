@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js): GA4 + Google Ads, WhatsApp/phone clicks as conversions -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-95Y04XGSFQ');
+  gtag('config', 'AW-17000832555');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
+    if (!a) return;
+    gtag('event', 'conversion', {'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_', 'transport_type': 'beacon'});
+    gtag('event', a.href.indexOf('tel:') === 0 ? 'click_call' : 'click_whatsapp', {'link_url': a.href, 'transport_type': 'beacon'});
+  });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
@@ -55,7 +70,7 @@
           "name": "Can I see a doctor at my villa or hotel in Bali?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Dripwell Bali provides mobile doctor visits to selected villas, hotels, resorts, private residences, and accommodations within our service areas."
+            "text": "Yes. Dripwell Bali provides mobile doctor visits to villas, hotels, resorts and private residences across Bali."
           }
         },
         {
@@ -103,7 +118,7 @@
           "name": "Can I get Bali Belly treatment at my villa in Bali?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Dripwell Bali provides doctor-led Bali Belly assessment and treatment at selected villas, hotels, resorts, and private residences. Explore our dedicated Bali Belly Package for complete care details."
+            "text": "Yes. Dripwell Bali provides doctor-led Bali Belly assessment and treatment at villas, hotels, resorts and private residences across Bali. Explore our dedicated Bali Belly Package for complete care details."
           }
         },
         {
@@ -167,7 +182,7 @@
           "name": "Can I get an IV drip at my villa or hotel in Bali?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Dripwell Bali provides mobile IV drip and vitamin therapy at selected villas, hotels, resorts, residences, and other preferred locations within our service coverage."
+            "text": "Yes. Dripwell Bali provides mobile IV drip and vitamin therapy at villas, hotels, resorts and residences across Bali."
           }
         },
         {
@@ -231,7 +246,7 @@
           "name": "Can you provide medical treatment at a resort?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Treatment may be provided at selected resorts, subject to resort policies, location, scheduling, and medical suitability."
+            "text": "Yes. Treatment can be provided at resorts, subject to resort policies, scheduling and medical suitability."
           }
         },
         {
@@ -239,7 +254,7 @@
           "name": "Can you visit a private residence in Bali?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Dripwell Bali can provide mobile medical services at selected private residences within our service coverage."
+            "text": "Yes. Dripwell Bali can provide mobile medical services at private residences across Bali."
           }
         },
         {
@@ -287,7 +302,7 @@
           "name": "Can I book a home doctor or IV drip in Ubud?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Dripwell Bali accepts enquiries for selected locations in Ubud. A visit or IV drip appointment must be confirmed individually based on the address, schedule and clinical suitability. Explore IV Drip Therapy in Bali or contact us to check availability."
+            "text": "Dripwell Bali visits villas, hotels and retreats in Ubud, usually within 60–90 minutes after your booking is confirmed. A visit or IV drip appointment must be confirmed individually based on the address, schedule and clinical suitability. Explore IV Drip Therapy in Bali or contact us to check availability."
           }
         },
         {
@@ -311,7 +326,7 @@
           "name": "Can I request a doctor in Tabanan or Kedungu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Dripwell Bali accepts enquiries for selected locations in Tabanan and Kedungu. Home visits and treatments are confirmed according to your exact address, travel distance, schedule and clinical needs. You can also explore our Bali Belly Treatment in Tabanan page."
+            "text": "Dripwell Bali is based in Tabanan and visits villas across Tabanan and Kedungu, usually within 30–60 minutes after your booking is confirmed. Home visits and treatments are confirmed according to your exact address, travel distance, schedule and clinical needs. You can also explore our Bali Belly Treatment in Tabanan page."
           }
         },
         {
@@ -327,7 +342,7 @@
           "name": "Can I request a doctor near Nuanu or in Mengwi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Selected locations around the Nuanu area and in Mengwi are within our broader service coverage. Please send the exact address or map pin so our team can confirm whether a visit can be arranged."
+            "text": "The Nuanu area and Mengwi are within our service coverage. Please send the exact address or map pin so our team can confirm whether a visit can be arranged."
           }
         },
         {
@@ -335,7 +350,7 @@
           "name": "Does Dripwell Bali cover every area of Bali?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Service availability is location-specific and should not be assumed for the whole island. Our listed service areas include Canggu and nearby neighbourhoods, selected parts of Tabanan and the west coast, Seminyak, and selected locations in Ubud. The exact address and appointment must be confirmed with our team."
+            "text": "We cover most of Bali's main areas, including Tabanan and the west coast, Canggu, Seminyak, Kuta, Legian, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar and Ubud. If you are staying somewhere else, send us your address and we will confirm whether we can visit and the estimated arrival time."
           }
         },
         {
@@ -876,7 +891,7 @@ footer {
 
         <details>
           <summary>Can I see a doctor at my villa or hotel in Bali?</summary>
-          <p>Yes. <a href="https://www.dripwellbali.com/">Dripwell Bali</a> provides mobile doctor visits to selected villas, hotels, resorts, private residences, and accommodations within our service areas.</p>
+          <p>Yes. <a href="https://www.dripwellbali.com/">Dripwell Bali</a> provides mobile doctor visits to villas, hotels, resorts and private residences across Bali.</p>
         </details>
 
         <details>
@@ -910,7 +925,7 @@ footer {
 
         <details>
           <summary>Can I get Bali Belly treatment at my villa in Bali?</summary>
-          <p>Yes. <a href="https://www.dripwellbali.com/">Dripwell Bali</a> provides doctor-led Bali Belly assessment and treatment at selected villas, hotels, resorts, and private residences. Explore our dedicated <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly Package</a> for complete care details.</p>
+          <p>Yes. <a href="https://www.dripwellbali.com/">Dripwell Bali</a> provides doctor-led Bali Belly assessment and treatment at villas, hotels, resorts and private residences across Bali. Explore our dedicated <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly Package</a> for complete care details.</p>
         </details>
 
         <details>
@@ -954,7 +969,7 @@ footer {
 
         <details>
           <summary>Can I get an IV drip at my villa or hotel in Bali?</summary>
-          <p>Yes. <a href="https://www.dripwellbali.com/">Dripwell Bali</a> provides mobile IV drip and vitamin therapy at selected villas, hotels, resorts, residences, and other preferred locations within our service coverage.</p>
+          <p>Yes. <a href="https://www.dripwellbali.com/">Dripwell Bali</a> provides mobile IV drip and vitamin therapy at villas, hotels, resorts and residences across Bali.</p>
         </details>
 
         <details>
@@ -998,12 +1013,12 @@ footer {
 
         <details>
           <summary>Can you provide medical treatment at a resort?</summary>
-          <p>Yes. Treatment may be provided at selected resorts, subject to resort policies, location, scheduling, and medical suitability.</p>
+          <p>Yes. Treatment can be provided at resorts, subject to resort policies, scheduling and medical suitability.</p>
         </details>
 
         <details>
           <summary>Can you visit a private residence in Bali?</summary>
-          <p>Yes. <a href="https://www.dripwellbali.com/">Dripwell Bali</a> can provide mobile medical services at selected private residences within our service coverage.</p>
+          <p>Yes. <a href="https://www.dripwellbali.com/">Dripwell Bali</a> can provide mobile medical services at private residences across Bali.</p>
         </details>
 
         <details>
@@ -1037,7 +1052,7 @@ footer {
 
         <details>
           <summary>Can I book a home doctor or IV drip in Ubud?</summary>
-          <p>Dripwell Bali accepts enquiries for selected locations in Ubud. A visit or IV drip appointment must be confirmed individually based on the address, schedule and clinical suitability. Explore <a href="https://www.dripwellbali.com/iv-drip-bali/">IV Drip Therapy in Bali</a> or contact us to check availability.</p>
+          <p>Dripwell Bali visits villas, hotels and retreats in Ubud, usually within 60–90 minutes after your booking is confirmed. A visit or IV drip appointment must be confirmed individually based on the address, schedule and clinical suitability. Explore <a href="https://www.dripwellbali.com/iv-drip-bali/">IV Drip Therapy in Bali</a> or contact us to check availability.</p>
         </details>
 
         <details>
@@ -1055,7 +1070,7 @@ footer {
 
         <details>
           <summary>Can I request a doctor in Tabanan or Kedungu?</summary>
-          <p>Dripwell Bali accepts enquiries for selected locations in Tabanan and Kedungu. Home visits and treatments are confirmed according to your exact address, travel distance, schedule and clinical needs. You can also explore our <a href="https://www.dripwellbali.com/bali-belly-treatment-tabanan/">Bali Belly Treatment in Tabanan</a> page.</p>
+          <p>Dripwell Bali is based in Tabanan and visits villas across Tabanan and Kedungu, usually within 30–60 minutes after your booking is confirmed. Home visits and treatments are confirmed according to your exact address, travel distance, schedule and clinical needs. You can also explore our <a href="https://www.dripwellbali.com/bali-belly-treatment-tabanan/">Bali Belly Treatment in Tabanan</a> page.</p>
         </details>
 
         <details>
@@ -1065,12 +1080,12 @@ footer {
 
         <details>
           <summary>Can I request a doctor near Nuanu or in Mengwi?</summary>
-          <p>Selected locations around the Nuanu area and in Mengwi are within our broader service coverage. Please send the exact address or map pin so our team can confirm whether a visit can be arranged.</p>
+          <p>The Nuanu area and Mengwi are within our service coverage. Please send the exact address or map pin so our team can confirm whether a visit can be arranged.</p>
         </details>
 
         <details>
           <summary>Does Dripwell Bali cover every area of Bali?</summary>
-          <p>No. Service availability is location-specific and should not be assumed for the whole island. Our listed service areas include Canggu and nearby neighbourhoods, selected parts of Tabanan and the west coast, Seminyak, and selected locations in Ubud. The exact address and appointment must be confirmed with our team.</p>
+          <p>We cover most of Bali's main areas, including Tabanan and the west coast, Canggu, Seminyak, Kuta, Legian, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar and Ubud. If you are staying somewhere else, send us your address and we will confirm whether we can visit and the estimated arrival time.</p>
         </details>
 
         <details>

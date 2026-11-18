@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js): GA4 + Google Ads, WhatsApp/phone clicks as conversions -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-95Y04XGSFQ');
+  gtag('config', 'AW-17000832555');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
+    if (!a) return;
+    gtag('event', 'conversion', {'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_', 'transport_type': 'beacon'});
+    gtag('event', a.href.indexOf('tel:') === 0 ? 'click_call' : 'click_whatsapp', {'link_url': a.href, 'transport_type': 'beacon'});
+  });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -1020,7 +1035,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 80px; margin-
             <span class="green-text">comfort and care.</span>
           </h1>
           <p>
-            Dripwell Bali provides mobile medical and wellness services at selected locations across Bali. Explore our <a href="https://www.dripwellbali.com/home-doctor-bali/" class="content-link">home doctor visits</a>, <a href="https://www.dripwellbali.com/iv-drip-bali/" class="content-link">mobile IV drip therapy</a>, and <a href="https://www.dripwellbali.com/bali-belly-package/" class="content-link">Bali Belly treatment options</a>. Appointments begin with consultation and assessment, and availability depends on your location and schedule.
+            Dripwell Bali provides mobile medical and wellness services across Bali. Explore our <a href="https://www.dripwellbali.com/home-doctor-bali/" class="content-link">home doctor visits</a>, <a href="https://www.dripwellbali.com/iv-drip-bali/" class="content-link">mobile IV drip therapy</a>, and <a href="https://www.dripwellbali.com/bali-belly-package/" class="content-link">Bali Belly treatment options</a>. Appointments begin with consultation and assessment, and availability depends on your location and schedule.
           </p>
           <div style="margin-top: 18px;">
             <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20get%20a%20Special%20Offer%20for%20About%20Inquiry." target="_blank" rel="noopener noreferrer" class="btn-cta">
@@ -1030,7 +1045,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 80px; margin-
         </div>
 
         <div class="photo-frame">
-          <img src="about1.jpg" alt="Dripwell Bali mobile IV therapy session in a villa" loading="eager">
+          <img width="735" height="913" src="about1.jpg" alt="Dripwell Bali mobile IV therapy session in a villa" loading="eager">
           <div class="photo-badge">✦ DRIPWELL BALI — RECOVER • REHYDRATE • REVIVE</div>
         </div>
       </div>
@@ -1130,7 +1145,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 50px 0 80px; margin-
       </div>
 
       <div class="photo-frame" style="height: 320px;">
-        <img src="about2.jpg" alt="Dripwell Bali wellness service setup" loading="lazy">
+        <img width="500" height="563" src="about2.jpg" alt="Dripwell Bali wellness service setup" loading="lazy">
         <div class="photo-badge">✦ DRIPWELL BALI — RECOVER • REHYDRATE • REVIVE</div>
       </div>
     </div>

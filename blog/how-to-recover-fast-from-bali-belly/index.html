@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js): GA4 + Google Ads, WhatsApp/phone clicks as conversions -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-95Y04XGSFQ');
+  gtag('config', 'AW-17000832555');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
+    if (!a) return;
+    gtag('event', 'conversion', {'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_', 'transport_type': 'beacon'});
+    gtag('event', a.href.indexOf('tel:') === 0 ? 'click_call' : 'click_whatsapp', {'link_url': a.href, 'transport_type': 'beacon'});
+  });
+</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
@@ -62,7 +77,7 @@
           "name": "How long does it take to recover from Bali Belly?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "With standard oral fluids and rest, recovery usually takes 24 to 72 hours. However, medical IV drip hydration can provide symptom relief within 15 to 30 minutes, significantly shortening total recovery time."
+            "text": "With standard oral fluids and rest, recovery usually takes 24 to 72 hours. However, IV rehydration may help some patients feel better sooner, often within the first hour. How quickly you recover depends on your condition, and the doctor will advise you."
           }
         },
         {
@@ -502,7 +517,7 @@
 
       <ol>
         <li><strong>100% Bioavailability:</strong> Rehydration fluids and medicines enter your blood circulation immediately, bypassing the inflamed gut.</li>
-        <li><strong>Instant Nausea &amp; Vomiting Relief:</strong> Intravenous antiemetics (anti-vomiting medications) stop dry heaving and nausea within 15 to 30 minutes.</li>
+        <li><strong>Instant Nausea &amp; Vomiting Relief:</strong> Intravenous anti-nausea medication can help ease nausea and vomiting, often during or soon after the drip, although responses vary.</li>
         <li><strong>Targeted Pain Relief:</strong> Antispasmodics ease intense abdominal cramps and stomach spasms quickly.</li>
         <li><strong>Gut Lining Protection:</strong> Stomach protectors reduce hyperacidity and soothe internal inflammation.</li>
       </ol>
@@ -558,7 +573,7 @@
           <span class="icon">+</span>
         </button>
         <div class="faq-answer">
-          With standard oral fluids and rest, recovery usually takes 24 to 72 hours. However, medical IV drip hydration can provide symptom relief within 15 to 30 minutes, significantly shortening total recovery time.
+          With standard oral fluids and rest, recovery usually takes 24 to 72 hours. However, IV rehydration may help some patients feel better sooner, often within the first hour. How quickly you recover depends on your condition, and the doctor will advise you.
         </div>
       </div>
 
