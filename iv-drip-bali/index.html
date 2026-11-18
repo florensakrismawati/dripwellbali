@@ -131,32 +131,7 @@
   img { max-width: 100%; display: block; height: auto; }
 
   /* Promo Banner */
-  .promo-bar {
-    background: var(--primary-green);
-    color: var(--bg-white);
-    padding: 10px 0;
-    font: 11px "DM Mono", monospace;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-weight: 500;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    display: flex;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .promo-track { display: flex; width: max-content; animation: marquee 22s linear infinite; will-change: transform; }
-  .promo-track span { padding-right: 60px; }
-  .promo-track strong { color: var(--accent-gold); text-decoration: underline; font-weight: 700; }
-  .promo-bar:hover .promo-track { animation-play-state: paused; }
-
-  @keyframes marquee {
-    0% { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(-50%, 0, 0); }
-  }
-
-  /* Accessibility */
+/* Accessibility */
   .skip-link {
     position: fixed; left: 12px; top: -60px; z-index: 100;
     background: var(--text-dark); color: var(--bg-white);
@@ -607,15 +582,6 @@
 </head>
 
 <body id="top">
-
-<!-- TOP PROMO BANNER -->
-<div class="promo-bar" aria-label="Promotion Banner">
-  <div class="promo-track">
-    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
-    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
-    <span>DRIPWELL BALI — <strong>RECOVER • REHYDRATE • REVIVE</strong></span>
-  </div>
-</div>
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
