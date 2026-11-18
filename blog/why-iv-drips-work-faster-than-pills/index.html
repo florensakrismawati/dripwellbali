@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js): GA4 + Google Ads, WhatsApp/phone clicks as conversions -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-95Y04XGSFQ');
+  gtag('config', 'AW-17000832555');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
+    if (!a) return;
+    gtag('event', 'conversion', {'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_', 'transport_type': 'beacon'});
+    gtag('event', a.href.indexOf('tel:') === 0 ? 'click_call' : 'click_whatsapp', {'link_url': a.href, 'transport_type': 'beacon'});
+  });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
@@ -371,7 +386,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 30px; margin-
     </header>
 
     <div class="featured-img">
-      <img src="https://www.dripwellbali.com/blog/why-iv-drips-work-faster-than-pills/why-iv.jpg" alt="IV Vitamin Drip Therapy vs Oral Supplementation" loading="eager" decoding="async">
+      <img width="736" height="1104" src="https://www.dripwellbali.com/blog/why-iv-drips-work-faster-than-pills/why-iv.jpg" alt="IV Vitamin Drip Therapy vs Oral Supplementation" loading="eager" decoding="async">
     </div>
 
     <div class="article-body">
@@ -450,7 +465,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 40px 0 30px; margin-
     <div class="footer-top">
       <div class="footer-brand">
         <a class="brand" href="https://www.dripwellbali.com/" style="text-decoration: none; color: inherit;">
-          <span class="logo"><img src="https://www.dripwellbali.com/dripwell-logo.jpeg" alt="Dripwell Bali" loading="lazy" decoding="async"></span>
+          <span class="logo"><img width="656" height="638" src="https://www.dripwellbali.com/dripwell-logo.jpeg" alt="Dripwell Bali" loading="lazy" decoding="async"></span>
           <span><strong>Dripwell <i>Bali</i></strong></span>
         </a>
         <p>Recover • Rehydrate • Revive<br>Mobile Medical &amp; IV Drip Service Across Bali</p>

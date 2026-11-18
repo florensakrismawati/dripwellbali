@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js): GA4 + Google Ads, WhatsApp/phone clicks as conversions -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-95Y04XGSFQ');
+  gtag('config', 'AW-17000832555');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
+    if (!a) return;
+    gtag('event', 'conversion', {'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_', 'transport_type': 'beacon'});
+    gtag('event', a.href.indexOf('tel:') === 0 ? 'click_call' : 'click_whatsapp', {'link_url': a.href, 'transport_type': 'beacon'});
+  });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
@@ -504,7 +519,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
       </div>
 
       <div class="featured-frame">
-        <img src="https://www.dripwellbali.com/home.jpg" alt="Home doctor conducting villa visit in Canggu Bali" class="featured-img" loading="eager" decoding="async">
+        <img width="1536" height="1024" src="https://www.dripwellbali.com/home.jpg" alt="Home doctor conducting villa visit in Canggu Bali" class="featured-img" loading="eager" decoding="async">
       </div>
 
       <div class="article-body">
@@ -521,7 +536,7 @@ footer { border-top: 1px solid var(--border-teal); padding: 28px 0 20px; margin-
           Anyone who has stayed in Batu Bolong, Echo Beach, or Pererenan knows that road congestion can turn a short 3 km trip into a 45-minute ordeal. When you are suffering from severe nausea due to <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly</a> or high fever chills, sitting in traffic on a scooter or taxi is agonizing. 
         </p>
         <p>
-          A mobile doctor service eliminates travel entirely. Medical personnel arrive directly at your villa, hotel, or private resort within 30 to 60 minutes equipped with diagnostic tools and emergency IV medication.
+          A mobile doctor service eliminates travel entirely. Medical personnel arrive directly at your villa, hotel, or private resort equipped with diagnostic tools and emergency IV medication.
         </p>
 
         <h2>2. Privacy, Comfort, and Restful Recovery</h2>

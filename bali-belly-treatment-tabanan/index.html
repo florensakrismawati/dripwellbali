@@ -1,12 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js): GA4 + Google Ads, WhatsApp/phone clicks as conversions -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95Y04XGSFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-95Y04XGSFQ');
+  gtag('config', 'AW-17000832555');
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
+    if (!a) return;
+    gtag('event', 'conversion', {'send_to': 'AW-17000832555/Miu9CMfVk_gcEKu80Ko_', 'transport_type': 'beacon'});
+    gtag('event', a.href.indexOf('tel:') === 0 ? 'click_call' : 'click_whatsapp', {'link_url': a.href, 'transport_type': 'beacon'});
+  });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
 <title>Bali Belly Treatment in Tabanan, Bali | Dripwell Bali</title>
-<meta name="description" content="Need medical help for Bali belly in Tabanan? Doctor assessment and mobile visits to selected villas and hotels, subject to availability.">
+<meta name="description" content="Bali Belly treatment in Tabanan: doctor and nurse visit your villa with IV rehydration, transport and follow-up included. 24/7.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="Dripwell Bali">
 <meta name="theme-color" content="#133e3d">
@@ -19,12 +34,12 @@
 <meta property="og:site_name" content="Dripwell Bali">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Bali Belly Treatment in Tabanan, Bali | Dripwell Bali">
-<meta property="og:description" content="Need medical help for Bali belly in Tabanan? Doctor assessment and mobile visits to selected villas and hotels, subject to availability.">
+<meta property="og:description" content="Bali Belly treatment in Tabanan: doctor and nurse visit your villa with IV rehydration, transport and follow-up included. 24/7.">
 <meta property="og:image" content="https://www.dripwellbali.com/dripwell-logo.jpeg">
 <meta property="og:image:alt" content="Dripwell Bali mobile medical service">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bali Belly Treatment in Tabanan, Bali | Dripwell Bali">
-<meta name="twitter:description" content="Need medical help for Bali belly in Tabanan? Doctor assessment and mobile visits to selected villas and hotels, subject to availability.">
+<meta name="twitter:description" content="Bali Belly treatment in Tabanan: doctor and nurse visit your villa with IV rehydration, transport and follow-up included. 24/7.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
@@ -37,7 +52,7 @@
       "@id": "https://www.dripwellbali.com/bali-belly-treatment-tabanan/#webpage",
       "url": "https://www.dripwellbali.com/bali-belly-treatment-tabanan/",
       "name": "Bali Belly Treatment in Tabanan, Bali | Dripwell Bali",
-      "description": "Doctor assessment and mobile medical visits for Bali belly symptoms at selected villas and hotels in Tabanan, subject to availability.",
+      "description": "Bali Belly treatment in Tabanan: doctor and nurse visit your villa with IV rehydration, transport and follow-up included. 24/7.",
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://www.dripwellbali.com/#website"
@@ -50,6 +65,10 @@
       },
       "mainEntity": {
         "@id": "https://www.dripwellbali.com/bali-belly-treatment-tabanan/#service"
+      },
+      "reviewedBy": {
+        "@id": "https://www.dripwellbali.com/about/#dr-florensa-krismawati",
+        "name": "dr. Florensa Krismawati, S.Ked"
       }
     },
     {
@@ -65,6 +84,12 @@
         {
           "@type": "ListItem",
           "position": 2,
+          "name": "Bali Belly Package",
+          "item": "https://www.dripwellbali.com/bali-belly-package/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
           "name": "Bali Belly Treatment in Tabanan",
           "item": "https://www.dripwellbali.com/bali-belly-treatment-tabanan/"
         }
@@ -73,17 +98,68 @@
     {
       "@type": "Service",
       "@id": "https://www.dripwellbali.com/bali-belly-treatment-tabanan/#service",
-      "name": "Bali Belly Medical Assessment in Tabanan",
-      "serviceType": "Mobile medical consultation for gastrointestinal symptoms",
+      "name": "Bali Belly Treatment in Tabanan with Doctor and Nurse",
+      "serviceType": "Doctor-assessed Bali Belly treatment with IV rehydration at your accommodation",
       "provider": {
         "@id": "https://www.dripwellbali.com/#organization"
       },
-      "areaServed": {
-        "@type": "Place",
-        "name": "Tabanan, Bali"
-      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Tabanan, Bali"
+        },
+        {
+          "@type": "Place",
+          "name": "Kedungu, Bali"
+        },
+        {
+          "@type": "Place",
+          "name": "Tanah Lot, Bali"
+        },
+        {
+          "@type": "Place",
+          "name": "Beraban, Bali"
+        },
+        {
+          "@type": "Place",
+          "name": "Yeh Gangga, Bali"
+        },
+        {
+          "@type": "Place",
+          "name": "Munggu, Bali"
+        },
+        {
+          "@type": "Place",
+          "name": "Seseh, Bali"
+        },
+        {
+          "@type": "Place",
+          "name": "Nuanu Area, Bali"
+        }
+      ],
       "url": "https://www.dripwellbali.com/bali-belly-treatment-tabanan/",
-      "description": "Medical assessment for people experiencing symptoms commonly described as Bali belly. Treatment options depend on the clinician's assessment and individual needs."
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "2025000",
+        "priceCurrency": "IDR",
+        "url": "https://www.dripwellbali.com/bali-belly-package/",
+        "description": "Price includes the IV medications and recovery vitamins listed in the package, doctor visit, nurse care, transport and follow-up. 15% off with code SAVE15."
+      },
+      "description": "Bali Belly Treatment in Tabanan at villas, hotels and residences, Bali. A doctor and a nurse attend every treatment; transport and follow-up are included."
     },
     {
       "@type": "FAQPage",
@@ -91,10 +167,74 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Which parts of Tabanan can you cover?",
+          "name": "How fast can you reach me in Tabanan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Requests may be checked for Tabanan and nearby areas listed on this page, including Kedungu, Tanah Lot, Yeh Gangga and Munggu. Coverage is not guaranteed for every address; contact us with your location to confirm."
+            "text": "Arrival time depends on your exact location and traffic, so our team confirms an estimated time on WhatsApp once you send your address."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I need antibiotics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not always. Many cases of Bali Belly improve with rehydration and rest. The doctor assesses your symptoms and decides whether medication such as an antibiotic is needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I go to hospital instead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Go to a hospital emergency department if you have blood in your stool, a high fever that does not come down, severe abdominal pain, confusion, fainting, or you cannot keep any fluids down for many hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Dripwell Bali packages IV drip packages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every Dripwell Bali package is an IV drip (infusion) treatment given at your villa, hotel or residence. It includes the IV medications and recovery vitamins listed in your package, a doctor and a nurse, transport and follow-up. The doctor assesses you first, and the treatment is given only if it is suitable for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who comes to my villa or hotel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A doctor and a nurse come to every treatment. The doctor assesses your symptoms and medical history first, and the treatment is given only if it is suitable for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is transport included in the price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Transport to your accommodation is included in the package price, so there is no separate call-out fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after the treatment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our team follows up on your recovery after the treatment, and you can contact the doctor directly if you have any concerns. Dripwell Bali does not provide wound care; for wounds or injuries please go to a clinic or hospital."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are lab tests included in the package?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Lab tests are only arranged when the doctor finds them necessary, and they are charged separately from the package. Ask the team about the cost before the test is done."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do if I have severe symptoms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Do not wait for a mobile visit if you have severe or rapidly worsening symptoms, fainting, confusion, difficulty breathing, chest pain or signs of severe dehydration. Go to the nearest hospital emergency department."
           }
         }
       ]
@@ -535,72 +675,64 @@ footer {
 </header>
 
 <main id="main">
-  <nav class="wrap" aria-label="Breadcrumb" style="padding-top:15px;font-size:12px;color:#55706f"><a href="https://www.dripwellbali.com/" style="color:inherit">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Bali Belly Treatment in Tabanan</span></nav>
-  <section class="belly-hero">
-    <div class="wrap belly-hero-grid">
-      <div>
-        <div class="eyebrow">Mobile Medical Service · Tabanan, Bali</div>
-        <h1>Bali Belly Treatment in Tabanan</h1>
-        <p>Feeling unwell with diarrhoea, stomach cramps, nausea or vomiting while staying in Tabanan? Dripwell Bali can help you check options for a medical assessment at selected villas, hotels and residences, subject to location and team availability.</p>
-        <div class="belly-actions">
-          <a class="belly-btn primary" href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali%2C%20I%20would%20like%20to%20check%20availability%20for%20Bali%20belly%20medical%20help%20in%20Tabanan." target="_blank" rel="noopener noreferrer">Book Now</a>
-          <a class="belly-btn secondary" href="https://www.dripwellbali.com/bali-belly-package/">Explore Bali Belly Package</a>
-        </div>
-        <p class="belly-note">Mobile service requests are confirmed individually based on address, clinical assessment and availability.</p>
-      </div>
+<nav aria-label="Breadcrumb" class="wrap" style="padding-top:15px;font-size:12px;color:#55706f"><a href="https://www.dripwellbali.com/" style="color:inherit">Home</a> <span aria-hidden="true">/</span> <a href="https://www.dripwellbali.com/bali-belly-package/" style="color:inherit">Bali Belly Package</a> <span aria-hidden="true">/</span> <span aria-current="page">Bali Belly Treatment in Tabanan</span></nav>
+<section class="belly-hero">
+<div class="wrap belly-hero-grid">
+<div>
+<div class="eyebrow">Bali Belly Treatment · Tabanan, Bali</div>
+<h1>Bali Belly Treatment in Tabanan</h1>
+<p>Diarrhoea, vomiting or stomach cramps in Tabanan? Dripwell Bali is based in Tabanan, so villas and retreats along the west coast are close to our team. A doctor and a nurse come to your villa, hotel or residence, assess you and give IV rehydration and the medications in the Bali Belly package if it is suitable for you. Transport and follow-up are included in the price.</p>
+<p>The doctor assesses you before any treatment. An IV infusion is not automatically recommended for everyone.</p>
+<div class="belly-actions">
+<a class="belly-btn primary" href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali%2C%20I%20would%20like%20to%20check%20availability%20for%20Bali%20Belly%20treatment%20in%20Tabanan." rel="noopener noreferrer" target="_blank">Book Now</a>
+<a class="belly-btn secondary" href="https://www.dripwellbali.com/bali-belly-package/">View the Bali Belly Package</a>
 </div>
-  </section>
-
-  <section class="belly-section">
-    <div class="wrap">
-      <div class="eyebrow">Local service information</div>
-      <h2>Arranging Bali Belly Medical Help in Tabanan</h2>
-      <p>If you are staying in Tabanan and feel unwell, the first step is to contact Dripwell Bali with your exact accommodation location. The team can review your request and confirm whether a medical visit can be arranged for your villa, hotel or residence.</p>
-      <div class="belly-two" style="margin-top:22px">
-        <div class="belly-panel"><h3>Useful details to share</h3><ul class="belly-list"><li>Villa or hotel name</li><li>Google Maps pin or full address</li><li>Reason for your enquiry and current symptoms, if any</li><li>Preferred visit time</li><li>Relevant medical history and known medication allergies</li></ul></div>
-        <div class="belly-panel"><h3>Before a visit is confirmed</h3><p>Mobile service requests are confirmed individually based on address, clinical assessment and availability. Please wait for the team to confirm your visit before assuming it is booked.</p><p>For package inclusions and pricing, see the <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly Package page</a>.</p></div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="belly-section">
-    <div class="wrap">
-      <h2>Explore Treatment and Pricing</h2>
-      <p>This Tabanan page focuses on local visit requests and service availability. For current package details, inclusions and pricing, visit the dedicated <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly Package page</a>. A clinician must assess your condition before recommending treatment; an IV infusion is not necessary or suitable for everyone.</p>
-      <p>For other medical concerns or general doctor visits, see our <a href="https://www.dripwellbali.com/home-doctor-bali/">Home Doctor Bali service</a>.</p>
-    </div>
-  </section>
-
-  <section class="belly-section soft">
-    <div class="wrap">
-      <h2>Bali Belly Medical Visits Around Tabanan</h2>
-      <p>Requests may be considered for selected accommodation in Tabanan and nearby areas. Coverage is confirmed individually based on the exact address, service requested and medical team availability.</p>
-      <div class="belly-locations" aria-label="Areas to check for service availability"><span>Tabanan</span><span>Kedungu</span><span>Tanah Lot</span><span>Yeh Gangga</span><span>Munggu</span><span>Beraban</span><span>Nuanu Area</span></div>
-      <p class="belly-note">These area names are indicative only and do not guarantee availability at every address. Please contact the team to confirm.</p>
-    </div>
-  </section>
-
-  <section class="belly-section">
-    <div class="wrap belly-faq">
-      <h2>Questions About Bali Belly Visits in Tabanan</h2>
-      <details><summary>Which parts of Tabanan can you cover?</summary><p>Requests may be checked for Tabanan and nearby areas listed on this page, including Kedungu, Tanah Lot, Yeh Gangga and Munggu. Coverage is not guaranteed for every address; contact us with your location to confirm.</p></details>
-      <details><summary>What information should I send on WhatsApp?</summary><p>Send your villa or hotel name, Google Maps pin or full address, the reason for your enquiry and current symptoms if any, your preferred visit time, and relevant medical history or known medication allergies.</p></details>
-      <details><summary>How are mobile service requests confirmed?</summary><p>Mobile service requests are confirmed individually based on your exact address, clinical assessment and team availability. A WhatsApp enquiry is a request only; please wait for the team to confirm your visit.</p></details>
-      <details><summary>Can I request a visit if I am staying in a hotel or villa?</summary><p>You can enquire about a visit to your accommodation. Please include the property name and any access instructions needed to reach you. Availability is confirmed individually.</p></details>
-      <details><summary>When should I seek urgent medical care instead?</summary><p>Seek urgent medical care for severe or worsening abdominal pain, blood in stool or vomit, fainting, confusion, inability to keep fluids down, very little urine or signs of severe dehydration. Do not wait for a mobile visit if symptoms may be an emergency.</p></details>
-      <p class="belly-disclaimer"><strong>Medical disclaimer:</strong> This page provides general service information and does not replace a medical consultation. Treatment suitability is determined by a clinician after assessment. If you think you may have a medical emergency, contact local emergency services or go to the nearest emergency department.</p>
-    </div>
-  </section>
-
-  <section class="belly-section soft">
-    <div class="wrap" style="text-align:center;max-width:760px">
-      <div class="eyebrow">Dripwell Bali</div>
-      <h2>Need Medical Help for Bali Belly in Tabanan?</h2>
-      <p>Send your location and a short description of your symptoms. Our team will check service availability and guide you on the next steps.</p>
-      <div class="belly-actions" style="justify-content:center"><a class="belly-btn primary" href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali%2C%20I%20would%20like%20to%20check%20availability%20for%20Bali%20belly%20medical%20help%20in%20Tabanan." target="_blank" rel="noopener noreferrer">Book Now</a><a class="belly-btn secondary" href="https://www.dripwellbali.com/faq/">Read Medical FAQs</a></div>
-    </div>
-  </section>
+<p class="belly-note">Available 24/7. Rated 5.0 on <a href="https://maps.app.goo.gl/pkGnDAKp4qALJbZq5" rel="noopener noreferrer" target="_blank">Google reviews</a>.</p>
+</div>
+</div>
+</section>
+<section class="belly-section">
+<div class="wrap">
+<div class="eyebrow">Included in every package</div>
+<h2>Doctor, Nurse, Transport and Follow-Up Included</h2>
+<p>One price covers the whole visit. There is no separate doctor fee and no call-out fee.</p>
+<ul class="belly-list"><li>IV drip with the medications and recovery vitamins listed in your package</li><li>A doctor and a nurse at every treatment: the doctor assesses you first, the nurse looks after the drip</li><li>Transport to your villa, hotel or residence is included in the package price</li><li>Follow-up on your recovery after the treatment</li><li>Direct contact with the doctor afterwards if you have any concerns</li><li>A <a href="https://www.dripwellbali.com/travel-insurance-medical-report/">medical report for your travel insurance claim</a>, with an itemized receipt</li></ul>
+<p class="belly-note" style="margin-top:12px">Not included: lab tests are only arranged when the doctor finds them necessary, and are charged separately.</p>
+</div>
+</section>
+<section class="belly-section soft">
+<div class="wrap">
+<h2>When to Call Us for Bali Belly in Tabanan</h2>
+<ul class="belly-list"><li>Frequent diarrhoea or vomiting that makes it hard to keep fluids down</li><li>Stomach cramps, nausea and weakness after a meal out</li><li>Signs of mild to moderate dehydration such as thirst, dizziness or dark urine</li><li>Several people in the same villa falling ill after a shared meal</li></ul>
+<div class="belly-two" style="margin-top:22px">
+<div class="belly-panel"><h3>What to send when you book</h3><ul class="belly-list"><li>Villa or hotel name, and room number</li><li>Google Maps pin or full address</li><li>Your symptoms and when they started</li><li>How many people need treatment</li><li>Medical history and any medication allergies</li></ul></div>
+<div class="belly-panel"><h3>Arrival time and confirmation</h3><p>Arrival time depends on your exact location and traffic, so our team confirms an estimated time on WhatsApp once you send your address. A message alone is not a confirmed appointment.</p></div>
+</div>
+</div>
+</section>
+<section class="belly-section package-section"><div class="wrap"><div class="eyebrow">Packages &amp; pricing</div><h2>Bali Belly Package Price</h2><p>The <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly Package</a> costs Rp 2.025.000, or Rp 1.721.250 with code SAVE15, including the doctor, nurse, IV medications and recovery vitamins in the package, transport and follow-up. The doctor will recommend the most suitable option, if any, after assessing you.</p><a class="text-link" href="https://www.dripwellbali.com/bali-belly-package/">See what the Bali Belly Package includes <span aria-hidden="true">→</span></a></div></section>
+<section class="belly-section soft">
+<div class="wrap">
+<h2>Areas We Visit Around Tabanan</h2>
+<p>We visit villas, hotels, retreats and private residences in these areas. Send us your exact location and we will confirm the visit time.</p>
+<div aria-label="Areas served" class="belly-locations"><span>Tabanan</span><span>Kedungu</span><span>Tanah Lot</span><span>Beraban</span><span>Yeh Gangga</span><span>Munggu</span><span>Seseh</span><span>Nuanu Area</span></div>
+</div>
+</section>
+<section class="belly-section">
+  <div class="wrap belly-faq">
+    <h2>Questions About Bali Belly Treatment in Tabanan</h2>
+    <details><summary>How fast can you reach me in Tabanan?</summary><p>Arrival time depends on your exact location and traffic, so our team confirms an estimated time on WhatsApp once you send your address.</p></details><details><summary>Will I need antibiotics?</summary><p>Not always. Many cases of Bali Belly improve with rehydration and rest. The doctor assesses your symptoms and decides whether medication such as an antibiotic is needed.</p></details><details><summary>When should I go to hospital instead?</summary><p>Go to a hospital emergency department if you have blood in your stool, a high fever that does not come down, severe abdominal pain, confusion, fainting, or you cannot keep any fluids down for many hours.</p></details><details><summary>Are Dripwell Bali packages IV drip packages?</summary><p>Yes. Every Dripwell Bali package is an IV drip (infusion) treatment given at your villa, hotel or residence. It includes the IV medications and recovery vitamins listed in your package, a doctor and a nurse, transport and follow-up. The doctor assesses you first, and the treatment is given only if it is suitable for you.</p></details><details><summary>Who comes to my villa or hotel?</summary><p>A doctor and a nurse come to every treatment. The doctor assesses your symptoms and medical history first, and the treatment is given only if it is suitable for you.</p></details><details><summary>Is transport included in the price?</summary><p>Yes. Transport to your accommodation is included in the package price, so there is no separate call-out fee.</p></details><details><summary>What happens after the treatment?</summary><p>Our team follows up on your recovery after the treatment, and you can contact the doctor directly if you have any concerns. Dripwell Bali does not provide wound care; for wounds or injuries please go to a clinic or hospital.</p></details><details><summary>Are lab tests included in the package?</summary><p>No. Lab tests are only arranged when the doctor finds them necessary, and they are charged separately from the package. Ask the team about the cost before the test is done.</p></details><details><summary>What should I do if I have severe symptoms?</summary><p>Do not wait for a mobile visit if you have severe or rapidly worsening symptoms, fainting, confusion, difficulty breathing, chest pain or signs of severe dehydration. Go to the nearest hospital emergency department.</p></details>
+    <p class="belly-note" style="margin-top:16px">Medically reviewed by <a href="https://www.dripwellbali.com/about/#doctor-credentials">dr. Florensa Krismawati, S.Ked</a>.</p>
+  </div>
+</section>
+<section class="belly-section soft">
+<div class="wrap final-cta" style="text-align:center;max-width:760px">
+<div class="eyebrow">Dripwell Bali</div>
+<h2>Need Help for Bali Belly in Tabanan?</h2>
+<p>Send your location, how many people need treatment and a short description of your symptoms. Our team will confirm the visit and the estimated arrival time.</p>
+<div class="belly-actions" style="justify-content:center"><a class="belly-btn primary" href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali%2C%20I%20would%20like%20to%20check%20availability%20for%20Bali%20Belly%20treatment%20in%20Tabanan." rel="noopener noreferrer" target="_blank">Book Now</a><a class="belly-btn secondary" href="https://www.dripwellbali.com/faq/">Read Medical FAQs</a></div>
+</div>
+</section>
 </main>
 
 <!-- FOOTER -->
