@@ -20,6 +20,15 @@
     gtag('config', 'G-95Y04XGSFQ');
   </script>
 
+  <script>
+  /* GA4 click events for WhatsApp and phone links (Ads conversion is sent by the existing onclick handler) */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="wa.me/"], a[href^="tel:"]');
+    if (!a || typeof gtag !== 'function') return;
+    gtag('event', a.href.indexOf('tel:') === 0 ? 'click_call' : 'click_whatsapp', {'link_url': a.href, 'transport_type': 'beacon'});
+  });
+</script>
+
   <!-- Event snippet for Contact conversion page -->
   <script>
   function gtag_report_conversion(url) {
@@ -702,7 +711,7 @@
         <div>
           <div class="eyebrow"><span></span> 24/7 Mobile Medical Service · 15% OFF Promo</div>
           <h1 class="display">IV Drip &amp; Vitamin Therapy</h1>
-          <p>Customized IV drip vitamin treatments delivered straight to your villa, resort, or hotel room across Bali. Enjoy 15% OFF all packages with fast 30–60 minute response time by certified doctors and registered nurses.</p>
+          <p>Customized IV drip vitamin treatments delivered straight to your villa, resort, or hotel room across Bali. Enjoy 15% OFF all packages, with a doctor and a nurse at every treatment and transport included.</p>
           <div style="margin-top: 20px;">
             <a href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali,%20I%20would%20like%20to%20book%20an%20IV%20Drip%20Vitamin%20Treatment%20with%2015%25%20off." onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener noreferrer" class="btn-cta">
               CLAIM 15% OFF VIA WHATSAPP →
