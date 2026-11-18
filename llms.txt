@@ -1,6 +1,6 @@
 # Dripwell Bali
 
-> Dripwell Bali is a mobile medical service in Bali, Indonesia. Licensed doctors and nurses visit villas, hotels and residences for doctor home visits, IV drip therapy, Bali Belly (traveller's diarrhoea) treatment, on-site laboratory tests and physiotherapy. Available 24/7. Based in Tabanan and serving Tabanan, Canggu, Pererenan, Seminyak, Kerobokan, Kuta, Legian, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar, Ubud and surrounding areas.
+> Dripwell Bali is a mobile medical service in Bali, Indonesia. Licensed doctors and nurses visit villas, hotels and residences for IV drip therapy (every package includes a doctor visit and assessment), Bali Belly (traveller's diarrhoea) treatment and on-site laboratory tests. Physiotherapy home visits are also available. Wound care is not provided. Available 24/7. Based in Tabanan and serving Tabanan, Canggu, Pererenan, Seminyak, Kerobokan, Kuta, Legian, Jimbaran, Uluwatu, Nusa Dua, Sanur, Denpasar, Ubud and surrounding areas.
 
 Key facts:
 - Business name: Dripwell Bali
@@ -13,10 +13,10 @@ Key facts:
 - Prices: IV drip packages Rp 975.000 to Rp 3.125.000; Rp 828.750 to Rp 2.656.250 with promo code SAVE15 (15% off)
 
 ## Services
-- [Home Doctor Bali](https://www.dripwellbali.com/home-doctor-bali/): doctor consultations at your villa or hotel
+- [Home Doctor Bali](https://www.dripwellbali.com/home-doctor-bali/): the doctor visit included with every IV drip package
 - [IV Drip Bali](https://www.dripwellbali.com/iv-drip-bali/): overview of all IV drip treatments
 - [Bali Belly Package](https://www.dripwellbali.com/bali-belly-package/): treatment for traveller's diarrhoea and food poisoning
-- [Physiotherapy Bali](https://www.dripwellbali.com/physiotherapy-bali/): home-visit physiotherapy for surf and sports injuries
+- [Physiotherapy Bali](https://www.dripwellbali.com/physiotherapy-bali/): home-visit physiotherapy (supporting service)
 - [Health Packages](https://www.dripwellbali.com/health-packages/): all medical and IV drip packages
 
 ## IV drip packages
