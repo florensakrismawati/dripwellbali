@@ -577,6 +577,21 @@ footer {
 </style>
 <meta name="twitter:image" content="https://www.dripwellbali.com/dripwell-logo.jpeg">
 <style id="dw-shared-layout">
+/* Breadcrumb + related reading (same on every page) */
+html body main nav[aria-label="Breadcrumb"]{display:block!important}
+html body nav.dw-crumbs{max-width:1280px;margin:0 auto;padding:14px 20px 0;font-size:12px;line-height:1.6;color:#55706f}
+html body nav.dw-crumbs a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+html body nav.dw-crumbs span[aria-hidden]{margin:0 6px}
+html body #priority-service-locations .service-location-group:nth-child(2){grid-row:span 2}
+html body .dw-related{max-width:1280px;margin:40px auto 0;padding:0 20px}
+html body .dw-related-box{border:1px solid var(--border-teal);border-radius:14px;padding:20px 22px;background:#fff}
+html body .dw-related h2{font:700 11px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dark);margin:0 0 10px}
+html body .dw-related ul{list-style:none;margin:0;padding:0}
+html body .dw-related li{padding:7px 0;border-top:1px solid var(--border-teal);font-size:15px}
+html body .dw-related li:first-child{border-top:0}
+html body .dw-related a{color:var(--primary-green);font-weight:600;text-decoration:none}
+html body .dw-related a:hover{text-decoration:underline}
+
 /* Readability: darker text tones so small text meets WCAG AA contrast */
 html body .old-price{color:#5f6b6a!important;opacity:1!important}
 html body .belly-note,html body .blog-meta,html body .article-meta,html body .article-meta *,html body .contact-info-item a,html body .content-link{opacity:1!important}
@@ -774,7 +789,7 @@ html body header nav .btn-cta{margin:0}
 </header>
 
 <main id="main">
-<nav aria-label="Breadcrumb" class="wrap" style="padding-top:15px;font-size:12px;color:#55706f"><a href="https://www.dripwellbali.com/" style="color:inherit">Home</a> <span aria-hidden="true">/</span> <a href="https://www.dripwellbali.com/bali-belly-package/" style="color:inherit">Bali Belly Package</a> <span aria-hidden="true">/</span> <span aria-current="page">Bali Belly Treatment in Seminyak</span></nav>
+<nav aria-label="Breadcrumb" class="dw-crumbs"><a href="https://www.dripwellbali.com/">Home</a> <span aria-hidden="true">/</span> <a href="https://www.dripwellbali.com/bali-belly-package/">Bali Belly Package</a> <span aria-hidden="true">/</span> <span aria-current="page">Bali Belly Treatment in Seminyak</span></nav>
 <section class="belly-hero">
 <div class="wrap belly-hero-grid">
 <div>
@@ -832,6 +847,7 @@ html body header nav .btn-cta{margin:0}
 <div class="belly-actions" style="justify-content:center"><a class="belly-btn primary" href="https://wa.me/6282221614966?text=Hello%20Dripwell%20Bali%2C%20I%20would%20like%20to%20check%20availability%20for%20Bali%20Belly%20treatment%20in%20Seminyak." rel="noopener noreferrer" target="_blank">Book Now</a><a class="belly-btn secondary" href="https://www.dripwellbali.com/faq/">Read Medical FAQs</a></div>
 </div>
 </section>
+<section class="dw-related" aria-label="Further reading"><div class="dw-related-box"><h2>Further reading</h2><ul><li><a href="https://www.dripwellbali.com/blog/how-to-recover-fast-from-bali-belly/">How to Recover Fast from Bali Belly: A Doctor-Approved Guide</a></li><li><a href="https://www.dripwellbali.com/blog/travel-insurance-claim-bali/">How to Claim Travel Insurance for Villa Doctor Visits in Bali</a></li></ul></div></section>
 </main>
 
 <!-- FOOTER -->
@@ -875,6 +891,13 @@ html body header nav .btn-cta{margin:0}
               <li><a href="https://www.dripwellbali.com/iv-drip-uluwatu/">IV Drip in Uluwatu</a></li>
               <li><a href="https://www.dripwellbali.com/iv-drip-nusa-dua/">IV Drip in Nusa Dua</a></li>
               <li><a href="https://www.dripwellbali.com/iv-drip-sanur/">IV Drip in Sanur &amp; Denpasar</a></li>
+            </ul>
+          </div>
+          <div class="service-location-group">
+            <h3>Patient Information</h3>
+            <ul class="service-location-list">
+              <li><a href="https://www.dripwellbali.com/travel-insurance-medical-report/">Medical Report for Travel Insurance</a></li>
+              <li><a href="https://www.dripwellbali.com/faq/">Frequently Asked Questions</a></li>
             </ul>
           </div>
         </div>

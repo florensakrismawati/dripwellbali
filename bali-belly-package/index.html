@@ -554,6 +554,21 @@
   }
   </style>
 <style id="dw-shared-layout">
+/* Breadcrumb + related reading (same on every page) */
+html body main nav[aria-label="Breadcrumb"]{display:block!important}
+html body nav.dw-crumbs{max-width:1280px;margin:0 auto;padding:14px 20px 0;font-size:12px;line-height:1.6;color:#55706f}
+html body nav.dw-crumbs a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+html body nav.dw-crumbs span[aria-hidden]{margin:0 6px}
+html body #priority-service-locations .service-location-group:nth-child(2){grid-row:span 2}
+html body .dw-related{max-width:1280px;margin:40px auto 0;padding:0 20px}
+html body .dw-related-box{border:1px solid var(--border-teal);border-radius:14px;padding:20px 22px;background:#fff}
+html body .dw-related h2{font:700 11px "DM Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dark);margin:0 0 10px}
+html body .dw-related ul{list-style:none;margin:0;padding:0}
+html body .dw-related li{padding:7px 0;border-top:1px solid var(--border-teal);font-size:15px}
+html body .dw-related li:first-child{border-top:0}
+html body .dw-related a{color:var(--primary-green);font-weight:600;text-decoration:none}
+html body .dw-related a:hover{text-decoration:underline}
+
 /* Heading order fix: keep original look for re-levelled headings */
 :where(.h4){font-size:1em}
 
@@ -754,6 +769,7 @@ html body header nav .btn-cta{margin:0}
 </header>
 
 <main id="main">
+<nav aria-label="Breadcrumb" class="dw-crumbs"><a href="https://www.dripwellbali.com/">Home</a> <span aria-hidden="true">/</span> <a href="https://www.dripwellbali.com/health-packages/">Health Packages</a> <span aria-hidden="true">/</span> <span aria-current="page">Bali Belly Package</span></nav>
 
   <!-- HERO SECTION -->
   <section class="hero">
@@ -864,7 +880,7 @@ html body header nav .btn-cta{margin:0}
               <li>Doctor Consultation</li>
               <li>Transport Included</li>
               <li>Follow-Up &amp; Direct Doctor Contact</li>
-              <li>Medical Report for Travel Insurance</li>
+              <li><a href="https://www.dripwellbali.com/travel-insurance-medical-report/">Medical Report for Travel Insurance</a></li>
               <li>24/7 On-Call Medical Support</li>
             </ul>
           </div>
@@ -980,6 +996,7 @@ html body header nav .btn-cta{margin:0}
     </div>
   </section>
 
+<section class="dw-related" aria-label="Further reading"><div class="dw-related-box"><h2>Further reading</h2><ul><li><a href="https://www.dripwellbali.com/blog/how-to-recover-fast-from-bali-belly/">How to Recover Fast from Bali Belly: A Doctor-Approved Guide</a></li><li><a href="https://www.dripwellbali.com/blog/food-poisoning-emergency-protocol-tabanan/">Food Poisoning in Tabanan? 4-Hour Emergency Protocol &amp; Villa Medical Care</a></li></ul></div></section>
 </main>
 
 <!-- FOOTER (Diselaraskan dengan Halaman Contact) -->
@@ -1023,6 +1040,13 @@ html body header nav .btn-cta{margin:0}
               <li><a href="https://www.dripwellbali.com/iv-drip-uluwatu/">IV Drip in Uluwatu</a></li>
               <li><a href="https://www.dripwellbali.com/iv-drip-nusa-dua/">IV Drip in Nusa Dua</a></li>
               <li><a href="https://www.dripwellbali.com/iv-drip-sanur/">IV Drip in Sanur &amp; Denpasar</a></li>
+            </ul>
+          </div>
+          <div class="service-location-group">
+            <h3>Patient Information</h3>
+            <ul class="service-location-list">
+              <li><a href="https://www.dripwellbali.com/travel-insurance-medical-report/">Medical Report for Travel Insurance</a></li>
+              <li><a href="https://www.dripwellbali.com/faq/">Frequently Asked Questions</a></li>
             </ul>
           </div>
         </div>
