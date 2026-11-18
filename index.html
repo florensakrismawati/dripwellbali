@@ -476,10 +476,9 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .promo-track { display: flex; width: max-content; animation: marquee 35s linear infinite; will-change: transform; }
-  .promo-track span { padding-right: 60px; }
+  .promo-track { display: flex; flex: 1; justify-content: center; text-align: center; white-space: normal; line-height: 1.6; }
+  .promo-track span { padding: 0 16px; }
   .promo-track strong { color: var(--accent-gold); text-decoration: underline; font-weight: 700; }
-  .promo-bar:hover .promo-track { animation-play-state: paused; }
 
   @keyframes marquee {
     0% { transform: translate3d(0, 0, 0); }
@@ -953,13 +952,6 @@
     <span>Vacation Saver Promo: Get <strong>15% OFF</strong> All Medical &amp; IV Drip Services! Use Code: <strong>SAVE15</strong></span>
   </div>
 </div>
-
-<script>
-  /* Duplicate the promo text for the scrolling animation in the browser only,
-     so search engines and AI crawlers read the promotion once. */
-  (function(){var t=document.querySelector('.promo-track');if(!t)return;var s=t.querySelector('span');
-  for(var i=0;i<3;i++){var c=s.cloneNode(true);c.setAttribute('aria-hidden','true');t.appendChild(c);}})();
-</script>
 
 <!-- HEADER -->
 <header>
